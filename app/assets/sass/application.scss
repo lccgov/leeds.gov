@@ -1,0 +1,187 @@
+// available variables to change the brand colours as required
+// masterhead.scss
+
+//$head-background: #ffffff;
+
+//mainMenu.scss -- responsive icons color
+//$menu-link-color:#337ab7;
+
+//base.scss
+
+//base colours
+$blue:#016D9E;
+$dark-blue: darken(#016D9E, 20%);
+$light-blue: lighten(#016D9E, 20%);
+$green:#008000;
+$black:#212224;
+$light-black:#3D414A;
+$dark-grey:#666B76;
+$grey:#9DA5B2;
+$light-grey:#DCDEE1;
+$lighter-grey:#F6F7FA;
+$white:#FFFFFF;
+$focus-color:#FFBF47;
+
+//$base-background-color:#fff;
+$base-font-size:16px ;
+$base-font-color:$light-black;
+$header-font-color:$black;
+$base-link-color:$blue;
+$secondary-font-color:$dark-grey;
+$border-grey:$light-grey;
+$brand-color:$blue;
+$base-container-width:1400px ;
+//$btn-background-color:green ;
+$font-primary:proxima-nova, sans-serif; // main font
+$font-secondary:proxima-nova, sans-serif; // secondary font
+
+//global used on all partials to get a uniform spacing between elements
+//$base-margin-bottom:1.875em ;
+
+//headerTop
+//$search-link-background:#F3F3F4 ;
+//$search-link:#333 ;
+
+// mainNav.scss
+$main-nav-background:lighten( $brand-color, 3% );
+//$main-nav-link:#fff ;
+
+//footer.scss
+//$footer-font-color:#fff ;
+//$footer-nav-selected-link:#133E8D ;
+
+//sectionSubsite.scss - socialamedia.scss
+//$section-Background:#efefef ;
+
+//socialamedia.scss
+//$social-link-color:#337ab7 ;
+
+//sideNavigation.scss
+//$side-nav-active-background:#133E8D ;
+
+//carousel.scss
+//$carousel-active-background:#000 ;
+//$carousel-indicators-active-background:#ccc ;
+//$carousel-caption-background: rgba(0,0,0,0.6) ;
+//$carousel-caption-font-color:#fff ;
+
+
+//blocklinks.scss
+
+//$block-link-back:#f6f6f6 ;
+//$block-link-back-hover:#3380A4 ;
+//$promo-group-border:1px solid #fff ; 
+//$promo-group-background:#EDF2F5 ; 
+//$promo-group-li-background:#EDF2F5 ;
+//$promo-group-link-color:#216486 ;
+
+//promolist webpart
+//$link-font-color:#fff;
+//$span-info-color:#133E8D;
+//$span-info-hover:#131A22;
+//$span-info-secondary-color:#fff;
+//$span-arrow-base:darken($span-info-color, 10%);
+//$span-third-info-base:#f6f6f6;
+//$third-info-font-color:#333;
+//$arrow-color:#fff;
+//$contentFontColor:#333;
+//$content-arrow-color:#133E8D;
+//$content-border-color:#ddd;
+
+//section backgrounds
+$sectionHeader-background-color:$brand-color;
+$sectionOne-background-color:#fff;
+$sectionTwo-background-color:$lighter-grey;
+//$sectionThree-background-color:lighten($base-background-color, 3%) ;
+//$sectionFour-background-color:lighten($base-background-color, 5%) ;
+//$sectionFive-background-color:darken($base-background-color, 5%) ;
+
+//iconlinks
+//$iconLinkIconColor:#FFC82E;
+
+//heroBanner
+//$heroFontBackground:rgba(0, 0, 0, 0.5); 
+//$heroFontcolor:#fff; 
+
+//news
+//$news-button-background: #3498DB ;
+$news-pod-back:#ffffff ;
+$news-pod-border-color:#ddd;
+
+//accordion
+//$accordion-color:green;
+//$accordion-border-color:#ECF0F1;
+
+//Block quote
+// $blockquoteBorderColor:#bbcada ;
+// $blockquoteQuoteColor:#333;
+// $blockquoteQuoteFooterColor:#000;
+
+//highlighted box in content assets
+//$highlighted-background-color:#333 !default;
+//$highlighted-font-color:#fff !default;
+//$highlighted-alt-background-color:#f6f6f6 !default;
+//$highlighted-alt-font-color:#333 !default;
+
+//mega-promo
+$promo-background-color:#3D414A;
+$promo-arrow-color:#fff;
+$promo-header-color:#fff;
+$promo-secondary-color:#fff;
+$promo-highlight-background-color:lighten(#3D414A, 15%);
+$promo-highlight-color:#fff;
+
+//button colours
+$primary-button-background-color:$green;
+$primary-button-color:$white;
+$secondary-button-background-color:$blue;
+$secondary-button-color:$white;
+$outline-button-border-color:$blue;
+$outline-button-color:$blue;
+
+@import 'mixins';
+@import 'variables';
+@import 'brandColors';
+
+//available sass files please un-comment out as required
+
+//@import 'mainMenuSubsites';
+@import 'breadcrumb';
+@import 'sectionSubsite';
+@import 'promo';
+@import 'carousel';
+//@import 'socialMedia';
+//@import 'sideNavigation';
+//@import 'blockLinks';
+@import 'accordion';
+@import 'promoGroup';
+@import 'alerts';
+@import 'promoListwebpart';
+//@import 'eventsWebparts';
+@import 'sharepointOverides';
+@import 'iconLinks';
+@import 'heroBanner';
+@import 'news';
+@import 'polaroids';
+@import 'groupPromo';
+@import 'blocklinks';
+@import 'contentLink';
+@import 'docList';
+@import 'contentAssets';
+@import 'blockQuote';
+
+//custom style added by DH - needs to filed properly
+@import 'group-promo-lcc';
+@import 'forms';
+@import 'sub-section-nav';
+@import 'buttons';
+@import 'mega-promo';
+@import 'hero-lcc';
+@import 'prism';
+@import 'typography-lcc';
+@import 'swatch-lcc';
+@import 'code-example';
+@import 'sticky';
+@import 'accessibility';
+@import 'footer-lcc';
+@import 'lcc-digital';

@@ -1,0 +1,8 @@
+//accessibility
+a:focus, 
+input[type=submit]:focus, 
+.btn:focus{
+    background:$focus-color !important;
+    color:$base-font-color !important;
+    text-decoration:none;   
+}

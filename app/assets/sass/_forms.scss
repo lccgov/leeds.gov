@@ -1,0 +1,22 @@
+input[type="text"]{
+
+    :focus{
+        border:4px solid $yellow !important;
+    }
+
+}
+
+.form-control{
+    width: 100%;
+    height: 45px;
+    color: $grey;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid $light-grey !important;
+}
+
+.form-group{
+    .btn{
+        margin:0;
+    }
+}

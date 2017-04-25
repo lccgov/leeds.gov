@@ -1,0 +1,23 @@
+//sticky
+#sticky-anchor{
+  @media (max-width: 990px) {
+    display:none;
+  }
+}
+#sticky{
+  padding:20px 0 0;
+}
+#sticky.stick {
+    margin-top: 0 !important;
+    position: fixed;
+    top: 0;
+    padding:20px 0 0;
+    z-index: 10000;
+    
+    @media (max-width: 990px) {
+      position: relative;
+      top: auto;
+      padding:0;
+      z-index: 1;
+    }
+}

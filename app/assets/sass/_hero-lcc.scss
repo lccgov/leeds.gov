@@ -1,0 +1,257 @@
+.hero-lcc-wrapper{
+    background-image: none;
+    background-color:rgba(9,59,81,1);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index:-2;
+    margin-top:-65px;
+
+    @media (min-width: 767px) {
+        height:75vh;
+    }
+
+    .hero-lcc{
+        background: rgba(9,59,81,0.5);
+        background: -webkit-radial-gradient(rgba(9,59,81,0.8), rgba(9,59,81,0)); /* For Safari 5.1 to 6.0 */
+        background: -o-radial-gradient(rgba(9,59,81,0.8), rgba(9,59,81,0)); /* For Opera 11.1 to 12.0 */
+        background: -moz-radial-gradient(rgba(9,59,81,0.8), rgba(9,59,81,0)); /* For Firefox 3.6 to 15 */
+        background: radial-gradient(rgba(9,59,81,0.8), rgba(9,59,81,0)); /* Standard syntax */
+        z-index:-1;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 767px) {
+            padding:145px 0 80px 0;
+        }
+
+        @media (max-width: 500px) {
+            padding:115px 0 50px 0;
+        }
+    
+        .hero-lcc__content{
+            max-width:900px;
+            width:100%;
+            margin:0 auto;
+            padding:15px;
+
+            @media (max-width: 500px) {
+                padding:0px 15px;
+            }
+
+            .hero-lcc__intro{
+                text-align:center;
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+
+                .hero-lcc__intro-header{
+                    color:#fff;
+                    margin:0 0 7px;
+                    font-size:52px;
+
+                    @media (max-width: 500px) {
+                        font-size:36px;
+                        margin:0 0 5px;
+                    }
+
+                    span{
+                        display:block;
+                        font-size:24px;
+                        font-weight:400;
+                        margin:0 0 7px;
+
+                        @media (max-width: 500px) {
+                            font-size:19px;
+                            margin:0 0 5px;
+                        }
+
+                    }
+                }
+                .hero-lcc__intro-secondary{
+                    margin:0 0 20px;
+                    color:#fff;
+                    font-size:24px;
+                    font-weight:400;
+
+                    @media (max-width: 500px) {
+                        font-size:19px;
+                    }
+                    
+                }
+            }
+
+            .hero-lcc__actions{
+                background:rgba(38,50,56,0.25);
+                @include border-radius(4px);
+                padding:10px;
+
+                .hero-lcc__search-wrapper{
+                    margin:0 0 10px;
+
+                    @media (max-width: 767px) {
+                        margin:0 0 5px;
+                    }
+
+                    .hero-lcc__search{
+                        position:relative;
+
+                            &:before{
+                                font-family: FontAwesome;
+                                content: "\f002";
+                                position: absolute;
+                                left: 15px;
+                                top: 50%;
+                                margin-top:-17px;
+                                font-size:30px;
+                                line-height:1;
+                                color:$dark-grey;
+                                z-index:4;
+
+                                @media (max-width: 766px) {
+                                    display:none;
+                                }
+                            }
+
+                        .hero-lcc__search-input{
+                            height:45px;
+                            border-radius:4px 0 0 4px;
+                            font-size:16px;
+
+                            @media (min-width: 767px) {
+                                padding-left:60px;
+                                font-size:20px;
+                                height:55px;
+                            }
+                        }
+
+                        .btn{
+                            height:55px;
+                            border:0;
+                            padding:10px 25px;
+                            background:$green;
+                            font-size:21px;
+                            margin:0;
+
+                            &:hover{
+                                background:darken($green,5%);
+                                color:$white;
+                            }
+
+                            @media (max-width: 766px) {
+                                width:45px;
+                                height:45px;
+                            }
+
+                            &:after{
+                                display:none;
+                            }
+
+                            i{
+                                font-size:26px;
+
+                                @media (min-width: 767px) {
+                                    display:none;
+                                }
+                            }
+
+                            @media (max-width: 766px) {
+
+                                padding:5px 10px;
+
+                                span{
+                                    position: absolute;
+                                    width: 1px;
+                                    height: 1px;
+                                    padding: 0;
+                                    margin: -1px;
+                                    overflow: hidden;
+                                    clip: rect(0,0,0,0);
+                                    border: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .hero-lcc__most-popular{
+                    padding:0;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -ms-flex-wrap: wrap;
+                    -webkit-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                    margin:0 0 0 -10px;
+
+                    .hero-lcc__most-popular-item{
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        -webkit-align-items: stretch;
+                        align-items: stretch;
+                        -ms-flex: 1 1 auto;
+                        -webkit-flex: 1 1 auto;
+                        align-content: space-between;
+                        flex: 1 1 auto;
+                        width:33.33% !important;
+                        padding-left:10px;
+
+                        .btn{
+                            width:100%;
+                            text-align:left;
+                            margin:0;
+                            font-size:16px;
+                            padding:10px 100px 10px 10px;
+                            font-weight:400;
+                            background:$blue;
+                            border:0;
+                            margin:0;
+
+                                &:hover{
+                                    background:darken($blue,5%);
+                                }
+
+                            &:after{
+                                font-size: 22px;
+                                content: "\f105";
+                                padding: 0!important;
+                                width: 55px;
+                                text-align: center;
+                                line-height:54px;
+                                
+
+                                @media (max-width: 767px) {
+                                    width: 45px;
+                                    line-height:42px;
+                                }
+                            }
+
+                            @media (min-width: 767px) {
+                                font-size:19px;
+                                padding:13px 60px 13px 15px;
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    padding:5px 5px 0px;
+
+                    .hero-lcc__most-popular{
+                        margin:0;
+
+                    .hero-lcc__most-popular-item{
+                        width:100% !important;
+                        padding-left:0;
+                        padding-bottom:5px;
+                    }
+                }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+
+//style example
+.example {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $border-grey;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+
+  @media (min-width: 641px) {
+      padding-top: 45px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+      padding-left: 30px;
+  }
+
+  &:before {
+    content: "EXAMPLE";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+    font-family: $font-primary, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 12px;
+    line-height: 1.25;
+    background: #bfc1c3;
+    color: white;
+
+    @media (min-width: 641px) {
+        font-size: 14px;
+        line-height: 1.4285714286;
+    }
+  }
+
+  .highlight {
+    font-style: normal;
+    color: #0076c0;
+  }
+
+  .list-bullet {
+    margin-bottom: 20px;
+  }
+}
+
+.example-grid p {
+  width: 100%;
+  background: url("/public/images/examples/grid.png") 0 0 repeat;
+  margin-bottom: 0;
+  height: 30px;
+  overflow: hidden;
+  text-indent: -999em;
+
+  @media (min-width: 641px) {
+      height: 60px;
+  }
+}
+
+//code example
+.exampleCode{
+  padding-top:15px;
+}
+
+@media (max-width: 990px) {
+  .example-images{
+    img{
+      margin:15px 0 15px 0;
+    }
+  }
+}

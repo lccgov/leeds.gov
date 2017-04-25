@@ -1,0 +1,219 @@
+.swatch {
+  width: 60px;
+  height: 60px;
+  @include border-radius(100%);
+}
+
+@media (max-width: 640px) {
+  .swatch {
+    clear: both;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 641px) {
+  .swatch {
+    margin: 0 auto 15px auto;
+  }
+}
+
+.swatch-purple {
+  background-color: #2e358b;
+}
+
+.swatch-mauve {
+  background-color: #6f72af;
+}
+
+.swatch-fuschia {
+  background-color: #912b88;
+}
+
+.swatch-pink {
+  background-color: #d53880;
+}
+
+.swatch-baby-pink {
+  background-color: #f499be;
+}
+
+.swatch-red {
+  background-color: #b10e1e;
+}
+
+.swatch-mellow-red {
+  background-color: #df3034;
+}
+
+.swatch-orange {
+  background-color: #f47738;
+}
+
+.swatch-brown {
+  background-color: #b58840;
+}
+
+.swatch-yellow {
+  background-color: #ffbf47;
+}
+
+.swatch-green {
+  background-color: #006435;
+}
+
+.swatch-grass-green {
+  background-color: #85994b;
+}
+
+.swatch-turquoise {
+  background-color: #28a197;
+}
+
+.swatch-light-blue {
+  background-color: #2b8cc4;
+}
+
+.swatch-govuk-blue {
+  background-color: #005ea5;
+}
+
+.swatch-alpha {
+  background-color: #005ea5;
+}
+
+.swatch-beta {
+  background-color: #005ea5;
+}
+
+.swatch-discovery {
+  background-color: #005ea5;
+}
+
+.swatch-live {
+  background-color: #85994b;
+}
+
+.swatch-error {
+  background-color: #b10e1e;
+}
+
+.swatch-focus {
+  background-color: #ffbf47;
+}
+
+.swatch-button-colour {
+  background-color: #00823b;
+}
+
+.swatch-black {
+  background-color: #0b0c0c;
+}
+
+.swatch-grey-1 {
+  background-color: #6f777b;
+}
+
+.swatch-grey-2 {
+  background-color: #bfc1c3;
+}
+
+.swatch-grey-3 {
+  background-color: #dee0e2;
+}
+
+.swatch-grey-4 {
+  background-color: #f8f8f8;
+}
+
+.swatch-white {
+  background-color: #fff;
+  border: 1px solid #dee0e2;
+}
+
+.swatch-text-colour {
+  background-color: #0b0c0c;
+}
+
+.swatch-text-secondary {
+  background-color: #6f777b;
+}
+
+.swatch-page-colour {
+  background-color: #fff;
+  border: 1px solid #dee0e2;
+}
+
+.swatch-button-colour {
+  background-color: #00823b;
+}
+
+.swatch-link-colour {
+  background-color: #005ea5;
+}
+
+.swatch-link-colour-visited {
+  background-color: #4c2c92;
+}
+
+.swatch-link-colour-hover {
+  background-color: #2b8cc4;
+}
+
+.swatch-border-colour {
+  background-color: #bfc1c3;
+}
+
+.swatch-panel-colour {
+  background-color: #dee0e2;
+}
+
+.swatch-highlight-colour {
+  background-color: #f8f8f8;
+}
+
+@media (min-width: 641px) {
+  .swatch-wrapper {
+    float: left;
+    width: 20%;
+    text-align: center;
+  }
+}
+
+.swatch-wrapper .heading-small {
+  margin-bottom: 0.5263157895em;
+}
+
+.swatch-wrapper ul {
+  list-style-type: none;
+  padding-bottom: 15px;
+  padding-left:0;
+}
+
+@media (max-width: 640px) {
+  .swatch-wrapper ul {
+    min-height: 50px;
+    padding-top: 10px;
+  }
+}
+
+.swatch-wrapper li {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+}
+
+@media (min-width: 641px) {
+  .swatch-wrapper li {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.swatch-wrapper b {
+  font-weight: bold;
+  text-transform: uppercase;
+}

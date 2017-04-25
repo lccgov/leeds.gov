@@ -1,0 +1,56 @@
+//footer
+footer.main{
+  .container-fluid{
+    padding:0;
+  }
+}
+.footerGlobal{
+  padding:50px 0;
+  background:$base-link-color !important;
+  font-size:16px;
+
+  nav{
+    padding-bottom:50px;
+  ul{
+    li{
+      margin-bottom:10px;
+
+      @media (max-width: 500px) {
+          width:100%;
+          text-align:center;
+
+          &:after{
+            display:none;
+          }
+      }
+
+      }
+  }
+  }
+}
+.logo-footer span {
+    margin: 0 0 1.25em 0;
+
+    @media (max-width: 500px) {
+          margin:0 auto 20px;
+      }
+}
+footer.main p {
+    margin-bottom: 0;
+
+    @media (max-width: 500px) {
+          text-align:center;
+      }
+}
+
+footer.main .socialBookmarks ul li:first-of-type {
+    display: inline-block;
+    padding-bottom: 0.65em;
+}
+
+footer.main .text-right {
+  @media (max-width: 500px) {
+    padding-top:50px;
+    text-align:center;
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+dist/
+lcc_modules/
+settings.json
+settings.default.json

@@ -1,0 +1,120 @@
+//masterhead
+//bootsrap override
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*temporarily hide masterhead*/
+.masterhead {
+    display:none;
+}
+
+//logo
+.logo {
+    height: auto;
+    width: auto;
+    background: none;
+    display:inline-block;
+    margin:9px 0;
+    text-decoration:none;
+
+    &:after{
+        content:'LCC Digital';
+        font-size:36px;
+        text-transform:uppercase;
+        font-weight:700;
+        color: #fff;
+
+        @media (max-width: 767px) {
+              font-size:30px;
+          }
+    }
+
+    &:hover{
+      color:darken(#fff, 10%);
+    }
+}
+
+//nav
+.main-nav ul li {
+
+    a{
+      font-size:18px;
+      padding:12px;
+      text-decoration:none;
+    }
+}
+
+//breadcrumb
+.breadcrumb {
+    padding: 0 0 20px;
+    margin: 10px 0 0;
+    font-size: 16px;
+
+        a{
+          position:relative;
+          margin-left:16px;
+
+            &:after {
+                position:absolute;
+                display:inline-block;
+                content: "/";
+                font-size: 16px;
+                padding: 0 8px;
+            }
+        }
+}
+
+/*could be coded better*/
+.breadcrumb a:first-child{
+  margin-left:0;
+}
+
+//accordion
+ul.accordion {
+  margin:1.4em 0;
+
+  li {
+    border-color:$border-grey;
+    border-bottom:1px solid $border-grey;
+
+    a.header {
+      border:none !important;
+      font-weight:700;
+      padding: 20px 40px 20px 0;
+      text-decoration:none !important;
+
+      &:after {
+      font-family: FontAwesome;
+      font-size: 24px;
+      content: "\f067";
+      position: absolute;
+      right: 0;
+      top:50%;
+      margin-top:-14px;
+      color: $base-link-color;
+      }
+    }
+  }
+
+  .list{
+    a{
+      text-decoration:none;
+    }
+  }
+}
+
+//hr
+hr{
+  margin-top:2.5em;
+  border-color:rgba( $border-grey, .5 );
+}
+
+//secondary-nav
+.secondary-nav{
+  .heading-contents{
+    margin-top:0;
+  }
+}
+

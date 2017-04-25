@@ -1,0 +1,129 @@
+//promo-group custom
+ul.promo-group{
+
+  &.lcc {
+    background: transparent;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:10px 0 30px -6px;
+    width:auto;
+    border:0;
+
+    @media (max-width: 600px) {
+        margin:0 -15px 20px -15px;
+    }
+
+    li {
+        background:$lighter-grey;
+        border: 0;
+        width: calc(100% * (1/4) - 5px);
+        margin:5px 0 0 5px;
+        border:0;
+
+        @media (max-width: 1200px) {
+            width: calc(100% * (1/2) - 5px);
+        }
+        @media (max-width: 600px) {
+            width: calc(100%);
+            margin:5px 0 0;
+        }
+
+        a{
+            background:$lighter-grey;
+            padding:30px;
+            text-decoration:none !important;
+            height:100%;
+
+            &:hover{
+                background:$blue !important;
+
+                h3,
+                p{
+                    color:$white !important;
+                }
+            }
+
+            &:focus{
+
+                h3,
+                p{
+                    color:$black !important;
+                }
+            }
+
+            @media (max-width: 767px) {
+                min-height:0;
+                padding:20px;
+            }
+
+            @media (max-width: 600px) {
+                min-height:0;
+                padding:20px 15px;
+            }
+            
+            h3 {
+                margin: 0;
+                font-weight: 600;
+                font-size: 24px;
+                color: $base-link-color;
+                padding-right:30px;
+                line-height:28px;
+
+                @media (max-width: 767px) {
+                    font-size: 19px;
+                    line-height:24px;
+                }
+
+                    &:after {
+                        content: '\f105';
+                        font-family: FontAwesome;
+                        position: absolute;
+                        top: 30px;
+                        right: 30px;
+                        color:$light-grey;
+
+                        @media (max-width: 767px) {
+                          top: 20px;
+                          right: 20px;
+                        }
+
+                        @media (max-width: 600px) {
+                            top: 50%;
+                            right: 15px;
+                            margin-top:-10px;
+                        }
+                    }
+            }
+
+            p{
+              font-size:18px;
+              font-weight:300;
+              margin-top: 10px;
+              margin-bottom:0;
+              color:$secondary-font-color;
+
+              @media (max-width: 600px) {
+                padding-right:30px;
+              }
+            }
+        }
+    }
+}
+}
+
+ul.promo-group{
+    &.lcc{
+        &.home{
+            li{
+                background:$white;
+
+                a{
+                    background:$white;
+                }
+            }
+        }
+    }
+}

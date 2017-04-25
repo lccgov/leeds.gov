@@ -1,0 +1,3 @@
+{
+    "webparts": ["LCCNewsArchiveFilter", "LCCNewsDateFilter", "LCCNewsKeywordFilter", "LCCNewsResults", "LCCNewsResultsSearch"]
+}
