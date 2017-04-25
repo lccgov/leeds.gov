@@ -1,11 +1,11 @@
 [
     {
-        "name": "lcc_gov.master",
+        "name": "n.master",
         "metadata": {
             "__metadata": {
                 "type": "SP.Data.OData__x005f_catalogs_x002f_masterpageItem"
             },
-            "Title": "lcc_gov Masterpage",
+            "Title": "n Masterpage",
             "ContentTypeId": "0x010105"
         }
     },
