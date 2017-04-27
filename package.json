@@ -34,7 +34,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "lcc_frontend_toolkit": "^0.83.0",
-    "lcc_sharepoint_toolkit": "^0.26.0",
+    "lcc_sharepoint_toolkit": "^0.27.0",
     "lcc_templates_sharepoint": "^1.1.47",
     "lodash": "^4.17.2",
     "mincer": "^1.5.0",
