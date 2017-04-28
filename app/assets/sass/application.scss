@@ -185,3 +185,79 @@ $outline-button-color:$blue;
 @import 'accessibility';
 @import 'footer-lcc';
 @import 'lcc-digital';
+
+
+//Rm quick add to be removed when we consolidate group promo styling
+
+
+
+.groupPromo .listWebpart {
+    margin:0 -15px;
+}
+
+
+.groupPromo.default .listWebpart ul li a {
+    margin: 0 7.5px 15px;
+    padding: 30px 60px 30px 30px;
+    display: block;
+    font-weight: 600;
+    position: relative;
+    width: auto;
+    color: #216486;
+    font-size: 1.313em;
+    background:#F6F7FA;
+    border:none;
+    text-decoration:none;
+    position:relative;
+
+    span{
+      font-size: 18px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color:#212224;
+    }
+
+    &:after {
+    content: '\f105';
+    font-family: FontAwesome;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #DCDEE1;
+    font:30px;
+    }
+
+        &:hover{
+      background:#216486;
+      color:#fff;
+
+      span, &:after{
+        color:#fff;
+      }
+}
+}
+
+.groupPromo.default.home .listWebpart ul li a {
+  background:#fff;
+
+   &:hover{
+     background:#216486;
+   }
+}
+
+
+.sub-section-heading {
+    border-bottom: 1px solid #DCDEE1;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+}
+
+
+.docList.one .listWebpart ul li {
+  float:none;
+}
+
+
+
+//End Rm quick add to be removed when we consolidate group promo styling
