@@ -1,3 +1,4 @@
 {
-    "webparts": ["LCCNewsArchiveFilter", "LCCNewsDateFilter", "LCCNewsKeywordFilter", "LCCNewsResults", "LCCNewsResultsSearch"]
+    "webparts": ["LCCNewsArchiveFilter", "LCCNewsDateFilter", "LCCNewsKeywordFilter", "LCCNewsResults", "LCCNewsResultsSearch"],
+    "footerSubsites": ["bsc_subsite"]
 }
