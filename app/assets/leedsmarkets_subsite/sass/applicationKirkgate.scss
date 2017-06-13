@@ -1,0 +1,466 @@
+// available variables to change the brand colours as required
+// masterhead.scss
+
+//$head-background: #ffffff;
+
+
+// mainMenu.scss -- responsive icons color
+//$menu-link-color:#337ab7;
+
+
+//base.scss
+
+//$base-background-color:#fff;
+//$base-font-size:16px ;
+//$base-font-color:#333 ;
+$base-link-color:#A2AD00; ;
+//$base-container-width:1500px ;
+$btn-background-color:#A2AD00 ;
+$font-primary: 'Helvetica Neue', Helvetica, Arial,;
+$font-secondary:  'Helvetica Neue', Helvetica, Arial,;
+
+
+// global used on all partials to get a uniform spacing between elements
+//$base-margin-bottom:1.875em ;
+
+//headerTop
+//$search-link-background:#F3F3F4 ;
+//$search-link:#333 ;
+
+// mainNav.scss
+$main-nav-background:#000 ;
+//$main-nav-link:#fff ;
+
+//footer.scss
+//$footer-font-color:#fff ;
+//$footer-nav-selected-link:#133E8D ;
+
+// sectionSubsite.scss - socialamedia.scss
+//$section-Background:#efefef ;
+
+//  socialamedia.scss
+//$social-link-color:#337ab7 ;
+
+//  sideNavigation.scss
+//$side-nav-active-background:#133E8D ;
+
+//  carousel.scss
+//$carousel-active-background:#000 ;
+//$carousel-indicators-active-background:#ccc ;
+//$carousel-caption-background: rgba(0,0,0,0.6) ;
+//$carousel-caption-font-color:#fff ;
+
+
+// blocklinks.scss
+
+//$block-link-back:#f6f6f6 ;
+//$block-link-back-hover:#3380A4 ;
+//$promo-group-border:1px solid #fff ; 
+//$promo-group-background:#EDF2F5 ; 
+//$promo-group-li-background:#EDF2F5 ;
+//$promo-group-link-color:#216486 ;
+
+
+//promolist webpart
+//$link-font-color:#fff;
+$span-info-color:#A75041;
+$span-info-hover:darken(#A75041,10%);
+//$span-info-secondary-color:#fff;
+//$span-arrow-base:darken($span-info-color, 10%);
+//$span-third-info-base:#f6f6f6;
+//$third-info-font-color:#333;
+//$arrow-color:#fff;
+//$contentFontColor:#333;
+//$content-arrow-color:#133E8D;
+//$content-border-color:#ddd;
+
+// section backgrounds
+$sectionHeader-background-color:#000 url(../images/kirkgate-banner.jpg) top center no-repeat;
+$sectionOne-background-color:#fff;
+$sectionTwo-background-color:#fff;
+$sectionThree-background-color:#ecf0f1 url(../images/bricks2.jpg) center center no-repeat;
+//$sectionFour-background-color:lighten($base-background-color, 5%) ;
+//$sectionFive-background-color:darken($base-background-color, 5%) ;
+
+//iconlinks
+//$iconLinkIconColor:#FFC82E;
+
+//heroBanner
+//$heroFontBackground:rgba(0, 0, 0, 0.5); 
+//$heroFontcolor:#fff; 
+
+//news
+//$news-button-background: #3498DB ;
+$news-pod-back:#ffffff ;
+$news-pod-border-color:#ddd;
+
+//accordion
+$accordion-color:green;
+//$accordion-border-color:#ECF0F1;
+
+//highlighted box in content assets
+$highlighted-background-color:#ECF0F1;
+$highlighted-font-color:#666;
+$highlighted-alt-background-color:#A2AD00;
+$highlighted-alt-font-color:#fff ;
+
+
+@import 'mixins';
+@import 'variables';
+@import 'brandColors';
+
+// available sass files please un-comment out as required
+
+//@import 'mainMenuSubsites';
+@import 'breadcrumb';
+@import 'sectionSubsite';
+@import 'promo';
+@import 'carousel';
+//@import 'socialMedia';
+//@import 'sideNavigation';
+//@import 'blockLinks';
+@import 'accordion';
+@import 'promoGroup';
+@import 'alerts';
+@import 'promoListwebpart';
+//@import 'eventsWebparts';
+@import 'sharepointOverides';
+@import 'iconLinks';
+@import 'heroBanner';
+@import 'news';
+@import 'polaroids';
+@import 'groupPromo';
+@import 'blocklinks';
+@import 'contentLink';
+@import 'docList';
+@import 'contentAssets';
+
+
+
+a{
+    color:#A75041;
+}
+
+.logo {
+    background:url(../images/logoKirkgate.jpg) left center no-repeat;
+    margin: 30px 0px;
+    height:145px;
+    width:195px;
+
+    
+    &:hover{
+        text-decoration:none;
+    }
+
+
+        @media screen and (max-width:768px){
+            text-align: center;
+            margin:30px auto;
+
+                &:after{
+           font-size:30px;
+            text-align: center;
+
+
+    }
+        }
+}
+
+
+
+
+
+
+.sectionThree{
+    background:url(../images/bricks2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+
+
+/*************
+.contentLink overides
+*************/
+
+.contentLink .listWebpart {
+
+margin:0 -18px;
+
+ul li 
+{
+    margin: 0 0 30px 0;
+ &:nth-child(even) div {
+   border-color:#E67E22;
+   .btn{
+       background:#E67E22;
+       box-shadow: inset 0 1px 1px #fd9e4a;
+       border-color:#E67E22;
+
+       &:hover{
+           background:darken(#E67E22, 10%);
+           border-color:darken(#E67E22, 10%);
+       }
+   }
+ }  
+
+div {
+    padding:30px;
+    background: #FFF;
+    text-align: left;
+    border: 1px dashed #A2AD00;
+
+    img{
+        width:auto;
+        float:right;
+    }
+
+    h2{
+        margin-top:0px;
+    }
+
+    .btn {
+      display:inline-block;
+      width:auto;
+    }
+
+    @media only screen and (max-width:1000px){
+       text-align: center;
+            
+        img{
+            margin:0 auto 15px auto;
+            float:none;
+        }
+    }
+}
+
+ @media only screen and (max-width:768px){
+     width:100%;
+ }
+}
+}
+/*END contentLink overides*/
+
+.btn{
+    -webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+
+
+
+
+
+hr {
+        border-top: 1px solid #000;
+        clear:both;
+        float:left;
+        margin-top:20px;
+        width:100%;
+}
+
+/*******************
+Highlighted overides
+*******************/
+
+.highlighted, .blockText{
+
+    margin:0 0 2em 0;
+    h3{
+       border-bottom:1px dashed #666;
+       padding-bottom:20px;
+       color:#333;
+       font-size:20px;
+       text-transform: uppercase;
+       font-weight:bold;
+       margin-bottom:20px;
+    }
+
+        h4{
+       color:#333;
+       font-size:25px;
+    }
+
+}
+
+.blockText{
+    background:#ECF0F1;
+    padding: 30px;
+
+    h3 {
+        margin-top:0px;
+    }
+}
+
+/*******************
+docList overides
+*******************/
+
+.docList{
+  background:$highlighted-background-color;
+  padding:20px;
+
+  .listWebpart ul li{
+      float:none;
+
+      a {
+          border-bottom:none;
+      }
+  }
+
+  h2{
+       color:#333;
+       font-size:20px;
+       border-bottom:1px dashed #666;
+       padding-bottom:20px;
+       text-transform: uppercase;
+       font-weight:bold;
+       margin-top:10px;
+  }
+
+}
+
+/*docList END*/
+
+/*******************
+VENUE ADDRESS
+*******************/
+
+.venueAddress{
+    margin:-10px 0 0px;
+}
+
+.venueAddress p{
+    line-height:1.2em;
+    font-size:1.2em;
+    color:#666;
+    margin:0 0 5px 25px;
+    padding:0;
+}
+
+.venueAddress hr{
+    margin: 20px 0 10px;
+}
+
+.venueAddress p span.icon{
+    width:16px;
+    height:17px;
+    display:block;
+    float:left;
+    margin:0 8px 0 -25px;
+}
+
+.venueAddress p span.icon-map{
+    background:url(../Images/icon-map.png) center center no-repeat;
+}
+
+.venueAddress p span.icon-phone{
+    background:url(../Images/icon-phone.png) center center no-repeat;
+}
+
+.venueAddress p span.icon-clock{
+    background:url(../Images/icon-clock.png) center center no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .venueAddress{
+        margin:-5px 0 0px;
+    }
+    
+    .venueAddress p{
+        font-size:1.1em;
+    }
+    
+}
+
+/*VENUE ADDRESS END*/
+
+/***********************
+BLOCK VENUE DETAILS
+***********************/
+
+.blockVenueDetails{
+    width:100%;
+    float:left;
+    margin:0 0 20px;
+    position:relative;
+}
+
+.blockVenueDetails .listWebpart{
+    margin:0;
+    padding:0px;
+
+    h2{
+    border-bottom:1px dashed #666;
+    margin:0 0 10px;
+    padding:0 0 10px;
+    font-size:18px;
+    color:#000;
+    font-weight:bold;
+    line-height:1em;
+    text-transform:uppercase;
+    position:relative;
+
+
+
+     img{
+    position:absolute;
+    right:0px;
+    top:-5px;
+    margin:0;
+    width:30px;
+    height:30px;
+}
+}
+
+ul{
+    margin:0;
+    padding:0;
+
+    li{
+    margin:0;
+    padding:0;
+
+    div{
+        background:#ECF0F1;
+        padding:30px;
+        margin:0 0 30px 0;
+    }
+
+    a{
+    margin:5px 0 0px;
+    padding:0 0px;
+    color:#A2AD00;
+    text-transform:capitalize;
+    font-size:16px;
+
+    &:hover{
+    background:none;
+    color:#687100;
+    text-decoration:underline;
+}
+}
+}
+}
+}
+
+
+
+
+
+/*BLOCK VENUE DETAILS END*/
+
+.promoListWebpart .content.heightTwo {
+    height: 385px;
+    overflow:hidden;
+    padding-right:0px;
+    border-right:15px solid #fff;
+}
+
+.promoListWebpart .two a span.info, .promoListWebpart .three a span.info, .promoListWebpart .four a span.info, .promoListWebpart .quarter a span.info {
+    font-size: 18px;
+}
+
+.promoListWebpart{
+    margin:0 -15px;
+}

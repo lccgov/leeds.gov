@@ -1,0 +1,208 @@
+// available variables to change the brand colours as required
+// masterhead.scss
+
+//$head-background: #ffffff;
+
+
+// mainMenu.scss -- responsive icons color
+//$menu-link-color:#337ab7;
+
+
+//base.scss
+
+$base-background-color:#004D69;
+//$base-font-size:16px ;
+$base-font-color:#fff ;
+$base-link-color:orange ;
+//$base-container-width:1500px ;
+//$btn-background-color:green ;
+//$font-primary: Arial ; // main font
+//$font-secondary: Arial ; // secondary font
+
+
+// global used on all partials to get a uniform spacing between elements
+//$base-margin-bottom:1.875em ;
+
+//headerTop
+//$search-link-background:#F3F3F4 ;
+//$search-link:#333 ;
+
+// mainNav.scss
+$main-nav-background:#005878 ;
+$main-nav-link:orange;
+
+//footer.scss
+//$footer-font-color:#333 ;
+//$footer-nav-selected-link:#133E8D ;
+
+// sectionSubsite.scss - socialamedia.scss
+//$section-Background:#efefef ;
+
+//  socialamedia.scss
+//$social-link-color:#337ab7 ;
+
+//  sideNavigation.scss
+//$side-nav-active-background:#133E8D ;
+
+//  carousel.scss
+//$carousel-active-background:#000 ;
+//$carousel-indicators-active-background:#ccc ;
+//$carousel-caption-background: rgba(0,0,0,0.6) ;
+//$carousel-caption-font-color:#fff ;
+
+
+// blocklinks.scss
+
+//$block-link-back:#f6f6f6 ;
+//$block-link-back-hover:#3380A4 ;
+//$promo-group-border:1px solid #fff ; 
+//$promo-group-background:#EDF2F5 ; 
+//$promo-group-li-background:#EDF2F5 ;
+//$promo-group-link-color:#216486 ;
+
+
+//promolist webpart
+//$link-font-color:#fff;
+//$span-info-color:#133E8D;
+//$span-info-hover:#131A22;
+//$span-info-secondary-color:#fff;
+//$span-arrow-base:darken($span-info-color, 10%);
+//$span-third-info-base:#f6f6f6;
+//$third-info-font-color:#333;
+//$arrow-color:#fff;
+//$contentFontColor:#333;
+//$content-arrow-color:#133E8D;
+//$content-border-color:#ddd;
+
+// section backgrounds
+//$sectionHeader-background-color:#efefef ;
+$sectionOne-background-color:#005878;
+$sectionTwo-background-color:darken($base-background-color, 5%) ;
+$sectionThree-background-color:$base-background-color;
+$sectionFour-background-color:darken($base-background-color, 5%)  ;
+$sectionFive-background-color:$base-background-color;
+
+//iconlinks
+//$iconLinkIconColor:#FFC82E;
+
+//heroBanner
+//$heroFontBackground:rgba(0, 0, 0, 0.5); 
+//$heroFontcolor:#fff; 
+
+//news
+//$news-button-background: #3498DB ;
+$news-pod-back:#ffffff ;
+$news-pod-border-color:#ddd;
+
+//accordion
+$accordion-color:#ED943A;
+//$accordion-border-color:#ECF0F1;
+
+//mega-promo
+$promo-background-color:darken($base-background-color, 2%);
+$promo-arrow-color:#ED943A;
+$promo-header-color:#fff;
+$promo-secondary-color:#96b5d6;
+$promo-highlight-background-color:#AD033B;
+$promo-highlight-color:#fff;
+$promo-arrow:"\f054";
+
+@import 'mixins';
+@import 'variables';
+@import 'brandColors';
+
+// available sass files please un-comment out as required
+
+//@import 'mainMenuSubsites';
+@import 'breadcrumb';
+@import 'sectionSubsite';
+@import 'promo';
+@import 'carousel';
+//@import 'socialMedia';
+//@import 'sideNavigation';
+//@import 'blockLinks';
+@import 'accordion';
+@import 'promoGroup';
+@import 'alerts';
+@import 'promoListwebpart';
+//@import 'eventsWebparts';
+@import 'sharepointOverides';
+@import 'iconLinks';
+@import 'heroBanner';
+@import 'news';
+@import 'polaroids';
+@import 'groupPromo';
+@import 'blocklinks';
+@import 'contentLink';
+@import 'docList';
+@import 'mega-promo';
+
+a {
+    color: orange;
+    &:hover{
+        color:darken(orange,50%);   
+    }
+
+}
+
+
+        .header-left{
+                width:100%;
+                position:relative;
+                text-align: center;
+
+                      &:after{
+                        content:'';
+                        right:0px;
+                        top:20px;
+                        color:#fff;
+                        position:absolute;
+                        background:url(../images/cfllogo.png) center top no-repeat;
+                        width:130px;
+                        height:180px;
+
+                        @media screen and (max-width:768px){
+                            position:relative;
+                            margin:0 auto;
+                            display:block;
+                        }
+                }        }
+
+
+        
+ .logo{
+        height:100px;
+        width:600px;
+        background-size:100%;
+        background:url(../images/logo.png) center top no-repeat;
+        background-size:100%;
+        margin:60px 0;
+
+     
+
+            @media (max-width:768px){
+            margin-bottom:0px;
+        }
+
+             @media (max-width:500px){
+            margin-bottom:0px;
+            height:60px;
+        }
+
+    }
+
+    .main-nav{
+        border-bottom:1px solid #004964;
+        border-top:1px solid #004964;
+    }
+
+
+.ms-srch-sb > input {
+color:#414141;
+}
+
+img {
+    max-width:100%;
+}
+
+

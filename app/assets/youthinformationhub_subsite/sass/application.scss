@@ -1,0 +1,360 @@
+// available variables to change the brand colours as required
+// masterhead.scss
+
+//$head-background: #ffffff;
+
+
+// mainMenu.scss -- responsive icons color
+//$menu-link-color:#337ab7;
+
+
+//base.scss
+
+$base-background-color:#fff;
+//$base-font-size:16px ;
+//$base-font-color:#333 ;
+//$base-link-color:#133E8D ;
+//$base-container-width:1500px ;
+//$btn-background-color:green ;
+$font-primary:  Arial,sans-serif; // main font
+$font-secondary: Arial,sans-serif; // secondary font
+
+
+// global used on all partials to get a uniform spacing between elements
+//$base-margin-bottom:1.875em ;
+
+//headerTop
+//$search-link-background:#F3F3F4 ;
+//$search-link:#333 ;
+
+// mainNav.scss
+$main-nav-background:darken(#80CCFF, 5%) ;
+$main-nav-link:#333F07;
+
+//footer.scss
+$footer-font-color:#333F07;
+//$footer-nav-selected-link:#133E8D ;
+
+// sectionSubsite.scss - socialamedia.scss
+//$section-Background:#efefef ;
+
+//  socialamedia.scss
+//$social-link-color:#337ab7 ;
+
+//  sideNavigation.scss
+//$side-nav-active-background:#133E8D ;
+
+//  carousel.scss
+//$carousel-active-background:#000 ;
+//$carousel-indicators-active-background:#ccc ;
+//$carousel-caption-background: rgba(0,0,0,0.6) ;
+//$carousel-caption-font-color:#fff ;
+
+
+
+
+//promolist webpart
+//$link-font-color:#fff;
+//$span-info-color:#133E8D;
+//$span-info-hover:#131A22;
+//$span-info-secondary-color:#fff;
+//$span-arrow-base:darken($span-info-color, 10%);
+//$span-third-info-base:#f6f6f6;
+//$third-info-font-color:#333;
+//$arrow-color:#fff;
+//$contentFontColor:#333;
+//$content-arrow-color:#133E8D;
+//$content-border-color:#ddd;
+
+// section backgrounds
+ $sectionHeader-background-color:#80CCFF;
+$sectionOne-background-color:#fff ;
+$sectionTwo-background-color:#fff ;
+//$sectionThree-background-color:lighten($base-background-color, 3%) ;
+//$sectionFour-background-color:lighten($base-background-color, 5%) ;
+//$sectionFive-background-color:darken($base-background-color, 5%) ;
+
+//iconlinks
+//$iconLinkIconColor:#FFC82E;
+
+//heroBanner
+//$heroFontBackground:rgba(0, 0, 0, 0.5); 
+//$heroFontcolor:#fff; 
+
+//news
+//$news-button-background: #3498DB ;
+$news-pod-back:#ffffff ;
+$news-pod-border-color:#ddd;
+
+//accordion
+$accordion-color:#C71585;
+//$accordion-border-color:#ECF0F1;
+
+//highlighted box in contentAssets
+$highlighted-background-color:#F6F7FA;;
+$highlighted-font-color:#333;
+//$highlighted-alt-background-color:#f6f6f6 !default;
+//$highlighted-alt-font-color:#333 !default;
+
+
+//group promo colours
+$group-promo-background-color: #fff;
+$group-promo-header-color: #337ab7;
+$group-promo-description-color: #666B76;
+$group-promo-arrow-color: #C71585 ;
+
+//Block quote
+$blockquoteBorderColor:#F6F7FA;
+$blockquoteQuoteColor:#C71585;
+$blockquoteQuoteFooterColor:#C71585;
+
+
+
+@import 'mixins';
+@import 'variables';
+@import 'brandColors';
+
+// available sass files please un-comment out as required
+
+//@import 'mainMenuSubsites';
+@import 'breadcrumb';
+@import 'sectionSubsite';
+//@import 'promo';
+//@import 'carousel';
+//@import 'socialMedia';
+//@import 'sideNavigation';
+//@import 'blockLinks';
+@import 'accordion';
+@import 'promoGroup';
+@import 'alerts';
+//@import 'promoListwebpart';
+//@import 'eventsWebparts';
+@import 'sharepointOverides';
+@import 'iconLinks';
+@import 'heroBanner';
+@import 'news';
+@import 'polaroids';
+@import 'groupPromo';
+@import 'blocklinks';
+@import 'contentLink';
+@import 'docList';
+@import 'contentAssets';
+@import 'blockQuote';
+
+
+
+.header-nav-container .logo {
+    background:url(../images/logo.png) left center  no-repeat;
+    margin: 50px 0 50px -30px;
+    height:130px;
+    width:350px;
+    background-size:100%;
+    
+    &:hover{
+        text-decoration:none;
+    }
+
+
+        @media screen and (max-width:768px){
+            text-align: center;
+            margin:0 auto;
+
+        }
+}
+
+
+ul.breadcrumb li a {
+    background: transparent;
+}
+
+.mainContent {
+    margin: 0;
+}
+
+
+@font-face {
+	font-family: 'BebasNeuewebfont';
+	src: url('../fonts/BebasNeuewebfont.eot');
+	src: local('../fonts/BebasNeuewebfont'), url('../fonts/BebasNeuewebfont.woff') format('woff'), url('../fonts/BebasNeuewebfont.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_1962">Text with this font applied</p> */
+.fontsforweb_fontid_1962 {
+	font-family: 'BebasNeuewebfont' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
+
+h1, h2, h3, h4, h5 {
+	font-family: 'BebasNeuewebfont';
+}
+
+h1, h2, h3{
+
+	color: #414141;
+}
+
+
+.groupPromo{
+
+&.thirds{
+    li{
+            width: calc(100% * (1/3) - 5px) !important;
+    
+
+           @media (max-width: 1024px) {
+                    width: calc(100% * (1/2) - 5px) !important;
+            }
+
+              @media (max-width: 600px) {
+                    width: calc(100% ) !important;
+            }
+    }
+}  
+
+
+
+&.multiColors
+{
+
+ul li {
+
+
+    background:#ddd;
+    text-align:center;
+    border-radius:5px;
+
+   a 
+   {
+    background:transparent;   
+    padding:100px 30px;
+    border-radius:5px;
+
+   
+   h3{
+            font-size:50px;
+            font-weight:200;
+            line-height:50px;
+            padding-right:0px;
+
+            &:after{
+                display:none;
+            }
+    
+    }
+ @media (max-width: 600px) {
+       padding:30px;
+
+       h3{
+           font-size:40px;
+       }
+ }
+
+}
+
+}
+}
+
+}
+
+
+
+
+.groupPromo {
+
+    h3{
+        font-family:arial;
+        font-size:20px !important;
+    }
+
+    .listWebpart li.blue   {
+        @include groupPromoMulticolors(#0092DF, #fff, #fff,#fff);
+    }
+    .listWebpart li.pink {
+        @include groupPromoMulticolors(#eb278e, #fff,#fff,#fff);
+    }
+   .listWebpart li.green {
+        @include groupPromoMulticolors(#ABCE1E, #fff,#fff,#fff);
+    }
+
+ .listWebpart li.orange {
+        @include groupPromoMulticolors(#ffb200, #fff,#fff,#fff);
+    }
+
+     &.blue .listWebpart {
+        @include groupPromo(#0092DF, #fff, #fff,#fff);
+    }
+
+      &.pink .listWebpart {
+        @include groupPromo(#eb278e, #fff, #fff,#fff);
+    }
+
+      &.green .listWebpart {
+        @include groupPromo(#ABCE1E, #fff, #fff,#fff);
+    }
+
+      &.orange .listWebpart {
+        @include groupPromo(#ffb200, #fff, #fff,#fff);
+    }
+}
+
+
+.groupPromo ul li
+{
+  border-radius:0px;
+ a
+{ 
+     border-radius:0px;
+    
+    @media screen and (min-width:1200px){
+        min-height:120px;
+    }
+
+
+    h3 {
+    font-weight: 200;
+}
+}
+}
+
+ .highlighted {
+    padding: 25px; border: 5px solid #efefef;
+    border-radius: 13px;
+    background:transparent;
+
+    h2, h3{
+        margin-top:0px;
+        color:#C71585;
+    }
+
+    .highlighted {
+
+    margin: 2em 0 0 0;
+    background: #F6F7FA;
+    border:none;
+    border-radius:0px;
+}
+}
+
+
+
+ .col-md-4 .groupPromo.full ul{
+
+ border-bottom:1px solid #efefef;
+ 
+  li {
+     width: 100% !important;
+     margin:0px;
+
+    a{
+        min-height:auto;
+        border-top:1px solid #efefef;
+        padding:15px;
+    }
+} 
+ }
+
+
+
+
+
+

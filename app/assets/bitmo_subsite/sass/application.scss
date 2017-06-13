@@ -1,0 +1,170 @@
+// available variables to change the brand colours as required
+// masterhead.scss
+
+//$head-background: #ffffff;
+
+
+// mainMenu.scss -- responsive icons color
+//$menu-link-color:#337ab7;
+
+
+//base.scss
+
+//$base-background-color:#fff;
+//$base-font-size:16px ;
+//$base-font-color:#333 ;
+//$base-link-color:#133E8D ;
+//$base-container-width:1500px ;
+//$btn-background-color:green ;
+//$font-primary: Arial ; // main font
+//$font-secondary: Arial ; // secondary font
+
+
+// global used on all partials to get a uniform spacing between elements
+//$base-margin-bottom:1.875em ;
+
+//headerTop
+//$search-link-background:#F3F3F4 ;
+//$search-link:#333 ;
+
+// mainNav.scss
+
+$main-nav-background:#56843E ;
+//$main-nav-link:#fff ;
+
+//footer.scss
+//$footer-font-color:#fff ;
+//$footer-nav-selected-link:#133E8D ;
+
+// sectionSubsite.scss - socialamedia.scss
+//$section-Background:#efefef ;
+
+//  socialamedia.scss
+//$social-link-color:#337ab7 ;
+
+//  sideNavigation.scss
+//$side-nav-active-background:#133E8D ;
+
+//  carousel.scss
+//$carousel-active-background:#000 ;
+//$carousel-indicators-active-background:#ccc ;
+//$carousel-caption-background: rgba(0,0,0,0.6) ;
+//$carousel-caption-font-color:#fff ;
+
+
+// blocklinks.scss
+
+//$block-link-back:#f6f6f6 ;
+//$block-link-back-hover:#3380A4 ;
+//$promo-group-border:1px solid #fff ; 
+//$promo-group-background:#EDF2F5 ; 
+//$promo-group-li-background:#EDF2F5 ;
+//$promo-group-link-color:#216486 ;
+
+
+//promolist webpart
+//$link-font-color:#fff;
+//$span-info-color:#133E8D;
+//$span-info-hover:#131A22;
+//$span-info-secondary-color:#fff;
+//$span-arrow-base:darken($span-info-color, 10%);
+//$span-third-info-base:#f6f6f6;
+//$third-info-font-color:#333;
+//$arrow-color:#fff;
+//$contentFontColor:#333;
+//$content-arrow-color:#133E8D;
+//$content-border-color:#ddd;
+
+// section backgrounds
+$sectionHeader-background-color:#fff;
+$sectionOne-background-color:#fff;
+//$sectionTwo-background-color:darken($base-background-color, 10%) ;
+//$sectionThree-background-color:lighten($base-background-color, 3%) ;
+//$sectionFour-background-color:lighten($base-background-color, 5%) ;
+//$sectionFive-background-color:darken($base-background-color, 5%) ;
+
+//iconlinks
+//$iconLinkIconColor:#FFC82E;
+
+//heroBanner
+//$heroFontBackground:rgba(0, 0, 0, 0.5); 
+//$heroFontcolor:#fff; 
+
+//news
+//$news-button-background: #3498DB ;
+$news-pod-back:#ffffff ;
+$news-pod-border-color:#ddd;
+
+//accordion
+$accordion-color:green;
+//$accordion-border-color:#ECF0F1;
+
+@import 'mixins';
+@import 'variables';
+@import 'brandColors';
+
+// available sass files please un-comment out as required
+
+//@import 'mainMenuSubsites';
+@import 'breadcrumb';
+@import 'sectionSubsite';
+@import 'promo';
+@import 'carousel';
+//@import 'socialMedia';
+//@import 'sideNavigation';
+//@import 'blockLinks';
+@import 'accordion';
+//@import 'promoGroup';
+@import 'alerts';
+//@import 'promoListwebpart';
+//@import 'eventsWebparts';
+@import 'sharepointOverides';
+@import 'iconLinks';
+//@import 'heroBanner';
+//@import 'news';
+//@import 'polaroids';
+@import 'groupPromo';
+@import 'blocklinks';
+//@import 'contentLink';
+//@import 'docList';
+
+.sectionHeader{
+    border-top:1px solid #ddd;
+    padding:20px 0;
+
+            .header-left{
+                width:100%;
+                position:relative;
+
+
+                    .logo {
+                    background:url(../images/logo.png) left center no-repeat;
+                    margin: 30px 0px;
+                    height:96px;
+                    width:500px;
+
+                    
+                    &:hover{
+                        text-decoration:none;
+                                        }
+
+
+                                                    @media screen and (max-width:768px){
+                                                        text-align: center;
+
+                                                                            &:after{
+                                                                    font-size:30px;
+                                                                        text-align: center;
+
+
+                                                                }
+                                                                                       }
+                        }  
+                 } 
+         }
+
+
+    .groupPromo .listWebpart {
+    padding: 15px 0px 0px;
+    margin:0 -7.5px;
+}

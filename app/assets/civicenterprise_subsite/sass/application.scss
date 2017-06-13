@@ -1,0 +1,442 @@
+// available variables to change the brand colours as required
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600');
+// masterhead.scss
+
+//$head-background: #ffffff;
+
+
+// mainMenu.scss -- responsive icons color
+//$menu-link-color:#337ab7;
+
+
+//base.scss
+
+//$base-background-color:#fff;
+$base-font-size:18px ;
+//$base-font-color:#333 ;
+//$base-link-color:#133E8D ;
+//$base-container-width:1500px ;
+$btn-background-color:#721371 ;
+$font-primary: 'Open Sans', Arial ; // main font
+$font-secondary:'Open Sans', Arial ; // secondary font
+
+
+// global used on all partials to get a uniform spacing between elements
+//$base-margin-bottom:1.875em ;
+
+//headerTop
+//$search-link-background:#F3F3F4 ;
+//$search-link:#333 ;
+
+// mainNav.scss
+$main-nav-background:#f6f6f6 ;
+$main-nav-link:#414141 ;
+
+//footer.scss
+$footer-font-color:#414141 ;
+//$footer-nav-selected-link:#133E8D ;
+
+// sectionSubsite.scss - socialamedia.scss
+//$section-Background:#efefef ;
+
+//  socialamedia.scss
+//$social-link-color:#337ab7 ;
+
+//  sideNavigation.scss
+//$side-nav-active-background:#133E8D ;
+
+//  carousel.scss
+//$carousel-active-background:#000 ;
+//$carousel-indicators-active-background:#ccc ;
+//$carousel-caption-background: rgba(0,0,0,0.6) ;
+//$carousel-caption-font-color:#fff ;
+
+
+// blocklinks.scss
+
+//$block-link-back:#f6f6f6 ;
+//$block-link-back-hover:#3380A4 ;
+//$promo-group-border:1px solid #fff ; 
+//$promo-group-background:#EDF2F5 ; 
+//$promo-group-li-background:#EDF2F5 ;
+//$promo-group-link-color:#216486 ;
+
+
+//promolist webpart
+//$link-font-color:#fff;
+//$span-info-color:#133E8D;
+//$span-info-hover:#131A22;
+//$span-info-secondary-color:#fff;
+//$span-arrow-base:darken($span-info-color, 10%);
+//$span-third-info-base:#f6f6f6;
+//$third-info-font-color:#333;
+//$arrow-color:#fff;
+//$contentFontColor:#333;
+//$content-arrow-color:#133E8D;
+//$content-border-color:#ddd;
+
+// section backgrounds
+//$sectionHeader-background-color:lighten($base-background-color, 3%) ;
+$sectionOne-background-color:#fff;
+//$sectionTwo-background-color:darken($base-background-color, 10%) ;
+//$sectionThree-background-color:lighten($base-background-color, 3%) ;
+//$sectionFour-background-color:lighten($base-background-color, 5%) ;
+//$sectionFive-background-color:darken($base-background-color, 5%) ;
+
+//iconlinks
+//$iconLinkIconColor:#FFC82E;
+
+//heroBanner
+//$heroFontBackground:rgba(0, 0, 0, 0.5); 
+//$heroFontcolor:#fff; 
+
+//news
+//$news-button-background: #3498DB ;
+$news-pod-back:#ffffff ;
+$news-pod-border-color:#ddd;
+
+//accordion
+$accordion-color:#721371;
+//$accordion-border-color:#ECF0F1;
+
+
+//Block quote
+// $blockquoteBorderColor:#bbcada;
+ $blockquoteQuoteColor:#721371;
+// $blockquoteQuoteFooterColor:#000;
+
+//highlighted box in content assets
+$highlighted-background-color:#038fa5;
+$highlighted-font-color:#fff;
+$highlighted-alt-background-color:#f6f6f6 ;
+$highlighted-alt-font-color:#333;
+
+@import 'mixins';
+@import 'variables';
+@import 'brandColors';
+
+// available sass files please un-comment out as required
+
+//@import 'mainMenuSubsites';
+@import 'breadcrumb';
+@import 'sectionSubsite';
+@import 'promo';
+@import 'carousel';
+//@import 'socialMedia';
+//@import 'sideNavigation';
+//@import 'blockLinks';
+@import 'accordion';
+@import 'promoGroup';
+@import 'alerts';
+@import 'promoListwebpart';
+//@import 'eventsWebparts';
+@import 'sharepointOverides';
+@import 'iconLinks';
+@import 'heroBanner';
+@import 'news';
+@import 'polaroids';
+@import 'groupPromo';
+@import 'blocklinks';
+@import 'contentLink';
+@import 'docList';
+@import 'contentAssets';
+@import 'blockQuote';
+
+ 
+
+ .logo{
+        height:100px;
+        width:400px;
+        background:url(../images/logo.png) left top no-repeat;
+        margin:50px 0 20px 0;
+
+        @media (max-width: 900px){
+            margin:20px auto;
+            width:350px;
+            background-size:350px;
+      
+        }
+
+            @media (max-width:400px){
+             width:100%;
+            background-size:100%;
+      
+
+        }
+
+    }
+
+
+    p.lead{
+        font-size:25px;
+        font-weight:400;
+    }
+
+
+    .main-nav{
+
+        background:#fff;
+
+        &:after{
+            content:'';
+            background: #038fa5; /* Old browsers */
+            background: -moz-linear-gradient(-45deg, #038fa5 0%, #731378 19%, #c30c4a 39%, #da771f 74%, #b98f07 85%, #8c8705 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg, #038fa5 0%,#731378 19%,#c30c4a 39%,#da771f 74%,#b98f07 85%,#8c8705 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg, #038fa5 0%,#731378 19%,#c30c4a 39%,#da771f 74%,#b98f07 85%,#8c8705 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#038fa5', endColorstr='#8c8705',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+            width:100%;
+            height:10px;
+            left:0px;
+            position:absolute;
+            }
+        border-top:1px solid #ddd;
+
+        ul{
+            border-left:1px solid #ddd;
+
+            ul {
+                border:none; 
+
+                a{
+                    border:none;
+                }
+            }
+        }
+
+        a{
+            border-right:1px solid #ddd;
+        }
+    }
+
+    .masterhead {
+   border-bottom:1px solid #ddd;
+}
+
+
+
+footer.main{
+    &:before{
+        content:'';
+        position:absolute;
+        width:100%;
+        height:20px;
+    background: #038fa5; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #038fa5 0%, #731378 19%, #c30c4a 39%, #da771f 74%, #b98f07 85%, #8c8705 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #038fa5 0%,#731378 19%,#c30c4a 39%,#da771f 74%,#b98f07 85%,#8c8705 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #038fa5 0%,#731378 19%,#c30c4a 39%,#da771f 74%,#b98f07 85%,#8c8705 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#038fa5', endColorstr='#8c8705',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+}
+
+
+
+.highlighted{
+   background: #038fa5; /* Old browsers */
+background: -moz-linear-gradient(45deg, #038fa5 0%, #731378 50%, #c30c4a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #038fa5 0%,#731378 50%,#c30c4a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #038fa5 0%,#731378 50%,#c30c4a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#038fa5', endColorstr='#c30c4a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+em{
+    font-size:70px;
+    line-height:70px;
+
+    @media only screen and (max-width:768px) {
+        font-size:50px;
+        line-height:50px;
+    }
+}
+}
+
+
+
+ul.menu li a.main-menu {
+    background: #DD781B !important;
+    color: #fff;
+}
+
+
+@media (max-width: 767px){
+
+.main-nav {
+    background: #DD781B;
+    border:none;
+    margin-top:-1px;
+    
+    ul 
+    {
+    border:none;    
+    
+    li{
+        a{
+            border:none;
+            color:#fff;
+
+            &.selected{
+               background:darken(#DD781B,10%)!important; 
+            }
+        }
+    }
+    }
+
+}
+
+}
+
+
+//sidenav
+.sideNav {
+    padding: 0px;
+    margin:30px 0;
+    border-bottom:5px solid #bbcada;
+    background:transparent;
+
+    h3{
+        margin:0;
+        background: #721371;
+        color:#fff;
+        padding:20px 15px;
+    }
+
+    ul{
+        margin:0;
+        padding:0;
+
+        li{
+            margin: 0;
+            padding:0;
+
+            &:first-of-type a{
+                  background: $btn-background-color;
+                  color:#fff;
+                  padding:20px 15px;
+
+                   &.active, &.active:hover {
+                    color: #fff;
+                    background:#721371 !important;
+
+
+
+                }
+     
+            }
+
+            a {
+                font-size: 1.2em;
+                margin: 0;
+                padding: 20px 15px;
+                background: transparent;
+                width: 100%;
+                border-bottom: 1px solid #bbcada;
+                text-decoration:none !important;
+                font-weight:600;
+
+                &:hover{
+                    color: darken($base-link-color, 10%);
+                    background:#f2f2f2 !important;
+                }
+
+                &.active, &.active:hover {
+                    color: #721371;
+                    background:transparent !important;
+                    cursor:default;
+                }
+            }
+        }
+
+      }
+
+    
+}
+
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-tv-selected:link, a.ms-tv-header:hover, a.ms-tv-item:hover {
+    background-color: #f2f2f2;
+    color: orange;
+}
+
+
+.groupPromo .listWebpart{ 
+    ul li a {
+    min-height:150px;
+    h3{
+        font-weight:400;
+    }
+}
+}
+
+.groupPromo {
+
+    .listWebpart li.blue  {
+        @include groupPromoMulticolors(#00ADEE, #fff, #fff,#fff);
+    }
+
+      .listWebpart li.pink {
+        @include groupPromoMulticolors(#C50650, #fff, #fff,#fff);
+    }
+
+     .listWebpart li.green {
+        @include groupPromoMulticolors(#00919E, #fff, #fff,#fff);
+    }
+
+     .listWebpart li.orange {
+        @include groupPromoMulticolors(#DD781B, #fff, #fff,#fff);
+    }
+
+    
+ .listWebpart li.purple {
+        @include groupPromoMulticolors(#721371, #fff, #fff,#fff);
+    }
+
+.listWebpart li.darkgreen {
+        @include groupPromoMulticolors(#376250, #fff, #fff,#fff);
+    }
+
+
+.listWebpart li.olive {
+        @include groupPromoMulticolors(#8C8A00, #fff, #fff,#fff);
+    }
+
+.listWebpart  li.gold {
+        @include groupPromoMulticolors(#BA8C09, #fff, #fff,#fff);
+    }
+
+} 
+
+.limitedrte-Style-right-blue {
+    -ms-name: "BOX RIGHT Purple";
+    background: none repeat scroll 0 0 #efefef;
+    border-right: 10px solid #721371;
+    color: #333333;
+    float: right;
+    font-size: 1.2em;
+    margin:30px 0 30px 30px;
+    width: 40%;
+    padding: 20px;
+
+    @media only screen and (max-width:768px){
+      width:100%;
+      margin:30px 0;
+    }
+}
+
+.limitedrte-Style-blockquote-blue {
+    -ms-name: "BLOCKQUOTE Purple";
+    background: none repeat scroll 0 0 #efefef;
+    border-left: 10px solid #721371;
+    color: #333333;
+    margin: 30px 30px 30px 0;
+    padding:20px;
+    font-size: 1.1em;
+    line-height: 1.4em;
+
+    
+    @media only screen and (max-width:768px){
+      width:100%;
+      margin:30px 0;
+    }
+}
+
+
+.logo-footer span {
+    background: url(../../images/lcclogo.svg) center center no-repeat;
+}
