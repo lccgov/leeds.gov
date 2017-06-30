@@ -1,4 +1,5 @@
 {
     "webparts": ["LCCNewsArchiveFilter", "LCCNewsDateFilter", "LCCNewsKeywordFilter", "LCCNewsResults", "LCCNewsResultsSearch"],
-    "footerSubsites": ["bsc_subsite"]
+    "footerSubsites": ["adopt4leeds_subsite", "assistedliving_subsite", "bipcleeds_subsite", "bitmo_subsite","bsc_subsite", "childfriendlyleeds_subsite","civicenterprise_subsite", "domesticviolence_subsite","foster4leeds_subsite","leedsenterprisezone_subsite", "leedsmarkets_subsite", "leedsmic_subsite","leedspathways_subsite", "museumsandgalleries_subsite", "saferleeds_subsite", "youthinformationhub_subsite", "abbeyhouse_subsite", "armleymills_subsite", "discoverycentre_subsite", "kirkstallabbey_subsite", "leedsartgallery_subsite",
+    "leedscitymuseum_subsite", "templenewsamhouse_subsite", "thwaitemills_subsite" ]
 }

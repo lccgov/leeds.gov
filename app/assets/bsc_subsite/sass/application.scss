@@ -101,9 +101,14 @@ $accordion-color:#00929f;
 //$accordion-border-color:#ECF0F1;
 
 //Block quote
-// $blockquoteBorderColor:#bbcada;
- $blockquoteQuoteColor:#00929f;
+$blockquoteBorderColor:#bbcada;
+$blockquoteQuoteColor:#00929f;
 $blockquoteQuoteFooterColor:#00929f;
+
+
+//Arrow Link
+$ArrowLinkBorderColor:$blockquoteBorderColor;
+$ArrowLinkColor:$blockquoteQuoteColor;
 
 @import 'mixins';
 @import 'variables';
@@ -258,49 +263,6 @@ footer.main:before{
 
 
 
-a.arrow {
-    padding: 15px;
-    //background: #fff url(../images/sidebarArrow.png) no-repeat 5px 50%;
-    display:block;
-    position:relative;
-    border-bottom:1px solid #bbcada ;
-
-    &:first-of-type{
-        border-top:1px solid #bbcada;
-    }
-
-
-        
-    &:after{
-    content:'\f105';    
-    font-family: FontAwesome;
-    font-size: 20px;
-    border-radius: 50%;
-    border: 2px solid #DF791C;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    padding: 2px 0 0 2px;
-    margin: -18px 5px 0 0;
-    color:#DF791C;
-    display:inline-block;
-    right:0px;
-    position:absolute;
-    top:50%;
-    
- 
-    }  
-
-       &:hover{
-       background:#f2f2f2;
-
-       &:after{
-        background:#DF791C;
-        color:#fff;
-    }
-       }
-}
-
 
 .heroBanner .container-fluid h1, .heroBanner .container-fluid p.lead {
     color: #414141;
@@ -403,13 +365,9 @@ a.arrow {
 
 
 
-.breadrumb ul {
-    padding:0px;
-    margin:0px;
-}
-
 
 blockquote p {
     font-size: 20px !important;
 }
+
 

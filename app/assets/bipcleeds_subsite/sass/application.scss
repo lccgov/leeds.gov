@@ -95,8 +95,20 @@ $news-pod-back:#ffffff ;
 $news-pod-border-color:#ddd;
 
 //accordion
-$accordion-color:green;
+$accordion-color:#803f92;
 //$accordion-border-color:#ECF0F1;
+
+//Block quote
+ $blockquoteBorderColor:#efefef;
+ $blockquoteQuoteColor:#803f92;
+$blockquoteQuoteFooterColor:#803f92;
+
+
+//Arrow Link
+$ArrowLinkBorderColor:$blockquoteBorderColor;
+$ArrowLinkColor:$blockquoteQuoteColor;
+
+
 
 @import 'mixins';
 @import 'variables';
@@ -126,6 +138,8 @@ $accordion-color:green;
 @import 'blocklinks';
 @import 'contentLink';
 @import 'docList';
+@import 'blockQuote';
+@import 'contentAssets';
 
 
 h2{
@@ -282,27 +296,6 @@ h3{
     
 }
 
-.related{
-      border:none;
-
-      h3  {
-         background: transparent;
-         color:#333;
-         font-size:20px;
-         font-weight:600;
-    }
-
-   ul li a{
-                font-size: 1.2em;
-                margin: 0;
-                padding: 10px 15px;
-                background: transparent;
-                width: 100%;
-                border-bottom:none;
-                text-decoration:none !important;
-                font-weight:600;
-    }
-}
 
 .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-tv-selected:link, a.ms-tv-header:hover, a.ms-tv-item:hover {
     background-color: #f2f2f2;
@@ -311,4 +304,10 @@ h3{
 
 footer.main{
     border-top:10px solid #803F92;
+}
+
+
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-tv-selected:link, a.ms-tv-header:hover, a.ms-tv-item:hover, .main-nav ul li a.selected  {
+    background-color:  #803f92 !important;
+    color: #fff;
 }

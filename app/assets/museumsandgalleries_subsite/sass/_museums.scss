@@ -461,6 +461,10 @@ ul.footerLogos{
      @include ulStyle;
      margin:15px 15px 30px 15px;
 
+     a{
+         display:block;
+     }
+
      img{
          margin-bottom:5px;
      }
@@ -559,4 +563,3 @@ ul.footerLogos{
 .groupPromo ul li a h3 {
     font-weight: 400;
 }
-
