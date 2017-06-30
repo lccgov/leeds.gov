@@ -1,0 +1,199 @@
+.header-lcc{
+    .logo {
+        height: auto;
+        width: auto;
+        background: none;
+        display:inline-block;
+        margin:9px 0;
+        text-decoration:none;
+        border:0;
+        font-size:36px;
+        text-transform:uppercase;
+        font-weight:700;
+        color: #fff;
+
+        @media (max-width: 767px) {
+            font-size:26px;
+        }
+
+        &:after{
+            display:none;
+        }
+
+        &:hover{
+            color:$light-grey;
+        }
+    }
+
+    .header-nav{
+        float:right;
+
+        a{
+            cursor:pointer;
+            color:#ffffff !important;
+            display:inline-block;
+            background:$secondary-link-color;
+            text-decoration:none;
+            margin:5px 0;
+            padding:14px 15px;
+
+            @media (min-width: 767px) {
+                border-bottom:2px solid darken($secondary-link-color,10%);
+            }
+
+            &:before{
+                font-family: "FontAwesome";
+            }
+
+            &:hover{
+                background:lighten($secondary-link-color,5%) !important;
+                border-color:lighten($secondary-link-color,5%)
+            }
+
+            &:focus{
+                background:$focus-color !important;
+                color:$base-font-color !important;
+                border-color:$focus-color !important;
+            }
+
+            &.active{
+                background:darken($secondary-link-color,3%) !important;
+                color:#fff !important;
+
+                &:hover{
+                    background:lighten($secondary-link-color,6%) !important;
+                }
+            }
+
+            &:active{
+                background:lighten($secondary-link-color,3%) !important;
+                color:#fff !important;
+                border-color:lighten($secondary-link-color,3%) !important;
+            }
+
+            &.my-account{
+                @include border-radius(4px);
+
+                &:before {
+                    content: "\f007"; 
+                    margin-right:5px;
+                }
+            }
+
+            &.search{
+                @media (min-width: 767px) {
+                    display:none;
+                }
+
+                &:before {
+                    content: "\f002"; 
+                }
+
+                &.active{
+                    &:before {
+                        content: "\f00d"; 
+                    }
+                }
+            }
+
+            @media (max-width: 767px) {
+                font-size: 8px;
+                padding: 10px 5px;
+                line-height: 1;
+                min-height: 0;
+                display: inline-block;
+                text-align:center;
+                color:#ffffff;
+                width:60px;
+                margin:0 !important;
+
+                @media (max-width: 350px) {
+                    font-size: 7px;
+                    padding: 10px 3px;
+                    width:45px;
+
+                    &:before{
+                        font-size:16px;
+                    }
+                }
+
+                &:before{
+                    display:block;
+                    width:100%;
+                    margin-bottom:3px;
+                    font-size:20px;
+                    float:none;
+                }
+
+                &.my-account{
+                    @include border-radius(0px);
+                    margin-right:-3px !important;
+                }
+            }
+        }
+    }
+
+}
+
+//search
+#nav-search {
+    margin: 5px;
+    float:right;
+
+    .ms-srch-sb > input{
+        outline:0;
+        
+        &:focus{
+            -webkit-box-shadow: 0 0 0 4px $focus-color !important;
+            -moz-box-shadow: 0 0 0 4px $focus-color !important;
+            box-shadow: 0 0 0 4px $focus-color !important;
+        }
+    }
+
+    .ms-srch-sb-searchLink{
+        margin: 0 !important;
+        padding:0 15px;
+
+        &:before{
+            font-size:34px;
+            content: "\f002";
+            margin:0;
+        }
+    }
+}
+
+@media (max-width: 767px){
+   #nav-search {
+        position: absolute;
+        top:50px;
+        left: 0px;
+        padding: 15px;
+        height: auto;
+        width: 100%;
+        z-index: 10;
+        display: none;
+        margin:0;
+        background:darken($secondary-link-color,5%) !important;
+
+        .ms-srch-sb-searchLink{
+            padding:0;
+            line-height:55px;
+            background:$green;
+
+            &:hover{
+                background:$light-green !important;
+            }
+
+            &:active{
+                background:darken($button-color,5%) !important;
+                color:#fff !important;
+            }
+        
+            &:before{
+                font-size:34px;
+                content: "\f002";
+                margin:0;
+            }
+        }
+    }
+}

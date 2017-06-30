@@ -19,158 +19,49 @@
   }
 }
 
-.swatch-purple {
-  background-color: #2e358b;
-}
-
-.swatch-mauve {
-  background-color: #6f72af;
-}
-
-.swatch-fuschia {
-  background-color: #912b88;
-}
-
-.swatch-pink {
-  background-color: #d53880;
-}
-
-.swatch-baby-pink {
-  background-color: #f499be;
-}
-
-.swatch-red {
-  background-color: #b10e1e;
-}
-
-.swatch-mellow-red {
-  background-color: #df3034;
-}
-
-.swatch-orange {
-  background-color: #f47738;
-}
-
-.swatch-brown {
-  background-color: #b58840;
-}
-
-.swatch-yellow {
-  background-color: #ffbf47;
-}
-
-.swatch-green {
-  background-color: #006435;
-}
-
-.swatch-grass-green {
-  background-color: #85994b;
-}
-
-.swatch-turquoise {
-  background-color: #28a197;
-}
-
-.swatch-light-blue {
-  background-color: #2b8cc4;
-}
-
-.swatch-govuk-blue {
-  background-color: #005ea5;
-}
-
-.swatch-alpha {
-  background-color: #005ea5;
-}
-
-.swatch-beta {
-  background-color: #005ea5;
-}
-
-.swatch-discovery {
-  background-color: #005ea5;
-}
-
-.swatch-live {
-  background-color: #85994b;
-}
-
-.swatch-error {
-  background-color: #b10e1e;
-}
-
-.swatch-focus {
-  background-color: #ffbf47;
-}
-
-.swatch-button-colour {
-  background-color: #00823b;
-}
-
-.swatch-black {
-  background-color: #0b0c0c;
-}
-
-.swatch-grey-1 {
-  background-color: #6f777b;
-}
-
-.swatch-grey-2 {
-  background-color: #bfc1c3;
-}
-
-.swatch-grey-3 {
-  background-color: #dee0e2;
-}
-
-.swatch-grey-4 {
-  background-color: #f8f8f8;
-}
-
-.swatch-white {
-  background-color: #fff;
-  border: 1px solid #dee0e2;
-}
-
 .swatch-text-colour {
-  background-color: #0b0c0c;
+  background-color: $base-font-color;
 }
 
 .swatch-text-secondary {
-  background-color: #6f777b;
+  background-color: $secondary-font-color;
 }
 
 .swatch-page-colour {
   background-color: #fff;
-  border: 1px solid #dee0e2;
+  border: 1px solid $border-color
 }
 
 .swatch-button-colour {
-  background-color: #00823b;
+  background-color: $button-color;
+}
+
+.swatch-button-hover-colour {
+  background-color: $button-hover-color;
 }
 
 .swatch-link-colour {
-  background-color: #005ea5;
+  background-color: $base-link-color;
 }
 
 .swatch-link-colour-visited {
-  background-color: #4c2c92;
+  background-color: $base-link-visited-color;
 }
 
 .swatch-link-colour-hover {
-  background-color: #2b8cc4;
+  background-color: $base-link-hover-color;
 }
 
 .swatch-border-colour {
-  background-color: #bfc1c3;
+  background-color: $border-color;
 }
 
 .swatch-panel-colour {
-  background-color: #dee0e2;
+  background-color: $panel-color;
 }
 
-.swatch-highlight-colour {
-  background-color: #f8f8f8;
+.swatch-focus {
+  background-color: $focus-color;
 }
 
 @media (min-width: 641px) {
@@ -199,9 +90,6 @@
 }
 
 .swatch-wrapper li {
-  font-family: "nta", Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
 }

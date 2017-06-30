@@ -1,3 +1,7 @@
+//default sharpoint css - REMOVE BEFORE UPLOADING
+//@import 'sharepoint_core_15';
+//@import 'sharepoint_search_15';
+
 // available variables to change the brand colours as required
 // masterhead.scss
 
@@ -9,10 +13,12 @@
 //base.scss
 
 //base colours
-$blue:#016D9E;
-$dark-blue: darken(#016D9E, 20%);
-$light-blue: lighten(#016D9E, 20%);
+$blue:#007299;
+$dark-blue: #003F55;
+$light-blue: #3399BB;
+$pale-blue: #b3d9e6;
 $green:#008000;
+$light-green:#009A00;
 $black:#212224;
 $light-black:#3D414A;
 $dark-grey:#666B76;
@@ -20,16 +26,24 @@ $grey:#9DA5B2;
 $light-grey:#DCDEE1;
 $lighter-grey:#F6F7FA;
 $white:#FFFFFF;
-$focus-color:#FFBF47;
+$yellow:#FFBF47;
+$dark-yellow:#FAA300;
 
 //$base-background-color:#fff;
 $base-font-size:16px ;
-$base-font-color:$light-black;
+$base-font-color:$black;
 $header-font-color:$black;
 $base-link-color:$blue;
+$base-link-hover-color:$light-blue;
+$base-link-visited-color:#4C2C92;
+$secondary-link-color:$dark-blue;
 $secondary-font-color:$dark-grey;
-$border-grey:$light-grey;
+$border-color:$light-grey;
+$panel-color:darken($lighter-grey,3%);
 $brand-color:$blue;
+$button-color:$green;
+$button-hover-color:lighten($green,5%);
+$focus-color:$yellow;
 $base-container-width:1400px ;
 //$btn-background-color:green ;
 $font-primary:proxima-nova, sans-serif; // main font
@@ -91,10 +105,10 @@ $main-nav-background:lighten( $brand-color, 3% );
 //section backgrounds
 $sectionHeader-background-color:$brand-color;
 $sectionOne-background-color:#fff;
-$sectionTwo-background-color:$lighter-grey;
-//$sectionThree-background-color:lighten($base-background-color, 3%) ;
-//$sectionFour-background-color:lighten($base-background-color, 5%) ;
-//$sectionFive-background-color:darken($base-background-color, 5%) ;
+$sectionTwo-background-color:#fff;
+$sectionThree-background-color:#fff;
+$sectionFour-background-color:#fff;
+$sectionFive-background-color:#fff;
 
 //iconlinks
 //$iconLinkIconColor:#FFC82E;
@@ -124,12 +138,12 @@ $news-pod-border-color:#ddd;
 //$highlighted-alt-font-color:#333 !default;
 
 //mega-promo
-$promo-background-color:#3D414A;
-$promo-arrow-color:#fff;
-$promo-header-color:#fff;
-$promo-secondary-color:#fff;
-$promo-highlight-background-color:lighten(#3D414A, 15%);
-$promo-highlight-color:#fff;
+$promo-background-color:$lighter-grey;
+$promo-arrow-color:$blue;
+$promo-header-color:$blue;
+$promo-secondary-color:$black;
+$promo-highlight-background-color:$dark-blue;
+$promo-highlight-color:$white;
 
 //button colours
 $primary-button-background-color:$green;
@@ -138,6 +152,16 @@ $secondary-button-background-color:$blue;
 $secondary-button-color:$white;
 $outline-button-border-color:$blue;
 $outline-button-color:$blue;
+
+//group promo colours
+$group-promo-background-color: $lighter-grey;
+$group-promo-header-color: $blue;
+$group-promo-description-color: $black;
+$group-promo-arrow-color: $grey;
+
+//form colours
+$input-color:$black;
+$input-border-color:$grey;
 
 @import 'mixins';
 @import 'variables';
@@ -169,95 +193,444 @@ $outline-button-color:$blue;
 @import 'docList';
 @import 'contentAssets';
 @import 'blockQuote';
+@import 'accessibility';
+@import 'mega-promo';
+@import 'buttons';
 
 //custom style added by DH - needs to filed properly
-@import 'group-promo-lcc';
+@import 'browser-alert';
+@import 'hero-lcc';
+@import 'easy-autocomplete';
+@import 'typography-lcc';
 @import 'forms';
 @import 'sub-section-nav';
-@import 'buttons';
-@import 'mega-promo';
-@import 'hero-lcc';
 @import 'prism';
-@import 'typography-lcc';
 @import 'swatch-lcc';
 @import 'code-example';
 @import 'sticky';
-@import 'accessibility';
 @import 'footer-lcc';
+@import 'atoz';
+@import 'side-nav';
+@import 'pagination';
+@import 'part-nav';
+@import 'tables';
 @import 'lcc-digital';
+@import 'search-lcc';
+@import 'header-lcc';
+@import 'ie-support';
+@import 'open-data';
+@import 'search-results';
+@import 'venue-details';
+@import 'phase-banner';
+@import 'sharepoint_2010_style_fallback';
+
+//site background
+html{
+    background-color:$blue;
+}
+
+//bootsrap override
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+//accordion
+ul.accordion {
+  margin:1.4em 0 2.4em;
+
+  li {
+    border-color:$border-color;
+    border-bottom:1px solid $border-color;
+
+    a.header {
+      @include link-border-bottom($base-link-color,0,$base-link-color);
+      border:none !important;
+      font-weight:700;
+      padding: 20px 40px 20px 0;
+      text-decoration:none !important;
+      font-size:19px;
+
+      @media (max-width: 641px){
+        font-size:16px;
+      }
+
+      &:after {
+      font-family: FontAwesome;
+      font-size: 24px;
+      content: "\f067";
+      position: absolute;
+      right: 0;
+      top:50%;
+      margin-top:-14px;
+      color: $base-link-color;
+      }
+    }
+  }
+
+  .list{
+    a{
+      text-decoration:none;
+    }
+  }
+}
+
+//hr
+hr{
+  border-color:rgba( $border-color, .5 );
+}
 
 
 //Rm quick add to be removed when we consolidate group promo styling
-
-
-
-.groupPromo .listWebpart {
-    margin:0 -15px;
-}
-
-
-.groupPromo.default .listWebpart ul li a {
-    margin: 0 7.5px 15px;
-    padding: 30px 60px 30px 30px;
-    display: block;
-    font-weight: 600;
-    position: relative;
-    width: auto;
-    color: #216486;
-    font-size: 1.313em;
-    background:#F6F7FA;
-    border:none;
-    text-decoration:none;
-    position:relative;
-
-    span{
-      font-size: 18px;
-    font-weight: 300;
-    margin-top: 10px;
-    margin-bottom: 0;
-    color:#212224;
-    }
-
-    &:after {
-    content: '\f105';
-    font-family: FontAwesome;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    color: #DCDEE1;
-    font:30px;
-    }
-
-        &:hover{
-      background:#216486;
-      color:#fff;
-
-      span, &:after{
-        color:#fff;
-      }
-}
-}
-
-.groupPromo.default.home .listWebpart ul li a {
-  background:#fff;
-
-   &:hover{
-     background:#216486;
-   }
-}
-
-
 .sub-section-heading {
     border-bottom: 1px solid #DCDEE1;
     margin: 0 0 20px;
     padding-bottom: 10px;
 }
 
+//group promo
+.groupPromo{
+    a{
+        border:0;
 
+        @media (max-width: 767px){
+            h3:after {
+                top: 0 !important;
+                right: 0 !important;
+                margin:0 !important;
+            }
+        }
+
+        &:focus{
+            h3,
+            h3:after,
+            p{
+                color:$base-font-color;
+            }
+        }
+    }
+
+    &.home ul{
+        margin:30px 0 30px -6px;
+
+        @media (max-width: 600px) {
+            margin:0 -15px 15px -15px;
+        }
+        li{
+            background:$white;
+
+            a{
+                background:$white;
+            }
+        }
+    }
+}
+
+//override group promo hover styles
+.groupPromo ul li a{
+    &:hover{
+        background:$blue !important;
+
+        h3,
+        p{
+            color:$white !important;
+        }
+
+        h3{
+            &:after{
+                color:$white !important;
+            }
+        }
+    }
+
+    &:active{
+        background:darken($blue,5%) !important;
+    }
+}
+
+//custom mega-promo
+.mega-promo{
+    .mega-promo__item{
+         a:hover{
+             background:darken($blue,5%);
+
+             .mega-promo__header,
+             .mega-promo__secondary,
+             &:after{
+                color:$white;
+             }
+         }
+    }
+}
+
+.mega-promo{
+    .mega-promo__item{
+         &.blue{
+            @include mega-promo-colors($blue, $white, $white, $white, $promo-highlight-background-color, $promo-highlight-color);
+        }
+    }
+}
+
+.col-md-8{
+    @media (min-width: 767px){
+        .mega-promo .mega-promo__item.two-thirds .mega-promo__header, 
+        .mega-promo .mega-promo__item.half .mega-promo__header {
+            font-size: 24px !important;
+        }
+    }
+    .mega-promo .mega-promo__item.featured .mega-promo__header {
+        font-size: 32px !important;
+        line-height: 36px !important;
+    }
+}
+
+//anchor border bottom stye overrides
+
+.carousel .carousel-caption a,
+.mega-promo a,
+.groupPromo a,
+.promoListWebpart a,
+.main-nav ul li a,
+.promo-group a,
+#paging .contentPod a{
+    border:0;
+}
+
+//doclist
 .docList.one .listWebpart ul li {
   float:none;
 }
 
+.docList.one li a:before {
+    top: 22px;
+
+    @media (max-width: 641px) {
+        top: 20px;
+    }
+}
+
+.docList li {
+    @media (max-width: 600px) {
+        padding: 5px 0;
+    }
+}
+
+//description-list
+.list-definition__heading {
+    border-top: 1px solid $light-grey;
+    clear: left;
+    font-weight: bold;
+    padding-top: 1rem;
+
+    @media (min-width: 767px) {
+        float: left;
+        padding: 1rem .75rem;
+        text-align: right;
+        width: 25%;
+    }
+}
+.list-definition__content {
+    margin: 0;
+    padding-bottom: 1rem;
+    padding-top: .25rem;
+
+    @media (min-width: 767px) {
+        border-top: 1px solid $light-grey;
+        float: left;
+        padding: 1rem .75rem;
+        width: 75%;
+    }
+}
+
+//docs
+.docList li a {
+    text-decoration:none;
+    border-color:$light-grey;
+
+    span.thirdInfo {
+        font-weight: 300;
+        color:$dark-grey;
+    }
+}
+
+//breadcrumb
+.breadcrumb {
+    padding: 0 0 12px;
+    margin: 10px 0 0;
+    font-size: 16px;
+
+    @media (max-width: 767px) {
+        padding: 0 0 10px;
+        font-size: 14px;
+    }
+
+    ul{
+        padding:0;
+        margin-left:16px;
+
+        li{
+
+            a{
+            position:relative;
 
 
-//End Rm quick add to be removed when we consolidate group promo styling
+                &:after {
+                    position:absolute;
+                    display:inline-block;
+                    content: "/";
+                    font-size: 16px;
+                    padding: 0 8px;
+                    text-decoration:none !important;
+                }
+            }
+        }
+    }
+}
+
+/*could be coded better*/
+.breadcrumb ul:first-child{
+  margin-left:0;
+}
+
+
+//buttons
+.btn-primary{
+    border-bottom:2px solid darken($primary-button-background-color,5%);
+}
+.btn-secondary{
+    border-bottom:2px solid darken($secondary-button-background-color,5%);
+}
+
+//back to top (focus fix)
+.cd-top:focus{
+    background:$focus-color url("images/cd-top-arrow.svg") no-repeat center 50% !important;
+    opacity:1;
+}
+
+//buttons
+.btn{
+    font-weight:400;
+}
+
+//page content
+#main {
+    .col-md-8{
+        @media (min-width: 990px){
+            padding-right:30px;
+        }
+    }
+    .col-md-4{
+        @media (min-width: 990px){
+            padding-left:30px;
+        }
+    }
+}
+
+//video container
+.media-container{
+    margin:30px 0;
+}
+
+//clear
+.clear{
+    padding:0 !important;
+}
+
+.highlight-box{
+    padding:30px;
+    margin:5px 0 20px;
+    background:$panel-color;
+
+    @media (max-width: 641px){
+            padding: 15px;
+        }
+
+    h1, h2, h3, h4{
+        margin-bottom:10px;
+    }
+
+    p:last-child{
+        margin-bottom:0;
+    }
+
+    &.highlight-box__blue{
+        background:$pale-blue;
+    }
+}
+
+//images
+.img-content{
+    display: block;
+    max-width: 100%;
+    width:100%;
+    height: auto;
+    padding:5px 0 20px;
+
+    &.img-right{
+        float:right;
+        padding:5px 0 20px 30px;
+    }
+
+    &.img-left{
+        float:left;
+        padding:5px 30px 20px 0;
+    }
+
+    &.img-right,
+    &.img-left{
+        width:50%;
+
+        @media (max-width: 641px){
+            width:100%;
+            float:none;
+            padding:5px 0 20px;
+        }
+    }
+}
+
+//self service custom
+.header-actions{
+    position:absolute;
+    top:-110px;
+    right:15px;
+
+    @media (max-width: 641px){
+        position:relative;
+        top:auto;
+        right:auto;
+        margin-bottom:20px;
+    }
+}
+
+//group promo external link
+.groupPromo{
+    li{
+        a[rel="external"],
+        a.external{
+            &:after{
+                display:none;
+            }
+
+            h3{
+                &:after{
+                    content: "\f08e";
+                    color:$base-link-color;
+                }
+            }
+        }
+    }
+}
+
+//mega promo fix
+@media (min-width: 767px){
+    .mega-promo .mega-promo__item a .mega-promo__content {
+        display: block;
+        padding: 20px;
+    }
+    .mega-promo .mega-promo__item a {
+        padding-bottom: 50px;
+    }
+    .mega-promo .mega-promo__item.featured a {
+        padding-bottom: 0px;
+    }
+}

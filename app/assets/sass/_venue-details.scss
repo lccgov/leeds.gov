@@ -1,0 +1,53 @@
+.venue-details{
+    margin:10px 0 30px;
+
+    .venue-details__item{
+        border-bottom:1px solid $border-color;
+
+        h3{
+            font-size:19px;
+            margin:0;
+            padding-top: 1rem;
+
+            @media (min-width: 641px) {
+                float:left;
+                width:25%;
+                padding: 1rem .75rem;
+            }
+        }
+
+        .venue-details__item-content{
+            margin: 0;
+            padding-bottom: 1rem;
+            padding-top: .25rem;
+
+            @media (min-width: 641px) {
+                float:left;
+                width:75%;
+                padding: 1rem .75rem;
+            }
+
+            p,
+            ul,
+            li,
+            .text-highlight{
+                &:last-child{
+                    margin-bottom:0;
+                }
+
+                @media (min-width: 641px) {
+                    &:first-child{
+                        margin-top:0;
+                    }
+                }
+            }
+
+            p{
+                margin-bottom:10px;
+            }
+            .text-highlight{
+                margin:10px 0;
+            }
+        }
+    }
+}

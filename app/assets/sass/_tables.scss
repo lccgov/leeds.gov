@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+table th {
+    font-weight: 700;
+}
+
+table th, table td {
+    @extend .font-small;
+    padding: 0.63158em 1.05263em 0.47368em 0;
+    text-align: left;
+    border-bottom: 1px solid $light-grey;
+}

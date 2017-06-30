@@ -1,0 +1,48 @@
+.open-data{
+    padding:0;
+
+    a{
+        text-decoration:underline !important;
+    }
+
+    li{
+        border-bottom:1px solid $border-color !important;
+        margin-top:20px;
+        position:relative;
+
+        &:last-child{
+            border:0 !important;
+        }
+
+        .heading-small{
+            @media (min-width: 767px){
+                padding-right: 180px;
+            }
+        }
+
+        .open-data__link{
+            @media (min-width: 767px){
+                position:absolute;
+                right:0;
+                top:0;
+            }
+        }
+
+        .open-data__info{
+            margin:10px 0 20px;
+
+            .open-data__info-cost,
+            .open-data__info-contact,
+            .open-data__info-format{
+                border:0 !important;
+                font-size:16px;
+                margin:5px 0 0;
+
+                @media (min-width: 767px){
+                    float:left;
+                    margin: 0 25px 0 0;
+                }
+            }
+        }
+    }
+}
