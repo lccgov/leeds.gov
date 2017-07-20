@@ -215,6 +215,8 @@ $highlighted-alt-font-color:#333;
 
 
 footer.main{
+   margin-top:50px;  
+ 
     &:before{
         content:'';
         position:absolute;
@@ -439,4 +441,20 @@ ul.menu li a.main-menu {
 
 .logo-footer span {
     background: url(../../images/lcclogo.svg) center center no-repeat;
+}
+
+.sectionSubsite {
+    margin: 0 0 0 0;
+    padding:0px;
+    width: 100%;
+    background: transparent;
+
+    p{
+        padding:0 15px 15px 0px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
 }

@@ -99,6 +99,8 @@ $news-pod-border-color:#ddd;
 $accordion-color:green;
 //$accordion-border-color:#ECF0F1;
 
+$white:#fff;
+
 @import 'mixins';
 @import 'variables';
 @import 'brandColors';
@@ -126,7 +128,14 @@ $accordion-color:green;
 @import 'groupPromo';
 @import 'blocklinks';
 //@import 'contentLink';
-//@import 'docList';
+@import 'mega-promo';
+@import 'docList';
+//@import 'contentAssets';
+@import 'typography-lcc';
+@import 'buttons';
+@import 'tables';
+@import 'description_list_accessible';
+@import 'images';
 
 .sectionHeader{
     border-top:1px solid #ddd;
@@ -167,4 +176,39 @@ $accordion-color:green;
     .groupPromo .listWebpart {
     padding: 15px 0px 0px;
     margin:0 -7.5px;
+}
+
+
+
+.relatedPages
+{
+    border-top:10px solid $section-Background;
+
+    h3{
+        margin-top:20px;
+    }
+    
+    li a {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 15px 20px 10px;
+    margin: 0;
+    font-weight:bold;
+}}
+
+
+
+.ms-rteStyle-Normal{
+    font-size:$base-font-size;
+}
+
+.ms-rteStyle-Normal {
+    font-family:$font-primary;
+    font-size: $base-font-size;
+    color: $base-font-color;
+    background-color: transparent;
+}
+
+footer.main {
+    margin-top:50px;
 }

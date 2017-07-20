@@ -15,7 +15,7 @@ $base-background-color:#fff;
 //$base-font-color:#333 ;
 $base-link-color:#133E8D ;
 //$base-container-width:1500px ;
-$btn-background-color:#133E8D ;
+$btn-background-color:#663399 ;
 //$font-primary: Arial ; // main font
 //$font-secondary: Arial ; // secondary font
 
@@ -120,26 +120,32 @@ $ArrowLinkColor:$blockquoteQuoteColor;
 @import 'breadcrumb';
 @import 'sectionSubsite';
 @import 'promo';
-@import 'carousel';
+//@import 'carousel';
 //@import 'socialMedia';
 @import 'sideNavigation';
 //@import 'blockLinks';
 @import 'accordion';
 @import 'promoGroup';
 @import 'alerts';
-@import 'promoListwebpart';
+//@import 'promoListwebpart';
 //@import 'eventsWebparts';
 @import 'sharepointOverides';
-@import 'iconLinks';
-@import 'heroBanner';
-@import 'news';
-@import 'polaroids';
+//@import 'iconLinks';
+//@import 'heroBanner';
+//@import 'news';
+//@import 'polaroids';
 @import 'groupPromo';
-@import 'blocklinks';
-@import 'contentLink';
+//@import 'blocklinks';
+//@import 'contentLink';
 @import 'docList';
 @import 'blockQuote';
 @import 'contentAssets';
+@import 'accessibility';
+@import 'browser-alert';
+@import 'contentAssets';
+@import 'typography-lcc';
+@import 'buttons';
+@import 'tables';
 
 
 h2{
@@ -269,9 +275,9 @@ h3{
             }
 
             a {
-                font-size: 1.2em;
+                font-size: 1.1em;
                 margin: 0;
-                padding: 20px 15px;
+                padding:15px;
                 background: transparent;
                 width: 100%;
                 border-bottom: 1px solid #bbcada;
@@ -285,7 +291,7 @@ h3{
 
                 &.active, &.active:hover {
                     color: #803F92;
-                    background:transparent !important;
+                    background:#f6f6f6 !important;
                     cursor:default;
                 }
             }
@@ -304,6 +310,7 @@ h3{
 
 footer.main{
     border-top:10px solid #803F92;
+    margin-top:50px;
 }
 
 

@@ -12,12 +12,20 @@
 
 //$base-background-color:#fff;
 $base-font-size:20px ;
-$base-font-color:#576170 ;
+$base-font-color:#212224 ;
 $base-link-color:#F38520 ;
 //$base-container-width:1500px ;
 $btn-background-color:#FFC82E ;
 $font-primary: oswald, Arial ; // main font
 $font-secondary: oswald, Arial ; // secondary font
+
+//button colours
+$primary-button-background-color:#FFC82E;
+//$primary-button-color:white !default;
+$secondary-button-background-color:#F38520;
+//$secondary-button-color:white !default;
+$outline-button-border-color:#FFC82E !default;
+$outline-button-color:#FFC82E !default;
 
 
 // global used on all partials to get a uniform spacing between elements
@@ -108,8 +116,12 @@ $blockquoteQuoteFooterColor:#999;
 //highlighted box in contentAssets
 $highlighted-background-color:#f38520;
 $highlighted-font-color:#fff;
-$highlighted-alt-background-color:#dde6f1;
-$highlighted-alt-font-color:#576170;
+$highlighted-alt-background-color:#414141;
+$highlighted-alt-font-color:#fff;
+
+
+
+$white:#fff;
 
 @import 'mixins';
 @import 'variables';
@@ -139,8 +151,10 @@ $highlighted-alt-font-color:#576170;
 @import 'blocklinks';
 @import 'contentLink';
 @import 'docList';
+@import 'typography-lcc';
+@import 'buttons';
+@import 'tables';
 @import 'contentAssets';
-
 
 
 
@@ -209,27 +223,25 @@ body{
     }
 }
 
-.sectionFive{
 
-
-    background: #F0EFEF url(../images/silloette.png) no-repeat center bottom;
-    padding-bottom: 200px;
-
+.silloette{
+      background: url(../images/silloette.png) no-repeat center bottom;  
+      height:200px;
+      margin:30px 0;
 }
 
 footer.main, footer.main .footer,  {
   background:#fff;
 
   .footerGlobal{
-      background:#f6f6f6;
+      background:#F0EFEF;
   }
 }
 
 .promoListWebpart{
 
-.info{
-    font-size:22px !important;
-}
+ margin:50px -15px;   
+
 
     .content p, .contentLink p
 
@@ -291,7 +303,8 @@ strong {
     padding: 20px;
     text-decoration: none;
     font-size: 24px;
-    text-transform: uppercase;}
+    text-transform: uppercase;
+    font-weight:100;}
 
 
 .btn:after, .button:after, .btn:visited:after, .button:visited:after {
@@ -330,75 +343,10 @@ strong {
     }
 }
 
-//sidenav
+
+
+//sidenav 
 .sideNav {
-    padding: 0px;
-    margin:30px 0;
-    border-bottom:5px solid #bbcada;
-    background:transparent;
-
-    h3{
-        margin:0;
-        background: #F38520;
-        color:#fff;
-        padding:20px 15px;
-    }
-
-    ul{
-        margin:0;
-        padding:0;
-
-        li{
-            margin: 0;
-            padding:0;
-
-            &:first-of-type a{
-                  background:#F38520;
-                  color:#fff;
-                  padding:20px 15px;
-
-                   &.active, &.active:hover {
-                    color: #fff;
-                    background:#F38520 !important;
-
-
-
-                }
-     
-            }
-
-            a {
-                font-size: 1.2em;
-                margin: 0;
-                padding: 20px 15px;
-                background: transparent;
-                width: 100%;
-                border-bottom: 1px solid #bbcada;
-                text-decoration:none !important;
-                font-weight:400;
-                text-transform: uppercase !important;
-
-                &:hover{
-                    color: darken($base-link-color, 10%);
-                    background:#f2f2f2 !important;
-                }
-
-                &.active, &.active:hover {
-                    color: #F38520;
-                    background:transparent !important;
-                    cursor:default;
-                }
-
-            }
-        }
-
-      }
-
-    
-}
-
-//sidenav
-.topNav {
     padding: 0px;
     margin:0px 0;
     border-bottom:1px solid #efefef;
@@ -422,10 +370,6 @@ strong {
             padding:0;
             display:inline-block;
 
-            &:first-of-type a{
-              display:none;
-                 
-            }
 
             a {
                 font-size: 1.2em;
@@ -464,13 +408,16 @@ strong {
 }
 
 .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-tv-selected:link, a.ms-tv-header:hover, a.ms-tv-item:hover {
-    background-color: #f2f2f2;
-    color: #F38520;
+    background-color: #E3730D;
+    color: #fff;
 }
 
-.promoListWebpart {
-    margin:0 -15px;
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-tv-selected:link, a.ms-tv-header:hover, a.ms-tv-item:hover,.ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link  {
+    background-color: #e3730d !important;
+    color: #fff;
 }
+
+
 .promoListWebpart .border 
 {
   height:auto;
@@ -552,9 +499,10 @@ p strong.lead,  p strong.lead
 
 
 
- .btn, .button, .btn:visited, .button:visited, .ms-rteElement-button
+  .ms-rteElement-button
     {
       position:relative;
+      display:inline-block;
       padding: 15px 55px 15px 35px;
       color:#fff;
       background:$btn-background-color;
@@ -599,4 +547,12 @@ p strong.lead,  p strong.lead
 
 .logo-footer span {
     background: url(../../images/lcclogo.svg) center center no-repeat;
+}
+
+.media-container{
+    background:#fff;
+}
+.breadcrumb ul {
+    margin:0px;
+    padding:0px;
 }
