@@ -1,0 +1,97 @@
+//group promo custom for leeds.gov.uk
+.groupPromo{
+    ul{
+        margin-top:0;
+
+        li{
+            a{
+                border:0;
+
+                h3{
+                    padding-right: 25px;
+                    font-weight:600;
+
+                    &:after{
+                        @media (max-width: 767px){
+                            top: 0 !important;
+                            right: 0 !important;
+                            margin:0 !important;
+                        }
+                    }
+                }
+
+                p{
+                    font-weight:400;
+                    color:$secondary-font-color;
+
+                    @media (max-width: 767px){
+                        font-size:16px;
+                    }
+                }
+
+                &:focus{
+                    h3,
+                    h3:after,
+                    p{
+                        color:$base-font-color;
+                    }
+                }
+
+                &:hover{
+                    background:$lighter-grey;
+
+                    h3{
+                        color:$light-blue;
+                        text-decoration:underline;
+
+                        &:after{
+                            color:$light-blue;
+                        }
+                    }
+                    p{
+                        color:$secondary-font-color;
+                    }
+                }
+
+                &:active{
+                    background:darken($lighter-grey,2%) !important;
+                }
+            }
+
+            //external link
+            a[rel="external"],
+            a.external{
+                &:after{
+                    display:none;
+                }
+
+                h3{
+                    &:after{
+                        content: "\f08e";
+                        color:$grey;
+                    }
+                }
+            }
+        }
+    }
+    
+    //custom style for homepage
+    &.home ul{
+        margin:30px 0 30px -6px;
+
+        @media (max-width: 600px) {
+            margin:0 -15px 15px -15px;
+        }
+        li{
+            background:white;
+
+            a{
+                background:white;
+
+                &:hover{
+                    background:white !important;
+                }
+            }
+        }
+    }
+}

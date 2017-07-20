@@ -1,0 +1,65 @@
+//docList custom for leeds.gov.uk
+.docList {
+    .listWebpart{
+        ul{
+            li{
+
+                @media (max-width: 600px) {
+                    padding: 5px 0;
+                }
+
+                a {
+                    text-decoration:none;
+                    border-color:$border-color;
+
+                    span.thirdInfo {
+                        font-weight: 300;
+                        color:$dark-grey;
+                    }
+                }
+            }
+        }
+    }
+
+    &.one{
+        .listWebpart{
+            ul{
+                li{
+                    float:none;
+
+                    a{
+                        &:before {
+                            top: 22px;
+
+                            @media (max-width: 641px) {
+                                top: 20px;
+                            }
+                        }
+                    }
+
+                    &:first-of-type {
+                        a{
+                            border-top: 1px solid $border-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.one, 
+    &.two, 
+    &.three, 
+    &.four, 
+    &.five {
+        margin: 30px 0;
+
+        ul{
+            li{
+                a{
+                    border-bottom: 1px solid $border-color;
+                }
+            }
+        }
+    }
+}

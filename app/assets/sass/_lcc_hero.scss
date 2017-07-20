@@ -1,3 +1,4 @@
+// custom for leeds.gov.uk
 .hero-lcc-wrapper{
     background-image: none;
     background-color:rgba(9,59,81,1);
@@ -84,6 +85,7 @@
                         margin:0 0 5px;
                     }
 
+                    //bootstrap style
                     .hero-lcc__search{
                         position:relative;
 
@@ -139,7 +141,7 @@
                             margin:0;
 
                             &:hover{
-                                background:$light-green;
+                                background:$button-hover-color;
                                 color:$white;
                             }
 

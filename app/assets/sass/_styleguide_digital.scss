@@ -9,7 +9,7 @@
 
 //logo
 .header-left{
-  padding-left: 0 !important;
+  padding:0 !important;
 }
 .logo {
     height: auto;
@@ -19,9 +19,11 @@
     margin:9px 0;
     text-decoration:none;
     border:0;
+    font-family:$font-secondary;
+    font-weight:600;
 
     &:after{
-        content:'LEEDS.GOV.UK';
+        content:'LCC DIGITAL';
         font-size:36px;
         text-transform:uppercase;
         font-weight:700;
@@ -33,13 +35,12 @@
     }
 
     &:hover{
-      color:$light-grey;
+      color:$border-color;
     }
 }
 
 //nav
 .main-nav ul li {
-
     a{
       font-size:18px;
       padding:12px;
@@ -48,15 +49,45 @@
 }
 
 //secondary-nav
-.secondary-nav{
   .heading-contents{
-    margin-top:0;
+    margin-top:0.46875em;
   }
-}
 
 @media screen and (max-width: 400px){
   .highlighted a.btn {
       width: auto;
   }
+}
+
+//hr
+hr {
+    margin-top: 40px;
+}
+
+.copyright{
+  @media (min-width: 767px){
+      text-align:right !important;
+      margin-top:50px;
+  }
+}
+
+.lcc-digital-header{
+  background:$lighter-grey;
+  padding:60px 0;
+
+  h1,
+  p{
+    width:50%;
+  }
+
+  h1{
+    margin:0 0 20px;
+  }
+
+  p{
+    font-size:24px;
+    margin:0;
+  }
+
 }
 

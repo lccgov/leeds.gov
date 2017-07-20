@@ -1,0 +1,69 @@
+.mega-promo {
+    .mega-promo__item {
+        a {
+            .mega-promo__content {
+                .mega-promo__header{
+                    font-weight:600 !important;
+                }
+
+                .mega-promo__secondary{
+                    color:$secondary-font-color;
+                    font-weight:400;
+                }
+            }
+
+            &:hover{
+             background:darken($blue,5%);
+
+                .mega-promo__header,
+                .mega-promo__secondary,
+                &:after{
+                    color:$white !important;
+                }
+            }
+        }
+    }
+}
+
+//mixin for blue promo
+.mega-promo{
+    .mega-promo__item{
+         &.blue{
+            @include mega-promo-colors($blue, $white, $white, $white, $promo-highlight-background-color, $promo-highlight-color);
+        }
+    }
+}
+
+//font size fixes - should move to front-end toolkit? 
+.col-md-8{
+    @media (min-width: 767px){
+        .mega-promo .mega-promo__item.two-thirds .mega-promo__header, 
+        .mega-promo .mega-promo__item.half .mega-promo__header {
+            font-size: 24px !important;
+        }
+    }
+    .mega-promo .mega-promo__item.featured .mega-promo__header {
+        font-size: 32px !important;
+        line-height: 36px !important;
+    }
+}
+
+@media (max-width: 600px){
+    .mega-promo .mega-promo__item.featured {
+        width: auto !important;
+    }
+}
+
+//mega promo fix - should move to front-end toolkit?
+@media (min-width: 767px){
+    .mega-promo .mega-promo__item a .mega-promo__content {
+        display: block;
+        padding: 20px;
+    }
+    .mega-promo .mega-promo__item a {
+        padding-bottom: 50px;
+    }
+    .mega-promo .mega-promo__item.featured a {
+        padding-bottom: 0px;
+    }
+}

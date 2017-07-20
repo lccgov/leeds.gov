@@ -1,3 +1,24 @@
+//reveal text swap
+$('.reveal-code').click(function(){
+		var $this = $(this);
+		if($this.hasClass('collapsed')){
+			$this.text(' Hide code');			
+		} else {
+			$this.text(' Show code');
+		}
+	});
+    
+//input block label
+$('input:radio').click(function() {
+    $('input:radio[name='+$(this).attr('name')+']').parent().removeClass('active');
+        $(this).parent().addClass('active');
+});
+
+//input block label
+$('input:checkbox').click(function() {
+    	$(this).parent().toggleClass('active');
+});
+
 //sticky-nav
 function sticky_relocate() {
     var window_top = $(window).scrollTop();
@@ -68,4 +89,3 @@ document.addEventListener("DOMContentLoaded", randomImage);
 };
 
 $("#hero-site-search").easyAutocomplete(options);
-

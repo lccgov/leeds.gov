@@ -2,6 +2,9 @@
 //@import 'sharepoint_core_15';
 //@import 'sharepoint_search_15';
 
+//google fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:400,700'); 
+
 // available variables to change the brand colours as required
 // masterhead.scss
 
@@ -30,7 +33,7 @@ $yellow:#FFBF47;
 $dark-yellow:#FAA300;
 
 //$base-background-color:#fff;
-$base-font-size:16px ;
+$base-font-size:16px;
 $base-font-color:$black;
 $header-font-color:$black;
 $base-link-color:$blue;
@@ -39,15 +42,19 @@ $base-link-visited-color:#4C2C92;
 $secondary-link-color:$dark-blue;
 $secondary-font-color:$dark-grey;
 $border-color:$light-grey;
-$panel-color:darken($lighter-grey,3%);
 $brand-color:$blue;
 $button-color:$green;
-$button-hover-color:lighten($green,5%);
+$button-hover-color:lighten($button-color,5%);
 $focus-color:$yellow;
 $base-container-width:1400px ;
 //$btn-background-color:green ;
-$font-primary:proxima-nova, sans-serif; // main font
-$font-secondary:proxima-nova, sans-serif; // secondary font
+$font-primary:'Open Sans', sans-serif; // main font
+$font-secondary:'Montserrat', sans-serif; // secondary font used for headings
+//$header-font-weight: 600;
+
+//panel colours
+$panel-color:#E5F1F5;
+$panel-color-secondary:#DCDEE1;
 
 //global used on all partials to get a uniform spacing between elements
 //$base-margin-bottom:1.875em ;
@@ -139,7 +146,7 @@ $news-pod-border-color:#ddd;
 
 //mega-promo
 $promo-background-color:$lighter-grey;
-$promo-arrow-color:$blue;
+$promo-arrow-color:#9DA5B2;
 $promo-header-color:$blue;
 $promo-secondary-color:$black;
 $promo-highlight-background-color:$dark-blue;
@@ -167,62 +174,78 @@ $input-border-color:$grey;
 @import 'variables';
 @import 'brandColors';
 
-//available sass files please un-comment out as required
+//FRONT END TOOLKIT SASS FILES
 
-//@import 'mainMenuSubsites';
-@import 'breadcrumb';
-@import 'sectionSubsite';
-@import 'promo';
-@import 'carousel';
-//@import 'socialMedia';
-//@import 'sideNavigation';
-//@import 'blockLinks';
-@import 'accordion';
-@import 'promoGroup';
-@import 'alerts';
-@import 'promoListwebpart';
-//@import 'eventsWebparts';
+//available sass files please un-comment out as required
 @import 'sharepointOverides';
-@import 'iconLinks';
-@import 'heroBanner';
+//@import 'mainMenuSubsites'; //subsites only
+//@import 'socialMedia'; //subsites only
+//@import 'sideNavigation'; //subsites only
+@import 'blocklinks'; //subsites only
+@import 'contentLink'; //subsites only
+//@import 'contentAssets'; //subsites only
+@import 'polaroids'; //subsites only
+@import 'iconLinks'; //subsites only
+@import 'heroBanner'; //subsites only
+@import 'promoListwebpart'; //subsites only
+@import 'promoGroup'; //subsites only
+@import 'sectionSubsite'; //subsites only
+@import 'promo'; //subsites only
+@import 'carousel'; //subsites only
+//@import 'eventsWebparts'; //subsites only
+@import 'breadcrumb';
+@import 'accordion';
+@import 'alerts';
 @import 'news';
-@import 'polaroids';
 @import 'groupPromo';
-@import 'blocklinks';
-@import 'contentLink';
 @import 'docList';
-@import 'contentAssets';
 @import 'blockQuote';
 @import 'accessibility';
 @import 'mega-promo';
 @import 'buttons';
-
-//custom style added by DH - needs to filed properly
 @import 'browser-alert';
-@import 'hero-lcc';
-@import 'easy-autocomplete';
 @import 'typography-lcc';
-@import 'forms';
-@import 'sub-section-nav';
-@import 'prism';
-@import 'swatch-lcc';
-@import 'code-example';
-@import 'sticky';
-@import 'footer-lcc';
-@import 'atoz';
+@import 'tables';
+@import 'form_elements';
+@import 'images';
+@import 'webchat';
+@import 'description_list_accessible';
+@import 'phase-banner';
 @import 'side-nav';
 @import 'pagination';
 @import 'part-nav';
-@import 'tables';
-@import 'lcc-digital';
-@import 'search-lcc';
-@import 'header-lcc';
-@import 'ie-support';
-@import 'open-data';
+@import 'sub-section-nav';
+@import 'atoz';
+@import 'lcc_search';
+
+//CUSTOM SASS FILES FOR STYLE GUIDE
+//@import 'prism';
+@import 'styleguide_digital';
+//@import 'styleguide_code-example';
+//@import 'styleguide_sticky';
+//@import 'styleguide_swatch';
+
+//CUSTOM SASS FILES FOR LEEDS.GOV.UK
+//@import 'easy-autocomplete';
 @import 'search-results';
-@import 'venue-details';
-@import 'phase-banner';
+@import 'where-i-live';
+@import 'open-data';
+//@import 'hero-lcc-sharepoint';
+@import 'lcc_hero';
+//@import 'lcc_accordion';
+@import 'lcc_group-promo';
+@import 'lcc_mega-promo';
+@import 'lcc_doclist';
+@import 'lcc_news';
+@import 'ie-support';
 @import 'sharepoint_2010_style_fallback';
+
+//in front end toolkit
+@import 'lcc_footer';
+@import 'lcc_header';
+
+
+//CUSTOM STYLES FOR LEEDS.GOV.UK
 
 //site background
 html{
@@ -235,51 +258,10 @@ html{
     padding-left: 15px;
 }
 
-//accordion
-ul.accordion {
-  margin:1.4em 0 2.4em;
-
-  li {
-    border-color:$border-color;
-    border-bottom:1px solid $border-color;
-
-    a.header {
-      @include link-border-bottom($base-link-color,0,$base-link-color);
-      border:none !important;
-      font-weight:700;
-      padding: 20px 40px 20px 0;
-      text-decoration:none !important;
-      font-size:19px;
-
-      @media (max-width: 641px){
-        font-size:16px;
-      }
-
-      &:after {
-      font-family: FontAwesome;
-      font-size: 24px;
-      content: "\f067";
-      position: absolute;
-      right: 0;
-      top:50%;
-      margin-top:-14px;
-      color: $base-link-color;
-      }
-    }
-  }
-
-  .list{
-    a{
-      text-decoration:none;
-    }
-  }
-}
-
 //hr
 hr{
   border-color:rgba( $border-color, .5 );
 }
-
 
 //Rm quick add to be removed when we consolidate group promo styling
 .sub-section-heading {
@@ -287,211 +269,6 @@ hr{
     margin: 0 0 20px;
     padding-bottom: 10px;
 }
-
-//group promo
-.groupPromo{
-    a{
-        border:0;
-
-        @media (max-width: 767px){
-            h3:after {
-                top: 0 !important;
-                right: 0 !important;
-                margin:0 !important;
-            }
-        }
-
-        &:focus{
-            h3,
-            h3:after,
-            p{
-                color:$base-font-color;
-            }
-        }
-    }
-
-    &.home ul{
-        margin:30px 0 30px -6px;
-
-        @media (max-width: 600px) {
-            margin:0 -15px 15px -15px;
-        }
-        li{
-            background:$white;
-
-            a{
-                background:$white;
-            }
-        }
-    }
-}
-
-//override group promo hover styles
-.groupPromo ul li a{
-    &:hover{
-        background:$blue !important;
-
-        h3,
-        p{
-            color:$white !important;
-        }
-
-        h3{
-            &:after{
-                color:$white !important;
-            }
-        }
-    }
-
-    &:active{
-        background:darken($blue,5%) !important;
-    }
-}
-
-//custom mega-promo
-.mega-promo{
-    .mega-promo__item{
-         a:hover{
-             background:darken($blue,5%);
-
-             .mega-promo__header,
-             .mega-promo__secondary,
-             &:after{
-                color:$white;
-             }
-         }
-    }
-}
-
-.mega-promo{
-    .mega-promo__item{
-         &.blue{
-            @include mega-promo-colors($blue, $white, $white, $white, $promo-highlight-background-color, $promo-highlight-color);
-        }
-    }
-}
-
-.col-md-8{
-    @media (min-width: 767px){
-        .mega-promo .mega-promo__item.two-thirds .mega-promo__header, 
-        .mega-promo .mega-promo__item.half .mega-promo__header {
-            font-size: 24px !important;
-        }
-    }
-    .mega-promo .mega-promo__item.featured .mega-promo__header {
-        font-size: 32px !important;
-        line-height: 36px !important;
-    }
-}
-
-//anchor border bottom stye overrides
-
-.carousel .carousel-caption a,
-.mega-promo a,
-.groupPromo a,
-.promoListWebpart a,
-.main-nav ul li a,
-.promo-group a,
-#paging .contentPod a{
-    border:0;
-}
-
-//doclist
-.docList.one .listWebpart ul li {
-  float:none;
-}
-
-.docList.one li a:before {
-    top: 22px;
-
-    @media (max-width: 641px) {
-        top: 20px;
-    }
-}
-
-.docList li {
-    @media (max-width: 600px) {
-        padding: 5px 0;
-    }
-}
-
-//description-list
-.list-definition__heading {
-    border-top: 1px solid $light-grey;
-    clear: left;
-    font-weight: bold;
-    padding-top: 1rem;
-
-    @media (min-width: 767px) {
-        float: left;
-        padding: 1rem .75rem;
-        text-align: right;
-        width: 25%;
-    }
-}
-.list-definition__content {
-    margin: 0;
-    padding-bottom: 1rem;
-    padding-top: .25rem;
-
-    @media (min-width: 767px) {
-        border-top: 1px solid $light-grey;
-        float: left;
-        padding: 1rem .75rem;
-        width: 75%;
-    }
-}
-
-//docs
-.docList li a {
-    text-decoration:none;
-    border-color:$light-grey;
-
-    span.thirdInfo {
-        font-weight: 300;
-        color:$dark-grey;
-    }
-}
-
-//breadcrumb
-.breadcrumb {
-    padding: 0 0 12px;
-    margin: 10px 0 0;
-    font-size: 16px;
-
-    @media (max-width: 767px) {
-        padding: 0 0 10px;
-        font-size: 14px;
-    }
-
-    ul{
-        padding:0;
-        margin-left:16px;
-
-        li{
-
-            a{
-            position:relative;
-
-
-                &:after {
-                    position:absolute;
-                    display:inline-block;
-                    content: "/";
-                    font-size: 16px;
-                    padding: 0 8px;
-                    text-decoration:none !important;
-                }
-            }
-        }
-    }
-}
-
-/*could be coded better*/
-.breadcrumb ul:first-child{
-  margin-left:0;
-}
-
 
 //buttons
 .btn-primary{
@@ -501,29 +278,18 @@ hr{
     border-bottom:2px solid darken($secondary-button-background-color,5%);
 }
 
+.btn{
+    font-weight:400;
+
+    &:focus{
+        border-color:$focus-color !important;
+    }
+}
+
 //back to top (focus fix)
 .cd-top:focus{
     background:$focus-color url("images/cd-top-arrow.svg") no-repeat center 50% !important;
     opacity:1;
-}
-
-//buttons
-.btn{
-    font-weight:400;
-}
-
-//page content
-#main {
-    .col-md-8{
-        @media (min-width: 990px){
-            padding-right:30px;
-        }
-    }
-    .col-md-4{
-        @media (min-width: 990px){
-            padding-left:30px;
-        }
-    }
 }
 
 //video container
@@ -534,58 +300,6 @@ hr{
 //clear
 .clear{
     padding:0 !important;
-}
-
-.highlight-box{
-    padding:30px;
-    margin:5px 0 20px;
-    background:$panel-color;
-
-    @media (max-width: 641px){
-            padding: 15px;
-        }
-
-    h1, h2, h3, h4{
-        margin-bottom:10px;
-    }
-
-    p:last-child{
-        margin-bottom:0;
-    }
-
-    &.highlight-box__blue{
-        background:$pale-blue;
-    }
-}
-
-//images
-.img-content{
-    display: block;
-    max-width: 100%;
-    width:100%;
-    height: auto;
-    padding:5px 0 20px;
-
-    &.img-right{
-        float:right;
-        padding:5px 0 20px 30px;
-    }
-
-    &.img-left{
-        float:left;
-        padding:5px 30px 20px 0;
-    }
-
-    &.img-right,
-    &.img-left{
-        width:50%;
-
-        @media (max-width: 641px){
-            width:100%;
-            float:none;
-            padding:5px 0 20px;
-        }
-    }
 }
 
 //self service custom
@@ -602,35 +316,40 @@ hr{
     }
 }
 
-//group promo external link
-.groupPromo{
-    li{
-        a[rel="external"],
-        a.external{
-            &:after{
-                display:none;
-            }
-
-            h3{
-                &:after{
-                    content: "\f08e";
-                    color:$base-link-color;
-                }
-            }
-        }
-    }
+//to be added to front end tookit
+.lead a[rel="external"] {
+    margin-right: 32px;
 }
 
-//mega promo fix
-@media (min-width: 767px){
-    .mega-promo .mega-promo__item a .mega-promo__content {
-        display: block;
-        padding: 20px;
+.intro{
+    text-align:center;
+    max-width:35em;
+    margin:70px auto;
+
+    @media (max-width: 641px){
+        margin:40px auto;
     }
-    .mega-promo .mega-promo__item a {
-        padding-bottom: 50px;
+
+    h1{
+        font-size:70px;
+        margin:0 0 25px;
+
+        @media (max-width: 641px){
+            font-size:40px;
+            margin:0 0 20px;
+        }
+        
+        span{
+            font-size:20px;
+            display:block;
+        }
     }
-    .mega-promo .mega-promo__item.featured a {
-        padding-bottom: 0px;
+
+    p.lead{
+        margin:0 0 40px;
+
+        @media (max-width: 641px){
+            margin:0 0 30px;
+        }
     }
 }
