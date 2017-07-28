@@ -263,13 +263,6 @@ hr{
   border-color:rgba( $border-color, .5 );
 }
 
-//Rm quick add to be removed when we consolidate group promo styling
-.sub-section-heading {
-    border-bottom: 1px solid #DCDEE1;
-    margin: 0 0 20px;
-    padding-bottom: 10px;
-}
-
 //buttons
 .btn-primary{
     border-bottom:2px solid darken($primary-button-background-color,5%);
@@ -352,4 +345,9 @@ hr{
             margin:0 0 30px;
         }
     }
+}
+
+#DeltaPlaceHolderMain .atoz{
+    margin-top: 0;
+    margin-bottom: 0;
 }
