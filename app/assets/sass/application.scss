@@ -230,15 +230,13 @@ $input-border-color:$grey;
 @import 'search-results';
 @import 'where-i-live';
 @import 'open-data';
-//@import 'hero-lcc-sharepoint';
 @import 'lcc_hero';
-//@import 'lcc_accordion';
-@import 'lcc_group-promo';
-@import 'lcc_mega-promo';
-@import 'lcc_doclist';
 @import 'lcc_news';
 @import 'ie-support';
 @import 'sharepoint_2010_style_fallback';
+
+//BASE LEEDS.GOV.UK STYLES
+@import 'lcc_base_styles';
 
 //in front end toolkit
 @import 'lcc_footer';
