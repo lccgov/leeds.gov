@@ -345,7 +345,15 @@ hr{
     }
 }
 
-#DeltaPlaceHolderMain .atoz{
-    margin-top: 0;
-    margin-bottom: 0;
+
+//need adding o front-end toolkit
+
+.header-nav{
+    @media (max-width: 400px){
+        width:100% !important;
+    }
+}
+
+.atoz ul li:last-of-type a{
+    width:74px;
 }
