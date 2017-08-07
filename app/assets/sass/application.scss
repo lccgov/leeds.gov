@@ -269,14 +269,6 @@ hr{
     border-bottom:2px solid darken($secondary-button-background-color,5%);
 }
 
-.btn{
-    font-weight:400;
-
-    &:focus{
-        border-color:$focus-color !important;
-    }
-}
-
 //back to top (focus fix)
 .cd-top:focus{
     background:$focus-color url("images/cd-top-arrow.svg") no-repeat center 50% !important;
@@ -307,53 +299,143 @@ hr{
     }
 }
 
-//to be added to front end tookit
-.lead a[rel="external"] {
-    margin-right: 32px;
-}
+//promo
+.promo a{
+    span {
+        background: $base-link-color;
+        font-family:$font-secondary;
+        font-weight:600;
+        padding: 20px 40px 20px 20px;
 
-.intro{
-    text-align:center;
-    max-width:35em;
-    margin:70px auto;
-
-    @media (max-width: 641px){
-        margin:40px auto;
-    }
-
-    h1{
-        font-size:70px;
-        margin:0 0 25px;
-
-        @media (max-width: 641px){
-            font-size:40px;
-            margin:0 0 20px;
-        }
-        
-        span{
-            font-size:20px;
-            display:block;
+        &:after{
+            bottom:17px;
+            right: 20px;
+            font-size:26px;
+            height:auto;
+            width:auto;
         }
     }
 
-    p.lead{
-        margin:0 0 40px;
+    &:hover span{
+        padding: 20px 40px 30px 20px;
+        background: rgba($base-link-color,0.95);
+        text-decoration:underline;
 
-        @media (max-width: 641px){
-            margin:0 0 30px;
+        &:after{       
+            bottom:27px;
+            right: 20px;
+            text-decoration:none;
         }
     }
 }
 
-
-//need adding o front-end toolkit
-
-.header-nav{
-    @media (max-width: 400px){
-        width:100% !important;
+.promoListWebpart {
+    ol, ul{
+        margin:0;
+        padding:0;
     }
 }
 
-.atoz ul li:last-of-type a{
-    width:74px;
+//right hand column top margin
+aside.col-md-4{
+    margin-top:50px;
+
+    @media (max-width: 990px) {
+        margin-top:30px;
+    }
+
+    &.empty{
+        margin-top:0 !important;
+    }
+}
+
+.col-md-8 .groupPromo ul {
+        margin-top: 30px;
+}
+
+//need adding to front-end toolkit
+.list-atoz{
+    padding:0;
+    float:none;
+
+    li{
+        padding:0;
+
+        h2{
+            margin:20px 0;
+        }
+    }
+}
+
+//sub section sp styling for summary links
+.sub-section-heading{
+    border-bottom:5px solid #F6F7FA;
+    margin:30px 0 15px;
+    padding-bottom:10px;
+    font-size:24px;
+
+    @media (max-width: 767px) {
+        font-size:19px;
+        margin:20px 0 15px;
+    }
+}
+
+.sub-section-heading + .list-nav{
+    margin-bottom:20px;
+}
+
+.column-third,
+.col-md-8 .col-sm-6{
+    .dfwp-column {
+        float: none;
+        padding-left:0;
+    }
+}
+
+.column-thirds .column-third{
+    @media (min-width: 1200px) {
+        &:nth-child(4){
+            clear:left;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+        width:50%;
+
+        &:nth-child(3),
+        &:nth-child(5){
+            clear:left;
+        }
+    }
+    @media (max-width: 767px) {
+        clear:none;
+    }
+}
+
+.socialBookmarks ul li a:visited{
+    color:$blue;
+}
+
+#ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ul.list-nav{
+    list-style:none;
+    padding-left:0;
+}
+
+.sub-section-nav .sub-section a {
+
+    .sub-section-heading{
+        text-decoration:none;
+        color:$base-link-color;
+    }
+
+    &:visited,
+    &:visited .sub-section-heading{
+        text-decoration:none !important;
+        color: #663399;
+    }
+}
+
+.list-nav .contact{
+    i{
+        margin-right:10px;
+    }
 }

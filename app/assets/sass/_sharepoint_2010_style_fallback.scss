@@ -6,18 +6,6 @@
     cursor:pointer;
 }
 
-//lists
-.freeContentArea ul.list{
-    @extend .list;
-    list-style:none;
-}
-
-.freeContentArea ul{
-    @extend .list;
-    @extend .list-bullet;
-    list-style-type: disc;
-}
-
 //tables
 table.styledTable {
   font-size: 1em;
@@ -86,4 +74,23 @@ table.styledTable td,
     padding: 0.63158em 1.05263em 0.47368em 0;
     text-align: left;
     border-bottom: 1px solid $border-color !important;
+}
+
+.limitedrte-Style-image-right{
+    @extend .img-content;
+    @extend .img-right;
+    padding:0;
+}
+
+//lists
+#ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ul{
+    @extend .list;
+    @extend .list-bullet;
+    list-style-type: disc;
+}
+
+#ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ol{
+    @extend .list;
+    @extend .list-number;
+    list-style-type: decimal;
 }
