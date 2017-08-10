@@ -13,7 +13,7 @@
 //$base-background-color:#fff;
 //$base-font-size:16px ;
 //$base-font-color:#333 ;
-//$base-link-color:#133E8D ;
+//$base-link-color:#56843E ;
 //$base-container-width:1500px ;
 //$btn-background-color:green ;
 //$font-primary: Arial ; // main font
@@ -96,7 +96,7 @@ $news-pod-back:#ffffff ;
 $news-pod-border-color:#ddd;
 
 //accordion
-$accordion-color:green;
+//$border-color:green;
 //$accordion-border-color:#ECF0F1;
 
 $white:#fff;
@@ -211,4 +211,8 @@ $white:#fff;
 
 footer.main {
     margin-top:50px;
+}
+
+.promoListWebpart ul{
+   padding-left:0px;
 }

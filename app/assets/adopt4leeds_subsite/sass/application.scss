@@ -133,6 +133,10 @@ $highlighted-alt-font-color:#333;
 //@import 'contentLink';
 //@import 'docList';
 @import 'contentAssets';
+@import 'buttons';
+@import 'browser-alert';
+@import 'typography-lcc';
+@import 'tables';
 
 
 
@@ -209,10 +213,8 @@ ul.menu li a.main-menu {
     background:$menuLinkColour !important;
 }
 
-.lead{
-    font-size:40px;
+
+
+.logo-footer span {
+    background: url(../images/lcclogo.svg) center center no-repeat;
 }
-
-
-
-
