@@ -139,6 +139,10 @@ $highlighted-alt-font-color:#333;
 @import 'blocklinks';
 @import 'contentLink';
 @import 'docList';
+@import 'buttons';
+@import 'browser-alert';
+@import 'typography-lcc';
+@import 'tables';
 @import 'contentAssets';
 @import 'blockQuote';
 
@@ -203,9 +207,6 @@ $highlighted-alt-font-color:#333;
             }
         }
 
-        a{
-            border-right:1px solid #ddd;
-        }
     }
 
     .masterhead {
@@ -231,24 +232,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#038fa5', end
 }
 
 
-
-.highlighted{
-   background: #038fa5; /* Old browsers */
-background: -moz-linear-gradient(45deg, #038fa5 0%, #731378 50%, #c30c4a 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(45deg, #038fa5 0%,#731378 50%,#c30c4a 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(45deg, #038fa5 0%,#731378 50%,#c30c4a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#038fa5', endColorstr='#c30c4a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-em{
-    font-size:70px;
-    line-height:70px;
-
-    @media only screen and (max-width:768px) {
-        font-size:50px;
-        line-height:50px;
-    }
-}
-}
 
 
 
@@ -338,11 +321,12 @@ ul.menu li a.main-menu {
                     background:#f2f2f2 !important;
                 }
 
-                &.active, &.active:hover {
-                    color: #721371;
-                    background:transparent !important;
+                      &.active, &.active:hover {
+                    color: #803F92;
+                    background:#f6f6f6 !important;
                     cursor:default;
                 }
+               
             }
         }
 
@@ -443,18 +427,15 @@ ul.menu li a.main-menu {
     background: url(../../images/lcclogo.svg) center center no-repeat;
 }
 
-.sectionSubsite {
-    margin: 0 0 0 0;
-    padding:0px;
-    width: 100%;
-    background: transparent;
 
-    p{
-        padding:0 15px 15px 0px;
-    }
+.breadcrumb {
+    margin: 20px 0 0;
+}
 
-    h2{
-        font-size:30px;
-    }
+.ms-rtestate-field ul{
+  list-style: disc;
+}
 
+.logo-footer span {
+    background: url(../adopt4leeds/images/lcclogo.svg) center center no-repeat;
 }
