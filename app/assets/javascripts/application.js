@@ -1,3 +1,6 @@
+//= require google-analytics
+
+
 //removes top margin frpm right hand column if empty
 function isEmpty( el ){
       return !$.trim(el.html())
@@ -38,3 +41,14 @@ function randomImage(){
 }
 
 document.addEventListener("DOMContentLoaded", randomImage);
+
+// hide site button on domestic violence subsite
+$(document).ready(function(){
+    
+    $("#hide-site").on("click", function() {
+      window.open("http://bbc.co.uk", "_newtab");
+      window.location.replace('http://google.com');
+    });
+    
+});
+

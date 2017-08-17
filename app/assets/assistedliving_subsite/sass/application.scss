@@ -146,8 +146,13 @@ $group-promo-arrow-color: #6cb6cd;
 @import 'blocklinks';
 @import 'contentLink';
 @import 'docList';
-@import 'contentAssets';
 @import 'blockQuote';
+@import 'accessibility';
+@import 'browser-alert';
+@import 'contentAssets';
+@import 'typography-lcc';
+@import 'buttons';
+@import 'tables';
 
  .masterhead{
      border-bottom:1px solid #ddd;
@@ -192,93 +197,11 @@ $group-promo-arrow-color: #6cb6cd;
 
 
 
-
-
-
-
-
-
-
-
-
-//sidenav
-.sideNav {
-    padding: 0px;
-    margin:30px 0;
-    border-bottom:5px solid #bbcada;
-    background:transparent;
-
-    h3{
-        margin:0;
-        background: #8CC63F;
-        color:#fff;
-        padding:20px 15px;
-    }
-
-    ul{
-        margin:0;
-        padding:0;
-
-        li{
-            margin: 0;
-            padding:0;
-
-            &:first-of-type a{
-                  background: $btn-background-color;
-                  color:#fff;
-                  padding:20px 15px;
-
-                   &.active, &.active:hover {
-                    color: #fff;
-                    background:#058C95 !important;
-
-
-
-                }
-     
-            }
-
-            a {
-                font-size: 1.2em;
-                margin: 0;
-                padding: 20px 15px;
-                background: transparent;
-                width: 100%;
-                border-bottom: 1px solid #bbcada;
-                text-decoration:none !important;
-                font-weight:600;
-
-                &:hover{
-                    color: darken($base-link-color, 10%);
-                    background:#f2f2f2 !important;
-                }
-
-                &.active, &.active:hover {
-                    color: #058C95;
-                    background:transparent !important;
-                    cursor:default;
-                }
-            }
-        }
-
-      }
-
-    
-}
-
-.ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-tv-selected:link, a.ms-tv-header:hover, a.ms-tv-item:hover {
-    background-color: #f2f2f2;
-    color: #058C95;
-}
-
-
 .col-md-8 img {
    max-width:100%;
 }
 
-.col-md-4 h2{
-    font-size:25px;
-}
+
 
 a{
   overflow-wrap: break-word;
@@ -286,11 +209,6 @@ a{
   -ms-word-break: break-all;
   word-break: break-all;
   word-break: break-word;
-}
-
-
-p.lead{
-    font-size:35px;
 }
 
 
@@ -320,3 +238,15 @@ h3{
  }
 
 
+.top{
+    margin-top:0px !important;
+}
+
+.ms-rtestate-field ul{
+  list-style: disc;
+}
+
+nav ul li a.selected {
+    background:darken(#4868a6, 20%)!important;
+    color:#fff;
+}

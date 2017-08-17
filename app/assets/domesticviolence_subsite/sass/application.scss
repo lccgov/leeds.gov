@@ -106,10 +106,10 @@ $accordion-color:#721371;
 // $blockquoteQuoteFooterColor:#000;
 
 //highlighted box in content assets
-$highlighted-background-color:#038fa5;
-$highlighted-font-color:#fff;
-$highlighted-alt-background-color:#f6f6f6 ;
-$highlighted-alt-font-color:#333;
+//$highlighted-background-color:#038fa5;
+//$highlighted-font-color:#fff;
+//$highlighted-alt-background-color:#f6f6f6 ;
+//$highlighted-alt-font-color:#333;
 
 @import 'mixins';
 @import 'variables';
@@ -128,19 +128,23 @@ $highlighted-alt-font-color:#333;
 @import 'accordion';
 @import 'promoGroup';
 @import 'alerts';
-@import 'promoListwebpart';
+//@import 'promoListwebpart';
 //@import 'eventsWebparts';
 @import 'sharepointOverides';
-@import 'iconLinks';
+//@import 'iconLinks';
 @import 'heroBanner';
-@import 'news';
-@import 'polaroids';
+//@import 'news';
+//@import 'polaroids';
 @import 'groupPromo';
 @import 'blocklinks';
 @import 'contentLink';
 @import 'docList';
-@import 'contentAssets';
 @import 'blockQuote';
+@import 'accessibility';
+@import 'browser-alert';
+//@import 'contentAssets';
+@import 'typography-lcc';
+@import 'buttons';
 
  
 
@@ -381,7 +385,6 @@ a{
   word-break: break-word;
 }
 
-
-p.lead{
-    font-size:35px;
+#main .col-md-8 {
+    margin-bottom:50px;
 }

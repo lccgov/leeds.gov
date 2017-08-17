@@ -102,7 +102,7 @@ $accordion-color:#721371;
 
 //Block quote
 // $blockquoteBorderColor:#bbcada;
- $blockquoteQuoteColor:#721371;
+ $blockquoteQuoteColor:#fff;
 // $blockquoteQuoteFooterColor:#000;
 
 //highlighted box in content assets
@@ -139,6 +139,11 @@ $highlighted-alt-font-color:#333;
 @import 'blocklinks';
 @import 'contentLink';
 @import 'docList';
+@import 'buttons';
+@import 'browser-alert';
+@import 'typography-lcc';
+@import 'tables';
+@import 'contentAssets';
 @import 'contentAssets';
 @import 'blockQuote';
 
@@ -282,7 +287,7 @@ p.lead{
 blockquote {
    background: #8CC63F;
    color: #fff;
-    padding: 6%;
+    padding: 6% 6% 6% 80px;
     margin: 0 0 20px 0;
     border-left: 0px;
     border-radius: 10px;
