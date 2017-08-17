@@ -60,9 +60,8 @@
     width:auto;
 }
 
-#findMyNearestSearch{
+.findMyNearest{
     @extend .panel;
-    @extend .panel_blue;
     padding-bottom:10px;
 
     h2{
