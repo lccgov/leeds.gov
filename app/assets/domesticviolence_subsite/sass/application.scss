@@ -333,7 +333,7 @@ em{
     left:0px;
     width:100%;
     background:#A76BA1;
-    z-index:1000;
+    z-index:11000;
 }
 
 a#hide-evidence{
@@ -342,6 +342,7 @@ a#hide-evidence{
     color:#fff;
     float:left;
     display:inline-block;
+    text-decoration: none;
 }
 
 a#hide-site{
@@ -351,6 +352,7 @@ a#hide-site{
     background:#52246D;
     float:right;
     display:inline-block;
+    text-decoration: none;
 }
 
 a#hide-site:hover, a#hide-site:focus{
@@ -387,4 +389,16 @@ a{
 
 #main .col-md-8 {
     margin-bottom:50px;
+}
+
+.media-container{
+    margin:30px;
+}
+
+a.promo{
+    display:block;
+    margin-top:30px;
+    img{
+        width:100%;
+    }
 }

@@ -139,7 +139,6 @@ $ArrowLinkColor:$blockquoteQuoteColor;
 //@import 'contentLink';
 @import 'docList';
 @import 'blockQuote';
-@import 'contentAssets';
 @import 'accessibility';
 @import 'browser-alert';
 @import 'contentAssets';
@@ -147,14 +146,6 @@ $ArrowLinkColor:$blockquoteQuoteColor;
 @import 'buttons';
 @import 'tables';
 
-
-h2{
-    font-size:30px;
-}
-
-h3{
-    font-size:25px
-}
 
 
 .sectionHeader{
