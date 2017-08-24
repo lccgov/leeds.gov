@@ -133,7 +133,12 @@ $highlighted-alt-font-color:#fff ;
 @import 'blocklinks';
 @import 'contentLink';
 @import 'docList';
+@import 'accessibility';
+@import 'browser-alert';
 @import 'contentAssets';
+@import 'typography-lcc';
+@import 'buttons';
+
 
 
 .main-nav{
