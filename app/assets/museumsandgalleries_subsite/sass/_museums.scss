@@ -8,7 +8,7 @@ body{
 $lotherton-base-color: #2f7251;
 $discovery-base-color: #16145F;
 $kirkstall-base-color: #00447C;
-$lag-base-color: #005953;
+$lag-base-color: #5f666f;
 $lim-base-color: #77230A;
 $temple-base-color: #860037;
 $city-base-color: #E86D1F;
@@ -492,6 +492,12 @@ ul.footerLogos{
 }
 
 
+body{
+    font-weight:200;
+}
+
+
+
 .docList.one{
     margin-bottom:30px;
 }
@@ -499,7 +505,7 @@ ul.footerLogos{
 
 
 .relatedPages,.sideNav {
-    margin: 0 0 30px;
+    margin: 0 0 30px 0px;
     padding: 0
 }
 
@@ -524,8 +530,9 @@ ul.footerLogos{
 }
 
 .relatedPages ul li,.sideNav ul li {
-    margin-bottom: 15px;
-    font-size: 16px
+    margin-bottom: 0px;
+    font-size: 16px;
+    padding:0px;
 }
 
 @media (max-width: 641px) {
