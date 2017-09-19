@@ -344,10 +344,6 @@ aside.col-md-4{
     }
 }
 
-.col-md-8 .groupPromo ul {
-        margin-top: 30px;
-}
-
 .socialBookmarks ul li a:visited{
     color:$blue;
 }
@@ -425,4 +421,56 @@ aside.col-md-4{
 
 h1 input.ms-long{
     width:100% !important;
+}
+
+ul.accordion li div.content-block div:last-of-type {
+    padding-bottom:30px !important;
+}
+
+ul.accordion li div.content-block div + .btn {
+    margin-right:20px;
+}
+
+.section-title{
+    display:block;
+    font-size:24px;
+    color:$secondary-font-color;
+    font-weight:400;
+}
+
+.atoz ul li a,
+.atoz ul li.inactive{
+    width:30px;
+}
+
+.atoz ul li:last-of-type a{
+    width:60px;
+}
+
+.ElginRoadworksWidget{
+    margin-top: 40px;
+    margin-bottom: 40px;    
+    @media (max-width: 450px) {
+    height: 400px !important;
+    } 
+}
+
+//third columns for summary links
+.column-thirds .column-third{
+    @media (min-width: 1200px) {
+        &:nth-child(4){
+            clear:left;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+        width:50%;
+
+        &:nth-child(3),
+        &:nth-child(5){
+            clear:left;
+        }
+    }
+    @media (max-width: 767px) {
+        clear:none;
+    }
 }

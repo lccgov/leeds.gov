@@ -63,6 +63,7 @@
 .findMyNearest{
     @extend .panel;
     padding-bottom:10px;
+    margin-top:0;
 
     h2{
         margin:0 0 30px;
@@ -93,6 +94,10 @@
 }
 
 //refiners
+.nearestItem{
+    margin-top:20px;
+}
+
 .nearestItem-search-features-inner{
     a{
         text-decoration:none !important;
@@ -114,11 +119,17 @@
     }
 }
 
+.nearestLayer{
+    margin-top:0 !important;
+}
+
 .nearestLayer-heading-container{
     position:relative;
 
     .nearestLayer-title {
         padding-left:50px;
+        margin:0;
+        color:$base-link-color;
     }
 }
 
@@ -155,6 +166,98 @@
         text-decoration:none !important;
         padding-left:50px;
         margin-top:10px;
+    }
+}
+
+//map
+#map{
+    margin-bottom:30px;
+}
+
+.panel-group-outline{
+    margin-bottom:30px !important;
+}
+
+.panel-group.panel-group-outline .panel .panel-body{
+    padding:20px !important;
+}
+
+//check your bin day
+.check-your-bin-day{
+
+    #postcode-lookup-container{
+        margin-bottom:-40px;
+    }
+
+    #address-container{
+        margin-top:40px;
+        margin-bottom:-40px;
+    }
+
+    .bin-results{
+        margin-top:20px;
+    }
+
+    h2{
+        &:before{
+            content: "\f073";
+        }
+    }
+
+    .selectedContainer{
+        border-top:1px solid rgba(white,0.8);
+        padding:20px 0 20px 140px;
+        position:relative;
+
+        &:last-child{
+            border-bottom:1px solid rgba(white,0.8);
+        }
+
+        @media (max-width: 641px){
+            padding:20px 0 20px 100px;
+        }
+
+        @media (max-width: 450px){
+            padding:20px 0;
+        }
+
+        h3{
+            img{
+                position:absolute;
+                left:20px;
+                top:25px;
+
+                @media (max-width: 641px){
+                    width:65px;
+                    left:10px;
+                }
+
+                @media (max-width: 450px){
+                    width:13px;
+                    top:0;
+                    left:0;
+                }
+            }
+
+            @media (max-width: 450px){
+                position:relative;
+                padding-left:25px;
+            }
+        }
+    }
+}
+
+.binCollectionTimesList{
+    @extend .list;
+    @extend .list-bullet;
+    margin-bottom:10px;
+}
+
+.bin-calendar-print{
+    padding-top:30px;
+    
+    .btn-print{
+        margin-bottom:0;
     }
 }
 
