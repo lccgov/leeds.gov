@@ -126,7 +126,7 @@ $vistitorInfoHeadingColor:#414141;
 //@import 'mainMenuSubsites';
 @import 'breadcrumb';
 @import 'sectionSubsite';
-//@import 'promo';
+@import 'promo';
 @import 'carousel';
 //@import 'socialMedia';
 //@import 'sideNavigation';
@@ -134,8 +134,8 @@ $vistitorInfoHeadingColor:#414141;
 @import 'accordion';
 @import 'promoGroup';
 @import 'alerts';
-@import 'promoListwebpart';
-//@import 'eventsWebparts';
+//@import 'promoListwebpart';
+@import 'eventsWebparts';
 @import 'sharepointOverides';
 @import 'iconLinks';
 //@import 'heroBanner';
@@ -144,12 +144,24 @@ $vistitorInfoHeadingColor:#414141;
 @import 'groupPromo';
 //@import 'blocklinks';
 //@import 'contentLink';
-//@import 'docList';
+@import 'docList';
 @import 'contentAssets';
 @import 'mega-promo';
 @import '../museumsandgalleries_subsite/sass/museums';
 @import 'accessibility';
 @import 'browser-alert';
+@import 'typography-lcc';
+@import 'buttons';
+@import 'tables';
+@import 'description_list_accessible';
+@import 'images';
+@import 'contentAssets';
+
+
+
+body{
+    font-weight:200;
+}
 
 
 
@@ -164,7 +176,7 @@ p{
 
 .header-nav-container .logo {
     background:url(../images/leedsCity-logo-w.svg) left center  no-repeat;
-    margin: 0px 0 0 -30px;
+    margin: 0px 0 0 0px;
     height:150px;
     width:290px;
     background-size:140%;

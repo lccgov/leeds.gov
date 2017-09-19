@@ -124,7 +124,7 @@ $promo-arrow:"\f105";
 //@import 'mainMenuSubsites';
 @import 'breadcrumb';
 @import 'sectionSubsite';
-//@import 'promo';
+@import 'promo';
 @import 'carousel';
 //@import 'socialMedia';
 //@import 'sideNavigation';
@@ -133,7 +133,7 @@ $promo-arrow:"\f105";
 @import 'promoGroup';
 @import 'alerts';
 @import 'promoListwebpart';
-//@import 'eventsWebparts';
+@import 'eventsWebparts';
 @import 'sharepointOverides';
 @import 'iconLinks';
 //@import 'heroBanner';
@@ -142,12 +142,18 @@ $promo-arrow:"\f105";
 @import 'groupPromo';
 //@import 'blocklinks';
 //@import 'contentLink';
-//@import 'docList';
+@import 'docList';
 @import 'contentAssets';
 @import 'mega-promo';
 @import '../museumsandgalleries_subsite/sass/museums';
 @import 'accessibility';
 @import 'browser-alert';
+@import 'typography-lcc';
+@import 'buttons';
+@import 'tables';
+@import 'description_list_accessible';
+@import 'images';
+@import 'contentAssets';
 
 
 

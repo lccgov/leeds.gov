@@ -131,7 +131,7 @@ $promo-arrow:"\f105";
 @import 'accordion';
 @import 'alerts';
 @import 'promoListwebpart';
-//@import 'eventsWebparts';
+@import 'eventsWebparts';
 @import 'sharepointOverides';
 @import 'iconLinks';
 //@import 'heroBanner';
@@ -140,10 +140,18 @@ $promo-arrow:"\f105";
 @import 'groupPromo';
 //@import 'blocklinks';
 //@import 'contentLink';
-//@import 'docList';
+@import 'docList';
 @import 'contentAssets';
 @import 'mega-promo';
-@import 'museums';
+@import '../museumsandgalleries_subsite/sass/museums';
+@import 'accessibility';
+@import 'browser-alert';
+@import 'typography-lcc';
+@import 'buttons';
+@import 'tables';
+@import 'description_list_accessible';
+@import 'images';
+@import 'contentAssets';
 
 
 body{
@@ -162,7 +170,7 @@ p{
 
 .header-nav-container .logo {
     background:url(../images/museums-logo-w.svg) left center no-repeat;
-    margin: 30px 0 30px -30px;
+    margin: 30px 0 30px 0px;
     height:150px;
     width:200px;
     background-size:150%;
@@ -224,10 +232,12 @@ h2{
                 width: calc(100% * (1/9) - 5px) !important;
                 margin:5px 0 0 5px;
                 border:0;
+        
 
 
            &.lotherton{
              background:$lotherton-base-color;
+             
          }
 
            &.discovery{
@@ -280,7 +290,8 @@ h2{
 
            img{
       max-width:100%;
-
+      height:60px;
+      display:table-cell;
   }
      }
 

@@ -203,3 +203,16 @@ var subsite = window.location.pathname.split("/")[1];
 
     global.LCC = LCC;
 })(window);
+
+
+
+
+$(document).ready(function() {
+
+var url = location.pathname;
+
+  if ("url:contains('abbeyhouse')") {
+    $("body").attr("class","pm-best-sellers");
+  }
+  
+});

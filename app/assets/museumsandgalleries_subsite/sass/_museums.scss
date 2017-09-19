@@ -1,87 +1,14 @@
 
-
-div.promo {
-    background-size:cover !important;
-    padding: 0;
-    margin-bottom: $base-margin-bottom;
-    position: relative;
-    width: 100%;
-    overflow:hidden;
-
-a{
-    display:block;
-    min-height:270px;
-
-    span.image{
-    height:100%;
-    width:100%;
-    bottom:0px;
-    transition: transform 1s;
-    background-size:cover !important;
-
-  
-        &:hover { transform:scale(1.1) }
-
-        &:after{
-            display:none;
-        }
- 
-
+body{
+    font-weight:200;
 }
-
- span {
-    background:$span-info-color;
-    padding: 20px;
-    color: $link-font-color;
-    border-radius: 0 0px 0px 0;
-    bottom: 0px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    transition:all 0.5s ease;
-    font-size:25px;
-
-
-    &:after{
-            content: '\f105';
-            font-family: FontAwesome;
-            position: absolute;
-            font-weight: normal;
-            right: 0px;
-            bottom:0px;
-            height: 100%;
-            display: block;
-            color: $link-font-color;
-            font-size: 35px;
-            transition:all 0.5s ease;
-            border-left:1px solid #ddd;
-            padding:0 20px;
-            line-height: 2.25em;
-
-    }
-}
-
-&:hover span{
-    width:100%;
-    padding: 20px 20px 40px 20px;
-    background:darken(#ecf0f1,5%);
-
-
-}
-
-}
-}
-
-
-
-
 // museums promolist webpart venue colours
 
 /*Venues base less colours */
 $lotherton-base-color: #2f7251;
 $discovery-base-color: #16145F;
 $kirkstall-base-color: #00447C;
-$lag-base-color: #005953;
+$lag-base-color: #5f666f;
 $lim-base-color: #77230A;
 $temple-base-color: #860037;
 $city-base-color: #E86D1F;
@@ -562,4 +489,59 @@ ul.footerLogos{
 
 .groupPromo ul li a h3 {
     font-weight: 400;
+}
+
+
+body{
+    font-weight:200;
+}
+
+
+
+.docList.one{
+    margin-bottom:30px;
+}
+
+
+
+.relatedPages,.sideNav {
+    margin: 0 0 30px 0px;
+    padding: 0
+}
+
+.relatedPages h2,.relatedPages h3,.sideNav h2,.sideNav h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    border-bottom: 5px solid #f6f7fa
+}
+
+@media (max-width: 641px) {
+    .relatedPages h2,.relatedPages h3,.sideNav h2,.sideNav h3 {
+        font-size:21px;
+        margin-bottom: 15px
+    }
+}
+
+.relatedPages ul,.sideNav ul {
+    margin: 0;
+    padding: 0
+}
+
+.relatedPages ul li,.sideNav ul li {
+    margin-bottom: 0px;
+    font-size: 16px;
+    padding:0px;
+}
+
+@media (max-width: 641px) {
+    .relatedPages ul li,.sideNav ul li {
+        margin-bottom:10px;
+        font-size: 16px
+    }
+}
+
+.relatedPages ul li:last-of-type,.sideNav ul li:last-of-type {
+    margin-bottom: 0
 }
