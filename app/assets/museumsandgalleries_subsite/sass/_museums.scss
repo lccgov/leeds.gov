@@ -266,7 +266,7 @@ $vistitorInfoHeadingColor:#2f7251 !default;
 
     h2{
         font-size:25px;
-        margin:30px 0px 0px;
+        margin:0px 0px 0px;
         padding-bottom:15px;
         color:$vistitorInfoHeadingColor;
         border-bottom:1px solid $vistitorInfoHeadingColor;
@@ -279,7 +279,6 @@ $vistitorInfoHeadingColor:#2f7251 !default;
 
         span{
             font-size:15px;
-            color:#999;
         }
     }
 
@@ -290,16 +289,10 @@ $vistitorInfoHeadingColor:#2f7251 !default;
         background:transparent;
         border-color:#414141;
         color:#414141;
-        margin:30px auto 0 auto;
+        margin:48px auto 0 auto;
         top:0px;
         left:0px;
   
-        &:after{
-        line-height:3.3em;
-        color: #414141;
-        border-left: 1px solid #414141;
-        background:transparent;
-        }
 
         &:hover{
          background:#e1e4e4;
@@ -387,6 +380,10 @@ position:absolute;
 ul.footerLogos{
      @include ulStyle;
      margin:15px 15px 30px 15px;
+
+     li{
+         margin:0 5px;
+     }
 
      a{
          display:block;
@@ -545,3 +542,13 @@ body{
 .relatedPages ul li:last-of-type,.sideNav ul li:last-of-type {
     margin-bottom: 0
 }
+
+
+.backto{
+    background:#f6f6f6;
+       .link-back {
+    margin-bottom: 0.526315789em;
+} 
+       
+}
+

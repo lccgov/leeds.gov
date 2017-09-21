@@ -207,12 +207,12 @@ var subsite = window.location.pathname.split("/")[1];
 
 
 
-$(document).ready(function() {
+$(document).ready(function () {
+    var checkURL = ['visit/', 'discoverycentre', 'abbeyhouse','thwaitemills','kirkstallabbey','leedsartgallery','armleymills','templenewsamhouse','leedscitymuseum','lothertonhall'];
 
-var url = location.pathname;
-
-  if ("url:contains('abbeyhouse')") {
-    $("body").attr("class","pm-best-sellers");
-  }
-  
+    for (var i = 0; i < checkURL.length; i++) {
+        if(window.location.href.indexOf(checkURL[i]) > -1) {
+            $('.masterhead').after('<div class="backto"><div class="container-fluid"><a href="/museumsandgalleries/home" class="link-back">Back to Museums and Galleries</a></div></div>');
+        }
+    }
 });
