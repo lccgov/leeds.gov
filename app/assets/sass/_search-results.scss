@@ -51,7 +51,7 @@
                 font-size:30px;
                 line-height:1;
                 position:absolute;
-                right:8px;
+                right:10px;
                 top:7px;
             }
         }
@@ -168,6 +168,7 @@
     .ms-ref-ctrl{
         .ms-ref-refiner{
             padding:0;
+            margin-bottom:10px;
 
             #Container{
                 border-bottom:3px solid $panel-color;
@@ -241,6 +242,11 @@
                     border-right:3px solid $panel-color;;
                     border-top:0;
                     padding:0;
+
+                    a.ms-ref-unsel-toggle.ms-commandLink{
+                        color:$base-link-color;
+                        padding:10px 15px;
+                    }
 
                         div{
                             width:100% !important;
