@@ -185,15 +185,6 @@
 //check your bin day
 .check-your-bin-day{
 
-    #postcode-lookup-container{
-        margin-bottom:-40px;
-    }
-
-    #address-container{
-        margin-top:40px;
-        margin-bottom:-40px;
-    }
-
     .bin-results{
         margin-top:20px;
     }
@@ -259,5 +250,12 @@
     .btn-print{
         margin-bottom:0;
     }
+}
+
+.form-link-option{
+    @extend .font-xsmall;
+    color: $base-link-color;
+    margin-top:15px;
+    display:inline-block;
 }
 
