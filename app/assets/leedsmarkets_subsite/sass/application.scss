@@ -138,6 +138,7 @@ $highlighted-alt-font-color:#fff ;
 @import 'contentAssets';
 @import 'typography-lcc';
 @import 'buttons';
+@import 'form_elements';
 
 
 
@@ -537,4 +538,9 @@ color:#333;
 &:before {
     margin-top: 0px;
 }
+}
+
+
+.sectionOne .col-md-8{
+  margin-bottom:50px;
 }
