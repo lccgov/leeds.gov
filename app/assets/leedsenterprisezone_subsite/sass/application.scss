@@ -16,7 +16,8 @@
 //$base-background-color:#fff;
 //$base-font-size:16px ;
 //$base-font-color:#333 ;
-//$base-link-color:#133E8D ;
+$base-link-color:#484a07;
+$border-color:#484a07;
 //$base-container-width:1500px ;
 $btn-background-color:#3A7BBF ;
 $font-primary: 'Open Sans', Arial ; // main font
@@ -844,4 +845,14 @@ ul.accordion {
 
 [rel=external].link:after,a[rel=external]:after {
      position:relative;
+}
+
+
+.sectionOne .col-md-8{
+  margin-bottom:50px;
+}
+
+
+footer img{
+  margin:1.875em -30px 1.875em 0;
 }
