@@ -237,6 +237,10 @@ h2{
 
            &.lotherton{
              background:$lotherton-base-color;
+
+             img{
+                 width:90%;
+             }
              
          }
 
@@ -292,7 +296,12 @@ h2{
       max-width:100%;
       height:60px;
       display:table-cell;
+      padding:5px 0px;
+      
+  
   }
+
+  
      }
 
                 @media only screen and (max-width:1200px){
