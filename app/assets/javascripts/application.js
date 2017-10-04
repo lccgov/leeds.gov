@@ -5,8 +5,6 @@
 //= require keyword-filter
 
 
-
-
 //removes top margin frpm right hand column if empty
 function isEmpty( el ){
       return !$.trim(el.html())
@@ -59,12 +57,6 @@ $(document).ready(function(){
 });
 
 var subsite = window.location.pathname.split("/")[1]; 
-
-
-
-
-
-
 
 $(document).ready(function () {
     var checkURL = ['visit/', 'discoverycentre', 'abbeyhouse','thwaitemills','kirkstallabbey','leedsartgallery','armleymills','templenewsamhouse','leedscitymuseum','lothertonhall'];

@@ -58,17 +58,38 @@
                 }
             }
 
-            //external link
+            //External and PDF link
             a[rel="external"],
-            a.external{
+            a.external,
+            a[rel="pdf"],
+            a.pdf{
                 &:after{
                     display:none;
                 }
 
                 h3{
                     &:after{
+                        color:#9DA5B2;
+                    }
+                }
+            }
+
+            //External link
+            a[rel="external"],
+            a.external{
+                h3{
+                    &:after{
                         content: "\f08e";
-                        color:$grey;
+                    }
+                }
+            }
+
+            //PDF link
+            a[rel="pdf"],
+            a.pdf{
+                h3{
+                    &:after{
+                        content: "\f1c1";
                     }
                 }
             }

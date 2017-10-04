@@ -1,0 +1,57 @@
+#report-a-problem{
+    margin-top:30px;
+
+    .report-a-problem-toggle{
+        @extend .font-xsmall;
+        color: $secondary-font-color !important;
+        text-decoration: underline !important;
+    }
+
+    #report-a-problem-content{
+        @extend .text;
+
+        h2{
+            @extend .heading-medium;
+            margin:40px 0 30px 0;
+
+            @media (max-width: 641px) {
+                margin:30px 0 20px;
+            }
+        }
+
+        form{
+            p{
+                margin:0 0 30px;
+
+                @media (max-width: 641px) {
+                    margin-bottom:20px;
+                }
+            }
+            .form-group{
+                margin-bottom:15px;
+
+                .form-label{
+                    font-weight:bold;
+                    font-size:19px;
+
+                    @media (max-width: 641px) {
+                        font-size:16px;
+                    }
+                }
+                .form-control{
+                    width:100% !important;
+                    max-width: 100% !important;
+                }
+
+                .btn{
+                    margin-top:15px;
+
+                    @media (max-width: 641px) {
+                        margin-top:10px;
+                    }
+                }
+            }
+        }
+    }
+
+}
