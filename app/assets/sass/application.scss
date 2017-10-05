@@ -287,212 +287,9 @@ hr{
     padding:0 !important;
 }
 
-//self service custom
-.header-actions{
-    position:absolute;
-    top:-110px;
-    right:15px;
+//LEEDS.GOV SPECIFIC
 
-    @media (max-width: 641px){
-        position:relative;
-        top:auto;
-        right:auto;
-        margin-bottom:20px;
-    }
-}
-
-//to be added to front end tookit
-.lead a[rel="external"] {
-    margin-right: 32px;
-}
-
-.atoz ul li:last-of-type a{
-    width:74px;
-}
-
-//promo
-.promo a{
-    span {
-        background: $base-link-color;
-        font-family:$font-secondary;
-        font-weight:600;
-        padding: 20px 40px 20px 20px;
-
-        &:after{
-            bottom:17px;
-            right: 20px;
-            font-size:26px;
-            height:auto;
-            width:auto;
-        }
-    }
-
-    &:hover span{
-        padding: 20px 40px 30px 20px;
-        background: rgba($base-link-color,0.95);
-        text-decoration:underline;
-
-        &:after{       
-            bottom:27px;
-            right: 20px;
-            text-decoration:none;
-        }
-    }
-}
-
-.promoListWebpart {
-    ol, ul{
-        margin:0;
-        padding:0;
-    }
-}
-
-.socialBookmarks ul li a:visited{
-    color:$blue;
-}
-
-//need adding to front-end toolkit
-
-//right hand column top margin
-aside.col-md-4{
-    margin-top:50px;
-
-    @media (max-width: 990px) {
-        margin-top:30px;
-    }
-
-    &.empty{
-        margin-top:0 !important;
-    }
-}
-
-.sub-section-nav .sub-section a {
-
-    .sub-section-heading{
-        text-decoration:none;
-        color:$base-link-color;
-    }
-
-    &:visited,
-    &:visited .sub-section-heading{
-        text-decoration:none !important;
-        color: #663399;
-    }
-}
-
-
-//promo sizing
-.two .listWebpart ul .promo{
-    width:48% !important;
-}
-
-.three .listWebpart ul .promo{
-    width:31.33% !important;
-}
-
-.four .listWebpart ul .promo{
-    width:23% !important;
-
-    @media (max-width: 990px) {
-        width:48% !important;
-    }
-}
-
-.two,
-.three,
-.four{
-    .listWebpart{
-        ul{
-            @include flexbox();
-            @include flex-wrap(wrap);
-            margin: 0 0 0 -2%;
-
-            @media (max-width: 600px) {
-                margin:0;
-            }
-
-            .promo{
-                @include flexbox();
-                @include align-items(stretch);
-                margin:0 0 2% 2%;
-
-                @media (max-width: 600px) {
-                    margin:0 0 15px;
-                    width:100% !important;
-                }
-                
-            }
-        }
-    }
-}
-
-.panel.top{
-    margin-top:0;
-}
-
-h1 input.ms-long{
-    width:100% !important;
-}
-
-ul.accordion li div.content-block div:last-of-type {
-    padding-bottom:30px !important;
-}
-
-ul.accordion li div.content-block div + .btn {
-    margin-right:20px;
-}
-
-//need adding to front-end toolkit
-.list-atoz{
-    padding:0;
-    float:none;
-
-    li{
-        padding:0;
-
-        h2{
-            margin:20px 0;
-        }
-    }
-}
-
-.atoz {
-    margin-bottom: 0 !important;;
-}
-
-.atoz ul li a,
-.atoz ul li.inactive{
-    width:30px;
-}
-
-.atoz ul li:last-of-type a{
-    width:60px;
-}
-
-ul.accordion div.text-highlight {
-    padding: 20px !important;
-}
-
-.section-title{
-    display:block;
-    font-size:24px;
-    color:$secondary-font-color;
-    font-weight:400;
-}
-
-.atoz ul li a,
-.atoz ul li.inactive{
-    width:30px;
-}
-
-.atoz ul li:last-of-type a{
-    width:60px;
-}
-
-footer.main {
-    margin-top: 0;
-}
-
+//Roadworks map
 .ElginRoadworksWidget{
     margin-top: 40px;
     margin-bottom: 40px;    
@@ -530,115 +327,137 @@ footer.main {
     }
 }
 
+//right hand column top margin
+aside.col-md-4{
+    margin-top:50px;
 
-//hero lcc
-.hero-lcc-wrapper{
-    height:70vh !important;
-}
+    @media (max-width: 990px) {
+        margin-top:30px;
+    }
 
-//groupPromo
-@media (max-width: 767px){
-    .groupPromo ul li a p {
-        font-size: 14px;
+    &.empty{
+        margin-top:0 !important;
     }
 }
 
+//sub-section - Is this needed? Need to test. DH.
+.sub-section-nav .sub-section a {
+    .sub-section-heading{
+        text-decoration:none;
+        color:$base-link-color;
+    }
 
-.groupPromo ul li a h3:after{
-    @media (max-width: 600px){
-        font-size: 16px;
+    &:visited,
+    &:visited .sub-section-heading{
+        text-decoration:none !important;
+        color: #663399;
     }
 }
 
-//add external and pdf styles to front-end toolkit
-
-
-//forms
-.label-small{
-    .block-label {
-        padding: 8px 15px 8px 38px;
-        font-size:16px;
-    }
-
-    .block-label {
-        input {
-            top: 9px;
-            left: 10px;
-            width: 21px;
-            height: 21px;
-        }
-    }
+//social bookmark link text decoration color 
+.socialBookmarks ul li a:visited{
+    color:$blue;
 }
 
-.form-group{
-    .panel{
-        .form-date{
-            margin-bottom:30px;
-            display:inline-block;
-            width:100%;
-        }
-    }
-}
-
-.form-label-header{
-    margin:0 0 10px;
-}
-
-//typography
-.more{
-    font-weight:700;
-}
-
-.border-link{
-    border-bottom:1px solid rgba($base-link-color,0.3);
-    text-decoration:none !important;
-
-    &:hover{
-        border-color:rgba($base-link-hover-color,0.3) !important;
-    }
-
-    &:visited{
-        border-color:rgba($base-link-visited-color,0.3);
-    }
-}
-
-.list-nav li {
-    margin-bottom:10px;
-    line-height:1.7;
-
-    a{
-        @extend .border-link;
-    }
-}
-
-.hidden-text a.reveal{
-    @extend .border-link;
-}
-
-.pagination-nav ul li a .pagination-nav__part-title{
-    font-size:24px;
-
-    @media (min-width: 641px){
-        font-size:32px;
-    }
-}
-
-.mega-promo .mega-promo__item a:after{
-    font-size: 19px;
-
-    @media (max-width: 600px){
-        font-size: 16px;
-    }
-}
-
-ul.accordion li a{
-    color: $base-link-color !important;
-
-    &:focus{
-        color: $base-font-color !important;
+//promo bespoke style for LCC
+.promo a{
+    span {
+        background: $base-link-color;
+        font-family:$font-secondary;
+        font-weight:600;
+        padding: 20px 40px 20px 20px;
 
         &:after{
-            color: $base-font-color !important;
+            bottom:17px;
+            right: 20px;
+            font-size:26px;
+            height:auto;
+            width:auto;
         }
+    }
+
+    &:hover span{
+        padding: 20px 40px 30px 20px;
+        background: rgba($base-link-color,0.95);
+        text-decoration:underline;
+
+        &:after{       
+            bottom:27px;
+            right: 20px;
+            text-decoration:none;
+        }
+    }
+}
+
+//Promolistwebpart reset - Can this be global? Need to check. DH.
+.promoListWebpart {
+    ol, ul{
+        margin:0;
+        padding:0;
+    }
+}
+
+//self service custom buttons
+.header-actions{
+    position:absolute;
+    top:-110px;
+    right:15px;
+
+    @media (max-width: 641px){
+        position:relative;
+        top:auto;
+        right:auto;
+        margin-bottom:20px;
+    }
+}
+
+//contact page old styles
+.box-layout{
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    margin:0 0 0 -15px;
+    width:auto;
+    padding:0 0 15px;
+
+    .box-layout-item{
+        padding-bottom:10px;
+        width: calc(100% * (1/3) - 16px);
+        margin:15px 0 0 15px;
+        border:0;
+        background:$lighter-grey;
+        padding:30px;
+
+        @media (max-width: 1200px) {
+            width: calc(100% * (1/2) - 16px);
+        }
+
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+    }
+
+    h2,
+    h3,
+    h4{
+        &:first-of-type{
+            margin-top:0;
+        }
+    }
+}
+
+.telephone{
+    font-weight:700;
+
+    &:before{
+        font-family: FontAwesome;
+        content: "\f095";
+        margin-right:10px;
+    }
+
+    .additionalInfo{
+        @extend .font-xsmall;
+        display:block;
+        font-weight:400;
     }
 }
