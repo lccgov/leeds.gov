@@ -31,6 +31,7 @@ $lighter-grey:#F6F7FA;
 $white:#FFFFFF;
 $yellow:#FFBF47;
 $dark-yellow:#FAA300;
+$red:#c0392b;
 
 //$base-background-color:#fff;
 $base-font-size:16px;
@@ -51,6 +52,7 @@ $base-container-width:1400px ;
 $font-primary:'Open Sans', sans-serif; // main font
 $font-secondary:'Montserrat', sans-serif; // secondary font used for headings
 //$header-font-weight: 600;
+$alert-color:$red;
 
 //panel colours
 $panel-color:#E5F1F5;
@@ -460,4 +462,36 @@ aside.col-md-4{
         display:block;
         font-weight:400;
     }
+}
+
+.text-highlight{
+    padding:30px;
+
+    @media (max-width: 641px) {
+        padding:15px;
+    }
+
+    h2,
+    h3,
+    h4{
+        margin-bottom:15px;
+
+        @media (max-width: 641px) {
+            margin-bottom:7px;
+        }
+    }
+}
+
+.text-block {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.text-highlight--red.text-block,.text-highlight.text-highlight--red {
+    border-color: $red;
+    background: rgba($red,0.1);
+}
+
+.atoz {
+    margin-top: 50px;
 }
