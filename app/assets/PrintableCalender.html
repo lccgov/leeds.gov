@@ -1,0 +1,797 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Bin Collection</title>
+  <style>
+  @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+      @media print{
+body{
+	margin:0;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.mainContainer{
+	padding:0px;
+	margin:0px;
+	width:960px;
+	border:8px solid #8DC73F;
+	border-radius:4px;
+	-moz-border-radius: 4px;
+	padding:5px;
+	text-align:center;
+}
+.mainContainer h1{
+    font-size: 20px;
+    margin: 13px 0px 10px;
+    color: #111111;
+    -webkit-print-color-adjust: exact;
+    display: inline;
+    float: left;
+}
+
+.binHeader
+{
+	padding-right:20px;
+}
+
+.lccLogo
+{
+	width:80px;
+	float:right;
+	margin-top:10px;
+}
+.binWrapper{
+	width:300px;
+	float:left;
+	padding:10px;
+	position:relative;
+	}
+.selectedContainer{
+	background:transparent;
+	margin:0;
+	padding:0px;
+	border-radius:4px;
+	z-index:999;
+	-moz-border-radius: 4px;
+	border:5px solid #000;
+	-webkit-print-color-adjust: exact
+}
+.selectedContainer h3{
+	text-transform:uppercase;
+	text-align:center;
+	color:#333;
+	font-size:16px;
+	margin:0;
+	padding:10px;
+}
+
+.selectedContainer.green{
+	border-color:#8DC73F;
+
+}
+
+.selectedContainer.green h3{
+	color:#8DC73F;
+}
+
+
+.selectedContainer.brown {
+	border-color:#663300;
+
+}
+
+.selectedContainer.brown h3{
+	color:#0290D7;
+}
+          
+          
+.selectedContainer.blue{
+	border-color:#0290D7;
+
+}
+
+.selectedContainer.blue h3{
+	color:#663300;
+}          
+
+
+.selectedContainer h3 img{
+	display:none;
+}
+.selectedContainer ul{
+	list-style-type:none;
+	padding:0px;
+    margin:0px 0px 0px;
+	background:none;
+	border-radius:4px;
+	text-align:left;
+	-moz-border-radius: 4px;
+	-webkit-print-color-adjust: exact
+}
+.selectedContainer ul li{
+	color:#111111;
+	padding:5px 10px;
+	font-size:0.8em;
+	line-height:1em;
+	border-top:1px solid #000;
+}
+
+.selectedContainer.brown ul li{
+	border-color:#663300;
+}
+
+.selectedContainer.green ul li{
+	border-color:#8DC73F;
+}
+
+
+.selectedContainer ul li:nth-child(even){
+	background: #F0F0F0;
+	}
+.brownBin .selectedContainer ul li:nth-child(even){
+	background: #FFF5EC;
+	}
+.greenBin .selectedContainer ul li:nth-child(even){
+	background: #EDF5E0;
+	}
+.blueBin .selectedContainer ul li:nth-child(even){
+	background: #E6F7FF;
+	}
+.binFooter{
+	clear:both;	
+	position:relative;
+	text-align:left;
+	padding:0 20px;
+}
+.binFooter p{
+	color:#222;
+	text-align:left;
+	font-weight:normal;
+	font-size:14px;
+	line-height:1em;
+	margin-top:15px;
+	display:block;
+	padding:0px;
+	display:inline-block;
+	-webkit-print-color-adjust: exact
+}
+.binFooter img{
+	height:25px;
+}
+.binFooter img.lccLogoFooter{
+	position:absolute;
+	left:10px;
+	top:10px;
+}
+.binFooter img.recycleLogoFooter{
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+.clear{
+	clear:both;
+}
+.whatGoesIn{
+	padding:0 10px 10px 10px;
+	margin-top:10px;
+	position:relative;
+	color:#333;
+	border-radius:4px;
+	border:5px solid #000;
+	-moz-border-radius: 4px;
+	-webkit-print-color-adjust: exact
+}
+.triangle {
+    position: absolute;
+    top: -20px;
+    left: 44%;
+    height: 15px;
+}
+.whatGoesIn h2 {
+	margin:10px 0 5px 0;
+	padding:0;
+	font-size:14px;
+	line-height:1em;
+	font-weight:bold;
+	display:inline-block;
+	color:#333;
+}
+
+.whatGoesIn p {
+	margin:0;
+	padding:0;
+	font-size:11px;
+	line-height:1em;
+	font-weight:normal;
+} 
+.brownBin .whatGoesIn {
+
+	border:5px solid #663300;	
+	-webkit-print-color-adjust: exact;
+}
+.greenBin .whatGoesIn{
+	border:5px solid #8DC73F;
+	-webkit-print-color-adjust: exact;
+}
+
+.blueBin .whatGoesIn{
+	border:5px solid #0290D7;
+	-webkit-print-color-adjust: exact;
+}          
+          
+.blackBin .whatGoesIn{
+	border:5px solid #000;
+	-webkit-print-color-adjust: exact;
+}
+.whatGoesIn ul{
+    list-style:none;
+	text-align:left;
+	font-size:12px;
+	margin:0;
+	padding:0;
+	width:50%;
+	float:left;
+}
+.whatGoesIn ul li{
+	padding:0px 10px 0px 20px;
+	background:url(../images/cross.png) top left no-repeat;
+}
+.greenBin .whatGoesIn ul li, .brownBin .whatGoesIn ul li, .blueBin .whatGoesIn ul li{
+	background:url(../images/tick.png) top left no-repeat;
+}
+.recycleLogo {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 0px;
+    width: 200px;
+    margin-top: 10px;
+    float:left;
+}
+
+
+.binBackground{
+	position:absolute;
+	top:9px;
+	left:10px;
+	z-index:-10;
+}
+.binBottom{
+	margin-left:-10px;
+	margin-top:-5px;
+	margin-bottom:-15px;
+	display:inline-block;
+	}
+.secondaryContainer
+{
+	display:none;
+}
+
+}
+
+/*--This is for Print Preview Screen--*/
+      @media screen{
+body{
+	margin:0;
+	padding:10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.mainContainer{
+	padding:0px;
+	margin:0px;
+	width:960px;
+	border:8px solid #8DC73F;
+	border-radius:4px;
+	-moz-border-radius: 4px;
+	padding:10px;
+	text-align:center;
+}
+
+.secondaryContainer {
+	padding:0px;
+	margin:50px 0 0 0;
+	width:960px;
+	border:8px solid #8DC73F;
+	border-radius:4px;
+	-moz-border-radius: 4px;
+	padding:10px;
+	text-align:center;
+}
+.mainContainer h1 {
+
+    font-size: 20px;
+    margin: 14px 0px 10px;
+    color: #111111;
+    -webkit-print-color-adjust: exact;
+    display: inline;
+    float: left;
+}
+
+.binHeader
+{
+	padding-right:20px;
+}
+
+.lccLogo
+{
+	width:80px;
+	float:right;
+	margin-top:10px;
+}
+.binWrapper{
+	width:300px;
+	float:left;
+	padding:10px;
+	position:relative;
+	}
+.selectedContainer{
+	background:transparent;
+	margin:0;
+	padding:0px;
+	border-radius:4px;
+	z-index:999;
+	-moz-border-radius: 4px;
+	border:5px solid #000;
+	-webkit-print-color-adjust: exact
+}
+.selectedContainer h3{
+	text-transform:uppercase;
+	text-align:center;
+	color:#333;
+	font-size:16px;
+	margin:0;
+	padding:10px;
+}
+
+.selectedContainer.green{
+	border-color:#8DC73F;
+
+}
+
+.selectedContainer.green h3{
+	color:#8DC73F;
+
+}
+
+
+.selectedContainer.brown{
+	border-color:#663300;
+
+}
+
+.selectedContainer.brown h3{
+	color:#663300;
+}
+          
+.selectedContainer.blue{
+	border-color:  #0290D7;
+
+}
+
+.selectedContainer.blue h3{
+	color:  #0290D7;
+}          
+          
+        
+
+
+.selectedContainer h3 img{
+	display:none;
+}
+.selectedContainer ul{
+	list-style-type:none;
+	padding:0px;
+    margin:0px 0px 0px;
+	background:none;
+	border-radius:4px;
+	text-align:left;
+	-moz-border-radius: 4px;
+	-webkit-print-color-adjust: exact
+}
+.selectedContainer ul li{
+	color:#111111;
+	padding:5px 10px;
+	font-size:0.8em;
+	line-height:1em;
+	border-top:1px solid #000;
+}
+
+.selectedContainer.brown ul li{
+	border-color:#663300;
+}
+
+.selectedContainer.green ul li{
+	border-color:#8DC73F;
+}
+.selectedContainer ul li:nth-child(even){
+	background: #F0F0F0;
+	}
+.brownBin .selectedContainer ul li:nth-child(even){
+	background: #FFF5EC;
+	}
+.greenBin .selectedContainer ul li:nth-child(even){
+	background: #EDF5E0;
+	}
+.blueBin .selectedContainer ul li:nth-child(even){
+	background: #E6F7FF;
+	}
+.binFooter{
+	clear:both;	
+	position:relative;
+	text-align:left;
+	padding:0 20px;
+}
+.binFooter p{
+	color:#222;
+	text-align:left;
+	font-weight:normal;
+	font-size:12px;
+	line-height:1em;
+	margin-top:15px;
+	display:block;
+	padding:0px;
+	display:inline-block;
+	-webkit-print-color-adjust: exact
+}
+.binFooter img{
+	height:25px;
+}
+.binFooter img.lccLogoFooter{
+	position:absolute;
+	left:10px;
+	top:10px;
+}
+.binFooter img.recycleLogoFooter{
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+.clear{
+	clear:both;
+}
+.whatGoesIn{
+	padding:0 15px 15px 15px;
+	margin-top:10px;
+	position:relative;
+	background:#fff;
+	color:#333;
+	border-radius:4px;
+	-moz-border-radius: 4px;
+	border:5px solid #000;
+    min-height:160px;    
+	-webkit-print-color-adjust: exact
+
+	
+}
+
+.triangle {
+    position: absolute;
+    top: -20px;
+    left: 44%;
+    height: 15px;
+}
+
+.whatGoesIn h2 {
+	margin:10px 0 5px 0;
+	padding:0;
+	font-size:13px;
+	line-height:1em;
+	font-weight:bold;
+	display:inline-block;
+}
+
+.whatGoesIn p {
+	margin:0;
+	padding:0;
+	font-size:12px;
+	line-height:1.4em;
+	font-weight:normal;
+} 
+.brownBin .whatGoesIn{
+	border-color:#663300;
+	-webkit-print-color-adjust: exact
+}
+.greenBin .whatGoesIn{
+	border-color:#8DC73F;
+	-webkit-print-color-adjust: exact
+}
+.blueBin .whatGoesIn{
+	border-color: #0290D7;
+	-webkit-print-color-adjust: exact
+}
+.whatGoesIn ul{
+    list-style:none;
+	text-align:left;
+	font-size:12px;
+	margin:0;
+	padding:0;
+	width:50%;
+	float:left;
+}
+.whatGoesIn ul li{
+	padding:0px 10px 0px 20px;
+	background:url(../images/cross.png) top left no-repeat;
+}
+.greenBin .whatGoesIn ul li, .brownBin .whatGoesIn ul li, .blueBin .whatGoesIn ul li{
+	background:url(../images/tick.png) top left no-repeat;
+}
+.recycleLogo {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 0px;
+    width: 200px;
+    margin-top: 10px;
+    float:left;
+}
+
+.binBackground{
+	position:absolute;
+	top:9px;
+	left:10px;
+	z-index:-10;
+}
+.binBottom{
+	margin-left:-10px;
+	margin-top:-5px;
+	margin-bottom:-15px;
+	display:inline-block;
+	}
+	
+.col-md-3
+{
+	width:320px;
+	box-sizing:border-box;
+	padding:15px;
+	float:left;
+}
+
+.contentBlock
+{
+	padding:15px;
+	border:1px solid #ddd;
+	min-height:170px;
+	position:relative;
+}
+
+.contentBlock a
+{
+	display:block;
+	border:2px solid #8DC73F;
+	padding:15px;
+	color:#8DC73F;
+	text-decoration:none;
+	bottom:15px;
+	width:85%;
+}
+
+.contentBlock a:hover, .contentBlock a:focus
+{
+	border:2px solid #8DC73F;
+	background:#8DC73F;
+	color:#fff;
+	display:block;
+	border:2px solid #8DC73F;
+	padding:15px;
+	color:#8DC73F;
+	text-decoration:none;
+}
+          
+.spacer
+{
+    min-height:90px;
+}
+
+.social 
+{
+	margin-bottom:15px;
+}
+.social a
+{
+	
+	font-size:40px;
+	background:#8DC73F;
+	border:2px solid #8DC73F;
+	display: inline-block;
+	color:#fff;
+	width:80px;
+	padding:20px 0;
+}
+
+.social a:hover, .social a:focus
+{
+	background:#fff;
+	border:2px solid #8DC73F;
+	color:#8DC73F;
+}
+
+
+.social a span
+{
+display:none;
+}
+
+
+
+      </style>
+   
+</head>
+
+<body>
+    <div class="mainContainer">
+
+        <div class="binHeader">
+
+            <img class="recycleLogo" src="../images/BinCalender/recycle-logo.jpg" alt="Recycle for leeds logo" />
+
+            <h1>Bin Collection Dates</h1>
+            <img class="lccLogo" src="../images/BinCalender/lccLogo.png" alt="Leeds City Council Logo" />
+            <div class="clear"></div>
+
+
+        </div>
+
+
+        <div class="binMain">
+
+                 <div id='divGreenBin' class="binWrapper greenBin">
+
+               
+
+                <div class="selectedContainer green">
+                    <h3>Green bin collection days</h3>
+                    _greenBinData
+                  
+                </div>
+
+                <div class="whatGoesIn">
+                    <img src="../images/BinCalender/triangle-green.png" class="triangle" />
+                                      <h2>Yes Please!</h2>
+                    <p>
+                        Aerosols •
+                        Food tins/drinks cans •
+                        Aluminium foil •
+                        Plastic bags •
+                        Plastic bottles •
+                        Other plastics (Types 1, 2 & 4) •
+                        Paper and card
+                    </p>
+                    <h2>No thanks!</h2>
+                      <p>Nappies •	
+                         Polystyrene • 
+                         Glass • 
+                         Yoghurt pots and butter tubs • 
+                         Clingfilm • 
+                         Shredded paper  </p>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+
+           
+
+            <div id='divBrownBin'  class="binWrapper brownBin">
+
+             
+
+                <div class="selectedContainer brown">
+                    <h3>Brown bin collection days</h3>
+                    _brownBinData
+             
+                </div>
+
+                <div class="whatGoesIn">
+                    <img src="../images/BinCalender/triangle-brown.png" class="triangle" />
+                    <h2>Yes Please!</h2>
+                    <p>
+                       Grass cuttings •
+                       Hedge clippings •
+                       Flowers and plants •
+                       Leaves •
+                       Twigs/Small branches •
+                       Weeds •
+                       Windfall fruit 
+                     </p>
+                      <h2>No thanks!</h2>
+                      <p>Animal bedding and waste • Stones, soil and food waste • Plant pots and furniture  • Noxious weeds e.g. Japanese knotweed and ragwort  </p>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+
+       
+            <div id='divBlueBin' class="binWrapper blueBin">
+
+             
+
+                <div class="selectedContainer blue">
+                    <h3>Food bin collection days</h3>
+                    _blueBinData
+                </div>
+
+                <div class="whatGoesIn">
+                    <img src="../images/BinCalender/triangle-blue.png" class="triangle" />
+                    <h2>Yes Please!</h2>
+                    
+                        <p>Cooked and uncooked food •
+                        Meat, fish and poultry •
+                        Dairy products •
+                        Bread, pastries and cakes •
+                        Pasta, rice and beans •
+                        Teabags and coffee grounds •
+                        Vegetables and fruit (including peelings)</p>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+
+            <div id='divBlackBin' class="binWrapper blackBin">
+
+             
+
+                <div class="selectedContainer">
+                    <h3>Black bin collection days</h3>
+                    _blackBinData
+               
+                </div>
+
+                <div class="whatGoesIn">
+                    <img src="../images/BinCalender/triangle-black.png" class="triangle" />
+                    <h2>No Thanks!</h2>
+                    <p>
+                        Soil/rubble •
+                        Electrical items •
+                        Large or heavy items •
+                        Hazardous waste (batteries, paint, chemicals) •
+                        Needles/syringes 
+                    </p>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+
+        </div><!--BIN MAIN-->
+
+        <div class="binFooter">
+             <p>Please put your <strong>bin out by 7am</strong> on your collection day and return after emptying</p>
+
+            <p style="float:right">Find out more at: <a href="http://www.leeds.gov.uk/yourbins">www.leeds.gov.uk/yourbins</a></p>
+
+            <div class="clear"></div>
+
+        </div>
+
+    </div>
+
+    <div class="secondaryContainer">
+    <div class="col-md-3">
+    <div class="contentBlock">
+    <p class="spacer">Take glass bottles and jars to a bottle bank. Find your nearest at </p>
+    <a href="http://www.leeds.gov.uk/whereilive">Where I live</a>
+    </div>
+    </div>
+        <div class="col-md-3">
+    <div class="contentBlock">
+    <p class="spacer">Take shoes, clothing and textiles to a charity shop or to a bring-site
+  Donate furniture and other re-usable items household items by visiting</p>
+    <a href="http://www.leeds.gov.uk/unwanteditems">Unwanted items</a>
+    </div>
+    </div>
+            <div class="col-md-3">
+    <div class="contentBlock">
+    <p>To check what goes where, visit</p> 
+    <a href="http://www.whatgoeswhere.org.uk" rel="external" style="margin-bottom:18px">What goes where website</a>    
+    <a href="http://www.leeds.gov.uk/recycle">Recycle</a>
+    </div>
+    </div>
+    <div class="clear"></div>
+    <p>Please make sure all your waste is contained within your bin with the lid closed.  Please put your bin out by 7am on your collection day and return after emptying </p>
+     <h2>Follow us on</h2>
+     <div class="social">
+     <a href="https://www.facebook.com/people/Leeds-Waste-Docs/100006765738636"><i class="fa fa-facebook" aria-hidden="true"></i><span>FaceBook</span></a>
+     <a href="https://twitter.com/LeedsWasteDocs?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+     </div>
+    </div>
+
+</body>
+</html>
