@@ -309,3 +309,11 @@ footer.main{
     background-color:  #803f92 !important;
     color: #fff;
 }
+
+
+.sectionSubsite a, footer.main a  {
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
