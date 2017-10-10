@@ -495,3 +495,28 @@ aside.col-md-4{
 .atoz {
     margin-top: 50px;
 }
+
+//sp pagination
+.pagination-nav{
+    position:relative;
+
+    #PagingSelf{
+        position: absolute;
+        left: 50%;
+        width: 100px;
+        top: 30%;
+        margin-left: -50px;
+        z-index:5;
+
+        @media (max-width: 641px) {
+            position: relative;
+            left: auto;
+            width: 100%;
+            top: auto;
+            margin-left: 0;
+            text-align:center
+        }
+    }
+}
+        
+        
