@@ -3,6 +3,7 @@
 //= require date-range-filter
 //= require news-archive-filter
 //= require keyword-filter
+//= require bins-print
 
 
 //removes top margin frpm right hand column if empty

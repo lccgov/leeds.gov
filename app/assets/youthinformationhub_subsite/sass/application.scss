@@ -15,7 +15,7 @@ $base-background-color:#fff;
 //$base-font-color:#333 ;
 //$base-link-color:#133E8D ;
 //$base-container-width:1500px ;
-//$btn-background-color:green ;
+$btn-background-color:#C71585 ;
 $font-primary:  Arial,sans-serif; // main font
 $font-secondary: Arial,sans-serif; // secondary font
 
@@ -98,7 +98,7 @@ $highlighted-font-color:#333;
 
 
 //group promo colours
-$group-promo-background-color: #fff;
+$group-promo-background-color: #f6f6f6;
 $group-promo-header-color: #337ab7;
 $group-promo-description-color: #666B76;
 $group-promo-arrow-color: #C71585 ;
@@ -130,14 +130,18 @@ $blockquoteQuoteFooterColor:#C71585;
 //@import 'promoListwebpart';
 //@import 'eventsWebparts';
 @import 'sharepointOverides';
-@import 'iconLinks';
-@import 'heroBanner';
-@import 'news';
-@import 'polaroids';
+//@import 'iconLinks';
+//@import 'heroBanner';
+//@import 'news';
+//@import 'polaroids';
 @import 'groupPromo';
-@import 'blocklinks';
-@import 'contentLink';
-@import 'docList';
+@import 'accessibility';
+@import 'browser-alert';
+@import 'typography-lcc';
+//@import 'buttons';
+@import 'tables';
+@import 'description_list_accessible';
+@import 'images';
 @import 'contentAssets';
 @import 'blockQuote';
 
@@ -188,9 +192,30 @@ h1, h2, h3, h4, h5 {
 	font-family: 'BebasNeuewebfont';
 }
 
-h1, h2, h3{
+.ms-rtestate-field {
+    &h1, &h2, &h3, &h4, &h5{
+        font-family: 'BebasNeuewebfont';
+}
+    }
+
+
+
+h1, h2, h3, .ms-rtestate-field h1, .ms-rtestate-field h2, .ms-rtestate-field h3 {
 
 	color: #414141;
+    font-family: 'BebasNeuewebfont';
+}
+
+.ms-rtestate-field h1, h1{
+    font-size:65px;
+}
+
+.ms-rtestate-field h2, h2{
+    font-size:50px;
+}
+
+.ms-rtestate-field h3, h3{
+    font-size:40px;
 }
 
 
@@ -300,10 +325,10 @@ ul li {
 
 .groupPromo ul li
 {
-  border-radius:0px;
+  border-radius:10px;
  a
 { 
-     border-radius:0px;
+     border-radius:10px;
     
     @media screen and (min-width:1200px){
         min-height:120px;
@@ -316,7 +341,7 @@ ul li {
 }
 }
 
- .highlighted {
+ .panel {
     padding: 25px; border: 5px solid #efefef;
     border-radius: 13px;
     background:transparent;
@@ -326,7 +351,7 @@ ul li {
         color:#C71585;
     }
 
-    .highlighted {
+    .panel{
 
     margin: 2em 0 0 0;
     background: #F6F7FA;
@@ -337,7 +362,7 @@ ul li {
 
 
 
- .col-md-4 .groupPromo.full ul{
+ .col-md-4 .groupPromo.list ul{
 
  border-bottom:1px solid #efefef;
  
@@ -352,6 +377,23 @@ ul li {
     }
 } 
  }
+
+
+  .col-md-4 .groupPromo.full ul{
+
+
+ 
+  li {
+     width: 100% !important;
+} 
+ }
+
+
+.btn{
+    font-size:19px;
+    text-decoration: none;
+    border-radius:5px;
+}
 
 
 

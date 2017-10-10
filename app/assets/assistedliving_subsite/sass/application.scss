@@ -250,3 +250,11 @@ nav ul li a.selected {
     background:darken(#4868a6, 20%)!important;
     color:#fff;
 }
+
+.sectionSubsite a, footer.main a  {
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
