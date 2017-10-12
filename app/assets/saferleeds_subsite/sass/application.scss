@@ -204,14 +204,6 @@ $highlighted-alt-font-color:#333;
     font-size:25px;
 }
 
-a{
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-}
-
 
 .ms-rtestate-field ul{
   list-style: disc;
@@ -256,5 +248,16 @@ a.promo {
     display:block;
     img {
         width:100%;
+    }
+}
+
+.btn, .button, .iconLinks li .link, .iconLinks li a,.ms-rteElement-button {
+    text-decoration:none;
+}
+
+footer.main a {
+    text-decoration:none;
+    &:hover{
+        text-decoration:underline;
     }
 }

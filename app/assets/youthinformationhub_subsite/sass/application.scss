@@ -393,10 +393,25 @@ ul li {
     font-size:19px;
     text-decoration: none;
     border-radius:5px;
+    text-decoration:none;
 }
 
 
 
+footer.main a {
+    text-decoration:none;
+    &:hover{
+        text-decoration:underline;
+    }
+}
 
+.content-block {
+    
+    padding-bottom:15px;
+    
+    .btn {
+    margin: 10px 20px 10px 0;
+}
 
+}
 

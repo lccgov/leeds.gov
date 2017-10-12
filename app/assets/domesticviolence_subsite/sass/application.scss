@@ -349,14 +349,14 @@ a#hide-site{
     padding:20px;
     font-size:24px;
     color:#fff;
-    background:#52246D;
+    background:#2e1140;
     float:right;
     display:inline-block;
     text-decoration: none;
 }
 
 a#hide-site:hover, a#hide-site:focus{
-    background:#301540;
+    background:darken(#2e1140,20%);
     text-decoration:none;
 }
 
@@ -379,13 +379,7 @@ a#hide-site:hover, a#hide-site:focus{
    max-width:100%;
 }
 
-a{
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-}
+
 
 #main .col-md-8 {
     margin-bottom:50px;
@@ -400,5 +394,16 @@ a.promo{
     margin-top:30px;
     img{
         width:100%;
+    }
+}
+
+.btn, .button, .iconLinks li .link, .iconLinks li a,.ms-rteElement-button {
+    text-decoration:none;
+}
+
+footer.main a {
+    text-decoration:none;
+    &:hover{
+        text-decoration:underline;
     }
 }

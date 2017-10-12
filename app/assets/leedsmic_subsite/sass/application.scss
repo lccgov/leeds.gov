@@ -199,13 +199,6 @@ $highlighted-alt-font-color:#333;
 
 
 
-a{
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-}
 
 
 
@@ -249,4 +242,15 @@ blockquote {
 
 .ms-rtestate-field ul{
   list-style: disc;
+}
+
+.btn, .button, .iconLinks li .link, .iconLinks li a,.ms-rteElement-button {
+    text-decoration:none;
+}
+
+footer.main a {
+    text-decoration:none;
+    &:hover{
+        text-decoration:underline;
+    }
 }
