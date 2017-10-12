@@ -1,9 +1,12 @@
+//= require knockout-3.4.0
+//= require knockout.validation
 //= require google-analytics
 //= require handlebars
 //= require date-range-filter
 //= require news-archive-filter
 //= require keyword-filter
 //= require bins-print
+//= require contact-us-form
 
 
 //removes top margin frpm right hand column if empty
