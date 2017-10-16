@@ -98,6 +98,13 @@ $news-pod-border-color:#ddd;
 $accordion-color:#ED943A;
 //$accordion-border-color:#ECF0F1;
 
+//highlighted box in content assets
+$highlighted-background-color:#f6f6f6;
+$highlighted-font-color:#333;
+$highlighted-alt-background-color:#ed943a ;
+$highlighted-alt-font-color:#fff;
+
+
 @import 'mixins';
 @import 'variables';
 @import 'brandColors';
@@ -210,4 +217,18 @@ ul.menu li a.main-menu {
 }
 
 
+.logo-footer span {
+    background: url(../images/lcclogo.svg) 0px center no-repeat;
+}
+
+.btn, .button, .iconLinks li .link, .iconLinks li a,.ms-rteElement-button {
+    text-decoration:none;
+}
+
+footer.main a {
+    text-decoration:none;
+    &:hover{
+        text-decoration:underline;
+    }
+}
 
