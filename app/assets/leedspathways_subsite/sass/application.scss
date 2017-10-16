@@ -212,6 +212,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .ms-rtestate-field {
+    word-wrap:normal;
+
     &h1, &h2, &h3, &h4, &h5{
         font-family: 'BebasNeuewebfont';
 }
@@ -242,11 +244,11 @@ h1, h2, h3, .ms-rtestate-field h1, .ms-rtestate-field h2, .ms-rtestate-field h3 
 
 &.thirds{
     li{
-            width: calc(100% * (1/3) - 5px) !important;
+            width: calc(100% * (1/3) - 7px) !important;
     
 
            @media (max-width: 1024px) {
-                    width: calc(100% * (1/2) - 5px) !important;
+                    width: calc(100% * (1/2) - 7px) !important;
             }
 
               @media (max-width: 600px) {
