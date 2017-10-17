@@ -451,3 +451,8 @@ aside.col-md-4{
 .mega-promo .mega-promo__item{
     width:100%;
 }
+
+input[type=submit]{
+    @extend .btn;
+    @extend .btn-primary;
+}
