@@ -456,3 +456,36 @@ aside.col-md-4{
     @extend .btn;
     @extend .btn-primary;
 }
+
+//rss feed
+h2.ms-webpart-titleText{
+    @extend .heading-medium;
+    margin-top:0;
+}
+
+.rss-content{
+    padding:0;
+    
+    .rss-article{
+        .rss-article-title{
+            a{
+
+            }
+        }
+        .rss-article-pubDate{
+            span{
+
+            }
+        }
+        .rss-article-description{
+            p{
+
+            }
+            div{
+                p{
+
+                }
+            }
+        }
+    }
+}
