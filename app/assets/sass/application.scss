@@ -452,40 +452,77 @@ aside.col-md-4{
     width:100%;
 }
 
-.form-group input[type=submit]{
-    @extend .btn;
-    @extend .btn-primary;
+
+//input submit styling
+.form-group{
+    input[type=submit]{
+        @extend .btn;
+        @extend .btn-primary;
+    }
 }
 
 //rss feed
-h2.ms-webpart-titleText{
-    @extend .heading-medium;
-    margin-top:0;
-}
-
-.rss-content{
+#rss-content{
     padding:0;
-    
+    margin:-5px 0 0;
+
     .rss-article{
+        border-bottom:1px solid $border-color;
+        margin-bottom: 15px;
+
         .rss-article-title{
             a{
-
+                margin-right:0;
+                margin-bottom: 15px;
+                display: inline-block;
             }
         }
         .rss-article-pubDate{
             span{
-
+                @extend .font-xsmall;
+                color:$secondary-font-color;
             }
         }
         .rss-article-description{
             p{
-
+                 @extend .font-xsmall;
             }
             div{
                 p{
 
                 }
             }
+        }
+    }
+}
+
+//rss feed sharepoint overrides
+.col-md-4{
+    .ms-webpart-titleText.ms-webpart-titleText{
+        font-family: $font-secondary;
+        color:$base-link-color;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        font-size: 24px;
+        border-bottom: 5px solid #f6f7fa;
+
+        @media (max-width: 641px){
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.ms-wpContentDivSpace {
+    table{
+        margin:0;
+        border:0;
+        
+        td{
+            padding:0;
+            border:0;
         }
     }
 }
