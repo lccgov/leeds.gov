@@ -219,6 +219,7 @@ $input-border-color:$grey;
 @import 'sub-section-nav';
 @import 'atoz';
 @import 'lcc_search';
+@import 'survey-webpart';
 
 //CUSTOM SASS FILES FOR STYLE GUIDE
 //@import 'prism';
@@ -236,6 +237,7 @@ $input-border-color:$grey;
 @import 'lcc_news';
 @import 'ie-support';
 @import 'sharepoint_2010_style_fallback';
+@import 'eventsSearchResults';
 
 //BASE LEEDS.GOV.UK STYLES
 @import 'lcc_base_styles';
@@ -413,89 +415,6 @@ aside.col-md-4{
     }
 }
 
-//contact page old styles
-.box-layout{
-    @include flexbox();
-    @include flex-direction(row);
-    @include flex-wrap(wrap);
-    margin:0 0 0 -15px;
-    width:auto;
-    padding:0 0 15px;
-
-    .box-layout-item{
-        padding-bottom:10px;
-        width: calc(100% * (1/3) - 16px);
-        margin:15px 0 0 15px;
-        border:0;
-        background:$lighter-grey;
-        padding:30px;
-
-        @media (max-width: 1200px) {
-            width: calc(100% * (1/2) - 16px);
-        }
-
-        @media (max-width: 600px) {
-            width: 100%;
-        }
-    }
-
-    h2,
-    h3,
-    h4{
-        &:first-of-type{
-            margin-top:0;
-        }
-    }
-}
-
-.telephone{
-    font-weight:700;
-
-    &:before{
-        font-family: FontAwesome;
-        content: "\f095";
-        margin-right:10px;
-    }
-
-    .additionalInfo{
-        @extend .font-xsmall;
-        display:block;
-        font-weight:400;
-    }
-}
-
-.text-highlight{
-    padding:30px;
-
-    @media (max-width: 641px) {
-        padding:15px;
-    }
-
-    h2,
-    h3,
-    h4{
-        margin-bottom:15px;
-
-        @media (max-width: 641px) {
-            margin-bottom:7px;
-        }
-    }
-}
-
-.text-block {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.text-highlight--red.text-block,.text-highlight.text-highlight--red {
-    border-color: $red;
-    background: rgba($red,0.1);
-}
-
-.atoz {
-    margin-top: 50px;
-}
-
 //sp pagination
 .pagination-nav{
     position:relative;
@@ -524,3 +443,11 @@ aside.col-md-4{
     line-height:1.4;
 }
         
+//mega promo fixes
+.mega-promo{
+    padding-top:0;
+}
+
+.mega-promo .mega-promo__item{
+    width:100%;
+}

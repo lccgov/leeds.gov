@@ -109,13 +109,13 @@ $accordion-color:green;
 
 
 //Block quote
-$blockquoteBorderColor:#bbcada ;
+$blockquoteBorderColor:rgba(0,0,0, 0.5) ;
 $blockquoteQuoteColor:#f38520;
 $blockquoteQuoteFooterColor:#999;
 
 //highlighted box in contentAssets
-$highlighted-background-color:#f38520;
-$highlighted-font-color:#fff;
+$highlighted-background-color:#f6f6f6;
+$highlighted-font-color:#333;
 $highlighted-alt-background-color:#414141;
 $highlighted-alt-font-color:#fff;
 
@@ -136,7 +136,7 @@ $white:#fff;
 @import 'carousel';
 //@import 'socialMedia';
 //@import 'sideNavigation';
-//@import 'blockLinks';
+
 @import 'accordion';
 @import 'promoGroup';
 @import 'alerts';
@@ -145,24 +145,30 @@ $white:#fff;
 @import 'sharepointOverides';
 @import 'iconLinks';
 @import 'heroBanner';
-@import 'news';
-@import 'polaroids';
+//@import 'news';
+//@import 'polaroids';
+
 @import 'groupPromo';
-@import 'blocklinks';
-@import 'contentLink';
-@import 'docList';
+//@import 'blocklinks';
+//@import 'contentLink';
+//@import 'docList';
 @import 'accessibility';
 @import 'browser-alert';
 @import 'typography-lcc';
 @import 'buttons';
 @import 'tables';
 @import 'contentAssets';
-@import 'mega-promo';
+//@import 'mega-promo';
+@import 'blockQuote';
 
 
 body{
-    font-weight:200;
+    font-weight:200 !important;
 }
+
+a:visited{
+    color:darken(#F38520, 10%);
+ } 
 
             .header-left{
                 width:100%;
@@ -429,13 +435,14 @@ strong {
     {
       position:relative;
       display:inline-block;
-      padding: 15px 55px 15px 35px;
+      padding: 20px 55px 20px 35px;
       color:#fff;
       background:$btn-background-color;
       text-transform:uppercase !important;
       border-color:$btn-background-color;
       box-shadow:none;
       font-weight:400;
+      font-size:18px;
 
       &:hover, &.btn-default:hover, &.alt:hover {
           background:darken(#F38520,10%);
@@ -559,6 +566,17 @@ p strong.lead,  p strong.lead
 }
 
 
-.btn, .button {
+.btn, .button, .iconLinks li .link, .iconLinks li a,.ms-rteElement-button {
     text-decoration:none;
+}
+
+.footer.main a {
+    text-decoration:none;
+    &:hover{
+        text-decoration:underline;
+    }
+}
+
+.sectionThree .panel{
+    background:#fff;
 }

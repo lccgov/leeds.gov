@@ -322,3 +322,12 @@
     font-weight:300;
 }
 
+.search-reset{
+    text-align:center;
+    padding:10px 0;
+    
+    a{
+        @extend .font-xsmall;
+        color:$base-link-color;
+    }
+}

@@ -203,13 +203,7 @@ $group-promo-arrow-color: #6cb6cd;
 
 
 
-a{
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-}
+
 
 
  .groupPromo ul
@@ -250,3 +244,11 @@ nav ul li a.selected {
     background:darken(#4868a6, 20%)!important;
     color:#fff;
 }
+
+.sectionSubsite a, footer.main a  {
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
