@@ -452,7 +452,7 @@ aside.col-md-4{
     width:100%;
 }
 
-input[type=submit]{
+.form-group input[type=submit]{
     @extend .btn;
     @extend .btn-primary;
 }
