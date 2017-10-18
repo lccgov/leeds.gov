@@ -6,8 +6,9 @@
 //= require news-archive-filter
 //= require keyword-filter
 //= require bins-print
+//= require street-register
+//= require highways-maintenance
 //= require contact-us-form
-
 
 //removes top margin frpm right hand column if empty
 function isEmpty( el ){
