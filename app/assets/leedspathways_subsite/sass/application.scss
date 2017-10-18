@@ -130,18 +130,17 @@ $blockquoteQuoteFooterColor:#C71585;
 //@import 'promoListwebpart';
 //@import 'eventsWebparts';
 @import 'sharepointOverides';
-@import 'iconLinks';
-@import 'heroBanner';
-@import 'news';
-@import 'polaroids';
+//@import 'iconLinks';
+//@import 'heroBanner';
+//@import 'news';
+//@import 'polaroids';
 @import 'groupPromo';
-@import 'blocklinks';
-@import 'contentLink';
-@import 'blockQuote';
-@import 'docList';
-@import 'contentAssets';
-@import 'mega-promo';
-@import '../museumsandgalleries_subsite/sass/museums';
+//@import 'blocklinks';
+//@import 'contentLink';
+
+//@import 'docList';
+
+//@import 'mega-promo';
 @import 'accessibility';
 @import 'browser-alert';
 @import 'typography-lcc';
@@ -150,6 +149,7 @@ $blockquoteQuoteFooterColor:#C71585;
 @import 'description_list_accessible';
 @import 'images';
 @import 'contentAssets';
+@import 'blockQuote';
 
 
 
@@ -212,8 +212,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .ms-rtestate-field {
+    word-wrap:normal;
+
     &h1, &h2, &h3, &h4, &h5{
-        font-family: 'BebasNeuewebfont' !important;
+        font-family: 'BebasNeuewebfont';
 }
     }
 
@@ -222,6 +224,7 @@ h1, h2, h3, h4, h5 {
 h1, h2, h3, .ms-rtestate-field h1, .ms-rtestate-field h2, .ms-rtestate-field h3 {
 
 	color: #C71585;
+    font-family: 'BebasNeuewebfont';
 }
 
 .ms-rtestate-field h1, h1{
@@ -241,11 +244,11 @@ h1, h2, h3, .ms-rtestate-field h1, .ms-rtestate-field h2, .ms-rtestate-field h3 
 
 &.thirds{
     li{
-            width: calc(100% * (1/3) - 5px) !important;
+            width: calc(100% * (1/3) - 7px) !important;
     
 
            @media (max-width: 1024px) {
-                    width: calc(100% * (1/2) - 5px) !important;
+                    width: calc(100% * (1/2) - 7px) !important;
             }
 
               @media (max-width: 600px) {
@@ -391,4 +394,7 @@ ul li {
     display:none;
 }
 
+blockquote p {
 
+    font-size: 19px!important;
+}

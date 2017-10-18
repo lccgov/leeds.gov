@@ -259,3 +259,33 @@
     display:inline-block;
 }
 
+.search-panel{
+    @extend .panel;
+    padding-bottom:10px;
+}
+
+.table-responsive {
+    margin-bottom: 0;
+    border: 0;
+}
+
+.table-title{
+    margin-bottom:0;
+}
+
+.hideFromScreen{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.or{
+    font-weight:700;
+    margin:-15px 0 10px;
+    display:block;
+}

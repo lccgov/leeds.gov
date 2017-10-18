@@ -1,11 +1,18 @@
+//= require knockout-3.4.0
+//= require knockout.validation
 //= require google-analytics
 //= require handlebars
 //= require date-range-filter
 //= require news-archive-filter
 //= require keyword-filter
 //= require bins-print
+<<<<<<< HEAD
 //= require street-register
 //= require highways-maintenance
+=======
+//= require contact-us-form
+
+>>>>>>> 80a24ce958f8e1e866c4c97c2c7ce2ba44011d61
 
 //removes top margin frpm right hand column if empty
 function isEmpty( el ){
