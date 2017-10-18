@@ -22,7 +22,7 @@
                         street = $('#full-name-f1').val();
                     }
 
-                    $.getJSON('http://api.highwaysmaintenanceapi-sde-idw.leeds.gov.uk/api/getSearchdata2014_Result/' + ward +'/' + street + '/Ward', function (data) {
+                    $.getJSON('https://api.highwaysmaintenance.leeds.gov.uk/api/getSearchdata2014_Result/' + ward +'/' + street + '/Ward', function (data) {
                         $.each(data, function (key, value) {
                             var markup1 = "<tr><td>" + value.Promoter + "</td><td>" + value.Road + "</td><td>" + value.From___To + "</td><td>" + value.Nature_of_Works + "</td><td>" + value.Start_Date + "</td><td>" + value.Duration__weeks_ + "</td><td>" + value.Description + "</td></tr>";
                             $("#tblResults").append(markup1);
@@ -40,7 +40,7 @@
 
                     $("#tblResults").html('');
 
-                    $.getJSON('http://api.highwaysmaintenanceapi-sde-idw.leeds.gov.uk/api/getSearchdata2014_Result/' + ward + '/' + street + '/Ward', function (data) {
+                    $.getJSON('https://api.highwaysmaintenance.leeds.gov.uk/api/getSearchdata2014_Result/' + ward + '/' + street + '/Ward', function (data) {
                         $.each(data, function (key, value) {
                             var markup1 = "<tr><td>" + value.Promoter + "</td><td>" + value.Road + "</td><td>" + value.From___To + "</td><td>" + value.Nature_of_Works + "</td><td>" + value.Start_Date + "</td><td>" + value.Duration__weeks_ + "</td><td>" + value.Description + "</td></tr>";
                             $("#tblResults").append(markup1);
@@ -48,7 +48,7 @@
                     });
                 });
 
-                $.getJSON('http://api.highwaysmaintenanceapi-sde-idw.leeds.gov.uk/api/getTreatmentTypes_Result', function (data) {
+                $.getJSON('https://api.highwaysmaintenance.leeds.gov.uk/api/getTreatmentTypes_Result', function (data) {
                     $.each(data, function (key, value) {
                         var markup2 = "<tr><td>" + value.Code + "</td><td>" + value.Treatment + "</td><td>" + value.Description + "</td></tr>";
                         $("#tblTreatmentTypes").append(markup2);

@@ -10,7 +10,7 @@
         this.start = function (element) {
 
             LCC.Modules.StreetRegister.getStreetData = function (roadId) {
-                $.getJSON('http://api.streetregister-sde-idw.leeds.gov.uk/api/getAddress_Result/' + roadId, function (data) {
+                $.getJSON('https://api.streetregister.leeds.gov.uk/api/getAddress_Result/' + roadId, function (data) {
                     LCC.Modules.StreetRegister.clearData();
                     $.each(data, function (key, value) {
 
@@ -59,7 +59,7 @@
             $(document).ready(function () {
                 $("#streetLookup").click(function (e) {
                     $("#tblBodyDetails").html('');
-                    $.getJSON('http://api.streetregister-sde-idw.leeds.gov.uk/api/getAddressSearch_Result/' + $('#streetName').val(), function (data) {
+                    $.getJSON('https://api.streetregister.leeds.gov.uk/api/getAddressSearch_Result/' + $('#streetName').val(), function (data) {
                         $.each(data, function (key, value) {
                             var address = "<tr><td>" + value.RoadName + "</td><td>" + value.Area + "</td><td>" + value.Status + "</td><td>" + "<td> <a href='#' onClick='LCC.Modules.StreetRegister.getStreetData(" + value.RoadID + ")'>Details</a> </td></tr>";
                             $("#tblBodyDetails").append(address);
