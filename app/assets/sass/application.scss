@@ -533,6 +533,7 @@ aside.col-md-4{
         border:4px solid $grey;
         margin-bottom:20px;
         padding:20px;
+        @include border-radius(4px);
 
         h3{
             background:$grey;
@@ -604,7 +605,7 @@ aside.col-md-4{
         color:$IncidentHeaderColor;
     }
     .IncidentFooter{
-        background:rgba($IncidentColor,0.2);
+        background:rgba($IncidentColor,0.1);
 
         p{
             color:$IncidentFooterColor;
@@ -624,5 +625,41 @@ aside.col-md-4{
     }
     .Summary{
         @include IncidentPanelColors($light-grey,$base-font-color,$base-font-color);
+    }
+}
+
+//form styles
+.form-group + .text-highlight{
+    margin-bottom:60px;
+
+    @media (max-width: 641px){
+        margin-bottom:50px;
+    }
+}
+
+.form-top{
+    margin-bottom:50px;
+    clear:both;
+    display:inline-block;
+    width:100%;
+
+    @media (max-width: 641px){
+        margin-bottom:30px;
+    }
+
+    .form-back{
+        width:50%;
+        float:left;
+
+        a{
+            margin:0;
+        }
+    }
+
+    .form-progress{
+        text-align:right;
+        width:50%;
+        float:right;
+        color:$secondary-font-color;
     }
 }
