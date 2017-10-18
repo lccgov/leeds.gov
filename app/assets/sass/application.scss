@@ -500,7 +500,7 @@ aside.col-md-4{
 .col-md-4{
     .ms-webpart-titleText.ms-webpart-titleText{
         font-family: $font-secondary;
-        color:$base-link-color;
+        color:$base-font-color;
         font-weight: 600;
         margin-top: 0;
         margin-bottom: 15px;
@@ -524,5 +524,105 @@ aside.col-md-4{
             padding:0;
             border:0;
         }
+    }
+}
+
+//emergencies
+#OngoingIncidents{
+    .IncidentPanel{
+        border:4px solid $grey;
+        margin-bottom:20px;
+        padding:20px;
+
+        h3{
+            background:$grey;
+            margin:0;
+            padding:20px;
+            margin:-20px -20px 20px -20px;
+        }
+        img{
+            height:150px;
+            float:left;
+            margin-right:20px;
+        }
+        p{
+            margin:0;
+        }
+        a{
+            margin:20px 0 0;
+            display:inline-block;
+        }
+        .IncidentFooter{
+            background:rgba($grey, 0.3);
+            margin:20px -20px -20px -20px;
+            padding:15px 20px;
+
+            p{
+                @extend .font-xsmall;
+                margin:0;
+                text-align:right;
+            }
+        }
+
+        @media (max-width: 641px){
+            margin-bottom:15px;
+            padding:15px;
+
+            h3{
+                padding:15px;
+                margin:-15px -15px 15px -15px;
+            }
+            img{
+                width:100%;
+                height:auto;
+                float:none;
+                margin:0 0 15px;
+            }
+            p{
+                margin:0;
+            }
+            a{
+                margin:15px 0 0;
+            }
+            .IncidentFooter{
+                margin:15px -15px -15px -15px;
+                padding:10px 15px;
+
+                p{
+                    text-align:left;
+                }
+            }
+        }
+    }
+}
+
+@mixin IncidentPanelColors($IncidentColor,$IncidentHeaderColor,$IncidentFooterColor){
+    border-color:$IncidentColor;
+
+    h3{
+        background:$IncidentColor;
+        color:$IncidentHeaderColor;
+    }
+    .IncidentFooter{
+        background:rgba($IncidentColor,0.2);
+
+        p{
+            color:$IncidentFooterColor;
+        }
+    }
+}
+
+#OngoingIncidents{
+    .Warning{
+        @include IncidentPanelColors($red,$white,$base-font-color);
+    }
+    .Information{
+        @include IncidentPanelColors($blue,$white,$base-font-color);
+    }
+    .Highlight{
+        @include IncidentPanelColors($yellow,$base-font-color,$base-font-color);
+    }
+    .Summary{
+        @include IncidentPanelColors($light-grey,$base-font-color,$base-font-color);
     }
 }
