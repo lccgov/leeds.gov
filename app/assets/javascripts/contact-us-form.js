@@ -31,13 +31,22 @@
 
         if(self.settings.nameEnabled) {
             this.view.fields.Name = ko.observable().extend({ required: true, minLength: 2, maxLength:50});
+            if(self.settings.name) {
+                this.view.fields.Name = self.settings.name;
+            }
         }
         //this.view.fields.Name.extend({ validatable: false });
         if(self.settings.commentsEnabled) {
             this.view.fields.Comments = ko.observable().extend({ required: true, minLength: 2, maxLength:1000, message: 'Please enter comments between 1 and 1000 characters'});
+            if(self.settings.comments) {
+                this.view.fields.Comments = self.settings.comments;
+            }
         }
         if(self.settings.emailEnabled) {
             this.view.fields.Email = ko.observable().extend({required: true, email: true});
+            if(self.settings.email) {
+                this.view.fields.Email = self.settings.email;
+            }
         }
 
         self.view.errors = ko.validation.group(this, {
