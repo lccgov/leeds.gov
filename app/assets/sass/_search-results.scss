@@ -7,6 +7,8 @@
         width:100% !important;
         //max-width: 35em !important;
         padding:0 !important;
+        height: 48px;
+        margin-bottom: 50px;
 
         .ms-srch-sbLarge{
             background-color:transparent;
@@ -41,6 +43,7 @@
             border:0 !important;
             margin:0;
             @include border-radius(0px 4px 4px 0px);
+            box-shadow:none;
 
             img{
                 display:none;
@@ -58,59 +61,56 @@
     }
 
     //search results
-    .ms-srch-group {
-        .ms-srch-group-content{
-                display:inline-block;
-                width:100%;
-                //max-width: 35em;
+    .ms-srch-result{
+        margin-top:50px;
 
-            .ms-srch-item{
-                padding:8px 0;
+        .ms-srch-group {
+            .ms-srch-group-content{
+                @extend .text;
+                    display:inline-block;
+                    width:100%;
 
-                &:hover{
-                    background:transparent;
-                }
-                .ms-srch-item-body{
-                    .ms-srch-item-icon{
-                        display:none;
+                .ms-srch-item{
+                    padding:0 0 30px;
+                    margin:0;
 
-                        img{
-                            
-                        }
+                    &:hover{
+                        background:transparent;
                     }
-                    .ms-srch-item-title{
-                        h3.ms-srch-ellipsis{
-                            white-space: normal;
-                            overflow: visible;
-                            display: block;
-                            margin:0;
+                    .ms-srch-item-body{
+                        .ms-srch-item-icon{
+                            display:none;
+                        }
+                        .ms-srch-item-title{
+                            h3.ms-srch-ellipsis{
+                                white-space: normal;
+                                overflow: visible;
+                                display: block;
+                                margin:0;
 
-                            .ms-srch-item-link{
-                                font-weight:700;
-                                text-decoration:none;
-
-                                strong{
-
+                                .ms-srch-item-link{
+                                    font-weight:700;
+                                    text-decoration:none;
                                 }
                             }
                         }
-                    }
-                    .ms-srch-item-summary{
-                        font-size:16px;
-                        color:$base-font-color;
-
-                        strong.ms-srch-item-highlightedText{
+                        .ms-srch-item-summary{
+                            font-size:16px;
                             color:$base-font-color;
-                        }
 
-                    }
-                    .ms-srch-item-path{
-                        color:$base-link-color;
-                        font-size:16px;
-                        display:none;
-                    }
-                    .ms-srch-hover-outerContainer{
-                        display:none !important;
+                            strong.ms-srch-item-highlightedText{
+                                color:$base-font-color;
+                            }
+
+                        }
+                        .ms-srch-item-path{
+                            color:$base-link-color;
+                            font-size:16px;
+                            display:none;
+                        }
+                        .ms-srch-hover-outerContainer{
+                            display:none !important;
+                        }
                     }
                 }
             }
@@ -165,6 +165,8 @@
 }
 
     .ms-ref-ctrl{
+        margin-bottom:0;
+
         .ms-ref-refiner{
             padding:0;
             margin-bottom:10px;
@@ -260,6 +262,7 @@
 
                                 .ms-ref-name{
                                     color:$base-link-color;
+                                    overflow: visible;
                                 
                                     &:hover{
                                         text-decoration:underline !important;
