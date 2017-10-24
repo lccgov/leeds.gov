@@ -1,48 +1,75 @@
 .open-data{
     padding:0;
+    position:relative;
+    margin:0;
+    
+    @media (min-width: 767px){
+        margin:-15px 0 0;
+    }
 
     a{
         text-decoration:underline !important;
     }
 
     li{
-        border-bottom:1px solid $border-color !important;
-        margin-top:20px;
-        position:relative;
+        margin-top:10px;
+
+        h3{
+            margin-bottom:10px;
+
+            @media (min-width: 767px){
+                margin-bottom:15px;
+            }
+        }
+
+        @media (min-width: 767px){
+            float:left;
+        }
 
         &:last-child{
             border:0 !important;
         }
 
-        .heading-small{
+    }
+
+    .open-data__link{
+        @media (min-width: 767px){
+            float: right;
+            margin-top: 10px;
+            display: inline-block;
+            right: 0;
+        }
+    }
+
+    .open-data__info{
+        margin:0;
+        border-bottom:1px solid $border-color !important;
+
+        &:last-of-type{
+            border:0 !important;
+        }
+
+        li{
+            border:0 !important;
+            font-size:16px;
+            margin:5px 0 0;
+
             @media (min-width: 767px){
-                padding-right: 180px;
+                float:left;
+                margin: 0 15px 15px 0;
             }
         }
 
-        .open-data__link{
-            @media (min-width: 767px){
-                position:absolute;
-                right:0;
-                top:0;
-            }
+        div.clear{
+            padding:0 !important;
         }
+    }
+}
 
-        .open-data__info{
-            margin:10px 0 20px;
+ul.accordion li div.content-block .open-data div.clear{
+    padding-bottom:10px !important;
 
-            .open-data__info-cost,
-            .open-data__info-contact,
-            .open-data__info-format{
-                border:0 !important;
-                font-size:16px;
-                margin:5px 0 0;
-
-                @media (min-width: 767px){
-                    float:left;
-                    margin: 0 25px 0 0;
-                }
-            }
-        }
+    @media (min-width: 767px){
+        padding-bottom:0 !important;
     }
 }
