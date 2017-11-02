@@ -10,6 +10,7 @@
 //= require highways-maintenance
 //= require contact-us-form
 //= require survey
+//= require where-i-live
 
 //removes top margin frpm right hand column if empty
 function isEmpty( el ){
