@@ -9,6 +9,7 @@
 //= require street-register
 //= require highways-maintenance
 //= require contact-us-form
+//= require survey
 
 //removes top margin frpm right hand column if empty
 function isEmpty( el ){
