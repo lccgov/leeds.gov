@@ -37,7 +37,7 @@
         }
         //this.view.fields.Name.extend({ validatable: false });
         if(self.settings.commentsEnabled) {
-            this.view.fields.Comments = ko.observable().extend({ required: true, minLength: 2, maxLength:1000, message: 'Please enter comments between 1 and 1000 characters'});
+            this.view.fields.Comments = ko.observable().extend({ required: true, minLength: 2, maxLength:2000, message: 'Please enter comments between 1 and 2000 characters'});
             if(self.settings.comments) {
                 this.view.fields.Comments = self.settings.comments;
             }
