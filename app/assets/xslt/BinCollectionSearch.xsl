@@ -25,7 +25,6 @@
            
           </xsl:for-each>
            </ul>
-           <p><a href="/bins-waste-and-recycling/your-bins/black-bin">What goes in the black bin?</a></p>
             </div>
         
         </div>
@@ -53,7 +52,6 @@
 
           </xsl:for-each>
          </ul>
-         <p><a href="/bins-waste-and-recycling/your-bins/brown-garden-waste-bin">What goes in the brown bin?</a></p>
             </div>
         </div>
       </xsl:if>
@@ -80,7 +78,6 @@
 
           </xsl:for-each>
           </ul>
-          <p><a href="/bins-waste-and-recycling/your-bins/green-recycling-bin">What goes in the green bin?</a></p>
             </div>
         </div>
       </xsl:if>
@@ -109,7 +106,6 @@
 
               </xsl:for-each>
            </ul>
-           <p><a href="/bins-waste-and-recycling/your-bins/food-waste-bin">What goes in the blue bin?</a></p>
             </div>                            
 
           </div>
