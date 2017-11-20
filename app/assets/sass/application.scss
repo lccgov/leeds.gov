@@ -3,7 +3,7 @@
 //@import 'sharepoint_search_15';
 
 //google fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:400,700'); 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,700'); 
 
 // available variables to change the brand colours as required
 // masterhead.scss
@@ -151,7 +151,7 @@ $promo-background-color:$lighter-grey;
 $promo-arrow-color:#9DA5B2;
 $promo-header-color:$blue;
 $promo-secondary-color:$black;
-$promo-highlight-background-color:$dark-blue;
+$promo-highlight-background-color:$blue;
 $promo-highlight-color:$white;
 
 //button colours
@@ -249,6 +249,8 @@ $input-border-color:$grey;
 @import 'lcc_header';
 
 @import 'report_a_problem';
+
+@import 'lcc_mega-promo';
 
 
 //CUSTOM STYLES FOR LEEDS.GOV.UK

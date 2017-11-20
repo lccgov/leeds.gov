@@ -2,8 +2,9 @@
     .mega-promo__item {
         a {
             .mega-promo__content {
+                
                 .mega-promo__header{
-                    font-weight:600 !important;
+                    font-weight:700 !important;
                 }
 
                 .mega-promo__secondary{
@@ -13,14 +14,35 @@
             }
 
             &:hover{
-             background:darken($blue,5%);
+                background:white;
 
                 .mega-promo__header,
-                .mega-promo__secondary,
+                &:after{
+                    color:$base-link-hover-color !important;
+                }
+
+                .mega-promo__secondary{
+                    color:$secondary-font-color !important;
+                }
+            }
+        }
+
+        &.blue{
+            a {
+
+            &:hover{
+
+                .mega-promo__header,
                 &:after{
                     color:$white !important;
                 }
+
+                .mega-promo__secondary{
+                    color:$white !important;
+                }
             }
+        }
+
         }
     }
 }
@@ -58,7 +80,6 @@
 @media (min-width: 767px){
     .mega-promo .mega-promo__item a .mega-promo__content {
         display: block;
-        padding: 20px;
     }
     .mega-promo .mega-promo__item a {
         padding-bottom: 50px;
@@ -67,3 +88,43 @@
         padding-bottom: 0px;
     }
 }
+
+.mega-promo .mega-promo__item a {
+
+        &:after{
+            right:30px;
+            bottom:30px;
+
+            @media (max-width: 767px){
+                right:20px;
+                bottom:20px;
+            }
+
+        }
+        
+        .mega-promo__content {
+        padding:30px !important;
+
+        @media (max-width: 767px){
+            padding:20px !important;
+        }
+    }
+
+}
+
+    .mega-promo .mega-promo__item.third a,
+    .mega-promo .mega-promo__item.quarter a {
+        padding-bottom: 50px;
+    }
+
+    @media (max-width: 990px){
+        .mega-promo .mega-promo__item.featured a {
+            padding-bottom: 50px;
+        }
+    }
+
+    @media (min-width: 767px){
+        .mega-promo .mega-promo__item.featured .mega-promo__header {
+            font-size: 34px!important;
+        }
+    }
