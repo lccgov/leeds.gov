@@ -1,0 +1,131 @@
+
+#modgov .mgTabs ul li a {
+    width: auto;
+    padding: 5px 15px;
+}
+
+#modgov .mgCalendarCell, .mgCalendarCellToday {
+    font-size: 14px !important;
+}
+
+
+#modgov h2.mgSectionTitle {
+    padding:0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 50px;
+    line-height: 1.25;
+    margin-bottom: .7em;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-top: 50px;
+    margin-bottom: .7em;
+    color: #212224;
+    background-color: transparent;
+}
+
+
+#modgov .mgFormRow{
+
+    display: inline-block;
+    width: 100%;
+    margin-top:0;
+    margin-bottom:30px;
+
+}
+
+
+
+#modgov .mgFormRow label, #modgov .mgContent label {
+  display:block;
+    font-weight:normal;
+    font-size:19px;
+    width:100%;
+
+    @media (min-width: 641px) {
+        font-size:21px;
+    }
+}
+
+
+
+
+
+#modgov .mgFormRow input, #modgov select {
+    max-width:40em;
+    height: 45px;
+    color: $input-color !important;
+    background-color: #fff !important;
+    background-image: none;
+    border: 1px solid $input-border-color !important;
+    box-shadow:none;
+    font-size:16px;
+    padding:5px !important;
+    background:white !important;
+    font-family: $font-primary !important;
+    @include border-radius(4px);
+
+    @media (min-width: 641px) {
+        width:50% !important;
+        font-size:19px;
+    }
+
+    &:focus{
+        @extend .input-focus;
+        outline:0;
+    }
+}
+
+
+#modgov input.mgGoButton, #modgov input.mgSubmitButton, #modgov input#butGo,
+
+{
+    font-weight: 400;
+    font-size: 19px;
+    border: 0;
+    border-radius: 4px;
+    white-space: normal;
+    box-shadow: none;
+    margin: 0;
+    text-decoration: none !important;
+    padding: 12px 15px !important;
+    text-align: left;
+    line-height: 1.3em;
+    background-color: #008000 !important;
+    color: #FFFFFF!important;
+    border-color: #008000 !important;
+    min-width:auto;
+    height:auto;
+    box-shadow: 0 3px 0 #006700;
+    width:auto !important;
+
+    &:hover{
+         background-color: #006700 !important;
+    }
+}
+
+#modgov a.mgTabUnSelectTitleLnk, #modgov a.mgTabUnSelectTitleLnk:hover{
+    background:transparent;
+}
+#modgov caption.mgSectionTitle, #modgov a.mgTabSelectTitleLnk, #modgov a.mgTabSelectTitleLnk:hover, #modgov div.mgTableTitleTxt, #modgov p.mgSectionTitle{
+    background:#007299;
+
+}
+
+#modgov li.mgTableOddRow,#modgov li.mgTableEvenRow {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background: none;
+    background-color: transparent;
+    margin: 0 !important;
+    list-style-type: none;
+    border-bottom:1px solid #dcdee1;
+}
+
+#anchorSurveyCompletedText{
+    padding: 20px;
+    background: rgba(0, 128, 0, 0.1);
+    font-weight:500;
+}

@@ -427,7 +427,7 @@ ul.menu li a.main-menu {
 
 
 .logo-footer span {
-    background: url(../../images/lcclogo.svg) center center no-repeat;
+    background: url(../../images/lcclogo.svg) left center no-repeat;
 }
 
 
@@ -439,6 +439,10 @@ ul.menu li a.main-menu {
   list-style: disc;
 }
 
-.logo-footer span {
-    background: url(../adopt4leeds/images/lcclogo.svg) center center no-repeat;
+.footerGlobal nav ul a{
+    text-decoration: none;
+    &:hover{
+        text-decoration:underline;
+    }
 }
+
