@@ -1,5 +1,16 @@
 //= require services.sharepoint
 
+
+
+
+/*
+ * Usage: 
+ *  <div data-module="related-pages" class="relatedPages">
+    <related-pages params="relatedPages: pages, pageTitle:'Test Related Pages'"></related-pages>
+    </div>
+ * 
+ * 
+ */
 (function (global, $) {
     "use strict";
     var LCC = global.LCC || {};
@@ -15,8 +26,9 @@
                 viewModel: function(params) {
                     var self = this;
                     self.pages = params.relatedPages;
+                    self.pageTitle = params.pageTitle || "Related Pages";
                 },
-                template: '<h3>New Related Pages</h3><ul class="nav" data-bind="foreach: pages"><li data-bind="text: name"></li></ul>'
+                template: '<h3 data-bind="text: pageTitle"></h3><ul class="nav" data-bind="foreach: pages"><li data-bind="text: name"><span data-bind="text: term.get_name()"></span></li></ul>'
             });
 
             var vm = function () {
@@ -43,13 +55,13 @@
                                             //pageTerms.map(function(currentValue) {
                                                 var currentValue = pageTerms[i];
                                                 jQuery.when(LCC.Services.SharePoint.GetTerm(currentValue))
-                                                .then(function(term) {
-                                                    console.log(term);
-                                                    //  jQuery.when(LCC.Services.SharePoint.GetTermSetOfTerm(term))
-                                                    //  .then(function(fullData) {
-                                                    //     console.log(fullData);
-                                                         self.pages.push(term);
-                                                    //  });
+                                                .then(function(termData) {
+                                                    //console.log(term);
+                                                      jQuery.when(LCC.Services.SharePoint.GetTermSetOfTerm(termData))
+                                                      .then(function(fullData) {
+                                                         console.log(fullData);
+                                                         self.pages.push(fullData);
+                                                      });
                                                 });
                                                 
                                             }

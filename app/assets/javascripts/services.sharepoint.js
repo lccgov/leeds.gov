@@ -62,38 +62,14 @@
                 var session = SP.Taxonomy.TaxonomySession.getTaxonomySession(context);
                 var termStore = session.getDefaultSiteCollectionTermStore();
 
-                //var parentTermId = 'd89595cf-7d0d-4f19-8e14-8b8b05efb7de'; // Some parent term
                 var term = termStore.getTerm(thisitem.id);
-
-                // arguments are termLabel, language code, defaultLabelOnly, matching option, max num results, trim unavailable
-                //var terms = parentTerm.getTerms(series,1033,true,SP.Taxonomy.StringMatchOption.exactMatch,1,true);
 
                 context.load(term);
                 context.executeQueryAsync(
                     function(){
-                        var termSet = term.get_termSet();
-                        context.load(termSet);
-                        context.executeQueryAsync(function () {
-                            thisitem.term = term;
-                            thisitem.termSet = termSet;
-                            dfd.resolve(thisitem);
-                        }, 
-                        function(sender,args){
-                            console.log(args.get_message());
-                            dfd.reject(args.get_message());    
-                        });
-
-                        // var data = { item: item, term: term };
-                        // dfd.resolve(data);
+                        thisitem.term = term ;
+                        dfd.resolve(thisitem);
                     
-                //print child Terms
-                // for(var i = 0; i < terms.get_count();i++){
-                //     var term = terms.getItemAtIndex(i);
-                //     console.log(term.get_name());
-                //     console.log(term.get_description());
-
-                // }
-
                 }, 
                 function(sender,args){
                     console.log(args.get_message());
@@ -105,9 +81,7 @@
             }
 
             LCC.Services.SharePoint.GetTermSetOfTerm = function(data) {
-
-                var that = this;
-                that.data = data;
+                var thisdata = data;
 
                 var dfd = jQuery.Deferred();
                 
@@ -115,11 +89,11 @@
                 var session = SP.Taxonomy.TaxonomySession.getTaxonomySession(context);
                 var termStore = session.getDefaultSiteCollectionTermStore();
 
-                var termSet = data.term.get_termSet();
+                var termSet = thisdata.term.get_termSet();
                 context.load(termSet);
                 context.executeQueryAsync(function () {
-                    that.data.termSet = termSet;
-                    dfd.resolve(that.data);
+                    thisdata.termSet = termSet;
+                    dfd.resolve(thisdata);
                 }, 
                 function(sender,args){
                     console.log(args.get_message());
