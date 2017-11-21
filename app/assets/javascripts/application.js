@@ -10,7 +10,6 @@
 //= require highways-maintenance
 //= require contact-us-form
 //= require survey
-//= require component.related.pages
 
 //removes top margin frpm right hand column if empty
 function isEmpty( el ){
