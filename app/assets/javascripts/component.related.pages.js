@@ -16,7 +16,7 @@
                     var self = this;
                     self.pages = params.relatedPages;
                 },
-                template: '<h3>New Related Pages</h3><ul class="nav" data-bind="foreach: pages"><li data-bind="text: item.name"></li></ul>'
+                template: '<h3>New Related Pages</h3><ul class="nav" data-bind="foreach: pages"><li data-bind="text: name"></li></ul>'
             });
 
             var vm = function () {
@@ -44,13 +44,14 @@
                                                 var currentValue = pageTerms[i];
                                                 jQuery.when(LCC.Services.SharePoint.GetTerm(currentValue))
                                                 .then(function(term) {
-                                                    //console.log(term);
-                                                     jQuery.when(LCC.Services.SharePoint.GetTermSetOfTerm(term))
-                                                     .then(function(fullData) {
-                                                        console.log(fullData);
-                                                        self.pages.push(fullData);
-                                                     });
+                                                    console.log(term);
+                                                    //  jQuery.when(LCC.Services.SharePoint.GetTermSetOfTerm(term))
+                                                    //  .then(function(fullData) {
+                                                    //     console.log(fullData);
+                                                         self.pages.push(term);
+                                                    //  });
                                                 });
+                                                
                                             }
                                             //});
 
