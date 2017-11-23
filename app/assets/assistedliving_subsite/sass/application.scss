@@ -29,7 +29,7 @@ $font-secondary:'Open Sans', Arial ; // secondary font
 //$search-link:#333 ;
 
 // mainNav.scss
-$main-nav-background:#5071b3 ;
+$main-nav-background:darken(#5071b3, 5%) ;
 $main-nav-link:#fff ;
 
 //footer.scss
@@ -106,17 +106,27 @@ $accordion-color:#6cb6cd;
 // $blockquoteQuoteFooterColor:#000;
 
 //highlighted box in content assets
-$highlighted-background-color:#038fa5;
-$highlighted-font-color:#fff;
+$highlighted-background-color:#dff0f5;
+$highlighted-font-color:#212224;
 $highlighted-alt-background-color:#f6f6f6 ;
 $highlighted-alt-font-color:#333;
 
 
 //group promo colours
-//$group-promo-background-color: #6cb6cd;
+//$group-promo-background-color: #dff0f5;
 //$group-promo-header-color: #6cb6cd;
-$group-promo-description-color: #666B76  !default;
-$group-promo-arrow-color: #6cb6cd;
+//$group-promo-description-color: #212224;
+//$group-promo-arrow-color: #6cb6cd;
+
+
+//responsive menu width
+$responsiveMenuWidth:1200px;
+
+
+//hero banner
+ //$heroFontBackground:rgba(11, 5, 0, 0.4); 
+ //$heroFontcolor:#fff ; 
+ //$heroMinHeight:450px;
 
 @import 'mixins';
 @import 'variables';
@@ -139,7 +149,7 @@ $group-promo-arrow-color: #6cb6cd;
 //@import 'eventsWebparts';
 @import 'sharepointOverides';
 @import 'iconLinks';
-@import 'heroBanner';
+@import 'heroBannerv2';
 @import 'news';
 @import 'polaroids';
 @import 'groupPromo';
@@ -149,13 +159,15 @@ $group-promo-arrow-color: #6cb6cd;
 @import 'blockQuote';
 @import 'accessibility';
 @import 'browser-alert';
-@import 'contentAssets';
 @import 'typography-lcc';
 @import 'buttons';
 @import 'tables';
+@import 'contentAssets';
 
  .masterhead{
+          @media (min-width: 1200px){
      border-bottom:1px solid #ddd;
+    }
  }
 
  .logo{
@@ -176,7 +188,7 @@ $group-promo-arrow-color: #6cb6cd;
              &:after{
                         content:'Assistive Technology services and information for disabled adults, children, older people and the professionals who support them';
                         float:right;
-                        color:#414141;
+                        color:#fff;
                         position:absolute;
                         right:0px;
                         font-size:20px;
@@ -185,11 +197,20 @@ $group-promo-arrow-color: #6cb6cd;
                         padding-left:150px;
                         max-width:700px;
 
+                        
+                        @media screen and (max-width:700px){
+                            padding:0 30px 50px 30px;
+                            top:40px;
+                            font-size:16px;
+                            max-width:400px;
+                        }
+
                         @media screen and (max-width:500px){
                             position:relative;
-                            padding:0 30px 30px 30px;
-                            top:30px;
+                            padding:0 30px 50px 30px;
+                            top:20px;
                             text-align: center;
+                          
                         }
                     }
 
@@ -236,7 +257,7 @@ h3{
     margin-top:0px !important;
 }
 
-.ms-rtestate-field ul{
+.col-md-8 .ms-rtestate-field ul{
   list-style: disc;
 }
 
@@ -250,5 +271,45 @@ nav ul li a.selected {
     &:hover{
         text-decoration: underline;
     }
+
 }
+
+.panel{
+    
+    &:first-of-type{
+    margin-top:0px;
+}
+
+ background:transparent;
+ border:5px solid #dff0f5;
+}
+
+
+.heroBanner .container-fluid h1, .heroBanner .container-fluid p.lead {
+    font-weight: 800;
+}
+
+.heroBanner .container-fluid p {
+ font-weight: 600;
+}
+
+.sectionOne .col-md-8{
+    margin-bottom:50px;
+
+    ul{
+        list-style:disc; // quick fix for migaration 
+    }
+
+    @media screen and (max-width:600px){
+        margin-bottom:0px;
+    }
+}
+
+
+
+    .sectionHeader{
+    background:#5071b3;
+   }
+
+
 

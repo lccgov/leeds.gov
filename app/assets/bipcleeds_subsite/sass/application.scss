@@ -101,12 +101,19 @@ $accordion-color:#803f92;
 //Block quote
  $blockquoteBorderColor:#efefef;
  $blockquoteQuoteColor:#803f92;
-$blockquoteQuoteFooterColor:#803f92;
+ $blockquoteQuoteFooterColor:#803f92;
 
 
 //Arrow Link
 $ArrowLinkBorderColor:$blockquoteBorderColor;
 $ArrowLinkColor:$blockquoteQuoteColor;
+
+
+//highlighted box in content assets
+$highlighted-background-color:#f6f6f6;
+$highlighted-font-color:#212224;
+//$highlighted-alt-background-color:#f6f6f6 ;
+//$highlighted-alt-font-color:#333;
 
 
 
@@ -141,13 +148,13 @@ $ArrowLinkColor:$blockquoteQuoteColor;
 @import 'blockQuote';
 @import 'accessibility';
 @import 'browser-alert';
-@import 'contentAssets';
 @import 'typography-lcc';
 @import 'buttons';
 @import 'tables';
+@import 'contentAssets';
 
 
-
+ 
 .sectionHeader{
     border-top:1px solid #ddd;
     padding:20px 0;
@@ -317,3 +324,8 @@ footer.main{
         text-decoration: underline;
     }
 }
+
+
+ .sectionOne .col-md-8 ul{
+        list-style:disc; // quick fix for migaration 
+    }
