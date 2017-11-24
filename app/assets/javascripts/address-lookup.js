@@ -1,45 +1,53 @@
+//= require address-lookup-service 
+
 (function (global, $) {
     "use strict";
     var LCC = global.LCC || {};
     LCC.Modules = LCC.Modules || {};
     LCC.Settings = LCC.Settings || {};
     
-    LCC.Modules.FindMyNearest = function () { 
+    LCC.Modules.AddressLookup = function () { 
         this.start = function (element) {
             console.log('starting module find my nearest');
 
-            //$("<p>" + (LCC.Settings.FindMyNearestPageText || "Find My Nearest") + "</p>").appendTo(element);
+            $("<p>" + (LCC.Settings.AddressLookupPageText || "Find My Nearest") + "</p>").appendTo(element);
 
             // var s = $("<select id=\"selectId\" name=\"selectName\" />");
-            // s.appendTo(element);
+            //s.appendTo(element);
 
-            LCC.Modules.FindMyNearest.getCurrentPage = function ()  {
-                var dfd = jQuery.Deferred();
+            LCC.Modules.AddressLookup.getCurrentPage = function ()  {
+               var dfd = jQuery.Deferred();
 
-                var context = SP.ClientContext.get_current();
-                var web = context.get_web(); 
-                var currentList = web.get_lists().getById(_spPageContextInfo.pageListId); 
-                var currentListItem = currentList.getItemById(_spPageContextInfo.pageItemId);
-                context.load(currentListItem);
-                context.executeQueryAsync(
-                    function(){
-                        dfd.resolve(currentListItem);
-                    }, 
-                    function(sender,args){
-                        dfd.reject(args.get_message());
+                var listId = _spPageContextInfo.pageListId.slice(1, -1);
+                var hostURL = [location.protocol, '//', location.host, location.pathname].join('');
+                var Url = _spPageContextInfo.webAbsoluteUrl + '/_api/search/query?querytext=%27Path:"' + hostURL + '"+ListId:"' + listId + '"%27&QueryTemplatePropertiesUrl=%27spfile://webroot/queryparametertemplate.xml%27&SelectProperties=%27Path,ID,owstaxIdPageCategory,Title%27&RowLimit=2';
+                jQuery.ajax({
+                    url: Url,
+                    method: 'GET',
+                    beforeSend: function (XMLHttpRequest) {                     
+                        XMLHttpRequest.setRequestHeader("Accept", "application/json; odata=verbose");
+                    },              
+                    cache: true,
+                    error: function (data) {      
+                        dfd.reject(data);                 
+                    },              
+                    success: function (data) {   
+                        dfd.resolve(data.d.query.PrimaryQueryResult.RelevantResults.Table.Rows.results);                  
                     }
-                );
+                });
 
                 return dfd.promise();
             }
 
-            LCC.Modules.FindMyNearest.getPageCategory = function (listItem) {
-                if(listItem.get_item('PageCategory')._Child_Items_.length > 0) {
-                    return listItem.get_item('PageCategory')._Child_Items_["0"].Label;
+            LCC.Modules.AddressLookup.getPageCategory = function (listItem) {
+                if(listItem.length > 0) {
+                    var catString = listItem["0"].Cells.results[3].Value;
+                    var pageCats = splitPageCatgoryTerms(catString);
+                    return pageCats[0][2];
                 }
             }
 
-            LCC.Modules.FindMyNearest.getLocalServiceOptions = function (pageCat) {
+            LCC.Modules.AddressLookup.getLocalServiceOptions = function (pageCat) {
 
                 console.log(pageCat);
                 var dfd = jQuery.Deferred();
@@ -64,8 +72,8 @@
                 return dfd.promise();
             }
 
-            LCC.Modules.FindMyNearest.hasMatchingPageCat = function (itemCategories, pageCategory) {
-                var pageCats = LCC.Modules.FindMyNearest.splitPageCatgoryTerms(itemCategories);
+            LCC.Modules.AddressLookup.hasMatchingPageCat = function (itemCategories, pageCategory) {
+                var pageCats = LCC.Modules.AddressLookup.splitPageCatgoryTerms(itemCategories);
                 for(var i = 0; i < pageCats.length; i++) {
                     if(pageCats[i][2] === pageCategory) {
                         return true;
@@ -74,7 +82,7 @@
                 return false;
             }
 
-            LCC.Modules.FindMyNearest.splitPageCatgoryTerms = function (pageCatString) {
+            LCC.Modules.AddressLookup.splitPageCatgoryTerms = function (pageCatString) {
                 var cats = [];
                 var arr = pageCatString.split(/\;\s*/g);
                 for (var i = 0; i < arr.length; i++){
@@ -88,13 +96,13 @@
 
             }
 
-            //LCC.Modules.FindMyNearest.loadStuff = function () {
+            //LCC.Modules.AddressLookup.loadStuff = function () {
 //                SP.SOD.ExecuteOrDelayUntilScriptLoaded(function() {
                 SP.SOD.executeFunc('sp.js', 'SP.ClientContext', function() {
-                    jQuery.when(LCC.Modules.FindMyNearest.getCurrentPage())
+                    jQuery.when(LCC.Modules.AddressLookup.getCurrentPage())
                     .then(function(listItem) {
-                        var pageCat = LCC.Modules.FindMyNearest.getPageCategory(listItem);
-                        jQuery.when(LCC.Modules.FindMyNearest.getLocalServiceOptions(pageCat)).then(function(results) {
+                        var pageCat = LCC.Modules.AddressLookup.getPageCategory(listItem);
+                        jQuery.when(LCC.Modules.AddressLookup.getLocalServiceOptions(pageCat)).then(function(results) {
                             // console.log(results);
                             // for (var i = 0; i < results.length; i++) {
                             //     console.log(results[i]);
@@ -105,7 +113,7 @@
                                 //console.log(val.Cells.results[4].Value);
                                 var pageCats = val.Cells.results[3].Value;
                                 var title = val.Cells.results[5].Value;
-                                if(LCC.Modules.FindMyNearest.hasMatchingPageCat(pageCats, pageCat)) {
+                                if(LCC.Modules.AddressLookup.hasMatchingPageCat(pageCats, pageCat)) {
                                     //$("<option />", {value: title, text: title}).appendTo(s);
                                     console.log(title);
                                 }
@@ -122,7 +130,7 @@
 
             // return {
             // loadStuff: function () {
-            //     LCC.Modules.FindMyNearest.loadStuff();
+            //     LCC.Modules.AddressLookup.loadStuff();
             // }
        //}
         }

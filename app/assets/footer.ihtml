@@ -1,0 +1,15 @@
+<script type="text/javascript"> 
+        ATGSvcs.setEEID("200106307565"); 
+        (function() { 
+        var l = "leedscitycouncil.custhelp.com" ,d=document,ss='script',s=d.getElementsByTagName(ss)[0]; 
+        function r(u) { 
+        var rn=d.createElement(ss); 
+        rn.type='text/javascript'; 
+        rn.defer=rn.async=!0; 
+        rn.src = "//" + l + u; 
+        s.parentNode.insertBefore(rn,s); 
+        } 
+        r('/rnt/rnw/javascript/vs/1/vsapi.js'); 
+        r('/vs/1/vsopts.js'); 
+        })(); 
+</script> 

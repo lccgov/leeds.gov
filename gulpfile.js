@@ -48,7 +48,7 @@ gulp.task('clean:dist', (done) => {
 
 //Sync assets to public folder excluding SASS files and JS
 gulp.task('sync:assets', ['clean:dist'], (done) => {
-    syncy(['app/assets/**/*', '!app/assets/sass/**',  '!app/assets/javascripts/**', '!app/assets/*_subsite/javascripts/**', '!app/assets/*_subsite/sass/**', '!app/assets/webparts/**'], './dist/_catalogs/masterpage/public', {
+    syncy(['app/assets/**/*', '!app/assets/sass/**',  '!app/assets/javascripts/**', '!app/assets/*_subsite/javascripts/**', '!app/assets/**/*.ihtml', '!app/assets/*_subsite/sass/**', '!app/assets/webparts/**'], './dist/_catalogs/masterpage/public', {
             ignoreInDest: '**/stylesheets/**',
             base: 'app/assets',
             updateAndDelete: false
@@ -137,6 +137,11 @@ gulp.task('sync:lcc_templates_sharepoint_views', ['sync:lcc_templates_sharepoint
 var replacements = {};
 
 replacements.css =  util.format('/_catalogs/masterpage/public/stylesheets/%s.css?rev=%s', packageName.replace(/_/g, '-'), Uuid());
+var footerPath = 'app/assets/footer.ihtml';
+if(fileExists(footerPath)) {
+    var footerSource = fs.readFileSync(footerPath, "utf8");
+    replacements.footerScript = footerSource;
+}
 
 //Update app css ref and rename master
 gulp.task('sync:lcc_templates_sharepoint_master', ['sync:lcc_templates_sharepoint_views'], (done) => {
@@ -186,8 +191,15 @@ gulp.task('sync:subsites_master', ['sass:subsites'], (done) => {
     return gulp.src('app/assets/*_subsite/', ['!app/assets/*_subsite/**/*.*'])
         .pipe(foreach(function(stream, folder) {  
             var subsiteName = folder.path.split(path.sep).pop();
+            
             var replacements = {};
             replacements.css =  util.format('/_catalogs/masterpage/public/%s/stylesheets/application.css', subsiteName);
+
+            var footerPath = [folder.path, path.sep, 'footer.ihtml'].join('');
+            if(fileExists(footerPath)) {
+                var footerSource = fs.readFileSync(footerPath, "utf8");
+                replacements.footerScript = footerSource;
+            }
 
             if(_.includes(manifest.footerSubsites, subsiteName))
             {
