@@ -6,7 +6,7 @@
 /*
  * Usage: 
  *  <div data-module="related-pages" class="relatedPages">
-    <related-pages params="relatedPages: pages, pageTitle:'Test Related Pages'"></related-pages>
+    <related-pages params="relatedPages: pages, pageTitle:'Related Pages'"></related-pages>
     </div>
  * 
  * 
@@ -33,8 +33,7 @@
 
             var RelatedPage = function(data) {
                 var self = this;
-                self.name = ko.observable(data.Cells.results[5].Value); 
-                // or plain "self.name = data.name;" if you don't need 2way binding
+                self.name = data.Cells.results[5].Value; 
                 self.url = data.Cells.results[2].Value;
             }
 
@@ -44,37 +43,28 @@
 
                 jQuery(document).ready(function(){   
   
-                    var scriptbase = _spPageContextInfo.siteAbsoluteUrl + "/_layouts/15/";
-                    
-                    jQuery.getScript(scriptbase + "SP.Runtime.js", function () {
-                            jQuery.getScript(scriptbase + "SP.js", function() {
-                                jQuery.getScript(scriptbase + "SP.Taxonomy.js", function() {
-
-                                    jQuery.when(LCC.Services.SharePoint.GetCurrentPageSPItem())
-                                    .then(function(listItem) {
-                                        var pageTerms = LCC.Services.SharePoint.GetPageRelatedTerms(listItem);
-                                        
-                                        if(typeof(pageTerms) !== 'undefined') {
-
-                                            jQuery.when(LCC.Services.SharePoint.GetRelatedPages(pageTerms))
-                                            .then(function (relatedData) {
-                                                self.pages(relatedData.map(function(item) { 
-                                                    return new RelatedPage(item); 
-                                                }));
-                                            },
-                                            function(error) {
-                                                console.log(error);
-                                            });
-                                        }
-                                    },
-                                    function(error) {
-                                        console.log(error);
-                                    });
-                                });
-                            });
-                        });
                 
+                jQuery.when(LCC.Services.SharePoint.GetCurrentPageSPItem())
+                .then(function(listItem) {
+                        var pageTerms = LCC.Services.SharePoint.GetPageRelatedTerms(listItem);
+                        
+                        if(typeof(pageTerms) !== 'undefined') {
+                            jQuery.when(LCC.Services.SharePoint.GetRelatedPages(pageTerms))
+                            .then(function (relatedData) {
+                                self.pages(relatedData.map(function(item) { 
+                                    return new RelatedPage(item); 
+                                }));
+                            },
+                            function(error) {
+                                console.log(error);
+                            });
+                        }
+                    },
+                    function(error) {
+                        console.log(error);
+                    });
                 });
+
             }
 
             ko.applyBindings(new vm(), element[0]);
