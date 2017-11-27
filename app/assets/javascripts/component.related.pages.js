@@ -51,6 +51,7 @@
                         if(typeof(pageTerms) !== 'undefined') {
                             jQuery.when(LCC.Services.SharePoint.GetRelatedPages(pageTerms))
                             .then(function (relatedData) {
+                    
                                 self.pages(relatedData.map(function(item) { 
                                     return new RelatedPage(item); 
                                 }));

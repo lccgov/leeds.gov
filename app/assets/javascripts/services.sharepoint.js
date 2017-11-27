@@ -14,7 +14,7 @@
                 if(i !== 0) {
                     output += " OR ";
                 }
-                output += ["(owstaxIdPageCategory:%23", currentValue.id, ")"].join('');
+                output += ["(owstaxIdPageCategory:", currentValue.id.replace("#","%23"), ")"].join('');
             }
             output += ")";
 
@@ -86,7 +86,7 @@
                 for (var i = 0; i < arr.length; i++){
                     var indCat = arr[i].split('|');
                     if(indCat[2]) {
-                        cats.push({something: indCat[0], id: indCat[1].substr(2), name: indCat[2]});
+                        cats.push({something: indCat[0], id: indCat[1], name: indCat[2]});
                     }
                 }
 
