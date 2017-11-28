@@ -52,9 +52,20 @@
                             jQuery.when(LCC.Services.SharePoint.GetRelatedPages(pageTerms))
                             .then(function (relatedData) {
                     
+                                // use me if there are no duplicates
                                 self.pages(relatedData.map(function(item) { 
                                     return new RelatedPage(item); 
                                 }));
+
+                                // use this code block if there are duplicates showing
+                                // var parsedData = relatedData.map(function(item) { 
+                                //     return new RelatedPage(item); 
+                                // });
+
+                                // var unique = new Map(parsedData.map(obj => [obj.name, obj]));
+                                // var uniques = Array.from(unique.values());
+                                // self.pages(uniques);
+
                             },
                             function(error) {
                                 console.log(error);
