@@ -13,7 +13,7 @@
                 $("#street-register_details").show();
                 $("#street-register_results").hide();
 
-                $.getJSON('https://api.streetregister.leeds.gov.uk/api/getAddress_Result/' + roadId, function (data) {
+                $.getJSON('https://api-streetregister.leeds.gov.uk/api/getAddress_Result/' + roadId, function (data) {
                     LCC.Modules.StreetRegister.clearData();
                     $.each(data, function (key, value) {
 
@@ -98,7 +98,7 @@
                     $("#tblStreetData").hide();
                     $("#street-register_details").hide();
 
-                    $.getJSON('https://api.streetregister.leeds.gov.uk/api/getAddressSearch_Result/' + $('#streetName').val(), function (data) {
+                    $.getJSON('https://api-streetregister.leeds.gov.uk/api/getAddressSearch_Result/' + $('#streetName').val(), function (data) {
                         if (data.length == 0) {
                             $("#lblMessage").html('No results returned');
                         }

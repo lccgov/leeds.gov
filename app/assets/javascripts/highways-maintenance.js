@@ -33,7 +33,7 @@
                         street = $('#full-name-f1').val();
                     }
 
-                    $.getJSON('https://api.highwaysmaintenance.leeds.gov.uk/api/getSearchdata2014_Result/' + ward +'/' + street + '/Ward', function (data) {
+                    $.getJSON('https://api-highwaysmaintenance.leeds.gov.uk/api/getSearchdata2014_Result/' + ward +'/' + street + '/Ward', function (data) {
 
                         if (data.length == 0) {
                             $("#lblMessage").html('No results returned');
@@ -63,7 +63,7 @@
 
                         $("#tblResults").html('');
 
-                        $.getJSON('https://api.highwaysmaintenance.leeds.gov.uk/api/getSearchdata2014_Result/' + ward + '/' + street + '/Ward', function (data) {
+                        $.getJSON('https://api-highwaysmaintenance.leeds.gov.uk/api/getSearchdata2014_Result/' + ward + '/' + street + '/Ward', function (data) {
                             if (data.length == 0) {
                                 $("#lblMessage").html('No results returned');
                             }
@@ -81,7 +81,7 @@
                     $("#maintenance-programme_key").show();
                 });
 
-                $.getJSON('https://api.highwaysmaintenance.leeds.gov.uk/api/getTreatmentTypes_Result', function (data) {
+                $.getJSON('https://api-highwaysmaintenance.leeds.gov.uk/api/getTreatmentTypes_Result', function (data) {
                     $.each(data, function (key, value) {
                         var markup2 = "<tr><td>" + value.Code + "</td><td>" + value.Treatment + "</td><td>" + value.Description + "</td></tr>";
                         $("#tblTreatmentTypes").append(markup2);
