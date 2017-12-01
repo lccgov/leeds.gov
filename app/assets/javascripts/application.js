@@ -20,16 +20,16 @@ function isEmpty( el ){
       $('aside.col-md-4').addClass('empty');
   }
   
-//input block label
-$('input:radio').click(function() {
-    $('input:radio[name='+$(this).attr('name')+']').parent().removeClass('active');
-        $(this).parent().addClass('active');
-});
+// //input block label
+// $('input:radio').click(function() {
+//     $('input:radio[name='+$(this).attr('name')+']').parent().removeClass('active');
+//         $(this).parent().addClass('active');
+// });
 
-//input block label
-$('input:checkbox').click(function() {
-    	$(this).parent().toggleClass('active');
-});
+// //input block label
+// $('input:checkbox').click(function() {
+//     	$(this).parent().toggleClass('active');
+// });
 
 //random image for hero-lcc
 function randomImage(){
