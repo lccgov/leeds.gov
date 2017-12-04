@@ -28,7 +28,7 @@
                     self.pages = params.relatedPages;
                     self.pageTitle = params.pageTitle || "Related Pages";
                 },
-                template: '<h3 data-bind="text: pageTitle, visible: pages.length > 0"></h3><ul class="nav" data-bind="foreach: pages"><li><a data-bind="text: name, attr: { href: url, title: name }" class="item"></a></li></ul>'
+                template: '<h3 data-bind="text: pageTitle, visible: pages().length > 0"></h3><ul class="nav" data-bind="foreach: pages"><li><a data-bind="text: name, attr: { href: url, title: name }" class="item"></a></li></ul>'
             });
 
             var RelatedPage = function(data) {
