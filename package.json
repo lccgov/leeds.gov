@@ -33,7 +33,7 @@
     "gulp-spsync-creds": "^2.2.6",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "lcc_frontend_toolkit": "^0.172.0",
+    "lcc_frontend_toolkit": "^0.175.0",
     "lcc_sharepoint_toolkit": "^0.55.0",
     "lcc_templates_sharepoint": "^1.1.100",
     "lodash": "^4.17.2",
