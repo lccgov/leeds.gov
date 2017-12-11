@@ -1,19 +1,9 @@
-//default sharpoint css - REMOVE BEFORE UPLOADING
-//@import 'sharepoint_core_15';
-//@import 'sharepoint_search_15';
+@import 'sharepoint'; //default sharpoint css - REMOVE BEFORE UPLOADING
 
 //google fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,700'); 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,700');
 
 // available variables to change the brand colours as required
-// masterhead.scss
-
-//$head-background: #ffffff;
-
-//mainMenu.scss -- responsive icons color
-//$menu-link-color:#337ab7;
-
-//base.scss
 
 //base colours
 $blue:#007299;
@@ -32,72 +22,66 @@ $white:#FFFFFF;
 $yellow:#FFBF47;
 $dark-yellow:#FAA300;
 $red:#c0392b;
-
 //$base-background-color:#fff;
-$base-font-size:16px;
-$base-font-color:$black;
-$header-font-color:$black;
-$base-link-color:$blue;
-$base-link-hover-color:$light-blue;
-$base-link-visited-color:#4C2C92;
-$secondary-link-color:$dark-blue;
-$secondary-font-color:$dark-grey;
 $border-color:$light-grey;
 $brand-color:$blue;
 $button-color:$green;
 $button-hover-color:lighten($button-color,5%);
 $focus-color:$yellow;
-$base-container-width:1280px ;
+$base-container-width:1280px;
 //$btn-background-color:green ;
-$font-primary:'Open Sans', sans-serif; // main font
-$font-secondary:'Montserrat', sans-serif; // secondary font used for headings
-//$header-font-weight: 600;
 $alert-color:$red;
+
+//typography
+$font-primary:'Open Sans',
+sans-serif; // main font
+$font-secondary:'Montserrat',
+sans-serif; // secondary font used for headings
+//$base-font-size:16px !default;
+//$base-font-size-desktop:19px !default;
+$base-line-height: 1.4;
+$base-font-color:$black;
+$header-font-color:$black;
+$secondary-font-color:$dark-grey;
+$header-font-weight: 700;
+//$base-font-weight: 400 !default;
+$base-link-color:$blue;
+$base-link-hover-color:$light-blue;
+$base-link-visited-color:#4C2C92;
+$secondary-link-color:$dark-blue;
 
 //panel colours
 $panel-color:#E5F1F5;
 $panel-color-secondary:#DCDEE1;
-
 //global used on all partials to get a uniform spacing between elements
 //$base-margin-bottom:1.875em ;
-
 //headerTop
 //$search-link-background:#F3F3F4 ;
 //$search-link:#333 ;
-
 // mainNav.scss
-$main-nav-background:lighten( $brand-color, 3% );
+$main-nav-background:lighten( $brand-color,3%);
 //$main-nav-link:#fff ;
-
 //footer.scss
 //$footer-font-color:#fff ;
 //$footer-nav-selected-link:#133E8D ;
-
 //sectionSubsite.scss - socialamedia.scss
 //$section-Background:#efefef ;
-
 //socialamedia.scss
 //$social-link-color:#337ab7 ;
-
 //sideNavigation.scss
 //$side-nav-active-background:#133E8D ;
-
 //carousel.scss
 //$carousel-active-background:#000 ;
 //$carousel-indicators-active-background:#ccc ;
 //$carousel-caption-background: rgba(0,0,0,0.6) ;
 //$carousel-caption-font-color:#fff ;
-
-
 //blocklinks.scss
-
 //$block-link-back:#f6f6f6 ;
 //$block-link-back-hover:#3380A4 ;
 //$promo-group-border:1px solid #fff ; 
 //$promo-group-background:#EDF2F5 ; 
 //$promo-group-li-background:#EDF2F5 ;
 //$promo-group-link-color:#216486 ;
-
 //promolist webpart
 //$link-font-color:#fff;
 //$span-info-color:#133E8D;
@@ -110,7 +94,6 @@ $main-nav-background:lighten( $brand-color, 3% );
 //$contentFontColor:#333;
 //$content-arrow-color:#133E8D;
 //$content-border-color:#ddd;
-
 //section backgrounds
 $sectionHeader-background-color:$brand-color;
 $sectionOne-background-color:#fff;
@@ -118,28 +101,22 @@ $sectionTwo-background-color:#fff;
 $sectionThree-background-color:#fff;
 $sectionFour-background-color:#fff;
 $sectionFive-background-color:#fff;
-
 //iconlinks
 //$iconLinkIconColor:#FFC82E;
-
 //heroBanner
 //$heroFontBackground:rgba(0, 0, 0, 0.5); 
 //$heroFontcolor:#fff; 
-
 //news
 //$news-button-background: #3498DB ;
-$news-pod-back:#ffffff ;
+$news-pod-back:#ffffff;
 $news-pod-border-color:#ddd;
-
 //accordion
 //$accordion-color:green;
 //$accordion-border-color:#ECF0F1;
-
 //Block quote
 // $blockquoteBorderColor:#bbcada ;
 // $blockquoteQuoteColor:#333;
 // $blockquoteQuoteFooterColor:#000;
-
 //highlighted box in content assets
 //$highlighted-background-color:#333 !default;
 //$highlighted-font-color:#fff !default;
@@ -172,466 +149,191 @@ $group-promo-arrow-color: $grey;
 $input-color:$black;
 $input-border-color:$grey;
 
-@import 'mixins';
-@import 'variables';
-@import 'brandColors';
+//back to top
+//$back-top-color:white;
+//$back-top-hover-color:white;
+//$back-top-background:black;
+//$back-top-hover-background:grey;
 
-//FRONT END TOOLKIT SASS FILES
+//phase banner
+//$phase-banner-stage-background:#007299 !default;
+//$phase-banner-stage-color:white !default;
 
-//available sass files please un-comment out as required
-@import 'sharepointOverides';
-//@import 'mainMenuSubsites'; //subsites only
-//@import 'socialMedia'; //subsites only
-//@import 'sideNavigation'; //subsites only
-@import 'blocklinks'; //subsites only
-@import 'contentLink'; //subsites only
-//@import 'contentAssets'; //subsites only
-//@import 'polaroids'; //subsites only
-@import 'iconLinks'; //subsites only
-//@import 'heroBanner'; //subsites only
-//@import 'promoListwebpart'; //subsites only
-@import 'promoGroup'; //subsites only
-//@import 'sectionSubsite'; //subsites only
-@import 'promo'; //subsites only
-//@import 'carousel'; //subsites only
-//@import 'eventsWebparts'; //subsites only
-@import 'breadcrumb';
+
+//- FRONT END TOOLKIT
+@import 'url-helper';
+@import 'base';
+@import 'brand-colors';
+@import '2010-typography-overrides';
 @import 'accordion';
-@import 'alerts';
-//@import 'news';
-@import 'groupPromo';
-@import 'docList';
-@import 'blockQuote';
-@import 'accessibility';
+@import 'a-to-z';
+//@import 'block-links'; //subsite only
+//@import 'block-quote'; //subsite only
+//@import 'carousel';
+//@import 'content-assets'; //subsite only
+//@import 'content-link'; //subsite only
+@import 'description-list';
+@import 'doc-list';
+@import 'events-search-results';
+//@import 'events-webparts';
+@import 'group-promo';
+//@import 'hero-banner';
+//@import 'hero-banner-overlay'; //needs aligning with hero-bnner - RM
+@import 'icon-links';
+@import 'lcc-hero';
 @import 'mega-promo';
-@import 'buttons';
-@import 'browser-alert';
-@import 'typography-lcc';
-@import 'panel';
-@import 'tables';
-@import 'form_elements';
-@import 'images';
-@import 'webchat';
-@import 'description_list_accessible';
+//@import 'news'; //subsites only
+@import 'open-data'; //is it leeds.gov.uk specific? - does it need re-naming- DH
+@import 'journey-page';
 @import 'phase-banner';
-@import 'side-nav';
-@import 'pagination';
-@import 'part-nav';
+//@import 'polaroids'; //subsite only
+//@import 'promo'; //subsites only
+//@import 'promo-list-webpart'; //subsite only
+//@import 'section-subsite'; //subsite only
+@import 'sharepoint-overrides';
+@import 'side-nav'; //needs aligning with side-navigation - DH & RM
+//@import 'side-navigation'; //needs aligning with side-nav - DH & RM
 @import 'sub-section-nav';
-@import 'atoz';
-@import 'lcc_search';
-@import 'survey-webpart';
-@import 'modern-gov';
+@import 'webchat';
 
-//CUSTOM SASS FILES FOR STYLE GUIDE
-//@import 'prism';
-@import 'styleguide_digital';
-//@import 'styleguide_code-example';
-//@import 'styleguide_sticky';
-//@import 'styleguide_swatch';
+//-PROJECT SPECIFIC
+//@import 'styleguide';//not needed for live site
+//@import 'sticky-nav';//not currently needed for live site
+@import 'modern-gov'; //not needed for live site
 
-//CUSTOM SASS FILES FOR LEEDS.GOV.UK
-//@import 'easy-autocomplete';
-@import 'search-results';
-@import 'where-i-live';
-@import 'open-data';
-@import 'lcc_hero';
-@import 'lcc_news';
-@import 'ie-support';
-@import 'sharepoint_2010_style_fallback';
-@import 'eventsSearchResults';
-@import 'ongoing-incidents';
+@import 'leedsgov-specific';
+@import 'leedsgov-overrides';
+@import 'where-i-live'; //needs fine tuning and adding to toolkit - DH
 
-//BASE LEEDS.GOV.UK STYLES
-@import 'lcc_base_styles';
-
-//in front end toolkit
-@import 'lcc_footer';
-@import 'lcc_header';
-
-@import 'report_a_problem';
-
-@import 'lcc_mega-promo';
-
-
-//CUSTOM STYLES FOR LEEDS.GOV.UK
+@import 'lcc-header'; //a part of the toolkit but needs to be at end
 
 //site background
-html{
-    background-color:$blue;
-}
-
-//bootsrap override
-.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-//hr
-hr{
-  border-color:rgba( $border-color, .5 );
-}
-
-//buttons
-.btn-primary{
-    //border-bottom:2px solid darken($primary-button-background-color,5%);
-    box-shadow: 0px 3px 0px darken($primary-button-background-color,5%);
-}
-.btn-secondary{
-    //border-bottom:2px solid darken($secondary-button-background-color,5%);
-    box-shadow: 0px 3px 0px darken($secondary-button-background-color,5%);
-}
-
-//back to top (focus fix)
-.cd-top:focus{
-    background:$focus-color url("images/cd-top-arrow.svg") no-repeat center 50% !important;
-    opacity:1;
+html {
+    background-color: $blue;
 }
 
 //video container
-.media-container{
-    margin:30px 0;
+.media-container {
+    margin: 30px 0;
 }
-
-//clear
-.clear{
-    padding:0 !important;
-}
-
-//LEEDS.GOV SPECIFIC
 
 //Roadworks map
-.ElginRoadworksWidget{
+.ElginRoadworksWidget {
     margin-top: 40px;
-    margin-bottom: 40px;    
+    margin-bottom: 40px;
     @media (max-width: 450px) {
-    height: 400px !important;
-    } 
-}
-
-//third columns for summary links
-.column-thirds .column-third{
-    @media (min-width: 1200px) {
-        &:nth-child(3n+4){
-            clear:left;
-        }
-    }
-    @media (min-width: 768px) and (max-width: 1199px) {
-        width:50%;
-
-        &:nth-child(2n+3){
-            clear:left;
-        }
-    }
-    @media (max-width: 767px) {
-        clear:none;
-    }
-}
-
-.column-thirds{
-    margin-left:-50px;
-    margin-right:-15px;
-
-    .column-third{
-        padding-left: 50px;
-        padding-right: 15px;
+        height: 400px !important;
     }
 }
 
 //right hand column top margin
-aside.col-md-4{
-    margin-top:50px;
-
+aside.col-md-4 {
+    margin-top: 50px;
     @media (max-width: 990px) {
-        margin-top:30px;
+        margin-top: 30px;
     }
-
-    &.empty{
-        margin-top:0 !important;
+    &.empty {
+        margin-top: 0 !important;
     }
 }
 
 //sub-section - Is this needed? Need to test. DH.
 .sub-section-nav .sub-section a {
-    .sub-section-heading{
-        text-decoration:none;
-        color:$base-link-color;
+    .sub-section-heading {
+        text-decoration: none;
+        color: $base-link-color;
     }
-
     &:visited,
-    &:visited .sub-section-heading{
-        text-decoration:none !important;
+    &:visited .sub-section-heading {
+        text-decoration: none !important;
         color: #663399;
     }
 }
 
 //social bookmark link text decoration color 
-.socialBookmarks ul li a:visited{
-    color:$blue;
-}
-
-//promo bespoke style for LCC
-.promo a{
-    span {
-        background: $base-link-color;
-        font-family:$font-secondary;
-        font-weight:600;
-        padding: 20px 40px 20px 20px;
-
-        &:after{
-            bottom:17px;
-            right: 20px;
-            font-size:26px;
-            height:auto;
-            width:auto;
-        }
-    }
-
-    &:hover span{
-        padding: 20px 40px 30px 20px;
-        background: rgba($base-link-color,0.95);
-        text-decoration:underline;
-
-        &:after{       
-            bottom:27px;
-            right: 20px;
-            text-decoration:none;
-        }
-    }
+.socialBookmarks ul li a:visited {
+    color: $blue;
 }
 
 //Promolistwebpart reset - Can this be global? Need to check. DH.
 .promoListWebpart {
-    ol, ul{
-        margin:0;
-        padding:0;
+    ol,
+    ul {
+        margin: 0;
+        padding: 0;
     }
 }
 
 //self service custom buttons
-.header-actions{
-    position:absolute;
-    top:-110px;
-    right:15px;
-
-    @media (max-width: 641px){
-        position:relative;
-        top:auto;
-        right:auto;
-        margin-bottom:20px;
+.header-actions {
+    position: absolute;
+    top: -110px;
+    right: 15px;
+    @media (max-width: 641px) {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 20px;
     }
 }
 
 //sp pagination
-.pagination-nav{
-    position:relative;
-
-    #PagingSelf{
+.pagination-nav {
+    position: relative;
+    #PagingSelf {
         position: absolute;
         left: 50%;
         width: 100px;
         top: 30%;
         margin-left: -50px;
-        z-index:5;
-
+        z-index: 5;
         @media (max-width: 641px) {
             position: relative;
             left: auto;
             width: 100%;
             top: auto;
             margin-left: 0;
-            text-align:center
+            text-align: center
         }
     }
 }
 
-//group promo line height fix
-.groupPromo ul li a p{
-    line-height:1.4;
-}
-        
-//mega promo fixes - need to be added to FET
-.mega-promo{
-    padding-top:0;
+//btn overrides
+.btn-primary {
+    box-shadow: 0px 3px 0px darken($primary-button-background-color, 10%);
 }
 
-.mega-promo .mega-promo__item{
-    width:100%;
+.btn-secondary {
+    box-shadow: 0px 3px 0px darken($secondary-button-background-color, 10%);
 }
 
-
-//input submit styling - need to be added to FET
-.form-group{
-    input[type=submit]{
-        @extend .btn;
-        @extend .btn-primary;
-    }
-}
-
-//rss feed
-#rss-content{
-    padding:0;
-    margin:-5px 0 0;
-
-    .rss-article{
-        border-bottom:1px solid $border-color;
-        margin-bottom: 15px;
-
-        .rss-article-title{
-            a{
-                margin-right:0;
-                margin-bottom: 15px;
-                display: inline-block;
-            }
+.btn {
+    padding: 15px 20px;
+    &.btn-arrow {
+        padding-right: 45px;
+        &:before {
+            display: none !important;
         }
-        .rss-article-pubDate{
-            span{
-                @extend .font-xsmall;
-                color:$secondary-font-color;
-            }
-        }
-        .rss-article-description{
-            p{
-                 @extend .font-xsmall;
-            }
-            div{
-                p{
-
-                }
-            }
+        &:after {
+            right: 20px;
+            top: 50%;
+            height: auto;
+            background: transparent;
+            padding: 0 0 0 15px;
+            font-size: inherit;
+            text-align: center;
+            line-height: 0;
+            width: auto;
         }
     }
-}
-
-//rss feed - sharepoint overrides
-.col-md-4{
-    .ms-webpart-titleText.ms-webpart-titleText{
-        font-family: $font-secondary;
-        color:$base-font-color;
-        font-weight: 600;
-        margin-top: 0;
-        margin-bottom: 15px;
-        padding-bottom: 10px;
-        font-size: 24px;
-        border-bottom: 5px solid #f6f7fa;
-
-        @media (max-width: 641px){
-            font-size: 21px;
-            margin-bottom: 15px;
-        }
+    &:focus,
+    &:active {
+        border-color: $focus-color !important;
+        box-shadow: 0px 3px 0px $focus-color;
     }
 }
 
-.ms-wpContentDivSpace {
-    table{
-        margin:0;
-        border:0;
-        
-        td{
-            padding:0;
-            border:0;
-        }
-    }
+//bredcrumb override
+.breadcrumb {
+    line-height: 1.5;
 }
-
-
-
-//form styles - need to be added to FET
-.form-group + .text-highlight{
-    margin-bottom:60px;
-
-    @media (max-width: 641px){
-        margin-bottom:50px;
-    }
-}
-
-.form-top{
-    margin-bottom:50px;
-    clear:both;
-    display:inline-block;
-    width:100%;
-
-    @media (max-width: 641px){
-        margin-bottom:30px;
-    }
-
-    .form-back{
-        width:50%;
-        float:left;
-
-        a{
-            margin:0;
-        }
-    }
-
-    .form-progress{
-        text-align:right;
-        width:50%;
-        float:right;
-        color:$secondary-font-color;
-    }
-}
-
-//search results document icons - need to be added to FET
-.ms-srch-result{
-    a[rel]{
-
-        &:after{
-            display:none;
-        }
-
-        &:before{
-            font-family: FontAwesome;
-            padding:0 10px 0 0;
-        }
-
-        span{
-            text-transform:uppercase;
-            font-size:16px;
-            font-weight:400;
-            color:$secondary-font-color;
-        }
-    }
-
-    a[rel="xls"]:before,
-    a[rel="xlsx"]:before {
-        content: "\f1c3"; 
-        color:#269129;
-    }
-
-    a[rel="pdf"]:before {
-        content: "\f1c1";
-        color:#ED1F24;
-    }
-
-    a[rel="doc"]:before,
-    a[rel="docx"]:before {
-        content: "\f1c2"; 
-        color:#294BA0; 
-    }
-
-    a[rel="ppt"]:before,
-    a[rel="pptx"]:before  {
-        content: "\f1c4"; 
-        color:orange;
-    }
-
-    a[rel="external"]:before {
-        content: "\f08e"; 
-    }
-}
-
-.search-results-title{
-    margin:50px 0 15px;
-    font-size:24px !important;
-}
-
-.filter-by-title{
-    margin:0 0 15px;
-}
-
-
-.survey {
-    margin-bottom: 40px;
-}
-

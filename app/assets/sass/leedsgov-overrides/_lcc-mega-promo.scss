@@ -1,0 +1,40 @@
+//colour changes for mega on leeds.gov
+.mega-promo {
+    .mega-promo__item {
+        a {
+            &:hover {
+                background: white;
+                .mega-promo__header,
+                &:after {
+                    color: $base-link-hover-color !important;
+                }
+                .mega-promo__secondary {
+                    color: $secondary-font-color !important;
+                }
+            }
+        }
+        &.blue {
+            a {
+                &:hover {
+                    .mega-promo__header,
+                    &:after {
+                        color: $white !important;
+                    }
+                    .mega-promo__secondary {
+                        color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//mixin for blue promo
+.mega-promo {
+    .mega-promo__item {
+        &.blue {
+            @include mega-promo-colors($blue, $white, $white, $white, $promo-highlight-background-color, $promo-highlight-color);
+        }
+    }
+}
+

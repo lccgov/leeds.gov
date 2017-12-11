@@ -1,0 +1,75 @@
+//Start sharpoint search snippet overrides custom for leeds.gov.uk
+.ms-srch-sb>input {
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    border-radius: 4px !important;
+    margin: 0 -1px 0 0;
+    padding-left: 15px !important;
+    height: 55px !important;
+    line-height: 55px;
+}
+
+.ms-srch-sb > .ms-srch-sb-searchLink {
+    border: none;
+    font-size: 40px !important;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    width: 60px !important;
+    height: 55px;
+    line-height: 55px;
+    margin: 0;
+    padding: 0 15px;
+    display: block;
+    color: $white;
+    background: lighten($blue, 10%);
+    -webkit-border-radius: 0 4px 4px 0 !important;
+    -moz-border-radius: 0 4px 4px 0 !important;
+    -ms-border-radius: 0 4px 4px 0 !important;
+    border-radius: 0 4px 4px 0 !important;
+    text-decoration: none;
+    &:hover {
+        background: darken($blue, 10%) !important;
+    }
+}
+
+.ms-srch-sb > .ms-srch-sb-searchLink:hover,
+.ms-srch-sb > .ms-srch-sb-searchLink:focus {
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+.ms-srch-sb-borderFocused {
+    border: none !important;
+}
+
+.ms-srch-sb > .ms-srch-sb-searchLink img {
+    display: none;
+}
+
+.ms-srch-sb > .ms-srch-sb-searchLink:before {
+    font-family: "Glyphicons Halflings";
+    content: "\e003";
+    font-size: 30px;
+}
+
+.ms-srch-sb-border,
+.ms-srch-sb-border:hover {
+    border: none !important;
+    width: 100%;
+}
+
+#nav-search {
+    float: left;
+    margin: 10px;
+}
+
+#s4-bodyContainer {
+    padding-bottom: 0px !important;
+}
+
+#SearchBox .ms-srch-sb {
+    display: block;
+}
