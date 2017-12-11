@@ -7,6 +7,7 @@ var settings;
 var rmdir = require('rmdir');
 var rename = require("gulp-rename");
 var packageName = require('root-require')('package.json').name;
+var packageVersion = require('root-require')('package.json').version;
 var util = require('util');
 var htmlreplace = require('gulp-html-replace');
 var uglify = require('gulp-uglify');
@@ -26,6 +27,9 @@ var metadata = require('./metadata.json');
 var prompt = require('gulp-prompt');
 var Uuid = require('uuid');
 
+var tsc = require('gulp-typescript');
+var tslint = require('gulp-tslint');
+
 var env = new Mincer.Environment();
 env.appendPath('app/assets/javascripts');
 env.appendPath('lcc_modules/lcc_frontend_toolkit/javascripts');
@@ -44,6 +48,21 @@ gulp.task('clean:dist', (done) => {
     rmdir('./dist', function (err, dirs, files) {
         done();
     });
+});
+
+// gulp.task("tslint", () =>
+//     gulp.src("source.ts")
+//         .pipe(tslint({
+//             formatter: "verbose"
+//         }))
+//         .pipe(tslint.report())
+// );
+
+var tsProject = tsc.createProject("tsconfig.json");
+gulp.task('ts', function(){
+  gulp.src(['./app/assets/ts/**/*.ts'])
+    .pipe(tsProject())
+    .pipe(gulp.dest('app/assets/javascripts'))
 });
 
 //Sync assets to public folder excluding SASS files and JS

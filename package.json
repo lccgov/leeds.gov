@@ -1,6 +1,6 @@
 {
   "name": "lcc_gov",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "",
   "dependencies": {
+    "@types/knockout": "^3.4.47",
     "file-exists": "^2.0.0",
     "file-system": "^2.2.1",
     "gulp": "^3.9.1",
@@ -31,9 +32,11 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-spsync-creds": "^2.2.6",
+    "gulp-tslint": "^8.1.2",
+    "gulp-typescript": "^3.2.3",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "lcc_frontend_toolkit": "^0.175.0",
+    "lcc_frontend_toolkit": "^0.172.0",
     "lcc_sharepoint_toolkit": "^0.55.0",
     "lcc_templates_sharepoint": "^1.1.100",
     "lodash": "^4.17.2",
@@ -41,6 +44,8 @@
     "rmdir": "^1.2.0",
     "root-require": "^0.3.1",
     "syncy": "^2.0.1",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
     "uuid": "^3.0.1"
   }
 }
