@@ -105,49 +105,103 @@ $accordion-color:#721371;
  $blockquoteQuoteColor:#721371;
 // $blockquoteQuoteFooterColor:#000;
 
-//highlighted box in content assets
-$highlighted-background-color:#038fa5;
-$highlighted-font-color:#fff;
-$highlighted-alt-background-color:#f6f6f6 ;
-$highlighted-alt-font-color:#333;
+//mega-promo
+//$promo-background-color:#F6F7FA;
+//$promo-arrow-color:#9DA5B2;
+//$promo-header-color:#3D414A;
+//$promo-secondary-color:#666B76;
+//$promo-highlight-background-color:#F6F7FA;
+//$promo-highlight-color:#3D414A;
+//$promo-arrow:"\f054";
 
-@import 'mixins';
-@import 'variables';
-@import 'brandColors';
 
-// available sass files please un-comment out as required
+//button colours
+$primary-button-background-color:$main-nav-background;
+//$primary-button-color:white !default;
+$secondary-button-background-color:#ddd;
+$secondary-button-color:$primary-button-background-color;
+//$outline-button-border-color:blue;
+//$outline-button-color:blue;
 
-//@import 'mainMenuSubsites';
-@import 'breadcrumb';
-@import 'sectionSubsite';
-@import 'promo';
-@import 'carousel';
-//@import 'socialMedia';
-//@import 'sideNavigation';
-//@import 'blockLinks';
+//group promo colours
+//$group-promo-background-color: #F6F7FA;
+//$group-promo-header-color: #3D414A;
+//$group-promo-description-color: #666B76;
+//$group-promo-arrow-color: #9DA5B2;
+
+//panel colors
+//$panel-event-date-background-light:$base-link-color;
+//$panel-event-date-background-dark:darken($panel-event-date-background-light,5%);
+//$panel-event-date-color:white;
+//$hightlight-color:$base-link-color;
+//$panel-alt-color:white;
+
+//extra colours
+//$focus-color:#FFBF47;
+//$secondary-link-color:#003F55;
+//$secondary-font-color:#666B76;
+//$border-color:#DCDEE1;
+//$panel-color:darken(#F6F7FA,3%);
+//$button-hover-color:lighten(#008000,5%);
+//$base-link-hover-color:#3399BB;
+//$black:#212224;
+//$light-black:#3D414A;
+//$dark-grey:#666B76;
+//$grey:#9DA5B2;
+//$light-grey:#DCDEE1;
+//$lighter-grey:#F6F7FA;
+
+
+//form colours
+//$input-color:#212224;
+//$input-border-color:#9DA5B2;
+
+
+//Arrow Link
+//$ArrowLinkBorderColor:#bbcada;
+//$ArrowLinkColor:#333 ;
+
+//responsive menu width
+$responsiveMenuWidth:1200px ;
+
+@import 'base';
+
+@import '2010-typography-overrides';
 @import 'accordion';
-@import 'promoGroup';
-@import 'alerts';
-@import 'promoListwebpart';
-//@import 'eventsWebparts';
-@import 'sharepointOverides';
-//@import 'iconLinks';
-//@import 'heroBanner';
+//@import 'a-to-z';
+//@import 'block-links';
+@import 'block-quote';
+@import 'brand-colors';
+//@import 'carousel';
+//@import 'content-link'; //subsite only
+@import 'description-list';
+@import 'doc-list'; //needs aligning with lcc_doc-list and a.doc within typography - DH
+//@import 'events-search-results';
+//@import 'events-webparts';
+@import 'group-promo';
+//@import 'hero-banner';
+//@import 'hero-banner-overlay'; //needs aligning with hero-bnner - RM
+@import 'icon-links';
+//@import 'lcc-base-styles'; //needs finalising - DH & RM
+//@import 'lcc-doc-list'; //see above - DH
+//@import 'lcc-footer'; //needs aligning with footer - is it leeds.gov specific? - DH
+//@import 'lcc-header'; //needs aligning with header - is it leeds.gov specific? - DH
+//@import 'lcc-hero'; //needs aligning with hero - is it leeds.gov specific? - DH
+//@import 'lcc-news'; //needs aligning with footer - is it leeds.gov specific? - DH
+//@import 'lcc-search'; //needs aligning with global search - is it leeds.gov specific? - DH
+@import 'mega-promo';
 //@import 'news';
-//@import 'polaroids';
-@import 'groupPromo';
-//@import 'blocklinks';
-//@import 'contentLink';
-@import 'docList';
-@import 'accessibility';
-@import 'buttons';
-@import 'browser-alert';
-@import 'typography-lcc';
-@import 'tables';
-@import 'contentAssets';
-@import 'blockQuote';
-
-
+//@import 'open-data'; //is it leeds.gov.uk specific? - does it need re-naming- DH
+//@import 'journey-page';
+//@import 'phase-banner'; //work needed to have in page beta banner
+//@import 'polaroids'; //subsite only
+@import 'promo';
+@import 'promo-list-webpart'; //subsite only
+@import 'sharepoint-overrides'; 
+@import 'side-nav'; //needs aligning with side-navigation - DH & RM
+//@import 'survey-webpart'; //is it leeds.gov specific? Relys on where-i-live which should be in the fet but renamed to search-panel - DH
+@import 'url-helper';
+@import 'webchat';
 
  .masterhead{
      border-bottom:1px solid #ddd;
@@ -157,11 +211,11 @@ $highlighted-alt-font-color:#333;
         height:132px;
         width:500px;
         background:url(../images/logo.png) center top no-repeat;
-        margin:50px auto;
+        margin:20px auto;
 
         @media (max-width: 500px){
-            background-size:100%;
-           margin:50px auto 0 auto;
+           background-size:80%;
+           height:100px;
         }
 
     }
