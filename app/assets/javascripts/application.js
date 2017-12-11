@@ -11,6 +11,7 @@
 //= require contact-us-form
 //= require survey
 //= require component.related.pages
+//= require service.sharepoint
 //= require component.ongoing.incidents
 
 //removes top margin frpm right hand column if empty

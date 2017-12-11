@@ -7,6 +7,8 @@
     
     //LCC.Services.SharePoint = function () { 
 
+        
+
         LCC.Services.SharePoint.GetRelatedPagesKQLString = function (pageTerms) {
             var output = "(";
             for (var i = 0; i < pageTerms.length; i++) {

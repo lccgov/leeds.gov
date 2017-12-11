@@ -47,5 +47,9 @@
     "tslint": "^5.8.0",
     "typescript": "^2.6.2",
     "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.2.16",
+    "@types/sharepoint": "^2016.1.0"
   }
 }
