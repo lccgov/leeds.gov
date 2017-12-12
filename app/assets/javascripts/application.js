@@ -37,12 +37,11 @@ function isEmpty( el ){
 //random image for hero-lcc
 function randomImage(){
   var images = [
-   '/_catalogs/masterpage/public/images/hero-image-1.jpg',
-   '/_catalogs/masterpage/public/images/hero-image-2.jpg',
-   '/_catalogs/masterpage/public/images/hero-image-3.jpg',
-   '/_catalogs/masterpage/public/images/hero-image-4.jpg',
-   '/_catalogs/masterpage/public/images/hero-image-5.jpg',
-   '/_catalogs/masterpage/public/images/hero-image-6.jpg'];
+   '/_catalogs/masterpage/public/images/home-hero-images/1.jpg',
+   '/_catalogs/masterpage/public/images/home-hero-images/2.jpg',
+   '/_catalogs/masterpage/public/images/home-hero-images/3.jpg',
+   '/_catalogs/masterpage/public/images/home-hero-images/4.jpg',
+   '/_catalogs/masterpage/public/images/home-hero-images/5.jpg'];
   var size = images.length;
   var x = Math.floor(size * Math.random());
   console.log(x);
