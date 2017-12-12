@@ -55,7 +55,7 @@
 }
 
 .findMyNearest {
-    @extend .panel;
+    @include panel();
     padding-bottom: 10px;
     margin-top: 0;
     h2 {
@@ -228,11 +228,6 @@
     color: $base-link-color;
     margin-top: 15px;
     display: inline-block;
-}
-
-.search-panel {
-    @extend .panel;
-    padding-bottom: 10px;
 }
 
 .table-responsive {

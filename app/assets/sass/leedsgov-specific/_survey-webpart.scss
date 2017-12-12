@@ -1,5 +1,5 @@
 .survey {
-    @extend .search-panel;
+    @include search-panel();
     background: transparent;
     border: 1px solid $border-color;
     margin-bottom: 0;
