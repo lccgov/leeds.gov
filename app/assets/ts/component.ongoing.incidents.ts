@@ -1,7 +1,7 @@
 /// <reference path="../../../node_modules/@types/knockout/index.d.ts" />
 /// <reference path="../../../node_modules/@types/jquery/index.d.ts" />
 /// <reference path="../../../node_modules/@types/sharepoint/index.d.ts" />
-/// <reference path="./service.sharepoint.ts" />
+/// <reference path="./services.sharepoint.ts" />
 "use strict";
 
 namespace LCC.Modules {
@@ -48,11 +48,11 @@ namespace LCC.Modules {
                     let listUrl = document.location.protocol + "//" + document.location.host + "/Lists/Ongoing Updates/*";
                     let url = "'ContentTypeId:\"0x010016DD9712094BA240AFECA9B2C177F97700CCC261225D64B145B2BACF40714DE379*\" Path:\"" + listUrl + "\"'&QueryTemplatePropertiesUrl='spfile://webroot/queryparametertemplate.xml'&selectproperties='Title,RiskTypeOWSCHCS,UpdateTextOWSMTXT,LastModifiedTime,IncidentImgOWSTEXT,IncidentMoreInfoLinkOWSTEXT'&sortlist='LastModifiedTime:descending'";
 
-                    let query: LCC.Modules.SharePoint.ISearchQuery = {
+                    let query: LCC.Services.ISearchQuery = {
                         queryText: url
                     };
 
-                    jQuery.when(LCC.Modules.SharePoint.Services.ExecuteSearchQuery(query))
+                    jQuery.when(LCC.Services.SharePoint.ExecuteSearchQuery(query))
                     .then(function(listData: any) {
                         self.incidents(listData.map(function(item: any) {
                             return new OngoingIncident(item);
