@@ -18,7 +18,6 @@ module LCC.Modules.SharePoint {
         public static ExecuteSearchQuery = function(searchQuery: ISearchQuery) {
             let dfd = jQuery.Deferred();
 
-            // let Url = _spPageContextInfo.webAbsoluteUrl + '/_api/search/query?querytext=%27Path:"' + hostURL + '"+ListId:"' + listId + '"%27&QueryTemplatePropertiesUrl=%27spfile://webroot/queryparametertemplate.xml%27&SelectProperties=%27Path,ID,owstaxIdPageCategory,owstaxIdRelatedPages,Title%27&RowLimit=2';
             let Url = [_spPageContextInfo.webAbsoluteUrl, "/_api/search/query?querytext=", searchQuery.queryText].join("");
             jQuery.ajax({
                 beforeSend: function (XMLHttpRequest) {

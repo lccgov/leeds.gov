@@ -1,22 +1,8 @@
 /// <reference path="../../../node_modules/@types/knockout/index.d.ts" />
 /// <reference path="../../../node_modules/@types/jquery/index.d.ts" />
 /// <reference path="../../../node_modules/@types/sharepoint/index.d.ts" />
-/// <reference path="../../../node_modules/@types/moment/index.d.ts" />
 /// <reference path="./service.sharepoint.ts" />
-/// <reference path="../../../moment.d.ts" />
 "use strict";
-
-
-// import ko = require("knockout");
-// import * as ko from "knockout";
-
-//import * as moment from "moment";
-//import * as services from "./service.sharepoint"
-
-
-//import { Services } from "./service.sharepoint"
-//import "service.sharepoint"
-//import Services = require('./service.sharepoint')
 
 namespace LCC.Modules {
 
@@ -68,7 +54,6 @@ namespace LCC.Modules {
 
                     jQuery.when(LCC.Modules.SharePoint.Services.ExecuteSearchQuery(query))
                     .then(function(listData: any) {
-                        console.log(listData);
                         self.incidents(listData.map(function(item: any) {
                             return new OngoingIncident(item);
                         }));

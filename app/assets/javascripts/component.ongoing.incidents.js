@@ -35,7 +35,6 @@ var LCC;
                         };
                         jQuery.when(LCC.Modules.SharePoint.Services.ExecuteSearchQuery(query))
                             .then(function (listData) {
-                            console.log(listData);
                             self.incidents(listData.map(function (item) {
                                 return new OngoingIncident(item);
                             }));
