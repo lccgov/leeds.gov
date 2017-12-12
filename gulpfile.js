@@ -59,8 +59,8 @@ gulp.task('clean:dist', (done) => {
 // );
 
 var tsProject = tsc.createProject("tsconfig.json");
-gulp.task('ts', function(){
-  gulp.src(['./app/assets/ts/**/*.ts'])
+gulp.task('compile:typescript', ['sync:lcc_frontend_toolkit'], (done) => {
+  return gulp.src(['./app/assets/ts/**/*.ts'])
     .pipe(tsProject())
     .pipe(gulp.dest('app/assets/javascripts'))
 });
@@ -88,7 +88,7 @@ gulp.task('sync:lcc_frontend_toolkit', ['sync:assets'], (done) => {
 
 //Sync app/assets/javascripts/application.js to dist/_catalogs/masterpages/public/javascripts
 //Use mince to add required js files
-gulp.task('sync:javascripts', ['sync:lcc_frontend_toolkit'], (done) => {
+gulp.task('sync:javascripts', ['compile:typescript'], (done) => {
     return gulp.src('app/assets/javascripts/application.js')
         .pipe(mince(env))
         //don't uglify if gulp is ran with '--debug'
@@ -314,5 +314,5 @@ gulp.task('sp-upload', ['prompt'], (done) => {
     );
 });
 
-gulp.task('default',  ['clean:dist', 'sync:assets', 'sync:lcc_frontend_toolkit', 'sync:javascripts', 'sync:lcc_sharepoint_toolkit_webparts', 'sync:lcc_sharepoint_toolkit_displaytemplates', 'sync:lcc_sharepoint_toolkit_xslstylesheets', 'sync:lcc_templates_sharepoint_assets', 'sync:lcc_templates_sharepoint_stylesheets', 'sync:lcc_templates_sharepoint_javascript', 'sync:lcc_templates_sharepoint_views', 'sync:lcc_templates_sharepoint_master', 'sass', 'sass:subsites', 'sync:subsites_master']);
+gulp.task('default',  ['clean:dist', 'sync:assets', 'sync:lcc_frontend_toolkit', 'compile:typescript', 'sync:javascripts', 'sync:lcc_sharepoint_toolkit_webparts', 'sync:lcc_sharepoint_toolkit_displaytemplates', 'sync:lcc_sharepoint_toolkit_xslstylesheets', 'sync:lcc_templates_sharepoint_assets', 'sync:lcc_templates_sharepoint_stylesheets', 'sync:lcc_templates_sharepoint_javascript', 'sync:lcc_templates_sharepoint_views', 'sync:lcc_templates_sharepoint_master', 'sass', 'sass:subsites', 'sync:subsites_master']);
 gulp.task('upload',  ['default', 'sp-upload']);
