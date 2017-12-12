@@ -152,7 +152,7 @@ $input-border-color:$grey;
 //back to top
 //$back-top-color:white;
 //$back-top-hover-color:white;
-$back-top-background:blue;
+//$back-top-background:black;
 //$back-top-hover-background:grey;
 
 //phase banner
@@ -199,13 +199,13 @@ $back-top-background:blue;
 //-PROJECT SPECIFIC
 //@import 'styleguide';//not needed for live site
 //@import 'sticky-nav';//not currently needed for live site
+@import 'modern-gov'; //not needed for live site
 
 @import 'leedsgov-specific';
 @import 'leedsgov-overrides';
 @import 'where-i-live'; //needs fine tuning and adding to toolkit - DH
 
 @import 'lcc-header'; //a part of the toolkit but needs to be at end
-@import 'modern-gov'; //not needed for live site
 
 //site background
 html {

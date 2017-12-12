@@ -1,14 +1,14 @@
 #report-a-problem {
     margin-top: 30px;
     .report-a-problem-toggle {
-        @extend .font-xsmall;
+        @include font-xsmall();
         color: $secondary-font-color !important;
         text-decoration: underline !important;
     }
     #report-a-problem-content {
-        @extend .text;
+        @include text();
         h2 {
-            @extend .heading-medium;
+            @include heading-medium();
             margin: 40px 0 30px 0;
             @media (max-width: 641px) {
                 margin: 30px 0 20px;

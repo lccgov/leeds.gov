@@ -211,8 +211,8 @@
 }
 
 .binCollectionTimesList {
-    @extend .list;
-    @extend .list-bullet;
+    @include list();
+    @include list-bullet();
     margin-bottom: 10px;
 }
 
@@ -224,7 +224,7 @@
 }
 
 .form-link-option {
-    @extend .font-xsmall;
+    @include font-xsmall();
     color: $base-link-color;
     margin-top: 15px;
     display: inline-block;

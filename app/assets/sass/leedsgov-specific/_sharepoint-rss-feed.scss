@@ -14,13 +14,13 @@
         }
         .rss-article-pubDate {
             span {
-                @extend .font-xsmall;
+                @include font-xsmall();
                 color: $secondary-font-color;
             }
         }
         .rss-article-description {
             p {
-                @extend .font-xsmall;
+                @include font-xsmall();
             }
             div {
                 p {}

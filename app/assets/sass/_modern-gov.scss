@@ -71,7 +71,7 @@
     }
 
     &:focus{
-        @extend .input-focus;
+        @include input-focus();
         outline:0;
     }
 }
