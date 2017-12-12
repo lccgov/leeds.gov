@@ -6,7 +6,7 @@
 // import ko = require("knockout");
 // import * as ko from "knockout";
 
-namespace LCC.Modules.SharePoint {
+module LCC.Modules.SharePoint {
 
     export interface ISearchQuery {
         queryText: string;
@@ -38,4 +38,7 @@ namespace LCC.Modules.SharePoint {
         };
     }
 
+
 }
+
+//export = LCC.Modules.SharePoint;

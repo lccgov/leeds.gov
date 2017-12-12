@@ -9,7 +9,9 @@ var LCC;
                 this.UpdateText = data.Cells.results[4].Value || "";
                 this.IncidentImage = data.Cells.results[6].Value || "";
                 this.InfoLink = data.Cells.results[7].Value || "";
-                this.LastModified = data.Cells.results[5].Value || "";
+                var modified = data.Cells.results[5].Value;
+                var displayDate = new Date(modified);
+                this.LastModified = displayDate.format("dd/MM/yyyy HH:MM tt");
                 this.Title = data.Cells.results[2].Value || "";
             }
             return OngoingIncident;

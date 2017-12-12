@@ -2,14 +2,19 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "commonjs",
+        "module": "none",
         "sourceMap": true,
         "listFiles": true,
         "removeComments": true,
         "noImplicitAny": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node"
     },
-    "exclude": [ "node_modules", "typings", "scripts"]
+    "exclude": [ "node_modules", "typings", "scripts"],
+    "include": [
+    
+  ]
 }
 
 // template

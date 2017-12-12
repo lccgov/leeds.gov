@@ -1,10 +1,22 @@
 /// <reference path="../../../node_modules/@types/knockout/index.d.ts" />
+/// <reference path="../../../node_modules/@types/jquery/index.d.ts" />
 /// <reference path="../../../node_modules/@types/sharepoint/index.d.ts" />
+/// <reference path="../../../node_modules/@types/moment/index.d.ts" />
 /// <reference path="./service.sharepoint.ts" />
+/// <reference path="../../../moment.d.ts" />
 "use strict";
+
 
 // import ko = require("knockout");
 // import * as ko from "knockout";
+
+//import * as moment from "moment";
+//import * as services from "./service.sharepoint"
+
+
+//import { Services } from "./service.sharepoint"
+//import "service.sharepoint"
+//import Services = require('./service.sharepoint')
 
 namespace LCC.Modules {
 
@@ -29,16 +41,12 @@ namespace LCC.Modules {
             this.UpdateText = data.Cells.results[4].Value || "";
             this.IncidentImage = data.Cells.results[6].Value || "";
             this.InfoLink = data.Cells.results[7].Value || "";
-            this.LastModified = data.Cells.results[5].Value || "";
+            let modified = data.Cells.results[5].Value;
+            var displayDate = new Date(modified);
+            this.LastModified =  displayDate.format("dd/MM/yyyy HH:MM tt");
             this.Title = data.Cells.results[2].Value || "";
         }
     }
-
-    // let OngoingIncident = function(data: any) {
-    //     let self = this;
-    //     self.name = data.Cells.results[5].Value;
-    //     self.url = data.Cells.results[2].Value;
-    // };
 
     export class OngoingIncidents implements IOngoingIncidents {
         public start(element: any) {
@@ -59,7 +67,7 @@ namespace LCC.Modules {
                     };
 
                     jQuery.when(LCC.Modules.SharePoint.Services.ExecuteSearchQuery(query))
-                    .then(function(listData) {
+                    .then(function(listData: any) {
                         console.log(listData);
                         self.incidents(listData.map(function(item: any) {
                             return new OngoingIncident(item);
