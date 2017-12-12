@@ -50,19 +50,11 @@ gulp.task('clean:dist', (done) => {
     });
 });
 
-// gulp.task("tslint", () =>
-//     gulp.src("source.ts")
-//         .pipe(tslint({
-//             formatter: "verbose"
-//         }))
-//         .pipe(tslint.report())
-// );
-
 var tsProject = tsc.createProject("tsconfig.json");
 gulp.task('compile:typescript', ['sync:lcc_frontend_toolkit'], (done) => {
   return gulp.src(['./app/assets/ts/**/*.ts'])
     .pipe(tsProject())
-    .pipe(gulp.dest('app/assets/javascripts'))
+    .pipe(gulp.dest('app/assets/javascripts/compiled'))
 });
 
 //Sync assets to public folder excluding SASS files and JS

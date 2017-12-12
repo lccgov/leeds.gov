@@ -1,8 +1,3 @@
-//= require services.sharepoint
-
-
-
-
 /*
  * Usage: 
  *  <div data-module="related-pages" class="relatedPages">
