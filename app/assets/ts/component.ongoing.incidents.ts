@@ -4,12 +4,7 @@
 /// <reference path="./services.sharepoint.ts" />
 "use strict";
 
-namespace LCC.Modules {
-
-    export interface Page {
-        name: string;
-        url: string;
-    }
+module LCC.Modules {
 
     export interface IOngoingIncidents {
         start(element: any): void;
