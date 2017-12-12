@@ -1,7 +1,7 @@
 /// <reference path="../../../node_modules/@types/knockout/index.d.ts" />
 /// <reference path="../../../node_modules/@types/jquery/index.d.ts" />
 /// <reference path="../../../node_modules/@types/sharepoint/index.d.ts" />
-/// <reference path="./service.sharepoint.ts" />
+/// <reference path="./services.sharepoint.ts" />
 "use strict";
 
 namespace LCC.Modules {
@@ -50,11 +50,11 @@ namespace LCC.Modules {
                     let listUrl = document.location.protocol + "//" + document.location.host + "/Lists/Dead Animals Register/*";
                     let url = "'ContentTypeId:\"0x01008458AFE154C4F54A9EC653F8A7C5CC8C0068F6C6CFF629174C93D79B84C46FFCB3*\" Path:\"" + listUrl + "\"'&QueryTemplatePropertiesUrl='spfile://webroot/queryparametertemplate.xml'&selectproperties='Title,SRRefOWSTEXT,Notes1OWSMTXT,AnimalLocationOWSMTXT,NotifiedOWSDATE,LastModifiedTime,IncidentImgOWSTEXT,IncidentMoreInfoLinkOWSTEXT'&sortlist='LastModifiedTime:descending'";
 
-                    let query: LCC.Modules.SharePoint.ISearchQuery = {
+                    let query: LCC.Services.ISearchQuery = {
                         queryText: url
                     };
 
-                    jQuery.when(LCC.Modules.SharePoint.Services.ExecuteSearchQuery(query))
+                    jQuery.when(LCC.Services.SharePoint.ExecuteSearchQuery(query))
                     .then(function(listData: any) {
                         self.animals(listData.map(function(item: any) {
                             return new DeadAnimal(item);

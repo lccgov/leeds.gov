@@ -33,7 +33,7 @@ var LCC;
                         var query = {
                             queryText: url
                         };
-                        jQuery.when(LCC.Modules.SharePoint.Services.ExecuteSearchQuery(query))
+                        jQuery.when(LCC.Services.SharePoint.ExecuteSearchQuery(query))
                             .then(function (listData) {
                             self.incidents(listData.map(function (item) {
                                 return new OngoingIncident(item);
