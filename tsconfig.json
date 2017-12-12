@@ -1,0 +1,37 @@
+
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "none",
+        "sourceMap": true,
+        "listFiles": true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node"
+    },
+    "exclude": [ "node_modules", "typings", "scripts"],
+    "include": [
+    
+  ]
+}
+
+// template
+// "compilerOptions": {
+//         "target": "es5",
+//         "sourceMap": true,
+//         "module": "commonjs",
+//         "moduleResolution": "node",
+//         "isolatedModules": false,
+//         "jsx": "react",
+//         "experimentalDecorators": true,
+//         "emitDecoratorMetadata": true,
+//         "declaration": false,
+//         "noImplicitAny": false,
+//         "removeComments": true,
+//         "outFile": "output.js",
+//         "noLib": false,
+//         "preserveConstEnums": true,
+//         "suppressImplicitAnyIndexErrors": true
+//     }

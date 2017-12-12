@@ -7,6 +7,7 @@ var settings;
 var rmdir = require('rmdir');
 var rename = require("gulp-rename");
 var packageName = require('root-require')('package.json').name;
+var packageVersion = require('root-require')('package.json').version;
 var util = require('util');
 var htmlreplace = require('gulp-html-replace');
 var uglify = require('gulp-uglify');
@@ -26,6 +27,9 @@ var metadata = require('./metadata.json');
 var prompt = require('gulp-prompt');
 var Uuid = require('uuid');
 
+var tsc = require('gulp-typescript');
+var tslint = require('gulp-tslint');
+
 var env = new Mincer.Environment();
 env.appendPath('app/assets/javascripts');
 env.appendPath('lcc_modules/lcc_frontend_toolkit/javascripts');
@@ -44,6 +48,21 @@ gulp.task('clean:dist', (done) => {
     rmdir('./dist', function (err, dirs, files) {
         done();
     });
+});
+
+// gulp.task("tslint", () =>
+//     gulp.src("source.ts")
+//         .pipe(tslint({
+//             formatter: "verbose"
+//         }))
+//         .pipe(tslint.report())
+// );
+
+var tsProject = tsc.createProject("tsconfig.json");
+gulp.task('compile:typescript', ['sync:lcc_frontend_toolkit'], (done) => {
+  return gulp.src(['./app/assets/ts/**/*.ts'])
+    .pipe(tsProject())
+    .pipe(gulp.dest('app/assets/javascripts'))
 });
 
 //Sync assets to public folder excluding SASS files and JS
@@ -69,7 +88,7 @@ gulp.task('sync:lcc_frontend_toolkit', ['sync:assets'], (done) => {
 
 //Sync app/assets/javascripts/application.js to dist/_catalogs/masterpages/public/javascripts
 //Use mince to add required js files
-gulp.task('sync:javascripts', ['sync:lcc_frontend_toolkit'], (done) => {
+gulp.task('sync:javascripts', ['compile:typescript'], (done) => {
     return gulp.src('app/assets/javascripts/application.js')
         .pipe(mince(env))
         //don't uglify if gulp is ran with '--debug'
@@ -295,5 +314,5 @@ gulp.task('sp-upload', ['prompt'], (done) => {
     );
 });
 
-gulp.task('default',  ['clean:dist', 'sync:assets', 'sync:lcc_frontend_toolkit', 'sync:javascripts', 'sync:lcc_sharepoint_toolkit_webparts', 'sync:lcc_sharepoint_toolkit_displaytemplates', 'sync:lcc_sharepoint_toolkit_xslstylesheets', 'sync:lcc_templates_sharepoint_assets', 'sync:lcc_templates_sharepoint_stylesheets', 'sync:lcc_templates_sharepoint_javascript', 'sync:lcc_templates_sharepoint_views', 'sync:lcc_templates_sharepoint_master', 'sass', 'sass:subsites', 'sync:subsites_master']);
+gulp.task('default',  ['clean:dist', 'sync:assets', 'sync:lcc_frontend_toolkit', 'compile:typescript', 'sync:javascripts', 'sync:lcc_sharepoint_toolkit_webparts', 'sync:lcc_sharepoint_toolkit_displaytemplates', 'sync:lcc_sharepoint_toolkit_xslstylesheets', 'sync:lcc_templates_sharepoint_assets', 'sync:lcc_templates_sharepoint_stylesheets', 'sync:lcc_templates_sharepoint_javascript', 'sync:lcc_templates_sharepoint_views', 'sync:lcc_templates_sharepoint_master', 'sass', 'sass:subsites', 'sync:subsites_master']);
 gulp.task('upload',  ['default', 'sp-upload']);

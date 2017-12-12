@@ -11,6 +11,9 @@
 //= require contact-us-form
 //= require survey
 //= require component.related.pages
+//= require service.sharepoint
+//= require component.ongoing.incidents
+//= require component.dead.animals
 
 //removes top margin frpm right hand column if empty
 function isEmpty( el ){
