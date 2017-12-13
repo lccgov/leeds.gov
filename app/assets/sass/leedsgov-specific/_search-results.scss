@@ -53,6 +53,9 @@
             display: inline-block;
             width: 100%;
             //max-width: 35em;
+            @media (min-width: 990px) {
+                margin-top:50px;
+            }
             .ms-srch-item {
                 padding: 8px 0;
                 &:hover {
@@ -311,5 +314,9 @@
 }
 
 .filter-by-title {
-    margin: 0 0 15px;
+    margin: 30px 0 15px !important;
+    font-size:19px !important;
+    @media (min-width: 990px) {
+        margin-top:50px !important;
+    }
 }
