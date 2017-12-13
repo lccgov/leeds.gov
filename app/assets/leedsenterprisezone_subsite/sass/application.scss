@@ -190,6 +190,7 @@ $secondary-button-color:$primary-button-background-color;
 //@import 'lcc-search'; //needs aligning with global search - is it leeds.gov specific? - DH
 @import 'mega-promo';
 @import 'news';
+@import 'section-subsite'; //needed for news
 @import 'open-data'; //is it leeds.gov.uk specific? - does it need re-naming- DH
 @import 'journey-page';
 @import 'phase-banner'; //work needed to have in page beta banner
@@ -539,7 +540,6 @@ SIDE BLOCK
   }
   a {
     text-align: center;
-    bottom: 20px;
   }
 
 
