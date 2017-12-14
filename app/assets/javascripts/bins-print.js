@@ -7,7 +7,12 @@
         this.start = function (element) {
 
             element.on('click', function () {
-                jQuery.get("/_catalogs/masterpage/public/PrintableCalender.html", function (data) {
+
+                var timestamp = new Date().getUTCMilliseconds();
+                let newWindow = open("", timestamp, 'width=auto,height=auto,menubar=yes,scrollbars=yes,resizable=yes');
+
+
+                jQuery.get("/Style Library/PrintableCalender.html", function (data) {
                     var blackBinText = document.getElementById("divBlackBin");
                     var brownBinText = document.getElementById("divBrownBin");
                     var greenBinText = document.getElementById("divGreenBin");
@@ -37,13 +42,16 @@
                     else {
                         data = data.replace("id='divBlueBin'", "id='divBlueBin' style='display:none'");
                     }
-                    var url = "/_catalogs/masterpage/public/images/";
+
+                    let hostUrl = document.location.protocol + "//" + document.location.host;
+                    var url = hostUrl + "/_catalogs/masterpage/public/images/";
                     data = data.replace(/..\/images\//g, url);
-                    var timestamp = new Date().getUTCMilliseconds();
-                    var myWindow = window.open("", timestamp, 'width=auto,height=auto,menubar=yes,scrollbars=yes,resizable=yes');
-                myWindow.document.write(data);
+
+                    newWindow.document.body.innerHTML = data;
+                    newWindow.focus();
                 
                 });
+
             });
         }
 
