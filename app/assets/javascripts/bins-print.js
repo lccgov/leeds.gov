@@ -9,7 +9,7 @@
             element.on('click', function () {
 
                 var timestamp = new Date().getUTCMilliseconds();
-                let newWindow = open("", timestamp, 'width=auto,height=auto,menubar=yes,scrollbars=yes,resizable=yes');
+                var newWindow = open("", timestamp, 'width=auto,height=auto,menubar=yes,scrollbars=yes,resizable=yes');
 
 
                 jQuery.get("/Style Library/PrintableCalender.html", function (data) {
@@ -43,7 +43,7 @@
                         data = data.replace("id='divBlueBin'", "id='divBlueBin' style='display:none'");
                     }
 
-                    let hostUrl = document.location.protocol + "//" + document.location.host;
+                    var hostUrl = document.location.protocol + "//" + document.location.host;
                     var url = hostUrl + "/_catalogs/masterpage/public/images/";
                     data = data.replace(/..\/images\//g, url);
 
