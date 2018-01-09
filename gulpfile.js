@@ -59,7 +59,7 @@ gulp.task('compile:typescript', ['sync:lcc_frontend_toolkit'], (done) => {
 
 //Sync assets to public folder excluding SASS files and JS
 gulp.task('sync:assets', ['clean:dist'], (done) => {
-    syncy(['app/assets/**/*', '!app/assets/sass/**',  '!app/assets/javascripts/**', '!app/assets/*_subsite/javascripts/**', '!app/assets/**/*.ihtml', '!app/assets/*_subsite/sass/**', '!app/assets/webparts/**'], './dist/_catalogs/masterpage/public', {
+    syncy(['app/assets/**/*', '!app/assets/sass/**',  '!app/assets/javascripts/**', '!app/assets/ts/**', '!app/assets/*_subsite/javascripts/**', '!app/assets/**/*.ihtml', '!app/assets/*_subsite/sass/**', '!app/assets/webparts/**'], './dist/_catalogs/masterpage/public', {
             ignoreInDest: '**/stylesheets/**',
             base: 'app/assets',
             updateAndDelete: false
@@ -81,10 +81,19 @@ gulp.task('sync:lcc_frontend_toolkit', ['sync:assets'], (done) => {
 //Sync app/assets/javascripts/application.js to dist/_catalogs/masterpages/public/javascripts
 //Use mince to add required js files
 gulp.task('sync:javascripts', ['compile:typescript'], (done) => {
+
+    function createErrorHandler(name) {
+        return function (err) {
+        console.error('Error from ' + name + ' in compress task', err.toString());
+        };
+    }
+
     return gulp.src('app/assets/javascripts/application.js')
         .pipe(mince(env))
+        .on('error', createErrorHandler('mince'))
         //don't uglify if gulp is ran with '--debug'
         .pipe(gutil.env.debug ? gutil.noop() : uglify({preserveComments: 'all'}))
+        .on('error', createErrorHandler('uglify'))
         .pipe(gulp.dest('dist/_catalogs/masterpage/public/javascripts'));
 });
 
