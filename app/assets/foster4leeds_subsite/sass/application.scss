@@ -785,7 +785,7 @@ footer.main {
                 ul {
                     li {
                         display: inline-block;
-                        margin: 0;
+                        margin: 0 5px 0 0;
                         &:first-of-type {
                             padding: 0;
                             color: $secondary-font-color;
@@ -939,7 +939,7 @@ footer.main {
         margin-top: 0;
     }
     p {
-        margin: 0;
+        margin: 0 !important;
     }
 }
 
@@ -977,7 +977,7 @@ footer.main {
         padding: 0;
         li {
             display: inline-block;
-            margin-right: 10px;
+            margin-right: 10px !important;
             a {
                 font-family: $font-secondary;
                 color: $secondary-font-color;
@@ -1122,5 +1122,17 @@ hr {
     margin-top: 30px;
     @media (min-width: 641px) {
         margin-top: 60px;
+    }
+}
+
+//sp overrides
+footer{
+    ul.dfwp-column{
+        margin:0;
+        padding:0;
+        li{
+            margin:0;
+            padding:0;
+        }
     }
 }

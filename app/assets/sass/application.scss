@@ -502,3 +502,17 @@ table{
         }
     }
 }*/
+
+.three-columns{
+    @include three-columns;
+}
+
+.two-columns{
+    @include two-columns;
+}
+
+//temp fix for old master nav
+.main-nav ul li {
+    display: inline-block;
+    margin-right: 25px;
+}
