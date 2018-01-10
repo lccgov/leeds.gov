@@ -43,7 +43,7 @@ function randomImage(){
   var size = images.length;
   var x = Math.floor(size * Math.random());
   console.log(x);
-  var element = document.getElementsByClassName('hero-lcc-wrapper');
+  var element = document.getElementsByClassName('hero-lcc-wrapper-home-leedsgov');
   console.log(element);
   if(element.length > 0)
   {
