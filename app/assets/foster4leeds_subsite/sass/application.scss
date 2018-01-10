@@ -506,7 +506,8 @@ $header-height-mobile:70px;
     }
 }
 
-.search-text {
+.search-text,
+a.search span {
     @include sr-only;
 }
 
