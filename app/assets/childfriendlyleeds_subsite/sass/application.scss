@@ -177,7 +177,7 @@ $highlighted-alt-font-color:#fff;
 //$ArrowLinkColor:#333 ;
 
 //responsive menu width
-//$responsiveMenuWidth:1200px ;
+$responsiveMenuWidth:1200px ;
 
 
 
@@ -269,14 +269,14 @@ a:visited{
 
 
                                                     @media screen and (max-width:768px){
-                                                        text-align: center;
-                                                        margin:20px auto;
+                                           
+                                                        margin:20px 0;
                                                         height:119px;
-                                                        width:100px;
+                                                        width:80px;
                                                         background-size:100%;
 
-                                                                            &:after{
-                                                                    font-size:30px;
+                                                                 &:after{
+                                                                        font-size:30px;
                                                                         text-align: center;
 
 

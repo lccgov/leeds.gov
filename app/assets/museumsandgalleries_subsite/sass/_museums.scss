@@ -334,13 +334,8 @@ position:absolute;
 .btn, .button{
     font-size:20px;
     text-align: left;
-    padding-right:20px;
 
-      &:after{
-
-          display:none;
-      }    
-
+  
 
     span{
         display:block;
@@ -555,3 +550,6 @@ body{
     margin-top:30px;
 }
 
+.col-md-4 .promoListWebpart {
+    margin: 0 0px;
+}
