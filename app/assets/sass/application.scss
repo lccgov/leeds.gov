@@ -516,3 +516,8 @@ table{
     display: inline-block;
     margin-right: 25px;
 }
+
+//fixes hero image to position
+.hero-lcc-wrapper {
+    background-attachment: fixed;
+}
