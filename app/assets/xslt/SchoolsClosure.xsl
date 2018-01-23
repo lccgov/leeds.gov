@@ -3,35 +3,47 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
   <xsl:output method="html" indent="yes"/>
   <xsl:template match="/">
-    <div class="section">
-      <h2>Schools</h2>
-      <ul>
-        <xsl:for-each select="Schools/School">
-          <li>
-            <div class="colOne">
-              <p> <xsl:value-of select="Status"/>
-            </p>
-              <div class="closureDates">
-                 <xsl:value-of select="StartDate"/> to <xsl:value-of select="EndDate"/>
-              </div>
-
-              <div class="lastUpdated">
-                <strong>Last updated: </strong>
-                 <xsl:value-of select="LastUpdated"/>
-              </div>
-
+  <div>
+    <xsl:for-each select="Schools/School">
+      <div class="description-list">
+        <h2 class="description-list__heading"><xsl:value-of select="Name"/></h2>
+        <div class="description-list__item">
+            <h3>Reason for <span class="sr-only"><xsl:value-of select="Name"/></span> closure</h3>
+            <div class="description-list__item-content">
+                <p><xsl:value-of select="Status"/></p>
             </div>
-            <h3>
-              <xsl:value-of select="Name"/>
-            </h3>
-
-            <p>
-              <xsl:value-of select="Comments"/>
-            </p>
             <div class="clear"></div>
-          </li>
-        </xsl:for-each>
-      </ul>
-    </div> 
+        </div>
+        <div class="description-list__item">
+            <h3>Comments <span class="sr-only">for <xsl:value-of select="Name"/></span></h3>
+            <div class="description-list__item-content">
+                <p><xsl:value-of select="Comments"/></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="description-list__item">
+            <h3><span class="sr-only">The date <xsl:value-of select="Name"/> is</span>Closed from</h3>
+            <div class="description-list__item-content">
+                <p><xsl:value-of select="StartDate"/></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="description-list__item">
+            <h3><span class="sr-only">The date <xsl:value-of select="Name"/></span>Opens on</h3>
+            <div class="description-list__item-content">
+                <p><xsl:value-of select="EndDate"/></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="description-list__item">
+            <h3><span class="sr-only"><xsl:value-of select="Name"/> was </span>Last updated <span class="sr-only">on</span></h3>
+            <div class="description-list__item-content">
+                <p><xsl:value-of select="LastUpdated"/></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    </xsl:for-each>
+    </div>
   </xsl:template>
 </xsl:stylesheet>

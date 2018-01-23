@@ -521,3 +521,17 @@ table{
 .hero-lcc-wrapper {
     background-attachment: fixed;
 }
+
+//description list
+.description-list__heading{
+    @include heading-medium();
+    border-bottom: 1px solid #dcdee1;
+    padding: 1rem .75rem 1rem 0;
+    margin-bottom: 0 !important;
+    line-height:1.6 !important;
+}
+
+//search box fix
+.ms-srch-sb>input {
+    padding-right: 50px;
+}
