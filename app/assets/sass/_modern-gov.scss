@@ -173,3 +173,13 @@ DIV#modgov A.mgSectionTitleLnk:link, DIV#modgov A.mgSectionTitleLnk:link:visited
 DIV#modgov .mgCouncillorImages {
     padding: 10px;
 }
+
+.lcc-modern-gov .col-md-4{
+    position:inherit;
+}
+
+@media screen and (max-width:500px){
+    DIV#modgov .mgThumbsList UL LI {
+    width: 100%;
+}
+}
