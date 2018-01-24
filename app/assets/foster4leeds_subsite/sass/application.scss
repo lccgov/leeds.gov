@@ -333,7 +333,7 @@ $header-height-mobile:70px;
     width: 325px;
     height: 48px;
     background-position: left top;
-    background-size: 100%;
+    background-size: 100% 100%;
     @media (max-width: 990px) {
         width: 250px;
         height: 37px;
@@ -901,6 +901,7 @@ footer.main {
                             }
                             img {
                                 height: 75px;
+                                width:100%;
                             }
                         }
                     }
