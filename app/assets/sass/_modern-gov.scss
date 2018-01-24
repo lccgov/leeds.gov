@@ -1,7 +1,27 @@
 
+#modgov{
+    width:100%;
+
+    h1{
+        display:block !important;
+    }
+
+    ul{
+    list-style-type:disc;
+}
+
+.mgCalWeekendLink a {
+    width: auto!important;
+}
+}
+
+ 
+
 #modgov .mgTabs ul li a {
-    width: auto;
+    width: auto !important;
     padding: 5px 15px;
+    height:auto !important;
+    background-image:none !important;
 }
 
 #modgov .mgCalendarCell, .mgCalendarCellToday {
@@ -21,7 +41,9 @@
     margin-top: 50px;
     margin-bottom: .7em;
     color: #212224;
-    background-color: transparent;
+    background: transparent;
+
+
 }
 
 
@@ -77,7 +99,7 @@
 }
 
 
-#modgov input.mgGoButton, #modgov input.mgSubmitButton, #modgov input#butGo,
+div#modgov input.mgGoButton, div#modgov input.mgSubmitButton, div#modgov input#butGo,
 
 {
     font-weight: 400;
@@ -91,7 +113,7 @@
     padding: 12px 15px !important;
     text-align: left;
     line-height: 1.3em;
-    background-color: #008000 !important;
+    background: #008000 !important;
     color: #FFFFFF!important;
     border-color: #008000 !important;
     min-width:auto;
@@ -128,4 +150,26 @@
     padding: 20px;
     background: rgba(0, 128, 0, 0.1);
     font-weight:500;
+}
+
+DIV#modgov DIV.mgTabs, DIV#modgov .mgTabs {
+
+    overflow: visible;
+    min-height:39px;
+}
+
+DIV#modgov table caption.mgSectionTitle{
+    overflow:visible;
+    width:auto;
+    height:auto;
+}
+
+DIV#modgov A.mgSectionTitleLnk:link, DIV#modgov A.mgSectionTitleLnk:link:visited, DIV#modgov A.mgSectionTitleLnk:visited {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #007299!important;
+}
+
+DIV#modgov .mgCouncillorImages {
+    padding: 10px;
 }
