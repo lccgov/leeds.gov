@@ -535,3 +535,29 @@ table{
 .ms-srch-sb>input {
     padding-right: 50px;
 }
+
+//schools back btn fix
+#SchoolDetails a.link-back{
+    margin-top:0;
+}
+
+//line-height fix for description list content in a div
+.description-list .description-list__item .description-list__item-content {
+    line-height: 1.6;
+}
+
+//fix for search results filters
+div a .ms-ref-name {
+    overflow: visible;
+}
+.col-md-4 .ms-ref-ctrl #unselToggle{
+    text-decoration:underline !important;
+    padding:10px 15px;
+    color:$base-link-color;
+    width:100%;
+    background:#e5f1f5;
+}
+
+.col-md-4 .ms-ref-ctrl .ms-ref-refiner {
+    margin-bottom: 10px;
+}
