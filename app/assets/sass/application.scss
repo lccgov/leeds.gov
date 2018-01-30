@@ -561,3 +561,9 @@ div a .ms-ref-name {
 .col-md-4 .ms-ref-ctrl .ms-ref-refiner {
     margin-bottom: 10px;
 }
+
+//fix to hide SP chrome h2 for accessibility
+#alert h2.ms-webpart-titleText,
+.col-lg-12 h2.ms-webpart-titleText{
+    display:none;
+}
