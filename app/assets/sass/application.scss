@@ -193,23 +193,22 @@ $input-border-color:$grey;
 //@import 'promo-list-webpart'; //subsite only
 //@import 'section-subsite'; //subsite only
 @import 'sharepoint-overrides';
+@import 'sharepoint-search-results';
 @import 'side-nav'; //needs aligning with side-navigation - DH & RM
 //@import 'side-navigation'; //needs aligning with side-nav - DH & RM
 @import 'sub-section-nav';
 @import 'webchat';
 
 //-PROJECT SPECIFIC
-@import 'styleguide';//not needed for live site
+//@import 'styleguide';//not needed for live site
 //@import 'sticky-nav';//not currently needed for live site
-@import 'modern-gov'; //not needed for live site
+@import 'modern-gov'; //custom styling for Modern Gov - democracy.leeds.gov.uk
 
 @import 'leedsgov-specific';
 @import 'leedsgov-overrides';
 @import 'where-i-live'; //needs fine tuning and adding to toolkit - DH
 
-@import 'lcc-header'; //a part of the toolkit but needs to be at end
-
-//@import 'table-saw';
+@import 'lcc-header'; //a part of the front-end toolkit but needs to be at end
 
 //site background
 html {
@@ -546,24 +545,13 @@ table{
     line-height: 1.6;
 }
 
-//fix for search results filters
-div a .ms-ref-name {
-    overflow: visible;
-}
-.col-md-4 .ms-ref-ctrl #unselToggle{
-    text-decoration:underline !important;
-    padding:10px 15px;
-    color:$base-link-color;
-    width:100%;
-    background:#e5f1f5;
-}
-
-.col-md-4 .ms-ref-ctrl .ms-ref-refiner {
-    margin-bottom: 10px;
-}
-
 //fix to hide SP chrome h2 for accessibility
 #alert h2.ms-webpart-titleText,
 .col-lg-12 h2.ms-webpart-titleText{
     display:none;
+}
+
+//footer SP override
+footer .item {
+    padding: 0;
 }

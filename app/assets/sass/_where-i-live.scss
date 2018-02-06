@@ -94,12 +94,21 @@
             display: block !important;
             width: 100%;
             .btn-link {
-                @extend a;
                 border: 0;
                 padding: 0;
                 text-decoration: underline !important;
                 margin: 0;
                 font-size: 16px;
+                text-decoration:underline;
+                color:$base-link-color;
+
+                &:hover{
+                color:$base-link-hover-color;
+                }
+
+                &:visited{
+                text-decoration:underline;
+                }
             }
         }
     }
@@ -119,7 +128,9 @@
 }
 
 .nearestLayer-feature-count {
-    @extend .badge;
+    margin: 0;
+    display: inline-block;
+    width: auto;
     background: $button-color;
     color: white;
     font-size: 17px;
@@ -135,8 +146,16 @@
         margin: 0;
     }
     .nearestItem-feature-marker {
-        @extend .badge;
-        @extend .nearestLayer-feature-count;
+        margin: 0;
+        display: inline-block;
+        width: auto;
+        background: $button-color;
+        color: white;
+        font-size: 17px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -13px !important;
         position: relative;
         top: auto;
         left: auto;
