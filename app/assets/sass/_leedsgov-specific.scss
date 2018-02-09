@@ -3,3 +3,110 @@
 @import 'leedsgov-specific/report-a-problem';;
 @import 'leedsgov-specific/sharepoint-rss-feed';
 @import 'leedsgov-specific/survey-webpart';
+
+//self service custom buttons
+.header-actions {
+    position: absolute;
+    top: -110px;
+    right: 15px;
+    @media (max-width: 641px) {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 20px;
+    }
+}
+
+//page logo
+.page-logo{
+    margin:0 0 30px;
+
+    @media (min-width: 400px) {
+        max-width:50%;
+    }
+
+    @media (min-width: 641px) {
+        margin:-20px 0 30px;
+    }
+
+    @media (min-width: 990px) {
+        position:absolute;
+        right:-48%;
+        top:50px;
+        max-width:50%;
+        max-height:100px;
+    }
+}
+
+//sponsors
+.sponsor-logos{
+    @include flexbox();
+    @include justify-content(space-evenly);
+    @include align-items(center);
+    border-top:1px solid $border-color;
+    border-bottom:1px solid $border-color;
+    margin:30px 0 0;
+    padding:15px 0;
+    @media (min-width: 641px) {
+        margin:50px 0 0;
+    }
+    img{
+        max-height:130px;
+        padding:15px;
+    }
+    a{
+        &:hover{
+            img{
+                opacity:0.7;
+            }
+        }
+    }
+}
+
+//sp pagination
+.pagination-nav {
+    position: relative;
+    #PagingSelf {
+        position: absolute;
+        left: 50%;
+        width: 100px;
+        top: 30%;
+        margin-left: -50px;
+        z-index: 5;
+        @media (max-width: 641px) {
+            position: relative;
+            left: auto;
+            width: 100%;
+            top: auto;
+            margin-left: 0;
+            text-align: center
+        }
+    }
+}
+
+//Roadworks map
+.ElginRoadworksWidget {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @media (max-width: 450px) {
+        height: 400px !important;
+    }
+}
+
+//Promolistwebpart reset - Can this be global? Need to check. DH.
+.promoListWebpart {
+    ol,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+//helper class
+.center-text{
+    margin:0 auto;
+}
+
+.panel.top{
+    margin-top:0;
+}
