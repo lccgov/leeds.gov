@@ -57,19 +57,26 @@ module LCC.Modules {
                      });
                 },
                 template: `<h1 data-bind="text: pageTitle, visible: pageTitle"></h1>
-                            <div id="CatsandDogs">
-                            <table class="table table-responsive">
-                                <thead><tr><th>SR Ref</th><th>Notes</th><th>Location</th><th>Notified</th></tr></thead>
-                                <tbody data-bind="foreach: animals">
-                                    <tr>
-                                        <td data-bind="text: SRRef"></td>
-                                        <td data-bind="html: Notes"></td>
-                                        <td data-bind="html: AnimalLocation"></td>
-                                        <td data-bind="text: Notified"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            </div>`
+                            <ul id="CatsandDogs" class="box-layout" data-bind="foreach: animals">
+                                <li class="animal-list box-layout-item">
+                                    <div class="animal-list-item animal-list-ref">
+                                        <strong>SR Ref: </strong>
+                                        <span data-bind="text: SRRef"></span>
+                                    </div>
+                                    <div class="animal-list-item animal-list-notes">
+                                        <strong>Notes: </strong>
+                                        <span data-bind="html: Notes"></span>
+                                    </div>
+                                    <div class="animal-list-item animal-list-location">
+                                        <strong>Location: </strong>
+                                        <span data-bind="html: AnimalLocation"></span>
+                                    </div>
+                                    <div class="animal-list-item animal-list-notified">
+                                        <strong>Notified: </strong>
+                                        <span data-bind="text: Notified"></span>
+                                    </div>
+                                </li>
+                            </ul>`
             });
 
             ko.components.register("dead-animals", {

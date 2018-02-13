@@ -1,0 +1,20 @@
+.box-layout{
+.box-layout-item.animal-list{
+    @media (min-width: 601px){
+        width: calc(100% * (1/2) - 16px);
+    }
+    .animal-list-item{
+        padding-bottom:15px;
+        line-height:1.6;
+        strong{
+            display:block;
+        }
+        br{
+            display:none;
+        }
+        p{
+            margin:0;
+        }
+    }
+}
+}
