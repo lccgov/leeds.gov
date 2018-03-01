@@ -12,35 +12,35 @@
             <div class="description-list__item-content">
                 <p><xsl:value-of select="Status"/></p>
             </div>
-            <div class="clear"></div>
+            <div class="clear">&#160;</div>
         </div>
         <div class="description-list__item">
             <h3>Comments <span class="sr-only">for <xsl:value-of select="Name"/></span></h3>
             <div class="description-list__item-content">
                 <p><xsl:value-of select="Comments"/></p>
             </div>
-            <div class="clear"></div>
+            <div class="clear">&#160;</div>
         </div>
         <div class="description-list__item">
             <h3><span class="sr-only">The date <xsl:value-of select="Name"/> is</span>Closed from</h3>
             <div class="description-list__item-content">
                 <p><xsl:value-of select="StartDate"/></p>
             </div>
-            <div class="clear"></div>
+            <div class="clear">&#160;</div>
         </div>
         <div class="description-list__item">
             <h3><span class="sr-only">The date <xsl:value-of select="Name"/></span>Opens on</h3>
             <div class="description-list__item-content">
                 <p><xsl:value-of select="EndDate"/></p>
             </div>
-            <div class="clear"></div>
+            <div class="clear">&#160;</div>
         </div>
         <div class="description-list__item">
             <h3><span class="sr-only"><xsl:value-of select="Name"/> was </span>Last updated <span class="sr-only">on</span></h3>
             <div class="description-list__item-content">
                 <p><xsl:value-of select="LastUpdated"/></p>
             </div>
-            <div class="clear"></div>
+            <div class="clear">&#160;</div>
         </div>
     </div>
     </xsl:for-each>
