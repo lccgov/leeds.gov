@@ -297,10 +297,10 @@ gulp.task('prompt',['pre-flight'], function () {
 });
 
 gulp.task('sp-upload', ['prompt'], (done) => {
-    var glob = gutil.env.css ? 'dist/**/*.css' : gutil.env.js ? 'dist/**/*.js' : 'dist/**/*.*';
+    var glob = gutil.env.css ? 'dist/**/*.css' : gutil.env.js ? 'dist/**/*.js' : gutil.env.xsl ? 'dist/**/*.xsl' : 'dist/**/*.*';
     return gulp.src(glob)
-    .pipe(((settings.siteUrl.indexOf("dev")) == -1 && (!noninteractive)) ? prompt.confirm({
-        message: 'You appear to be deploying to a non dev environment, is that ok?',
+    .pipe(((settings.siteUrl.indexOf("id")) == -1 && (!noninteractive)) ? prompt.confirm({
+        message: 'You appear to be deploying to a non dev environment: ' + settings.siteUrl + ', is that ok?',
         default: false
     }) : gutil.noop())
     .pipe(spsync({
