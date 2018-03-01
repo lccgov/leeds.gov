@@ -532,14 +532,16 @@ a.search span {
                 margin-top: 35px;
             }
             .hero-lcc__intro {
-                @media (min-width: 767px) {
+                max-width: 35em;
+                margin: 0 auto;
+                @media (min-width: 990px) {
                     .hero-lcc__intro-header {
-                        font-size: 68px;
+                        font-size: 80px;
                         margin-bottom: 15px;
                     }
                     .hero-lcc__intro-secondary {
                         margin-bottom: 40px;
-                        font-size: 26px;
+                        font-size: 30px;
                     }
                 }
                 @media (max-width: 500px) {
@@ -860,6 +862,9 @@ footer.main {
                 }
             }
             .footer-logos {
+                @include flexbox();
+                @include justify-content(space-between);
+                @include align-items(center);
                 @media (max-width: 990px) {
                     margin: 40px 0 -10px;
                 }
@@ -867,42 +872,37 @@ footer.main {
                     margin: 30px 0 -15px;
                 }
                 ul {
-                    text-align: right;
+                    text-align: left;
                     padding: 0;
                     margin: 0;
-                    @media (min-width: 990px) {
-                        @include flexbox();
-                        @include justify-content(center);
-                        @include align-items(center);
-                    }
                     li {
-                        float: left;
-                        @media (max-width: 990px) {
-                            height: 100px;
-                        }
-                        @media (min-width: 990px) {
-                            @include flexbox();
-                            @include justify-content(center);
-                            @include align-items(center);
-                        }
-                        &:first-of-type {
-                            width: 65%;
-                            margin-right: 5%;
-                            @media (max-width: 990px) {
-                                text-align: left;
-                            }
-                        }
-                        &:nth-child(2) {
-                            width: 30%;
-                        }
+                        display:inline-block;
                         a {
-                            display: inline-block;
+                            display: block;
                             &:hover {
                                 opacity: 0.7;
                             }
                             img {
-                                height: 75px;
-                                width:100%;
+                                height: 90px;
+                                padding:10px 20px 10px 0;
+                            }
+                        }
+                        &:first-of-type{
+                            @media (min-width: 991px) {
+                                display:block;
+                                a{
+                                    img{
+                                        height:75px;
+                                    }
+                                }
+                            }
+                            
+                        }
+                        &:last-of-type{
+                            a{
+                                img{
+                                    padding:10px 0;
+                                }
                             }
                         }
                     }
@@ -1144,4 +1144,26 @@ footer{
 }
 .panel-event-list h2 {
     margin-top: 0 !important;
+}
+
+.panel.img .img-container {
+    @media (max-width: 767px) {
+        height: 200px;
+        min-height:200px;
+    }
+    @media (max-width: 641px) {
+        height: 125px;
+        min-height:125px;
+    }
+}
+
+.panel-event .panel-event-date {
+    @media (max-width: 767px) {
+        height: 200px;
+        width: 50%;
+    }
+    @media (max-width: 641px) {
+        height: 125px;
+        width: 50%;
+    }
 }

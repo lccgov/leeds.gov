@@ -7,21 +7,29 @@
 
 //base colours
 $blue:#007299;
-$dark-blue: #003F55;
-$light-blue: #3399BB;
-$pale-blue: #b3d9e6;
-$green:#008000;
-$light-green:#009A00;
-$black:#212224;
-$light-black:#3D414A;
-$dark-grey:#666B76;
-$grey:#9DA5B2;
-$light-grey:#DCDEE1;
-$lighter-grey:#F6F7FA;
+$dark-blue: #003f55;
+$light-blue: #3399bb;
+$lighter-blue: #e5f1f5;
+$black:#263238;
+$light-black:#37474f;
+$dark-grey:#455a64;
+$grey:#90a4ae;
+$light-grey:#eceff1;
+$lighter-grey:#f5f5f6;
 $white:#FFFFFF;
-$yellow:#FFBF47;
-$dark-yellow:#FAA300;
-$red:#c0392b;
+$green:#2e7d32;
+$dark-green:#005005;
+$light-green:#60ad5e;
+$lighter-green:lighten($green,60%);
+$yellow:#fbc02d;
+$dark-yellow:#c49000;
+$light-yellow:#fff263;
+$lighter-yellow:lighten($yellow,40%);
+$red:#d32f2f;
+$dark-red:#9a0007;
+$light-red:#ff6659;
+$lighter-red:lighten($red,45%);
+
 //$base-background-color:#fff;
 $border-color:$light-grey;
 $brand-color:$blue;
@@ -35,8 +43,7 @@ $alert-color:$red;
 //typography
 $font-primary:'Open Sans',
 sans-serif; // main font
-$font-secondary:'Montserrat',
-sans-serif; // secondary font used for headings
+$font-secondary:'Montserrat', sans-serif; // secondary font used for headings
 //$base-font-size:16px !default;
 //$base-font-size-desktop:19px !default;
 $base-line-height: 1.4;
@@ -51,17 +58,17 @@ $base-link-visited-color:#4C2C92;
 $secondary-link-color:$dark-blue;
 
 //panel colours
-$panel-color:#E5F1F5;
-$panel-color-secondary:#DCDEE1;
-//$panel-alt-background-color:$lighter-grey;
-//$panel-alt-color:$base-font-color;
+$panel-color:$lighter-blue;
+$panel-color-secondary:$light-grey;
+//$panel-alt-background-color:#003F55;
+//$panel-alt-color:white;
 //global used on all partials to get a uniform spacing between elements
 //$base-margin-bottom:1.875em ;
 //headerTop
 //$search-link-background:#F3F3F4 ;
 //$search-link:#333 ;
 // mainNav.scss
-$main-nav-background:lighten( $brand-color,3%);
+$main-nav-background:lighten($brand-color,3%);
 //$main-nav-link:#fff ;
 //footer.scss
 //$footer-font-color:#fff ;
@@ -113,8 +120,8 @@ $sectionFive-background-color:#fff;
 $news-pod-back:#ffffff;
 $news-pod-border-color:#ddd;
 //accordion
-//$accordion-color:green;
-//$accordion-border-color:#ECF0F1;
+$accordion-color:$base-link-color;
+$accordion-border-color:$border-color;
 //Block quote
 // $blockquoteBorderColor:#bbcada ;
 // $blockquoteQuoteColor:#333;
@@ -127,7 +134,7 @@ $news-pod-border-color:#ddd;
 
 //mega-promo
 $promo-background-color:$lighter-grey;
-$promo-arrow-color:#9DA5B2;
+$promo-arrow-color:$grey;
 $promo-header-color:$blue;
 $promo-secondary-color:$black;
 $promo-highlight-background-color:$blue;
@@ -137,7 +144,7 @@ $promo-highlight-color:$white;
 $primary-button-background-color:$green;
 $primary-button-color:$white;
 $secondary-button-background-color:$blue;
-$secondary-button-color:$white;
+$secondary-button-color:white;
 $outline-button-border-color:$blue;
 $outline-button-color:$blue;
 
@@ -160,7 +167,6 @@ $input-border-color:$grey;
 //phase banner
 //$phase-banner-stage-background:#007299 !default;
 //$phase-banner-stage-color:white !default;
-
 
 //- FRONT END TOOLKIT
 @import 'url-helper';
@@ -213,4 +219,12 @@ $input-border-color:$grey;
 //site background
 html {
     background-color: $blue;
+}
+
+.alert h1, .alert h2, .alert h3, .alert h4, .alert p{
+    color:$base-font-color;
+}
+
+.box-layout .list-nav li {
+    border-left: 3px solid darken($light-grey,5%);
 }
