@@ -3,8 +3,6 @@
 //google fonts
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,700');
 
-// available variables to change the brand colours as required
-
 //base colours
 $blue:#007299;
 $dark-blue: #003f55;
@@ -15,7 +13,7 @@ $light-black:#37474f;
 $dark-grey:#455a64;
 $grey:#90a4ae;
 $light-grey:#eceff1;
-$lighter-grey:#f5f5f6;
+$lighter-grey:#f6f7fa;
 $white:#FFFFFF;
 $green:#2e7d32;
 $dark-green:#005005;
@@ -30,6 +28,8 @@ $dark-red:#9a0007;
 $light-red:#ff6659;
 $lighter-red:lighten($red,45%);
 
+// available variables to change the brand colours as required
+
 //$base-background-color:#fff;
 $border-color:$light-grey;
 $brand-color:$blue;
@@ -37,8 +37,6 @@ $button-color:$green;
 $button-hover-color:lighten($button-color,5%);
 $focus-color:$yellow;
 $base-container-width:1280px;
-//$btn-background-color:green ;
-$alert-color:$red;
 
 //typography
 $font-primary:'Open Sans',
@@ -62,35 +60,48 @@ $panel-color:$lighter-blue;
 $panel-color-secondary:$light-grey;
 //$panel-alt-background-color:#003F55;
 //$panel-alt-color:white;
+//$panel-event-date-background-light:$base-link-color;
+//$panel-event-date-background-dark:darken($panel-event-date-background-light,5%)
+//$panel-event-date-color:white;
+
 //global used on all partials to get a uniform spacing between elements
 //$base-margin-bottom:1.875em ;
+
 //headerTop
 //$search-link-background:#F3F3F4 ;
 //$search-link:#333 ;
+
 // mainNav.scss
 $main-nav-background:lighten($brand-color,3%);
 //$main-nav-link:#fff ;
+
 //footer.scss
 //$footer-font-color:#fff ;
 //$footer-nav-selected-link:#133E8D ;
+
 //sectionSubsite.scss - socialamedia.scss
 //$section-Background:#efefef ;
+
 //socialamedia.scss
 //$social-link-color:#337ab7 ;
 //sideNavigation.scss
 //$side-nav-active-background:#133E8D ;
+
 //carousel.scss
 //$carousel-active-background:#000 ;
 //$carousel-indicators-active-background:#ccc ;
 //$carousel-caption-background: rgba(0,0,0,0.6) ;
 //$carousel-caption-font-color:#fff ;
+
 //blocklinks.scss
 //$block-link-back:#f6f6f6 ;
 //$block-link-back-hover:#3380A4 ;
+
 //$promo-group-border:1px solid #fff ; 
 //$promo-group-background:#EDF2F5 ; 
 //$promo-group-li-background:#EDF2F5 ;
 //$promo-group-link-color:#216486 ;
+
 //promolist webpart
 //$link-font-color:#fff;
 //$span-info-color:#133E8D;
@@ -103,6 +114,7 @@ $main-nav-background:lighten($brand-color,3%);
 //$contentFontColor:#333;
 //$content-arrow-color:#133E8D;
 //$content-border-color:#ddd;
+
 //section backgrounds
 $sectionHeader-background-color:$brand-color;
 $sectionOne-background-color:#fff;
@@ -110,22 +122,28 @@ $sectionTwo-background-color:#fff;
 $sectionThree-background-color:#fff;
 $sectionFour-background-color:#fff;
 $sectionFive-background-color:#fff;
+
 //iconlinks
 //$iconLinkIconColor:#FFC82E;
+
 //heroBanner
 //$heroFontBackground:rgba(0, 0, 0, 0.5); 
 //$heroFontcolor:#fff; 
+
 //news
 //$news-button-background: #3498DB ;
 $news-pod-back:#ffffff;
 $news-pod-border-color:#ddd;
+
 //accordion
 $accordion-color:$base-link-color;
 $accordion-border-color:$border-color;
+
 //Block quote
 // $blockquoteBorderColor:#bbcada ;
 // $blockquoteQuoteColor:#333;
 // $blockquoteQuoteFooterColor:#000;
+
 //highlighted box in content assets
 //$highlighted-background-color:#333 !default;
 //$highlighted-font-color:#fff !default;
@@ -174,6 +192,7 @@ $input-border-color:$grey;
 @import 'brand-colors';
 @import '2010-typography-overrides';
 @import 'accordion';
+@import 'accordion-aria';
 @import 'a-to-z';
 //@import 'block-links'; //subsite only
 //@import 'block-quote'; //subsite only
@@ -219,12 +238,4 @@ $input-border-color:$grey;
 //site background
 html {
     background-color: $blue;
-}
-
-.alert h1, .alert h2, .alert h3, .alert h4, .alert p{
-    color:$base-font-color;
-}
-
-.box-layout .list-nav li {
-    border-left: 3px solid darken($light-grey,5%);
 }

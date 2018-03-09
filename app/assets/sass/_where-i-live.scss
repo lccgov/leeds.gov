@@ -274,3 +274,10 @@
     margin: -15px 0 10px;
     display: block;
 }
+
+.findMyNearest{
+    .text-highlight,
+    .text-block{
+        border-color:darken($panel-alt-background-color,15%);
+    }
+}
