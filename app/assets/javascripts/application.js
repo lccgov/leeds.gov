@@ -15,59 +15,64 @@
 
 //removes top margin frpm right hand column if empty
 function isEmpty( el ){
-      return !$.trim(el.html())
-  }
-  if (isEmpty($('aside.col-md-4'))) {
-      $('aside.col-md-4').addClass('empty');
-  }
-  
-// //input block label
-// $('input:radio').click(function() {
-//     $('input:radio[name='+$(this).attr('name')+']').parent().removeClass('active');
-//         $(this).parent().addClass('active');
-// });
+    return !$.trim(el.html())
+}
 
-// //input block label
-// $('input:checkbox').click(function() {
-//     	$(this).parent().toggleClass('active');
-// });
+if (isEmpty($('aside.col-md-4'))) {
+    $('aside.col-md-4').addClass('empty');
+}
 
 //random image for hero-lcc
 function randomImage(){
-  var images = [
-   '/_catalogs/masterpage/public/images/home-hero-images/1.jpg',
-   '/_catalogs/masterpage/public/images/home-hero-images/2.jpg',
-   '/_catalogs/masterpage/public/images/home-hero-images/3.jpg',
-   '/_catalogs/masterpage/public/images/home-hero-images/4.jpg',
-   '/_catalogs/masterpage/public/images/home-hero-images/5.jpg'];
-  var size = images.length;
-  var x = Math.floor(size * Math.random());
-  console.log(x);
-  var element = document.getElementsByClassName('hero-lcc-wrapper-home-leedsgov');
-  console.log(element);
-  if(element.length > 0)
-  {
-    element[0].style["background-image"] = "url("+ images[x] + ")";
-  }
+    var images = [
+        "/_catalogs/masterpage/public/images/home-hero-images/1.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/2.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/3.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/4.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/5.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/6.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/7.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/8.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/9.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/10.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/11.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/12.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/13.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/14.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/15.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/16.jpg",
+        "/_catalogs/masterpage/public/images/home-hero-images/17.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/18.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/19.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/20.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/21.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/22.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/19.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/20.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/21.jpg", 
+        "/_catalogs/masterpage/public/images/home-hero-images/22.jpg"];
+    var size = images.length;
+    var x = Math.floor(size * Math.random());
+    var element = document.getElementsByClassName('hero-lcc-wrapper-home-leedsgov');
+    if(element.length > 0) {
+        element[0].style["background-image"] = "url("+ images[x] + ")";
+    }
 }
 
 document.addEventListener("DOMContentLoaded", randomImage);
 
 // hide site button on domestic violence subsite
-$(document).ready(function(){
-    
+$(document).ready(function() {    
     $("#hide-site").on("click", function() {
-      window.open("http://bbc.co.uk", "_newtab");
-      window.location.replace('http://google.com');
+        window.open("http://bbc.co.uk", "_newtab");
+        window.location.replace('http://google.com');
     });
-    
 });
 
 var subsite = window.location.pathname.split("/")[1]; 
 
 $(document).ready(function () {
     var checkURL = ['visit/', 'discoverycentre', 'abbeyhouse','thwaitemills','kirkstallabbey','leedsartgallery','armleymills','templenewsamhouse','leedscitymuseum','lothertonhall'];
-
     for (var i = 0; i < checkURL.length; i++) {
         if(window.location.href.indexOf(checkURL[i]) > -1) {
             $('.masterhead').after('<div class="backto"><div class="container-fluid"><a href="/museumsandgalleries/home" class="link-back">Back to Museums and Galleries</a></div></div>');
