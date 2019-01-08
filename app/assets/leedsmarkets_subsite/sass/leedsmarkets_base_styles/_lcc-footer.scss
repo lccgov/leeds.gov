@@ -1,0 +1,129 @@
+//footer overrides for leeds.gov
+footer.main {
+    .container-fluid {
+        padding: 0;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    .footerGlobal {
+        padding: 30px 0;
+        background: #000000 !important;
+        font-size: 16px;
+        .logo-footer {
+            padding-bottom: 35px;
+        }
+        nav {
+            padding-bottom: 50px;
+            @media (max-width: 767px) {
+                padding-bottom: 30px;
+            }
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        font-size: 19px;
+                        font-weight: 400;
+                        color:$lighter-blue;
+                        border:0;
+                        text-decoration:underline;
+                        @media (max-width: 641px) {
+                            font-size: 16px;
+                        }
+                        &:hover{
+                            opacity:0.7;
+                            text-decoration:underline;
+                        }
+                        &.active{
+                            a{
+                                font-weight:bold;
+                                color:white;
+                                text-decoration:none;
+                            }
+                        }
+                    }
+                    @media (max-width: 400px) {
+                        width: 100%;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    &:last-child:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .socialBookmarks {            
+            ul {
+                li {
+                    margin: 0 5px 0 0;
+                    a {
+                        &:hover {
+                            text-decoration: none !important;
+                        }
+                        &.facebook:after,
+                        &.twitter:after,
+                        &.youtube:after,
+                        &.email:after,
+                        &.instagram:after {
+                            font-size: 25px;
+                            width: 42px;
+                            height: 42px;
+                            padding-top: 3px;
+                        }
+                    }
+                    &:first-of-type {
+                        display: block;
+                        padding-bottom: 0.65em;
+                        @media (min-width: 767px) {
+                            display: inline-block
+                        }
+                    }
+                }
+            }
+        }
+        .text-right {
+            float: right;
+            @media (max-width: 767px) {
+                padding-bottom: 30px;
+                float: none;
+            }            
+        }
+    }
+}
+
+.footer-bsl-logo {
+    display: inline-block;
+    background: url(../images/logo-bsl.svg) no-repeat;
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+    &:focus {
+        background: url(../images/logo-bsl.svg) no-repeat !important;
+        outline: 5px solid $focus-color;
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.ie8 .footer-bsl-logo {
+    background: url(../images/logo-bsl.png) no-repeat;
+    &:focus {
+        background: url(../images/logo-bsl.png) no-repeat !important;
+    }
+}
+
+
+.lcc-third-party{
+    footer{
+        margin-top:30px !important;
+        @media (min-width: 641px){
+            margin-top:50px !important;
+        }
+    } 
+}

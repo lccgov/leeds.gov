@@ -1,0 +1,105 @@
+//Start sharpoint search snippet overrides 
+.ms-srch-sb>input {
+    width: 100%;
+    min-width: 300px;
+    margin: 0 -1px 0 0;
+    padding-left: 5px !important;
+    min-height: 40px !important;
+    line-height: 2em;
+    background: #F3F3F4 !important;
+    border: 1px solid #F3F3F4 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+}
+
+.ms-srch-sb > .ms-srch-sb-searchLink {
+    border: none;
+    font-size: 13px;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    width: 40px !important;
+    height: 39px;
+    min-height: 39px;
+    margin: 1px;
+    padding: 0 0;
+    display: block;
+    color: #000000;
+    background: #F3F3F4;
+    top: -1px;  
+}
+
+.ms-srch-sb > .ms-srch-sb-searchLink:hover,
+.ms-srch-sb > .ms-srch-sb-searchLink:focus {
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.ms-srch-sb-borderFocused {
+    border: none !important;
+}
+
+.ms-srch-sb > .ms-srch-sb-searchLink img {
+    display: none;
+}
+
+.ms-srch-sb > .ms-srch-sb-searchLink:before {
+    font-family: "Glyphicons Halflings";
+    content: "\e003";
+    font-size: 25px;
+    padding-left: 7px;
+}
+
+.ms-srch-sb-border,
+.ms-srch-sb-border:hover {
+    border: none !important;
+    width: 100%;
+}
+
+#nav-search {
+    float: left;
+    margin: 10px;
+}
+
+@media (max-width: 767px) {
+    #nav-search {
+        position: absolute;
+        top: 62px;
+        left: 0px;
+        background: #bdc3c7;
+        padding: 20px;
+        margin: 0px;
+        height: auto;
+        width: 100%;
+        z-index: 10;
+        display: none;
+        &.active {
+            display: block;
+        }
+        .input-group {
+            margin: 0 !important;
+            width: 100%;
+        }
+        .ms-srch-sb>input {
+            min-width: 100% !important;
+            margin: 0px !important;
+        }
+        .ms-srch-sb > .ms-srch-sb-searchLink {
+            height: 100%;
+            min-height: 100%;
+        }
+    }
+}
+
+#s4-bodyContainer {
+    padding-bottom: 0px !important;
+}
+
+#SearchBox .ms-srch-sb {
+    display: block;
+}

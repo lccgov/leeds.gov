@@ -1,0 +1,220 @@
+.sectionSubsite.news {
+    float: left;
+    h3 {
+        border: 0px;
+    }
+    input {
+        padding: 10px;
+        height: 50px;
+        border: 1px solid #ddd;
+        float: left;
+    }
+    @media only screen and (max-width:400px) {
+        input {
+            width: 150px;
+        }
+    }
+    a.button {
+        display: inline-block;
+        border: none;
+        margin-top: 0px;
+        padding: 12px 0 12px 5px;
+        text-decoration: none;
+        &:hover {
+            background: darken($news-button-background, 20%);
+            color: #fff;
+            text-decoration: none;
+        }
+        &:after {
+            display: none;
+        }
+    }
+    .datePickerContainer {
+        float: left;
+        width: 250px;
+        &:first-of-type {
+            width: 150px;
+        }
+        label {
+            width: 100%;
+        }
+        input {
+            width: 140px;
+            margin-bottom: 10px;
+        }
+        @media only screen and (max-width:400px) {
+            input {
+                width: 150px;
+            }
+        }
+    }
+    .accordion {
+        margin: 0px;
+        a.header {
+            margin: 0px;
+        }
+        li div div {
+            padding: 0px;
+        }
+    }
+}
+
+#paging {
+    h2 {
+        font-size: 40px;
+        color: #9B59B6;
+        padding: 10px 0px;
+    }
+    .contentPod {
+        margin: 0px 0px 0px 0px;
+        width: 100%;
+        border-bottom: 1px solid $news-pod-border-color;
+        background: $news-pod-back;
+        font-size: 0.9em;
+        h3 {
+            font-size: 1.4em;
+            margin: 0px;
+            line-height: 1.1em;
+            margin-bottom: 5px;
+        }
+        a {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            text-decoration: none;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                background: darken($news-pod-back, 5%);
+            }
+            p.date {
+                text-transform: uppercase;
+            }
+            img {
+                margin: 0px 15px 0px 0px;
+                max-width: 300px;
+            }
+        }
+        h2 {
+            font-size: 1.4em;
+            font-weight: normal !important;
+        }
+    }
+    ul.content {
+        border: none;
+        margin: 0;
+        padding: 0px 0 0 0;
+        list-style: none;
+        clear: left;
+        li {
+            padding: 0;
+        }
+    }
+}
+
+.ms-promlink-headerNav {
+    display: inline-flex;
+    float: none;
+    margin-bottom: 20px;
+}
+
+.ms-promlink-button-inner {
+    display: none;
+}
+
+.pagingNav {
+    display: block;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid $news-pod-border-color;
+    text-align: center;
+}
+
+.pageNumbers a,
+.ms-promlink-button,
+.pageNumbers strong {
+    float: left;
+    list-style: none;
+    padding: 10px;
+    color: #333;
+    border: 1px solid darken($news-pod-border-color, 10%);
+    border-left: none;
+    margin: 0;
+    height: auto;
+    width: auto;
+    font-size: $base-font-size;
+    font-family: $font-primary;
+    &:first-of-type {
+        border-left: 1px solid darken($news-pod-border-color, 10%);
+    }
+    &:hover {
+        background: #666;
+        color: #fff;
+        border-color: #666
+    }
+}
+
+.ms-promlink-button {
+    span:before {
+        font-family: FontAwesome;
+        content: "\f105";
+        position: absolute;
+        font-size: 22px;
+        color: $news-button-background;
+        top: 4px;
+        left: 6px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+    .ms-promlink-button-image {
+        overflow: visible;
+    }
+    span.previous:before {
+        content: "\f104";
+    }
+}
+
+.alt_page_navigation a:hover,
+.page_navigation a:hover,
+a.active_page {
+    background: #666;
+    color: #fff;
+    border-color: #666
+}
+
+.pageNumbers strong {
+    background-color: #efefef;
+    color: #999;
+    pointer-events: none;
+    border-left: none !important;
+}
+
+.sectionSubsite.news ul.accordion li div.content-block {
+    padding: 0px!important;
+}
+
+#paging {
+    .contentPod {
+        a {
+            text-decoration: none !important;
+            &:hover {
+                background: $base-hover-color;
+            }
+            p.date {
+                margin-top: 0;
+                font-size: 14px;
+                font-weight: 700;
+            }
+            h3 {
+                color: $base-link-color;
+                margin-bottom: 10px;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+#archive {
+    .content-block {
+        padding: 20px 0 !important;
+    }
+}
