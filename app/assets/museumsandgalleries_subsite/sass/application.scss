@@ -1557,3 +1557,8 @@ input[type=button].btn-primary, input[type=submit].btn-primary{
   
 }
 }
+
+//Footer logo override
+.logo-footer span {
+    background: url(../../images/lcc-logo-white-01.svg) center center/100% 100% no-repeat;
+}
