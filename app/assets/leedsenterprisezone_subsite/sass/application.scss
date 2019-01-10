@@ -205,6 +205,9 @@ $secondary-button-color:$primary-button-background-color;
 @import 'url-helper';
 @import 'webchat';
 
+// New components
+@import 'component_example';
+
 .logo {
     background:url(../images/logo.png) left center no-repeat;
     margin: 30px 0px;

@@ -212,7 +212,10 @@ $ArrowLinkColor:$blockquoteQuoteColor;
 //@import 'survey-webpart'; //is it leeds.gov specific? Relys on where-i-live which should be in the fet but renamed to search-panel - DH
 @import 'url-helper';
 @import 'webchat';
- 
+
+ // New components
+@import 'component_example';
+
 .sectionHeader{
     border-top:1px solid #ddd;
     padding:20px 0;

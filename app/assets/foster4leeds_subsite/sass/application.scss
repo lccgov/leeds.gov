@@ -217,6 +217,10 @@ $panel-alt-color:white;
 //@import 'lcc_footer';
 @import 'lcc-header';
 //@import 'report_a_problem';
+
+// New components
+@import 'component_example';
+
 @mixin btn-border($border-color,
 $border-width,
 $hover-border-color,

@@ -210,6 +210,10 @@ $vistitorInfoHeadingColor:#414141;
 //@import 'webchat';
 
 @import '../museumsandgalleries_subsite/sass/museums';
+
+// New components
+@import 'component_example';
+
 body{
     font-weight:200;
 }

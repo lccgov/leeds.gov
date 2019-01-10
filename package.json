@@ -39,7 +39,7 @@
     "gulp-typescript": "^3.2.3",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "lcc_frontend_toolkit": "^0.253.0",
+    "lcc_frontend_toolkit": "^0.255.0",
     "lcc_sharepoint_toolkit": "^0.60.0",
     "lcc_templates_sharepoint": "^1.1.128",
     "lodash": "^4.17.2",

@@ -226,6 +226,9 @@ $white:#fff;
 @import 'url-helper';
 @import 'webchat';
 
+// New components
+@import 'component_example';
+
 body{
     font-weight:200 !important;
 }

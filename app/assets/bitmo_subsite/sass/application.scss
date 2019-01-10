@@ -201,6 +201,9 @@ $white:#fff;
 @import 'url-helper';
 @import 'webchat';
 
+// New components
+@import 'component_example';
+
 .sectionHeader{
     border-top:1px solid #ddd;
     padding:20px 0;

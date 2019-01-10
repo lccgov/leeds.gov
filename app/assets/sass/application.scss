@@ -235,6 +235,9 @@ $input-border-color:$grey;
 
 @import 'lcc-header'; //a part of the front-end toolkit but needs to be at end
 
+// New components
+@import 'component_example';
+
 //site background
 html {
     background-color: $blue;

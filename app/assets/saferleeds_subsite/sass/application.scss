@@ -204,6 +204,9 @@ $responsiveMenuWidth:1200px ;
 @import 'url-helper';
 @import 'webchat';
 
+// New components
+@import 'component_example';
+
  .masterhead{
      border-bottom:1px solid #ddd;
  }

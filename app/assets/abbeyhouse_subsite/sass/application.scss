@@ -218,6 +218,9 @@ $promo-arrow:"\f105";
 
 @import '../museumsandgalleries_subsite/sass/museums';
 
+// New components
+@import 'component_example';
+
 body{
     font-weight:200;
 }
