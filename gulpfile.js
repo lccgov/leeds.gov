@@ -68,8 +68,18 @@ gulp.task('sync:assets', ['clean:dist'], (done) => {
     }).catch((err) => { done(err);})
 });
 
+//Sync any additional master pages to public folder
+gulp.task('sync:masterpage', ['sync:assets'], (done) => {
+    syncy(['app/assets/*.master'], './dist/_catalogs/masterpage', {
+            base: 'app/assets',
+            updateAndDelete: false
+        }).then(() => { 
+            done();
+    }).catch((err) => { done(err);})
+});
+
 //Sync lcc_frontend_toolkit to lcc_modules to be used for SASS partial compilation
-gulp.task('sync:lcc_frontend_toolkit', ['sync:assets'], (done) => {
+gulp.task('sync:lcc_frontend_toolkit', ['sync:masterpage'], (done) => {
     syncy(['node_modules/lcc_frontend_toolkit/**'], 'lcc_modules/lcc_frontend_toolkit', {
             base: 'node_modules/lcc_frontend_toolkit',
             updateAndDelete: true
@@ -185,7 +195,7 @@ gulp.task('sass', ['sync:lcc_templates_sharepoint_master'], (done) => {
       .pipe(gulp.dest('./dist/_catalogs/masterpage/public/stylesheets'))
 });
 
-//Compile subsite sass/js and masterpages
+//Compile subsite sass
 gulp.task('sass:subsites', ['sass'], (done) => {
     return gulp.src(['app/assets/*_subsite/sass/*.scss'])
     .pipe(foreach(function(stream, file) {          
