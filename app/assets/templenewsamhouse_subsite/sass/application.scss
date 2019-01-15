@@ -29,7 +29,7 @@ $font-secondary: 'Oswald', Helvetica, Arial;
 //$search-link:#333 ;
 
 // mainNav.scss
-$main-nav-background:#860037;
+$main-nav-background:#1A2732;
 //$main-nav-link:#fff ;
 
 //footer.scss
@@ -76,7 +76,7 @@ $arrow-color:#414141;
 //$content-border-color:#ddd;
 
 // section backgrounds
-$sectionHeader-background-color:#860037;
+$sectionHeader-background-color:#1A2732;
 $sectionOne-background-color:#fff;
 $sectionTwo-background-color:darken(#ecf0f1,5%);
 //$sectionThree-background-color:lighten($base-background-color, 3%) ;
@@ -159,10 +159,10 @@ $secondary-button-color:$primary-button-background-color;
 
 //mega-promo
 //$promo-background-color:#F6F7FA;
-$promo-arrow-color:#860037;
+$promo-arrow-color:#1A2732;
 //$promo-header-color:#c3102f;
 //$promo-secondary-color:#666B76;
-$promo-highlight-background-color:#860037;
+$promo-highlight-background-color:#1A2732;
 $promo-highlight-color:#fff;
 $promo-arrow:"\f105";
 
@@ -228,7 +228,7 @@ p{
     background:url(../images/templeNewsam-logo-w.svg) left center  no-repeat;
     margin: 0px 0 0 0px;
     height:150px;
-    width:350px;
+    width:200px;
     background-size:100%;
     
     &:hover{
