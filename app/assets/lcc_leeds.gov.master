@@ -150,7 +150,7 @@
                     </section>
                 </footer>
                 <!-- BACK TO TOP -->
-                <a href="#0" class="cd-top" data-module="back-to-top">Top</a>         
+                <a href="#" class="cd-top" data-module="back-to-top">Top</a>         
             </div>
         </div> 
         <!-- webchat modal popup placeholder - legacy code. maybe worth changing in the future but changes to the engagement engine would be needed -->
