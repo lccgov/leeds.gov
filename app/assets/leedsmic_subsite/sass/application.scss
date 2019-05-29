@@ -165,8 +165,36 @@ $secondary-button-background-color:#8cc63f;
 //responsive menu width
 //$responsiveMenuWidth:1200px ;
 
-@import 'base';
+// ---------------------------------- Footer varibles
+$footer-bg-color: #3E3E40;
 
+// ---------------------------------- Front end toolkit
+@import 'base_styles/variables';
+@import 'url-helper';
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+@import 'base_styles/mixins';
+@import 'base_styles/base-structure';
+@import 'base_styles/typography';
+@import 'base_styles/buttons';
+@import 'base_styles/form-elements';
+@import 'base_styles/accessibility';
+@import 'base_styles/images';
+@import 'base_styles/tables';
+@import 'base_styles/panel';
+@import 'base_styles/helper-classes';
+@import 'base_styles/browser-alert';
+@import 'base_styles/back-to-top';
+@import 'base_styles/main-menu';
+@import 'base_styles/responsive-menu';
+@import 'base_styles/global-search';
+@import 'base_styles/footer';
+@import 'base_styles/social-media';
+@import 'base_styles/alerts';
+@import 'base_styles/breadcrumb';
+@import 'base_styles/jquery-ui-datepicker';
+@import 'base_styles/media-player';
+@import 'base_styles/lcc-search-box';
+@import 'brand-colors';
 @import '2010-typography-overrides';
 @import 'accordion';
 @import 'accordion-aria';
@@ -208,115 +236,88 @@ $secondary-button-background-color:#8cc63f;
 // New components
 @import 'component_example';
  
-
- .logo{
-        height:182px;
-        width:150px;
-        background:url(../images/logo.png) left top no-repeat;
-        margin:95px 0 50px 0;
-
-        @media (max-width: 768px){
-            margin:50px auto;
-      
-        }
-
+.logo {
+    height: 182px;
+    width: 150px;
+    background: url(../images/logo.png) left top no-repeat;
+    margin: 95px 0 50px 0;
+    @media (max-width: 768px) {
+        margin: 50px auto;    
     }
+}
 
-
-    .sectionHeader{
-        border-top:50px solid #3E3E40;   
-           @media (max-width: 900px){
-            border:none;
-           }
-            }
-
+.sectionHeader{
+    border-top:50px solid #3E3E40;   
+    @media (max-width: 900px){
+        border:none;
+    }
+}
 
 .header-right:after {
     content: '';
-    background:url(../images/headerBackground.jpg) top center no-repeat;
-    width:630px;
-    height:400px;
+    background: url(../images/headerBackground.jpg) top center no-repeat;
+    width: 630px;
+    height: 400px;
     float: right;
-    margin-top:-41px;
-
-      @media (max-width: 900px){
-            display: none;
-        }
+    margin-top: -41px;
+    @media (max-width: 900px) {
+        display: none;
+    }
 }
-
-
-
-
-
-
-
-
-
-
 
 .col-md-8 img {
    max-width:100%;
 }
 
-
-
-
-
-
-
 blockquote {
    background: #8CC63F;
-   color: #fff;
+   color: #ffffff;
     padding: 6% 6% 6% 80px;
     margin: 0 0 20px 0;
     border-left: 0px;
     border-radius: 10px;
     position: relative;
-
-    p{
-        color:#fff;
+    p {
+        color:#ffffff;
     }
-
     &:after {
-    content: '';
-    background: url(../images/pointerGreenDown.png) top center no-repeat;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    margin-left: -25px;
+        content: '';
+        background: url(../images/pointerGreenDown.png) top center no-repeat;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        margin-left: -25px;
     }
 }
 
- .groupPromo ul li a img {
-     margin-left:-35%;
+.groupPromo ul li a img {
+    margin-left:-35%;
+    @media screen and (max-width:600px) {
+        display:none;
+    }
+}
 
-        @media screen and (max-width:600px){
-         display:none;
-     }
- }
-
- #main .col-md-8 {
+#main .col-md-8 {
     margin-bottom:50px;
 }
 
-.ms-rtestate-field ul{
-  list-style: disc;
+.ms-rtestate-field ul {
+    list-style: disc;
 }
 
-.btn, .button, .iconLinks li .link, .iconLinks li a,.ms-rteElement-button {
-    text-decoration:none;
+.btn, 
+.button,
+.iconLinks li .link, 
+.iconLinks li a,
+.ms-rteElement-button {
+    text-decoration: none;
 }
 
-footer.main a {
-    text-decoration:none;
-    &:hover{
-        text-decoration:underline;
+// ---------------------------------- Footer overrides
+footer.main {  
+    .container-fluid .logo-footer span {
+        background: url(../../images/lcc-logo-white-01.svg) center center/1000% 100% no-repeat;
     }
-}
-
-//Footer logo override
-.logo-footer span {
-    background: url(../../images/lcc-logo-white-01.svg) center center/100% 100% no-repeat;
 }

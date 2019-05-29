@@ -179,12 +179,38 @@ $highlighted-alt-font-color:#fff;
 //responsive menu width
 $responsiveMenuWidth:1200px ;
 
-
-
 $white:#fff;
 
-@import 'base';
+// Footer varibles
+$footer-bg-color: #F0EFEF;
 
+//- FRONT END TOOLKIT
+@import 'base_styles/variables';
+@import 'url-helper';
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+@import 'base_styles/mixins';
+@import 'base_styles/base-structure';
+@import 'base_styles/typography';
+@import 'base_styles/buttons';
+@import 'base_styles/form-elements';
+@import 'base_styles/accessibility';
+@import 'base_styles/images';
+@import 'base_styles/tables';
+@import 'base_styles/panel';
+@import 'base_styles/helper-classes';
+@import 'base_styles/browser-alert';
+@import 'base_styles/back-to-top';
+@import 'base_styles/main-menu';
+@import 'base_styles/responsive-menu';
+@import 'base_styles/global-search';
+@import 'base_styles/footer';
+@import 'base_styles/social-media';
+@import 'base_styles/alerts';
+@import 'base_styles/breadcrumb';
+@import 'base_styles/jquery-ui-datepicker';
+@import 'base_styles/media-player';
+@import 'base_styles/lcc-search-box';
+@import 'brand-colors';
 @import '2010-typography-overrides';
 @import 'accordion';
 @import 'accordion-aria';
@@ -302,14 +328,6 @@ a:visited{
       background: url(../images/silloette.png) no-repeat center bottom;  
       height:200px;
       margin:30px 0;
-}
-
-footer.main, footer.main .footer,  {
-  background:#fff;
-
-  .footerGlobal{
-      background:#F0EFEF;
-  }
 }
 
 .promoListWebpart{
@@ -526,8 +544,12 @@ strong {
 }
 
 
+// Footer overrides
+footer.main .container-fluid nav ul li a {
+    font-weight: 400;
+}
 
-.logo-footer span {
+footer.main .container-fluid .logo-footer span {
     background: url(../../images/lcclogo.svg) center center/100% 100% no-repeat;
 }
 

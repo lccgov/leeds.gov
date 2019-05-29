@@ -125,11 +125,36 @@ $outline-button-color:#aa1c40;
 //$hightlight-color:$base-link-color;
 //$panel-alt-color:white;
 
+// Footer varibles
+$footer-bg-color: #D8DEE3;
 
-
-
-@import 'base';
-
+//- FRONT END TOOLKIT
+@import 'base_styles/variables';
+@import 'url-helper';
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+@import 'base_styles/mixins';
+@import 'base_styles/base-structure';
+@import 'base_styles/typography';
+@import 'base_styles/buttons';
+@import 'base_styles/form-elements';
+@import 'base_styles/accessibility';
+@import 'base_styles/images';
+@import 'base_styles/tables';
+@import 'base_styles/panel';
+@import 'base_styles/helper-classes';
+@import 'base_styles/browser-alert';
+@import 'base_styles/back-to-top';
+@import 'base_styles/main-menu';
+@import 'base_styles/responsive-menu';
+@import 'base_styles/global-search';
+@import 'base_styles/footer';
+@import 'base_styles/social-media';
+@import 'base_styles/alerts';
+@import 'base_styles/breadcrumb';
+@import 'base_styles/jquery-ui-datepicker';
+@import 'base_styles/media-player';
+@import 'base_styles/lcc-search-box';
+@import 'brand-colors';
 @import '2010-typography-overrides';
 @import 'accordion';
 @import 'accordion-aria';
@@ -249,7 +274,7 @@ ul.menu li a.main-menu {
 }
 
 
-
-.logo-footer span {
+//Footer logo override
+footer.main .container-fluid .logo-footer span {
     background: url(../images/lcclogo.svg) center center/100% 100% no-repeat;
 }

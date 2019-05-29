@@ -15,541 +15,479 @@ $city-base-color: #E86D1F;
 $thwaite-base-color:#5C8727;
 $abbey-base-color:#7D4199;
 
-
-.promoListWebpart
-{
-
-margin:0 -15px;    
-
- ul li a 
-
-{
-    background-position: center  0px !important;
-
-    .info {
-    opacity:1;
-    filter: alpha(opacity=100);
-    font-weight:400;
-    background:#ecf0f1;
-
-
-    .arrow{
-        border-left:1px solid #ddd;
-    }
-
-
-
-
-}
-
-}
-
-}
-
-.promoListWebpart ul li.four, .promoListWebpart ul li.six {
-
- a .info .arrow {
-    border-left:none;
-}
-}
-
- @mixin promoListWebpartColors($span-info-color, $link-font-color, $span-info-secondary-color, $span-arrow-base, $arrow-color, $span-third-info-base,$third-info-font-color) {
-     .info {
-         background: $span-info-color;
-         color: $link-font-color;
-         .secondaryInfo {
-             color: $span-info-secondary-color;
-         }
-         .arrow {
-             background: $span-arrow-base;
-             &:after {
-                 color: $arrow-color;
-             }
-         }
-
-      
-     }
-
-        span.thirdInfo{
-             background:$span-third-info-base;
-             color:$third-info-font-color;
-             border-bottom:0px;
-         }
- }
-
-
-
-
- .promoListWebpart {
-     ul li {
-
-
-                        &.abbey a {
-             @include promoListWebpartColors(#ecf0f1,$abbey-base-color,#666,transparent,$abbey-base-color,$abbey-base-color, #ffffff);
-     }       
-
-
-                       &.thwaite a {
-             @include promoListWebpartColors(#ecf0f1,$thwaite-base-color,#666,transparent,$thwaite-base-color,$thwaite-base-color, #ffffff);
-     }      
-
-
-                    &.temple a {
-             @include promoListWebpartColors(#ecf0f1,$temple-base-color,#666,transparent,$temple-base-color,$temple-base-color, #ffffff);
-     }  
-   
-
-
-                 &.lim a {
-             @include promoListWebpartColors(#ecf0f1,$lim-base-color,#666,transparent,$lim-base-color,$lim-base-color, #ffffff);
-     }  
-
-        
-              &.lag a {
-             @include promoListWebpartColors(#ecf0f1,$lag-base-color,#666,transparent, $lag-base-color,$lag-base-color, #ffffff);
-     }  
-              &.kirkstall a {
-             @include promoListWebpartColors(#ecf0f1,$kirkstall-base-color,#666,transparent, $kirkstall-base-color,$kirkstall-base-color, #ffffff);
-     }      
-
-
-              &.discovery a {
-             @include promoListWebpartColors(#ecf0f1,$discovery-base-color,#666,transparent, $discovery-base-color,$discovery-base-color, #ffffff);
-     }     
-
-
-             &.lotherton a {
-             @include promoListWebpartColors(#ecf0f1, $lotherton-base-color,#666,transparent, $lotherton-base-color,$lotherton-base-color, #d0c7a7);
-     }
-
-
-         &.city a {
-             @include promoListWebpartColors(#ecf0f1, $city-base-color,#666,transparent, $city-base-color, $city-base-color, #fff);
-     }
-
-
-
- }
-
- }
-
-
-
-
-
-
-
-
-
-.highlighted {
-    border:1px solid #ecf0f1;
-    padding:100px;
-
-    @media screen and(max-width:768px){
-        padding:50px;
-
-        em{
-            font-size:40px;
-        }
-    }
-}
-
-.vertical-content{
- display: table;
-}
-
-
-.carousel {
-    height: 70vh;
-    margin-bottom:0px;
-}
-
 $heroButtonBack:#fff !default;
 $heroButtonColor:#414141 !default;
 
-.heroBanner{
-    height:70vh;
-    background-size:cover !important;
-    position:relative;
+$vistitorInfoBack:rgba(#d0c7a7, 0.9) !default;
+$vistitorInfoHeadingColor:#2f7251 !default;
 
-    .container-fluid{
-        position:relative;
-
-          @media screen and (max-width:768px){
-              padding:0px;
-          }
-    }
-
-      a {
-          background:$heroButtonBack;
-          padding:50px 100px 50px 50px;
-          position:absolute;
-          top:15vh;
-          right:0px;
-          color:$heroButtonColor;
-          font-size:28px;
-          text-align: left;
-          border-bottom:1px solid darken($heroButtonBack,10%);
-
-          @media screen and (max-width:768px){
-              position:relative;
-              top:0px;
-              left:0px;
-              width:100%;
-              display:block;
-              padding:50px 100px 50px 50px;
-
-             &:after {
-            line-height:140px;
+.promoListWebpart {
+    margin: 0 -15px;    
+    ul {
+        li { 
+            a {
+                background-position: center  0px !important;
+                .info {
+                    opacity: 1;
+                    filter: alpha(opacity=100);
+                    font-weight: 400;
+                    background: #ecf0f1;
+                    .arrow {
+                        border-left: 1px solid #dddddd;
+                    }
+                }
+            }
+            &.four, &.six {
+                a {
+                    .info {
+                        .arrow {
+                            border-left: none;
+                        }
+                    }
+                }
+            }
         }
-          }
+    }
+}
 
-          &:hover{
-
-              text-decoration:none;
-              background:lighten($heroButtonBack,50%);
-
-          }
-
-         span{
-              display:block;
-              width:100%;
-              font-size:0.8em;
-              font-size:20px;
-              color:darken($heroButtonBack,50%)
-          }
-
-
-          
+@mixin promoListWebpartColors($span-info-color, $link-font-color, $span-info-secondary-color, $span-arrow-base, $arrow-color, $span-third-info-base,$third-info-font-color) {
+    .info {
+        background: $span-info-color;
+        color: $link-font-color;
+        .secondaryInfo {
+            color: $span-info-secondary-color;
+        }
+        .arrow {
+            background: $span-arrow-base;
             &:after {
+                color: $arrow-color;
+            }
+        }      
+    }
+    span.thirdInfo{
+        background: $span-third-info-base;
+        color: $third-info-font-color;
+        border-bottom: 0px;
+    }
+}
+
+.promoListWebpart {
+    ul {
+        li {
+            &.abbey a {
+                @include promoListWebpartColors(#ecf0f1,$abbey-base-color,#666,transparent,$abbey-base-color,$abbey-base-color, #ffffff);
+            }  
+            &.thwaite a {
+                @include promoListWebpartColors(#ecf0f1,$thwaite-base-color,#666,transparent,$thwaite-base-color,$thwaite-base-color, #ffffff);
+            }      
+            &.temple a {
+                @include promoListWebpartColors(#ecf0f1,$temple-base-color,#666,transparent,$temple-base-color,$temple-base-color, #ffffff);
+            }  
+            &.lim a {
+                @include promoListWebpartColors(#ecf0f1,$lim-base-color,#666,transparent,$lim-base-color,$lim-base-color, #ffffff);
+            }  
+            &.lag a {
+                @include promoListWebpartColors(#ecf0f1,$lag-base-color,#666,transparent, $lag-base-color,$lag-base-color, #ffffff);
+            }  
+            &.kirkstall a {
+                @include promoListWebpartColors(#ecf0f1,$kirkstall-base-color,#666,transparent, $kirkstall-base-color,$kirkstall-base-color, #ffffff);
+            } 
+            &.discovery a {
+                @include promoListWebpartColors(#ecf0f1,$discovery-base-color,#666,transparent, $discovery-base-color,$discovery-base-color, #ffffff);
+            }   
+            &.lotherton a {
+                @include promoListWebpartColors(#ecf0f1, $lotherton-base-color,#666,transparent, $lotherton-base-color,$lotherton-base-color, #d0c7a7);
+            }
+            &.city a {
+                @include promoListWebpartColors(#ecf0f1, $city-base-color,#666,transparent, $city-base-color, $city-base-color, #fff);
+            }
+        }
+    }
+}
+
+.highlighted {
+    border: 1px solid #ecf0f1;
+    padding: 100px;
+    @media screen and(max-width:768px) {
+        padding: 50px;
+        em {
+            font-size: 40px;
+        }
+    }
+}
+
+.vertical-content {
+    display: table;
+}
+
+.carousel {
+    height: 70vh;
+    margin-bottom: 0px;
+}
+
+.heroBanner {
+    height: 70vh;
+    background-size: cover !important;
+    position: relative;
+    .container-fluid {
+        position: relative;
+        @media screen and (max-width:768px) {
+            padding: 0px;
+        }
+    }
+    a {
+        background: $heroButtonBack;
+        padding: 50px 100px 50px 50px;
+        position: absolute;
+        top: 15vh;
+        right: 0px;
+        color: $heroButtonColor;
+        font-size: 28px;
+        text-align: left;
+        border-bottom: 1px solid darken($heroButtonBack,10%);
+        @media screen and (max-width:768px) {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            display: block;
+            padding: 50px 100px 50px 50px;
+            &:after {
+                line-height: 140px;
+            }
+        }
+        &:hover {
+            text-decoration: none;
+            background: lighten($heroButtonBack,50%);
+        }
+        span {
+            display: block;
+            width: 100%;
+            font-size: 0.8em;
+            font-size: 20px;
+            color: darken($heroButtonBack,50%)
+        }
+        &:after {
             font-family: FontAwesome;
             font-size: 32px;
             content: "\f105";
             display: block;
-            color:$heroButtonColor;
-            position:absolute;
-            right:0px;
-            height:100%;
-            border-left:1px solid darken($heroButtonBack,10%);
-            top:0px;
-            padding:0 30px;
-            line-height:170px;
+            color: $heroButtonColor;
+            position: absolute;
+            right: 0px;
+            height: 100%;
+            border-left: 1px solid darken($heroButtonBack,10%);
+            top: 0px;
+            padding: 0 30px;
+            line-height: 170px;
         }
+    }    
+}
 
-        &.alt{
-
-
-        }
-      }
-      
-
-  }
-
-$vistitorInfoBack:rgba(#d0c7a7, 0.9) !default;
-$vistitorInfoHeadingColor:#2f7251 !default;
-.visitorInfo
-{
-    background:$vistitorInfoBack;
-    padding:30px 0px 30px 0;
-    position:relative;
-    bottom:0px;
-    width:100%;
-    
-    @media screen and (max-width:768px){
-        position:relative;
-        padding:20px 0px 50px 0px;
-
-        a.btn{
-            display:block;
+.visitorInfo {
+    background: $vistitorInfoBack;
+    padding: 30px 0px 30px 0;
+    position: relative;
+    bottom: 0px;
+    width: 100%;    
+    @media screen and (max-width:768px) {
+        position: relative;
+        padding: 20px 0px 50px 0px;
+        a.btn {
+            display: block;
         }
     }
-
-    h2{
-        font-size:25px;
-        margin:0px 0px 0px;
-        padding-bottom:15px;
-        color:$vistitorInfoHeadingColor;
-        border-bottom:1px solid $vistitorInfoHeadingColor;
-
+    h2 {
+        font-size: 25px;
+        margin: 0px 0px 0px;
+        padding-bottom: 15px;
+        color: $vistitorInfoHeadingColor;
+        border-bottom: 1px solid $vistitorInfoHeadingColor;
     }
-
-    p{
-        font-size:18px;
-        font-weight:300;
-
-        span{
-            font-size:15px;
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        span {
+            font-size: 15px;
         }
     }
-
-    a.btn{
-        position:relative;
-        background:transparent;
-        border-color:#414141;
-        color:#414141;
-        margin:48px auto 0 auto;
-        top:0px;
-        left:0px;
+    a.btn {
+        position: relative;
+        background: transparent;
+        border-color: #414141;
+        color: #414141;
+        margin: 48px auto 0 auto;
+        top: 0px;
+        left: 0px;
         text-align: center;
-  
-
-        &:hover{
-         background:#e1e4e4;
-
+        &:hover {
+            background: #e1e4e4;
         }
-
     }
 }
 
-.heroBanner .visitorInfo{
-position:absolute;
+.heroBanner .visitorInfo {
+    position: absolute;
 }
 
+@media screen and (max-width:768px) {
+    .heroBanner {
+        height: auto;
+    }
+}
 
-  @media screen and (max-width:768px){
-      .heroBanner{
-          height:auto;
-      }
-  }
-
-
-  .promoListWebpart ul li.heightAuto a{
-      height:auto !important;
-      min-height:100px;
-      
-      .info{
-          position:relative;
-      }
-  }
-
+.promoListWebpart ul li.heightAuto a {
+    height: auto !important;
+    min-height: 100px;    
+    .info{
+        position: relative;
+    }
+}
 
 .promoListWebpart ul li a .secondaryInfo {
-
     width: 100%;
-
 }
 
-
-
-.btn, .button{
-    font-size:20px;
+.btn, .button {
+    font-size: 20px;
     text-align: left;
-
-  
-
-    span{
-        display:block;
-        width:100%;
-        font-size:20px;
+    span {
+        display: block;
+        width: 100%;
+        font-size: 20px;
     }
-
-    &.block{
-        display:block;
-        margin-bottom:30px;
-        
-    &:after{
-        background:transparent;
-        border-left:1px solid darken($btn-background-color,5%);
-        padding: 4.5% 0px !important;
-        font-size: 25px;
-        min-width:65px;
-        text-align: center;
-        line-height:1em;
-
-
+    &.block {
+        display: block;
+        margin-bottom: 30px;        
+        &:after {
+            background: transparent;
+            border-left: 1px solid darken($btn-background-color,5%);
+            padding: 4.5% 0px !important;
+            font-size: 25px;
+            min-width: 65px;
+            text-align: center;
+            line-height: 1em;
+        }
+        span {
+            font-weight: 200;
+        }
     }
-
-    span{
-        font-weight:200;
-    }
-
-
-    }
-
 }
-
-
-
-
-ul.footerLogos{
-     @include ulStyle;
-     margin:15px 15px 30px 15px;
-
-     li{
-         margin:0 5px;
-     }
-
-     a{
-         display:block;
-     }
-
-     img{
-         margin-bottom:5px;
-     }
-}
-
-
 
 
 @mixin mega-promo-colors($promo-background-color, $promo-header-color, $promo-secondary-color, $promo-arrow-color, $promo-highlight-background-color, $promo-highlight-color) {
-    a{
-        background:$promo-background-color;
-
+    a {
+        background: $promo-background-color;
         &:after {
-            color:$promo-arrow-color;
+            color: $promo-arrow-color;
         }
-
-        &:hover{
-            background:darken($promo-background-color, 5%);
+        &:hover {
+            background: darken($promo-background-color, 5%);
         }
-
-        .mega-promo__content{
-
+        .mega-promo__content {
             @media (max-width: 500px) {
                 &:after{
-                    color:$promo-arrow-color;
+                    color: $promo-arrow-color;
                 }
             }
-
-            .mega-promo__header{
-                color:$promo-header-color;
+            .mega-promo__header {
+                color: $promo-header-color;
             }
-
-            .mega-promo__secondary{
-                color:$promo-secondary-color;
+            .mega-promo__secondary {
+                color: $promo-secondary-color;
             }
         }
-
-        .mega-promo__highlight{
-            background:$promo-highlight-background-color;
-            color:$promo-highlight-color;
+        .mega-promo__highlight {
+            background: $promo-highlight-background-color;
+            color: $promo-highlight-color;
         }
     }
 }
 
-
-
-.mega-promo{
-    .mega-promo__item{
-
-            a {
-            &:after{
-                font-size:32px;
-            }    
-            
-             .mega-promo__content .mega-promo__header {
+.mega-promo {
+    .mega-promo__item {
+        a {
+            &:after {
+                font-size: 32px;
+            }                    
+            .mega-promo__content .mega-promo__header {
                 font-weight: 400;
-           }
-             }
-
-
-         &.abbey{
+            }
+        }
+        &.abbey{
             @include mega-promo-colors($promo-background-color, $abbey-base-color, $promo-secondary-color, $abbey-base-color, $abbey-base-color, $promo-highlight-color);
         }
-
-           &.thwaite{
+        &.thwaite{
             @include mega-promo-colors($promo-background-color, $thwaite-base-color, $promo-secondary-color, $thwaite-base-color, $thwaite-base-color, $promo-highlight-color);
         }
-
-            &.temple{
+        &.temple{
             @include mega-promo-colors($promo-background-color, $temple-base-color, $promo-secondary-color, $temple-base-color, $temple-base-color, $promo-highlight-color);
         }
-
-               &.lim{
+        &.lim{
             @include mega-promo-colors($promo-background-color, $lim-base-color, $promo-secondary-color, $lim-base-color, $lim-base-color, $promo-highlight-color);
         }
-               &.lag{
+        &.lag{
             @include mega-promo-colors($promo-background-color, $lag-base-color, $promo-secondary-color, $lag-base-color,$lag-base-color, $promo-highlight-color);
         }
-               &.kirkstall{
+        &.kirkstall{
             @include mega-promo-colors($promo-background-color,$kirkstall-base-color, $promo-secondary-color, $kirkstall-base-color, $kirkstall-base-color, $promo-highlight-color);
         }
-               &.discovery{
+        &.discovery{
             @include mega-promo-colors($promo-background-color, $discovery-base-color, $promo-secondary-color,$discovery-base-color, $discovery-base-color, $promo-highlight-color);
         }
-               &.lotherton{
+        &.lotherton{
             @include mega-promo-colors($promo-background-color, $lotherton-base-color, $promo-secondary-color, $lotherton-base-color, $lotherton-base-color, $promo-highlight-color);
         }
-
-               &.city{
+        &.city{
             @include mega-promo-colors($promo-background-color, $city-base-color, $promo-secondary-color, $city-base-color, $city-base-color,  $promo-highlight-color);
         }
     }
 }
 
-
 .groupPromo ul li a h3 {
     font-weight: 400;
 }
 
-
-body{
-    font-weight:200;
+body {
+    font-weight: 200;
 }
 
-
-
-.docList.one{
-    margin-bottom:30px;
+.docList.one {
+    margin-bottom: 30px;
 }
 
-
-
-.relatedPages,.sideNav {
+.relatedPages, 
+.sideNav {
     margin: 0 0 30px 0px;
-    padding: 0
+    padding: 0;
 }
 
-.relatedPages h2,.relatedPages h3,.sideNav h2,.sideNav h3 {
+.relatedPages h2,
+.relatedPages h3,
+.sideNav h2,
+.sideNav h3 {
     margin-top: 0;
     margin-bottom: 15px;
     padding-bottom: 10px;
     font-size: 24px;
-    border-bottom: 5px solid #f6f7fa
+    border-bottom: 5px solid #f6f7fa;
 }
 
 @media (max-width: 641px) {
-    .relatedPages h2,.relatedPages h3,.sideNav h2,.sideNav h3 {
+    .relatedPages h2,
+    .relatedPages h3,
+    .sideNav h2,
+    .sideNav h3 {
         font-size:21px;
-        margin-bottom: 15px
+        margin-bottom: 15px;
     }
 }
 
-.relatedPages ul,.sideNav ul {
+.relatedPages ul,
+.sideNav ul {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
-.relatedPages ul li,.sideNav ul li {
+.relatedPages ul li,
+.sideNav ul li {
     margin-bottom: 0px;
     font-size: 16px;
-    padding:0px;
+    padding: 0px;
 }
 
 @media (max-width: 641px) {
-    .relatedPages ul li,.sideNav ul li {
-        margin-bottom:10px;
-        font-size: 16px
+    .relatedPages ul li,
+    .sideNav ul li {
+        margin-bottom: 10px;
+        font-size: 16px;
     }
 }
 
-.relatedPages ul li:last-of-type,.sideNav ul li:last-of-type {
-    margin-bottom: 0
+.relatedPages ul li:last-of-type,
+.sideNav ul li:last-of-type {
+    margin-bottom: 0;
 }
 
-
-.backto{
+.backto {
     background:#f6f6f6;
-       .link-back {
-    margin-bottom: 0.526315789em;
-} 
-       
+    .link-back {
+        margin-bottom: 0.526315789em;
+    }        
 }
-
 .promo.two{
-    margin-top:30px;
+    margin-top: 30px;
 }
 
 .col-md-4 .promoListWebpart {
     margin: 0 0px;
+}
+
+// ---------------------------------- Footer overrides
+footer.main{  
+    .container-fluid {        
+        ul.footerLogos {
+            @include ulStyle;
+            margin-bottom: 25px;
+            li {
+                margin: 0 5px 5px 0;            
+                a {
+                    display: block;
+                }
+            }            
+        }
+        nav {
+            ul {
+                li {
+                    a {
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+        .text-right {
+            .socialBookmarks {                      
+                ul {
+                    li {
+                        a {                            
+                            &.facebook:after,
+                            &.twitter:after,
+                            &.youtube:after,
+                            &.email:after,
+                            &.instagram:after,
+                            &.flickr:after {
+                                font-size: 25px;
+                                width: 42px;
+                                height: 42px;
+                                padding-top: 3px;
+                                border: 1px solid #ffffff;
+                                color: #ffffff;
+                            }
+                            &:hover {
+                                text-decoration: none !important;
+                                &:after{
+                                    background: $footer-font-color;
+                                    color: $main-nav-background;
+                                }
+                            }
+                        }
+                    }
+                }
+            }   
+            p {
+                color: #ffffff;
+                font-weight: 200;
+                font-size: 19px;
+            }     
+        } 
+        .logo-footer {
+            span {
+                background: url(../../images/lcc-logo-white-01.svg) center center/100% 100% no-repeat;
+            }
+            p {
+                font-weight: 200;
+                font-size: 19px;
+            }
+        }
+    }
 }

@@ -163,14 +163,14 @@ $secondary-button-color:$primary-button-background-color;
 //responsive menu width
 //$responsiveMenuWidth:1200px ;
 
+// ---------------------------------- Footer varibles
+$footer-bg-color: #000000;
+
 @import 'base_styles/variables';
 @import 'url-helper';
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
-
 @import 'base_styles/mixins';
-
 @import 'base_styles/base-structure';
-
 @import 'base_styles/typography';
 @import 'base_styles/buttons';
 @import 'base_styles/form-elements';
@@ -179,25 +179,18 @@ $secondary-button-color:$primary-button-background-color;
 @import 'base_styles/tables';
 @import 'base_styles/panel';
 @import 'base_styles/helper-classes';
-
 @import 'base_styles/browser-alert';
 @import 'base_styles/back-to-top'; //look at arrow - possibly re-engineer ? - DH & RM
-
 @import 'base_styles/main-menu';
 @import 'base_styles/responsive-menu';
-
 @import 'leedsmarkets_base_styles/leedsmarkets_global-search'; // Replacing _global-search.scss
-
 @import 'base_styles/footer';
 @import 'base_styles/social-media';
-
 @import 'base_styles/alerts';
 @import 'base_styles/breadcrumb';
 @import 'base_styles/jquery-ui-datepicker';
 @import 'base_styles/media-player';
-
 @import 'base_styles/lcc-search-box';
-
 @import '2010-typography-overrides';
 @import 'accordion';
 @import 'accordion-aria';
@@ -217,7 +210,7 @@ $secondary-button-color:$primary-button-background-color;
 @import 'icon-links';
 //@import 'lcc-base-styles'; //needs finalising - DH & RM
 //@import 'lcc-doc-list'; //see above - DH
-@import 'leedsmarkets_base_styles/lcc-footer'; //needs aligning with footer - is it leeds.gov specific? - DH
+//@import 'lcc-footer'; //needs aligning with footer - is it leeds.gov specific? - DH
 //@import 'lcc-header'; //needs aligning with header - is it leeds.gov specific? - DH
 //@import 'lcc-hero'; //needs aligning with hero - is it leeds.gov specific? - DH
 //@import 'lcc-news'; //needs aligning with footer - is it leeds.gov specific? - DH
@@ -593,9 +586,9 @@ color:#333;
 }
 }
 
-
-
-//Footer logo override
-.logo-footer span {
-    background: url(../../images/lcc-logo-white-01.svg) center center/100% 100% no-repeat;
+// ---------------------------------- Footer overrides
+footer.main{  
+    .container-fluid .logo-footer span {
+        background: url(../../images/lcc-logo-white-01.svg) center center/1000% 100% no-repeat;
+    }
 }

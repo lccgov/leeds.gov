@@ -169,15 +169,43 @@ $vistitorInfoHeadingColor:#414141;
 
 //mega-promo
 //$promo-background-color:#F6F7FA;
-$promo-arrow-color:#7D4199;;
+$promo-arrow-color:#7D4199;
 //$promo-header-color:#c3102f;
 //$promo-secondary-color:#666B76;
 $promo-highlight-background-color:#7D4199;
 $promo-highlight-color:#fff;
 $promo-arrow:"\f105";
 
-@import 'base';
+// ---------------------------------- Footer varibles
+$footer-bg-color: #7D4199;
 
+// ---------------------------------- Front end toolkit
+@import 'base_styles/variables';
+@import 'url-helper';
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+@import 'base_styles/mixins';
+@import 'base_styles/base-structure';
+@import 'base_styles/typography';
+@import 'base_styles/buttons';
+@import 'base_styles/form-elements';
+@import 'base_styles/accessibility';
+@import 'base_styles/images';
+@import 'base_styles/tables';
+@import 'base_styles/panel';
+@import 'base_styles/helper-classes';
+@import 'base_styles/browser-alert';
+@import 'base_styles/back-to-top';
+@import 'base_styles/main-menu';
+@import 'base_styles/responsive-menu';
+@import 'base_styles/global-search';
+@import 'base_styles/footer';
+@import 'base_styles/social-media';
+@import 'base_styles/alerts';
+@import 'base_styles/breadcrumb';
+@import 'base_styles/jquery-ui-datepicker';
+@import 'base_styles/media-player';
+@import 'base_styles/lcc-search-box';
+@import 'brand-colors';
 @import '2010-typography-overrides';
 @import 'accordion';
 @import 'accordion-aria';
@@ -221,51 +249,36 @@ $promo-arrow:"\f105";
 // New components
 @import 'component_example';
 
-body{
-    font-weight:200;
+body {
+    font-weight: 200;
 }
 
-h1,h2,h3,h4,h5{
-    font-family:$font-primary;
+h1, h2, h3, h4, h5 {
+    font-family: $font-primary;
 }
 
-
-p{
-    font-family:$font-secondary;
+p {
+    font-family: $font-secondary;
 }
 
 .header-nav-container .logo {
-    background:url(../images/abbeyHouse-logo-w.svg) left center  no-repeat;
+    background: url(../images/abbeyHouse-logo-w.svg) left center no-repeat;
     margin: 0px 0 0 0px;
-    height:150px;
-    width:350px;
-    background-size:100%;
-    
-    &:hover{
-        text-decoration:none;
+    height: 150px;
+    width: 350px;
+    background-size: 100%;    
+    &:hover {
+        text-decoration: none;
     }
-
-
-        @media screen and (max-width:768px){
-            text-align: center;
-            margin:0 auto;
-
-        }
-}
-
-.main-nav{
-    border-top:1px solid darken($main-nav-background,5%);
-    ul li a{
-        font-size:20px;
+    @media screen and (max-width:768px) {
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
-//Footer logo override
-.logo-footer span {
-    background: url(../../images/lcc-logo-white-01.svg) center center/100% 100% no-repeat;
+.main-nav {
+    border-top: 1px solid darken($main-nav-background,5%);
+    ul li a {
+        font-size: 20px;
+    }
 }
-
-
-
-
-
