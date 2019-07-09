@@ -7,10 +7,14 @@
 <!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <SharePoint:SPHtmlTag lang="en" runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;"><!--<![endif]-->
+    
     <head runat="server">
+
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="/_catalogs/masterpage/public/images/apple-touch-icon.png?1.1.66">
         <link rel="icon" type="image/png" href="/_catalogs/masterpage/public/images/favicon-32x32.png?1.1.66" sizes="32x32">
         <link rel="icon" type="image/png" href="/_catalogs/masterpage/public/images/favicon-16x16.png?1.1.66" sizes="16x16">
@@ -18,20 +22,61 @@
         <link rel="manifest" href="/_catalogs/masterpage/public/images/manifest.json?1.1.66">
         <link rel="mask-icon" href="/_catalogs/masterpage/public/images/safari-pinned-tab.svg?1.1.66" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
+        
         <!-- Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" /><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" /><script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        
         <!-- Custom font using Typekit -->
         <script src="https://use.typekit.net/pws7qio.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script> 
+        
         <meta name="GENERATOR" content="Microsoft SharePoint" />
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="Expires" content="0" />
-        <SharePoint:RobotsMetaTag runat="server">                         </SharePoint:RobotsMetaTag>                         <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server">                         </SharePoint:CssRegistration>                         <SharePoint:CssLink runat="server" Version="15">                         </SharePoint:CssLink>                         <SharePoint:PageTitle runat="server">                             <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">                                 <SharePoint:ProjectProperty Property="Title" runat="server">                             </SharePoint:ProjectProperty>                         </asp:ContentPlaceHolder>                         </SharePoint:PageTitle>                         <SharePoint:StartScript runat="server">                         </SharePoint:StartScript>                         <SharePoint:CacheManifestLink runat="server">                         </SharePoint:CacheManifestLink>                         <SharePoint:PageRenderMode runat="server" RenderModeType="Standard">                         </SharePoint:PageRenderMode>                         <SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false">                         </SharePoint:ScriptLink>                         <SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false">                         </SharePoint:ScriptLink>                         <SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false">                         </SharePoint:ScriptLink>                         <SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false">                         </SharePoint:ScriptLink>                         <SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false">                         </SharePoint:ScriptLink>                         <SharePoint:CustomJSUrl runat="server">                         </SharePoint:CustomJSUrl>                         <SharePoint:SoapDiscoveryLink runat="server">                         </SharePoint:SoapDiscoveryLink>                         <SharePoint:AjaxDelta id="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">                         <asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server">                         </asp:ContentPlaceHolder>                         <SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true">                         </SharePoint:DelegateControl>                         <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server">                         </asp:ContentPlaceHolder>                         </SharePoint:AjaxDelta>                         <SharePoint:AjaxDelta id="DeltaSPWebPartManager" runat="server">                             <WebPartPages:SPWebPartManager runat="server">                             </WebPartPages:SPWebPartManager>                         </SharePoint:AjaxDelta>
+
+        <!-- Open Graph Data -->
+        <meta property="og:image" content="https://www.leeds.gov.uk/_catalogs/masterpage/public/images/leeds-city-council-logo.jpg" />
+        <meta property="og:image:width" content="1080" />
+        <meta property="og:image:height" content="1080" />
+
+
+        <SharePoint:RobotsMetaTag runat="server"></SharePoint:RobotsMetaTag>
+        <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server"></SharePoint:CssRegistration>
+        <SharePoint:CssLink runat="server" Version="15"></SharePoint:CssLink>
+        <SharePoint:PageTitle runat="server">
+            <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">
+                <SharePoint:ProjectProperty Property="Title" runat="server"></SharePoint:ProjectProperty>
+            </asp:ContentPlaceHolder>
+        </SharePoint:PageTitle>        
+        <SharePoint:StartScript runat="server"></SharePoint:StartScript>        
+        <SharePoint:CacheManifestLink runat="server"></SharePoint:CacheManifestLink>
+        <SharePoint:PageRenderMode runat="server" RenderModeType="Standard"></SharePoint:PageRenderMode>
+        <SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false"></SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false"></SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false"></SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false"></SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false"></SharePoint:ScriptLink>
+        <SharePoint:CustomJSUrl runat="server"></SharePoint:CustomJSUrl>
+        <SharePoint:SoapDiscoveryLink runat="server"></SharePoint:SoapDiscoveryLink>
+        <SharePoint:AjaxDelta id="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">
+            <asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server"></asp:ContentPlaceHolder>
+            <SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true"></SharePoint:DelegateControl>
+            <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server"></asp:ContentPlaceHolder>                
+        </SharePoint:AjaxDelta>
+        <SharePoint:AjaxDelta id="DeltaSPWebPartManager" runat="server">
+            <WebPartPages:SPWebPartManager runat="server"></WebPartPages:SPWebPartManager>
+        </SharePoint:AjaxDelta>
+        
         <!-- Template CSS -->
-        <link rel="stylesheet" href="/_catalogs/masterpage/public/stylesheets/lcc-template.css?1.1.66" />
+        <link rel="stylesheet" href="/_catalogs/masterpage/public/stylesheets/lcc-template.css?1.1.66">
+        
         <!-- Application CSS -->
         <link rel="stylesheet" href="/_catalogs/masterpage/public/stylesheets/lcc-gov.css?rev=6b02ea78-8f71-48c5-9f50-3313a407e42a">
-        </head>
+
+    </head>
+
     <body onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();">
     <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent"/>
 	<SharePoint:ImageLink runat="server"/>                             <SharePoint:SharePointForm onsubmit="if (typeof (_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server" __designer:Preview="&lt;table cellpadding=4 cellspacing=0 style=&quot;font:messagebox;color:buttontext;background-color:buttonface;border: solid 1px;border-top-color:buttonhighlight;border-left-color:buttonhighlight;border-bottom-color:buttonshadow;border-right-color:buttonshadow&quot;&gt;
