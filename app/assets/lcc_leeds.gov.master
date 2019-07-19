@@ -66,10 +66,7 @@
             <asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server"></asp:ContentPlaceHolder>
             <SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true"></SharePoint:DelegateControl>
             <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server"></asp:ContentPlaceHolder>                
-        </SharePoint:AjaxDelta>
-        <SharePoint:AjaxDelta id="DeltaSPWebPartManager" runat="server">
-            <WebPartPages:SPWebPartManager runat="server"></WebPartPages:SPWebPartManager>
-        </SharePoint:AjaxDelta>
+        </SharePoint:AjaxDelta>        
         
         <!-- Template CSS -->
         <link rel="stylesheet" href="/_catalogs/masterpage/public/stylesheets/lcc-template.css?1.1.66">
@@ -80,6 +77,10 @@
     </head>
 
     <body onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();">
+
+        <SharePoint:AjaxDelta id="DeltaSPWebPartManager" runat="server">
+            <WebPartPages:SPWebPartManager runat="server"></WebPartPages:SPWebPartManager>
+        </SharePoint:AjaxDelta>
 
         <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent"/>
 
