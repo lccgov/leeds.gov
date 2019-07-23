@@ -362,31 +362,19 @@ $header-height-mobile:70px;
 .header-lcc .logo {
     background-image: url(../images/foster4leeds_logo.svg);
     background-repeat: no-repeat;
-    display: inline-block;
-    width: 325px;
-    height: 48px;
     background-position: left top;
     background-size: 100% 100%;
-    @media (max-width: 990px) {
-        width: 250px;
-        height: 37px;
-    }
-    @media (max-width: 767px) {
-        width: 200px;
-        height: 29px;
-    }
-    @media (max-width: 399px) {
-        width: 200px;
-        height: 29px;
-    }
-    @media (max-width: 350px) {
-        width: 150px;
-        height: 22px;
+    display: inline-block;
+    width: 104px;
+    height: 41px;
+    @media (min-width: 991px) {
+        width: 154px;
+        height: 63px;
     }
 }
 
 .sectionHeader {
-    //@include gradient-background-half($panel-event-date-background-light, $panel-event-date-background-dark);
+    background: #3F6074 url(../images/blue-bg.jpg) repeat center center;
     .container-fluid {
         .header-wrapper {
             height: $header-height;
@@ -406,7 +394,7 @@ $header-height-mobile:70px;
                             box-shadow: none;
                             padding: 21px 20px;
                             @include border-radius(4px);
-                            background: $base-link-color;
+                            background: transparent;
                             line-height: 1.2;
                             &:hover {
                                 background: white;
@@ -451,8 +439,8 @@ $header-height-mobile:70px;
                         height: 40px;
                         display: block;
                         text-align: center;
-                        color: $base-link-color;
-                        background: white;
+                        color: #ffffff;
+                        background: transparent;
                         padding: 0;
                         margin-left: 5px;
                         @include border-radius(4px);
@@ -464,6 +452,8 @@ $header-height-mobile:70px;
                         }
                         &:hover {
                             text-decoration: none;
+                            background: white;
+                            color: $base-link-color;
                         }
                         @media (min-width: 641px) {
                             &:before {
@@ -1198,5 +1188,43 @@ footer{
     @media (max-width: 641px) {
         height: 125px;
         width: 50%;
+    }
+}
+
+// Custom panel styling
+.panel {
+    background: url(../images/blue-bg.jpg) center center #3F6074;
+    blockquote {
+        color: #ffffff;
+    }
+    .img-container {
+        -webkit-clip-path: polygon(62% 3%, 78% 17%, 100% 22%, 100% 87%, 42% 94%, 5% 78%, 8% 54%, 5% 23%);
+        clip-path: polygon(62% 3%, 78% 17%, 100% 22%, 100% 87%, 42% 94%, 5% 78%, 8% 54%, 5% 23%);
+    }
+    .img-container.clip-two {
+        -webkit-clip-path: polygon(10% 11%, 55% 0, 100% 23%, 100% 98%, 63% 89%, 27% 93%, 5% 69%, 0% 30%);
+        clip-path: polygon(10% 11%, 55% 0, 100% 23%, 100% 98%, 63% 89%, 27% 93%, 5% 69%, 0% 30%);
+    }
+    .img-container.clip-three {
+        -webkit-clip-path: polygon(17% 13%, 55% 0, 100% 23%, 100% 73%, 88% 96%, 55% 91%, 15% 99%, 0 40%);
+        clip-path: polygon(17% 13%, 55% 0, 100% 23%, 100% 73%, 88% 96%, 55% 91%, 15% 99%, 0 40%);
+    }
+    &.panel-event {
+        .img-container {
+            clip-path: none;
+        }
+    }
+    .content {
+        h1, h2, h3, h4, h5, h6, p {
+            color: #ffffff;
+        }
+    }
+    p {
+        a {
+            color: #ffffff;
+        }
+    }
+    &.panel-event .panel-event-info .panel-event-info-location {
+        color: #ffffff;
     }
 }
