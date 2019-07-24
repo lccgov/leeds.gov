@@ -592,3 +592,12 @@ footer.main{
         background: url(../../images/lcc-logo-white-01.svg) center center/1000% 100% no-repeat;
     }
 }
+
+// ---------------------------------- Search bar overrides
+.ms-srch-sb>.ms-srch-sb-searchLink {
+    border-left: 1px solid #414141;
+}
+.ms-srch-sb>input {
+    background: #F3F3F4 !important;
+    padding-left: 15px !important;
+}
