@@ -8,6 +8,7 @@
 //= require bins-print
 //= require street-register
 //= require highways-maintenance
+//= require nearest-school
 //= require contact-us-form
 //= require survey
 //= require component-related-pages
