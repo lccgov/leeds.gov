@@ -1,0 +1,389 @@
+
+//Base.sass variables
+body{
+  background-color:$base-background-color;
+}
+
+.sectionHeader{
+  background: #000000 url('../images/kirkgate-banner.jpg') top center no-repeat;
+}
+
+.sectionOne{
+    background:$sectionOne-background-color;
+}
+
+.sectionTwo{
+    background:$sectionTwo-background-color;
+}
+
+.sectionThree{
+    background:$sectionThree-background-color;
+    background-size: cover;
+    padding: 50px 0 20px 0;
+}
+
+
+.sectionFour{
+    background:$sectionFour-background-color;
+}
+
+
+.sectionFive{
+  background:$sectionFive-background-color;
+}
+
+//globhalSearch.sass variables
+
+@media (max-width: $responsiveMenuWidth){
+
+    
+    #nav-search{
+    
+        position:absolute;
+        top:62px;
+        left:0px;
+        background:#bdc3c7;
+        padding:20px;
+        margin:0px;
+        height:auto;
+        width:100%;
+        z-index: 10;
+        display:none;
+
+         &.active{
+        display:block;
+    
+         }
+
+       .input-group{
+        margin:0 !important;
+        width:100%;
+        }
+
+        .ms-srch-sb>input
+{
+
+    min-width: 100% !important;
+    margin:0px !important;
+	
+}
+
+.ms-srch-sb > .ms-srch-sb-searchLink {
+    height: 100%;   
+    min-height:100%;
+}
+    }
+}
+
+
+/*********************************************
+ End globhalSearch.sass variables
+*********************************************/
+
+
+/*********************************************
+ Masterhead.sass variables
+*********************************************/
+.masterhead{
+    background: $head-background;
+}
+
+/*********************************************
+ End Masterhead.sass variables
+*********************************************/
+/*********************************************
+ mainMenu.sass variables
+*********************************************/
+.ms-core-navigation {
+    font-family:$font-primary;
+}
+
+.ms-core-listMenu-item, .ms-core-listMenu-item:link, .ms-core-listMenu-item:visited, .ms-tv-item:link, .ms-tv-item:visited, .ms-tv-header:link, .ms-tv-header:visited
+{
+    color:$main-nav-link;
+}
+
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, a.ms-tv-item:hover, a.ms-tv-header:hover, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-tv-selected:link {
+    background-color: darken($main-nav-background, 5%);
+    color: $main-nav-link;
+}
+
+.main-nav {
+    background:$main-nav-background;
+  
+
+ ul 
+ {
+  width:100%;
+
+ li{
+  
+
+
+ a{
+
+    color:$main-nav-link;
+
+}
+
+ a:hover,    a:focus{
+    background-color: darken($main-nav-background, 5%);
+    color: $main-nav-link;
+}
+
+ a.selected{
+    background: darken($main-nav-background, 4%) !important;  //override sharepoint corev15
+
+}
+
+}
+}
+
+ul ul  {
+    background-color: darken($main-nav-background, 5%);
+    background-color: darken($main-nav-background, 5%);
+
+    li{
+        border-bottom:1px solid darken($main-nav-background, 8%);
+
+        &:first-of-type{
+            border-top:1px solid darken($main-nav-background, 8%);
+        }
+
+        a
+            {
+
+
+            &:hover {
+                background:darken($main-nav-background, 8%);
+            }
+
+            }
+        }
+    }
+
+
+}
+
+/*********************************************
+ End mainMenu.sass variables
+*********************************************/
+
+/*********************************************
+ ResponsiveMenu.sass variables
+*********************************************/
+
+ul.menu{
+    
+    li{
+ 
+
+
+    a {
+     color:$menu-link-color;    
+     text-decoration:none;
+
+    &:hover, &:focus
+    {
+      background:$main-nav-background !important;
+
+}  
+
+
+
+ &.main-menu, &.search{
+ 
+    background:#fff;
+}
+
+&.search{
+
+    background:lighten(gray, 30%);        
+}
+ 
+&.search.active,
+&.search:hover,
+&.search:focus{
+    background:#bdc3c7 !important;
+}
+
+&.main-menu {
+
+       background: #000000 !important;
+       color:#fff;
+
+   
+}
+
+&.main-menu:hover,
+&.main-menu:focus,
+&.main-menu.active{
+    background:darken($main-nav-background, 8%);
+
+    
+}
+
+
+    }
+}
+}
+
+
+
+@media (max-width:$responsiveMenuWidth){
+
+    ul.menu li a.main-menu,
+    ul.menu li a.search{
+        display:block !important;
+        text-decoration:none;
+   }
+
+
+    .main-nav {
+        position:absolute;
+        left:-$responsiveMenuWidth;
+        top:0px;
+        z-index:10;
+        min-height:640px;
+        width:100%;
+        -webkit-transition: all ease .5s;
+        -moz-transition: all ease .5s;
+        -o-transition:all ease .5s;
+        transition: all ease .5s;
+        
+        .container-fluid
+        {
+            padding:20px;
+        }
+    
+    
+    &.active{
+        left:0px;
+    
+    }
+ 
+    
+  .container-fluid ul li {
+
+    border-top: 1px solid rgba(0,0,0, 0.2);
+    margin:0px;
+    padding-top:0 !important;
+    width:100%;
+
+    a{
+          width:100%; 
+          background:none;
+            &:hover, &:focus
+                {
+                    background: rgba(0,0,0, 0.2);
+                }
+            &.selected {
+                background:none;
+                color:#fff;
+            } 
+                
+    }
+    
+
+       ul {
+       display:block;
+       position:relative;
+       width:100%; 
+       margin-left:0px;
+       background:none;
+       float:left;
+       padding:0px 0 10px 0;
+       border:none;
+
+       li {
+           border:none;
+           float:left;
+            
+            a{
+                font-size: 16px;
+                background:none;
+                padding:5px 20px;
+                color:#fff;
+
+        
+            }
+       }
+
+       &.active{
+           display:block;
+       }
+        
+   }  
+
+    }
+
+
+
+    }
+    
+}
+
+
+@media (max-width: $responsiveMenuWidth){
+    
+
+ .main-nav .ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item{
+      margin-left:0px;
+  } 
+    
+    .menu-horizontal {
+        width: 100%;
+    }
+
+    .ms-core-listMenu-horizontalBox, .ms-core-listMenu-horizontalBox ul {
+    display:block;
+    }
+    
+    .ms-core-listMenu-horizontalBox li.static, .ms-core-listMenu-horizontalBox  a.static, .ms-core-listMenu-horizontalBox span.static {
+        width: 100%;
+    }
+    
+}
+
+
+/*********************************************
+ End ResponsiveMenu.sass variables
+*********************************************/
+
+/** jquery ui datepicker overides ***/
+
+ .ui-datepicker-header {
+	background:$eventsfilter-hightlight-color;
+}
+
+ .ui-datepicker .ui-datepicker-prev-hover,
+ .ui-datepicker .ui-datepicker-next-hover,
+ .ui-datepicker .ui-datepicker-next,
+ .ui-datepicker .ui-datepicker-prev {
+
+
+    &:hover{
+        background:darken($eventsfilter-hightlight-color,10%);
+    }
+}
+
+ td .ui-state-active,
+ td .ui-state-hover {
+	background: $eventsfilter-hightlight-color;
+}
+
+/** jquery ui datepicker overides ***/
+
+
+/** main button color for forms and comments **/
+form
+{
+
+    input[type=submit].submit{
+        background:$btn-background-color
+    }
+
+}
+
+
+/**End  main button color for forms and comments **/

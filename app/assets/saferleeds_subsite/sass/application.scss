@@ -4,10 +4,8 @@
 
 //$head-background: #ffffff;
 
-
 // mainMenu.scss -- responsive icons color
 //$menu-link-color:#337ab7;
-
 
 //base.scss
 
@@ -151,11 +149,9 @@ $secondary-button-color:$primary-button-background-color;
 //$light-grey:#DCDEE1;
 //$lighter-grey:#F6F7FA;
 
-
 //form colours
 //$input-color:#212224;
 //$input-border-color:#9DA5B2;
-
 
 //Arrow Link
 //$ArrowLinkBorderColor:#bbcada;
@@ -164,8 +160,36 @@ $secondary-button-color:$primary-button-background-color;
 //responsive menu width
 $responsiveMenuWidth:1200px ;
 
-@import 'base';
+// -------------------------------- Footer varibles
+$footer-bg-color: #058C95;
 
+// -------------------------------- Front end toolkit
+@import 'base_styles/variables';
+@import 'url-helper';
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+@import 'base_styles/mixins';
+@import 'base_styles/base-structure';
+@import 'base_styles/typography';
+@import 'base_styles/buttons';
+@import 'base_styles/form-elements';
+@import 'base_styles/accessibility';
+@import 'base_styles/images';
+@import 'base_styles/tables';
+@import 'base_styles/panel';
+@import 'base_styles/helper-classes';
+@import 'base_styles/browser-alert';
+@import 'base_styles/back-to-top';
+@import 'base_styles/main-menu';
+@import 'base_styles/responsive-menu';
+@import 'base_styles/global-search';
+@import 'base_styles/footer';
+@import 'base_styles/social-media';
+@import 'base_styles/alerts';
+@import 'base_styles/breadcrumb';
+@import 'base_styles/jquery-ui-datepicker';
+@import 'base_styles/media-player';
+@import 'base_styles/lcc-search-box';
+@import 'brand-colors';
 @import '2010-typography-overrides';
 @import 'accordion';
 @import 'accordion-aria';
@@ -204,115 +228,124 @@ $responsiveMenuWidth:1200px ;
 @import 'url-helper';
 @import 'webchat';
 
- .masterhead{
-     border-bottom:1px solid #ddd;
- }
+// New components
+@import 'component_example';
 
- .logo {
-        height:132px;
-        width:500px;
-        background:url(../images/logo.png) center top no-repeat;
-        margin:20px auto;
+.masterhead {
+    border-bottom: 1px solid #ddd;
+}
 
-        @media (max-width: 500px){
-           background-size:80%;
-           height:100px;
-        }
-
+.logo {
+    height: 132px;
+    width: 500px;
+    background: url(../images/logo.png) center top no-repeat;
+    margin: 20px auto;
+    @media (max-width: 500px) {
+        background-size: 80%;
+        height: 100px;
     }
+}
 
+.header-left {
+    width: 100%;
+}
 
-   .header-left{
-       width:100%;
-   }
-
-   .header-right{
-       display:none;
-   }
-
+.header-right {
+    display: none;
+}
 
 .header-right:after {
     content: '';
-    background:url(../images/headerBackground.jpg) top center no-repeat;
-    width:630px;
-    height:400px;
+    background: url(../images/headerBackground.jpg) top center no-repeat;
+    width: 630px;
+    height: 400px;
     float: right;
-    margin-top:-41px;
-
-      @media (max-width: 900px){
-            display: none;
-        }
+    margin-top: -41px;
+    @media (max-width: 900px){
+        display: none;
+    }
 }
 
-
-  .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-tv-selected:link, a.ms-tv-header:hover, a.ms-tv-item:hover {
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-tv-selected:link, a.ms-tv-header:hover, a.ms-tv-item:hover {
     background-color: #f2f2f2;
     color: #058C95;
 }
 
-
 .col-md-8 img {
-   max-width:100%;
+    max-width: 100%;
 }
 
-.col-md-4 h2{
-    font-size:25px;
+.col-md-4 h2 {
+    font-size: 25px;
 }
 
-
-.ms-rtestate-field ul{
-  list-style: disc;
+.ms-rtestate-field ul {
+    list-style: disc;
 }
 
- .groupPromo{ 
-     
-     margin-top:30px;
-     
-     ul li a img {
-     margin-left:-11%;
-     width:auto;
+.groupPromo {      
+    margin-top: 30px;    
+    ul li a img {
+        margin-left: -11%;
+        width: auto;
+        @media screen and (max-width:600px) {
+            display: none;
+        }
+    }
+}
 
-     @media screen and (max-width:600px){
-         display:none;
-     }
- }
- }
+.ms-core-listMenu-horizontalBox {
+    padding-top: 6px;
+}
 
-  .ms-core-listMenu-horizontalBox{
-      padding-top:6px;
-  }
-
-
- .ms-core-listMenu-horizontalBox li.static>.ms-core-listMenu-item {
+.ms-core-listMenu-horizontalBox li.static>.ms-core-listMenu-item {
     max-width: 200px;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
     height: 86px;
-    border-right:1px solid #0b7a82;
-
+    border-right: 1px solid #0b7a82;
 }
 
- .ms-core-listMenu-horizontalBox li.static:first-of-type>.ms-core-listMenu-item{
-     border-left:1px solid #0b7a82;
- }
-
+.ms-core-listMenu-horizontalBox li.static:first-of-type>.ms-core-listMenu-item {
+    border-left: 1px solid #0b7a82;
+}
 
 a.promo {
-    margin-top:30px;
-    display:block;
+    margin-top: 30px;
+    display: block;
     img {
-        width:100%;
+        width: 100%;
     }
 }
 
 .btn, .button, .iconLinks li .link, .iconLinks li a,.ms-rteElement-button {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 footer.main a {
-    text-decoration:none;
+    text-decoration: none;
     &:hover{
-        text-decoration:underline;
+        text-decoration: underline;
     }
+}
+
+// -------------------------------- Footer override
+footer.main {
+    .container-fluid {
+        .logo-footer {
+            span {
+                background: url(../../images/lcc-logo-white-01.svg) center center/100% 100% no-repeat;
+            }
+        }
+    }
+}
+
+// ---------------------------------- Search bar overrides
+.ms-srch-sb>.ms-srch-sb-searchLink {
+    border-left: 1px solid #414141;
+}
+.ms-srch-sb>input {
+    background: #F3F3F4 !important;
+    padding-left: 15px !important;
 }
