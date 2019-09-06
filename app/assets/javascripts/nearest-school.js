@@ -30,13 +30,7 @@
                     $("#tblSchool").hide();
 
                     var pCode = $('#postcode').val();
-                    // $.getJSON('https://nearestschoolapi-test.leeds.gov.uk/api/GetSchoolNearestToPostcode_Result/' + pCode.replace(/\s/g, ''), function (data) {
-                   //    $.getJSON('https://nearestschoolapi-test.leeds.gov.uk:888/api/GetSchoolNearestToPostcode_Result/' + pCode.replace(/\s/g, ''), function (data) {
-
-                     //  $.getJSON('https://tapstegwss01.leeds.gov.uk:890/api/GetSchoolNearestToPostcode_Result/' + pCode.replace(/\s/g, ''), function (data) {
-                      //   $.getJSON('https://tapstegwss01.leeds.gov.uk:987/api/GetSchoolNearestToPostcode_Result/' + pCode.replace(/\s/g, ''), function (data) {
-                       $.getJSON('https://api-nearestschool.leeds.gov.uk/api/GetSchoolNearestToPostcode_Result/' + pCode.replace(/\s/g, ''), function (data) {
-
+                       $.getJSON('https://api-nearestschool-test.leeds.gov.uk/api/GetSchoolNearestToPostcode_Result/' + pCode.replace(/\s/g, ''), function (data) {
 
                         if (data.length == 0) {
                             $("#lblMessage").html('No results returned.');
