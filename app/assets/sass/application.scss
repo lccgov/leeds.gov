@@ -265,3 +265,9 @@ $input-border-color:$grey;
 html {
     background-color: $blue;
 }
+
+.hero-lcc__search-btn-wrapper {
+    .btn {
+        &:focus {box-shadow:none;}
+    }
+}
