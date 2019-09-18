@@ -11,6 +11,7 @@
 //= require nearest-school
 //= require contact-us-form
 //= require survey
+//= require details-polyfill
 //= require component-related-pages
 //= require_directory compiled
 
