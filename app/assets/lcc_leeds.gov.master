@@ -143,13 +143,13 @@
                                             <div id="header-custom" class="header-custom"> 
                                                 <div class="header-button">
                                                 <a title="My Account" class="btn-account" href="/pages/my-account.aspx"> 
-                                                    <span>My Account</span>
+                                                    <span class="sr-only">My Account link</span><span>My Account</span>
                                                 </a>
                                             </div>                                
                                             </div>                                  
                                             <div class="header-nav">
                                                 <a class="search" href="#">
-                                                    <span class="sr-only">Toggle </span><span>Search</span>
+                                                    <span class="sr-only">Toggle website search</span><span>Search</span>
                                                 </a>
                                                 <div class="nav-search" id="nav-search" role="search">
                                                     <div class="input-group">
