@@ -148,8 +148,9 @@
                                             </div>                                
                                             </div>                                  
                                             <div class="header-nav">
-                                                <a class="search" href="#">
-                                                    <span class="sr-only">Toggle website search</span><span>Search</span>
+                                                <a class="search" href="#" title="Toggle website search">
+                                                    <span class="sr-only">Toggle website search</span>
+                                                    <span>Search</span>
                                                 </a>
                                                 <div class="nav-search" id="nav-search" role="search">
                                                     <div class="input-group">
