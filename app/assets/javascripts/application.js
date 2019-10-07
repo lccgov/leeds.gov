@@ -12,6 +12,7 @@
 //= require contact-us-form
 //= require survey
 //= require details-polyfill
+//= require alert-cookie
 //= require component-related-pages
 //= require_directory compiled
 
