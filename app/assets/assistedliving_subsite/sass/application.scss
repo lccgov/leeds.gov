@@ -261,20 +261,9 @@ $footer-bg-color: #4765a3;
 
 .header-left {
     width: 100%;
-    &:after {
-        content: 'Assistive Technology services and information for disabled adults, children, older people and the professionals who support them';
-        float: right;
-        color: #ffffff;
-        position: absolute;
-        right: 0px;
-        font-size: 20px;
-        top: 80px;
-        text-align: right;
-        padding: 0 15px 0 150px;
-        max-width: 700px;        
-        @media screen and (max-width:768px) {
-            display: none;
-        }
+    &__intro {float: right; position: absolute; right: 0; font-size: 20px; top: 80px; text-align: right; padding: 0 15px 0 150px; max-width: 700px;
+        @media only screen and (max-width: 768px) { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        p {color: #fff;margin: .3em 0 .3em; line-height: 1.5;}
     }
 }
 
