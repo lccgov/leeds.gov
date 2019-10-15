@@ -13,6 +13,7 @@
 //= require survey
 //= require details-polyfill
 //= require alert-cookie
+//= require forms
 //= require component-related-pages
 //= require_directory compiled
 
@@ -64,12 +65,33 @@ function randomImage(){
 
 document.addEventListener("DOMContentLoaded", randomImage);
 
-// hide site button on domestic violence subsite
-$(document).ready(function() {    
+
+$(document).ready(function() {
+
+    // hide site button on domestic violence subsite
     $("#hide-site").on("click", function() {
         window.open("http://bbc.co.uk", "_newtab");
         window.location.replace('http://google.com');
     });
+
+    //input block label
+    if($('.form-group--radio').length > 0) {
+        $('.form-group--radio > input').on('click', function() {
+            $('.form-group--radio').removeClass('display');
+            $(this).parent().addClass('display');
+        });
+
+        $('.option--sub > input').on('click', function() {
+            $('.option--sub').removeClass('display');
+            $(this).parent().addClass('display');
+        });
+
+    } else {
+        $('input:radio').click(function() {
+            $('input:radio[name='+$(this).attr('name')+']').parent().removeClass('active');
+                $(this).parent().addClass('active');
+        });
+    }
 });
 
 var subsite = window.location.pathname.split("/")[1]; 
