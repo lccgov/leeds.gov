@@ -22,7 +22,8 @@ module LCC.Modules {
             this.Notes = data.Cells.results[4].Value || "";
             let notified = data.Cells.results[6].Value || "";
             let notifiedDate = new Date(notified);
-            this.Notified =  notifiedDate.format("dd/MM/yyyy HH:MM tt");
+            // this.Notified =  notifiedDate.format("dd/MM/yyyy HH:MM tt");
+            this.Notified =  notifiedDate.format("dd/MM/yyyy");
             this.AnimalLocation = data.Cells.results[5].Value || "";
             let modified = data.Cells.results[7].Value;
             let displayDate = new Date(modified);
