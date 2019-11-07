@@ -44,7 +44,8 @@ module LCC.Modules {
 
                     let hostUrl = document.location.protocol + "//" + document.location.host;
                     let listUrl = document.location.protocol + "//" + document.location.host + "/Lists/Dead Animals Register/*";
-                    let url = "'ContentTypeId:\"0x01008458AFE154C4F54A9EC653F8A7C5CC8C0068F6C6CFF629174C93D79B84C46FFCB3*\" Path:\"" + listUrl + "\"'&QueryTemplatePropertiesUrl='spfile://webroot/queryparametertemplate.xml'&selectproperties='Title,SRRefOWSTEXT,Notes1OWSMTXT,AnimalLocationOWSMTXT,NotifiedOWSDATE,LastModifiedTime,IncidentImgOWSTEXT,IncidentMoreInfoLinkOWSTEXT'&sortlist='LastModifiedTime:descending'";
+                    //let url = "'ContentTypeId:\"0x01008458AFE154C4F54A9EC653F8A7C5CC8C0068F6C6CFF629174C93D79B84C46FFCB3*\" Path:\"" + listUrl + "\"'&QueryTemplatePropertiesUrl='spfile://webroot/queryparametertemplate.xml'&selectproperties='Title,SRRefOWSTEXT,Notes1OWSMTXT,AnimalLocationOWSMTXT,NotifiedOWSDATE,LastModifiedTime,IncidentImgOWSTEXT,IncidentMoreInfoLinkOWSTEXT'&sortlist='LastModifiedTime:descending'";
+                    let url = "'ContentTypeId:\"0x01008458AFE154C4F54A9EC653F8A7C5CC8C0068F6C6CFF629174C93D79B84C46FFCB3*\" Path:\"" + listUrl + "\"'&QueryTemplatePropertiesUrl='spfile://webroot/queryparametertemplate.xml'&selectproperties='Title,SRRefOWSTEXT,Notes1OWSMTXT,AnimalLocationOWSMTXT,NotifiedOWSDATE,LastModifiedTime,IncidentImgOWSTEXT,IncidentMoreInfoLinkOWSTEXT'&sortlist='RefinableDate04:descending'";
 
                     let query: LCC.Services.ISearchQuery = {
                         queryText: url
