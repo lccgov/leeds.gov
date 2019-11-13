@@ -137,7 +137,7 @@
                                 <div class="container-fluid">
                                     <div class="header-wrapper">
                                         <div class="header-logo">
-                                            <a href="\" title="Go to the homepage" class="logo"><span class="sr-only">Go to home page</span></a>
+                                            <a href="/" title="Go to the homepage" class="logo">Leeds.gov.uk <span class="sr-only"> Go to home page</span></a>
                                         </div>
                                         <div class="header-content">
                                             <div id="header-custom" class="header-custom"> 
