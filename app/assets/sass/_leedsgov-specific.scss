@@ -128,3 +128,49 @@
         text-decoration:none;
     }
 }
+
+.sideNav { border-bottom: 5px solid #e5f1f5;
+    h3 {margin-bottom:0;}
+    ul {
+        li { margin:0;
+            a {
+                padding: 15px;
+                display: block;
+                border-bottom: 0;
+                text-decoration: none;
+                font-weight: bold;
+                &.active, &:hover {
+                    background: #e5f1f5;
+                    color: #007299;
+                }
+            }
+            // &:first-of-type {
+            //     a {
+            //         background: #007299;
+            //         color: #fff;
+            //     }
+            // }
+            &:last-of-type {
+                a {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+aside.col-md-4 {
+    h2 {
+        &.ms-webpart-titleText {
+            font-weight: 700 !important;
+            padding-bottom: 10px !important;
+            margin:0 !important;
+        }
+    }
+    .ms-webpart-chrome-title {
+        margin-bottom:0;
+    }
+    .js-webpart-titleCell {
+        display: block;
+    }
+}
