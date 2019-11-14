@@ -216,44 +216,8 @@ gulp.task('sass:subsites', ['sass'], (done) => {
     }));
 });
 
-//Add subsite masterpages
-gulp.task('sync:subsites_master', ['sass:subsites'], (done) => {
-    return gulp.src('app/assets/*_subsite/', ['!app/assets/*_subsite/**/*.*'])
-        .pipe(foreach(function(stream, folder) {  
-            var subsiteName = folder.path.split(path.sep).pop();
-            
-            var replacements = {};
-            replacements.css =  util.format('/_catalogs/masterpage/public/%s/stylesheets/application.css', subsiteName);
-
-            var footerPath = [folder.path, path.sep, 'footer.ihtml'].join('');
-            if(fileExists(footerPath)) {
-                var footerSource = fs.readFileSync(footerPath, "utf8");
-                replacements.footerScript = footerSource;
-            }
-
-            if(_.includes(manifest.footerSubsites, subsiteName))
-            {
-                replacements.footerCustom = util.format('<CQWPFooter:ContentByQueryWebPart runat="server" ItemStyle="NoImage" GroupStyle="DefaultHeader" WebUrl="~sitecollection/" ItemXslLink="/Style Library/XSL Style Sheets/RC_ReusableContent.xsl" ListName="Reusable Content" FilterField1="Title" Filter2ChainingOperator="Or" FilterDisplayValue1="%s" FilterValue1="%s" FilterType1="Text" DataMappingViewFields="{fa564e0f-0c70-4ab9-b863-0177e6ddd247},Text;{82dd22bf-433e-4260-b26e-5b8360dd9105},HTML;" GroupByDirection="Desc" SortByDirection="Desc" ItemLimit="1" DataMappings="Description:{82dd22bf-433e-4260-b26e-5b8360dd9105},ReusableHtml,HTML;|ImageUrl:|Title:{fa564e0f-0c70-4ab9-b863-0177e6ddd247},Title,Text;|LinkUrl:|" ServerTemplate="100" UseCopyUtil="True" ShowUntargetedItems="False" EnableOriginalValue="False" ViewFlag="0" ViewContentTypeId="" ListId="00000000-0000-0000-0000-000000000000" PageSize="-1" UseSQLDataSourcePaging="True" DataSourceID="" ShowWithSampleData="False" AsyncRefresh="False" ManualRefresh="False" AutoRefresh="False" AutoRefreshInterval="60" InitialAsyncDataFetch="False" Title="&lt;%$Resources:cmscore,ContentQueryWebPart_Title%&gt;" FrameType="None" SuppressWebPartChrome="False" Description="&lt;%$Resources:cmscore,ContentQueryWebPart_Description%&gt;" IsIncluded="True" ZoneID="ImportedPartZone" PartOrder="0" FrameState="Normal" AllowRemove="True" AllowZoneChange="True" AllowMinimize="True" AllowConnect="True" AllowEdit="True" AllowHide="True" IsVisible="True" DetailLink="" HelpLink="" HelpMode="Modeless" Dir="Default" PartImageSmall="" MissingAssembly="&lt;%$Resources:cmscore,WebPartImportError%&gt;" ImportErrorMessage="&lt;%$Resources:cmscore,WebPartImportError%&gt;" PartImageLarge="" IsIncludedFilter="" ExportControlledProperties="True" ConnectionID="00000000-0000-0000-0000-000000000000" ID="g_64820d85_08aa_41d4_b223_3991f4fa728f" ChromeType="None" ExportMode="All" __MarkupType="vsattributemarkup" __WebPartId="{64820d85-08aa-41d4-b223-3991f4fa728f}" WebPart="true" Height="" Width=""> \
-                    <Xsl> \
-                        <xsl:stylesheet version="1.0" exclude-result-prefixes="xsl cmswrt x"> \
-                            <xsl:import href="/Style Library/Footer XSL Style Sheets/Header.xsl" /> \
-                            <xsl:import href="/Style Library/XSL Style Sheets/RC_ReusableContent.xsl" /> \
-                            <xsl:import href="/Style Library/Footer XSL Style Sheets/ContentQueryMain.xsl" /> \
-                        </xsl:stylesheet> \
-                    </Xsl> \
-                    <SampleData></SampleData> \
-                    <DataFields /> \
-                    </CQWPFooter:ContentByQueryWebPart>', subsiteName, subsiteName);
-            }
-
-            return gulp.src("node_modules/lcc_templates_sharepoint/views/lcc-template.master")
- 	            .pipe(htmlreplace(replacements, {keepUnassigned:true}))
-                .pipe(rename(util.format("lcc_%s.master", subsiteName))).pipe(gulp.dest("./dist/_catalogs/masterpage"));
-        }));
-});
-
 // load settings from file/args
-gulp.task('pre-flight', ['sync:subsites_master'],
+gulp.task('pre-flight', ['sass:subsites'],
     (done) => {
         gutil.log(gutil.colors.green('Looking for settings'));
         if(fileExists('./settings.json')) {
@@ -325,5 +289,5 @@ gulp.task('sp-upload', ['prompt'], (done) => {
     );
 });
 
-gulp.task('default',  ['clean:dist', 'sync:assets', 'sync:lcc_frontend_toolkit', 'compile:typescript', 'sync:javascripts', 'sync:lcc_sharepoint_toolkit_webparts', 'sync:lcc_sharepoint_toolkit_displaytemplates', 'sync:lcc_sharepoint_toolkit_xslstylesheets', 'sync:lcc_templates_sharepoint_assets', 'sync:lcc_templates_sharepoint_stylesheets', 'sync:lcc_templates_sharepoint_javascript', 'sync:lcc_templates_sharepoint_views', 'sync:lcc_templates_sharepoint_master', 'sass', 'sass:subsites', 'sync:subsites_master']);
+gulp.task('default',  ['clean:dist', 'sync:assets', 'sync:lcc_frontend_toolkit', 'compile:typescript', 'sync:javascripts', 'sync:lcc_sharepoint_toolkit_webparts', 'sync:lcc_sharepoint_toolkit_displaytemplates', 'sync:lcc_sharepoint_toolkit_xslstylesheets', 'sync:lcc_templates_sharepoint_assets', 'sync:lcc_templates_sharepoint_stylesheets', 'sync:lcc_templates_sharepoint_javascript', 'sync:lcc_templates_sharepoint_views', 'sync:lcc_templates_sharepoint_master', 'sass', 'sass:subsites']);
 gulp.task('upload',  ['default', 'sp-upload']);
