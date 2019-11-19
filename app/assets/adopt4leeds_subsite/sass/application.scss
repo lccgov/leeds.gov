@@ -198,6 +198,7 @@ $footer-bg-color: #D8DEE3;
 
 // New components
 @import 'component_example';
+@import '../sass/decision-tree';
 
 .btn{
     position:relative;

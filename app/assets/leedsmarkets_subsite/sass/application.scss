@@ -234,6 +234,7 @@ $footer-bg-color: #000000;
 
 // New components
 @import 'component_example';
+@import '../sass/decision-tree';
 
 .logo {
     background: url('../images/logoKirkgate.jpg') left center no-repeat;

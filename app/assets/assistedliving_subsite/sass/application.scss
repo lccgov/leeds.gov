@@ -242,6 +242,7 @@ $footer-bg-color: #4765a3;
 
 // New components
 @import 'component_example';
+@import '../sass/decision-tree';
 
 .masterhead {
     @media (min-width: 1200px) {

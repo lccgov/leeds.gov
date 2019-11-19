@@ -249,6 +249,7 @@ $panel-alt-color:white;
 
 // New components
 @import 'component_example';
+@import '../sass/decision-tree';
 
 @mixin btn-border($border-color,
 $border-width,
