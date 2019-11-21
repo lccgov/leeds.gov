@@ -275,3 +275,15 @@ html {
         &:focus {box-shadow:none;}
     }
 }
+
+.pre-title {
+    font-size: 22px;
+    font-family: Montserrat,sans-serif,sans-serif;
+    margin: 25px 0 0 0 !important;
+    font-weight: 700;
+    color: $dark-grey;
+    @media (min-width: 768px) {
+        font-size: 24px;
+        margin: 50px 0 0 0 !important;
+    }
+}
