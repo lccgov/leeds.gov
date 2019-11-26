@@ -232,6 +232,7 @@ $footer-bg-color: #058C95;
 
 // New components
 @import 'component_example';
+@import '../sass/decision-tree';
 
 .masterhead {
     border-bottom: 1px solid #ddd;

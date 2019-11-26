@@ -226,7 +226,7 @@ $input-border-color:$grey;
 //@import 'content-assets'; //subsite only
 //@import 'content-link'; //subsite only
 @import 'description-list';
-@import 'doc-list';
+@import 'override/doc-list';
 @import 'events-search-results';
 //@import 'events-webparts';
 @import 'group-promo';
@@ -263,6 +263,7 @@ $input-border-color:$grey;
 
 // New components
 @import 'component_example';
+@import 'decision-tree';
 
 //site background
 html {
@@ -272,5 +273,17 @@ html {
 .hero-lcc__search-btn-wrapper {
     .btn {
         &:focus {box-shadow:none;}
+    }
+}
+
+.pre-title {
+    font-size: 22px;
+    font-family: Montserrat,sans-serif,sans-serif;
+    margin: 25px 0 0 0 !important;
+    font-weight: 700;
+    color: $dark-grey;
+    @media (min-width: 768px) {
+        font-size: 24px;
+        margin: 50px 0 0 0 !important;
     }
 }

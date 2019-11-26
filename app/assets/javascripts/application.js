@@ -15,6 +15,7 @@
 //= require alert-cookie
 //= require forms
 //= require component-related-pages
+//= require decision-tree
 //= require_directory compiled
 
 //removes top margin frpm right hand column if empty

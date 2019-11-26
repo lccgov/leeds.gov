@@ -256,6 +256,7 @@ $footer-bg-color: #F0EFEF;
 
 // New components
 @import 'component_example';
+@import '../sass/decision-tree';
 
 body{
     font-weight:200 !important;

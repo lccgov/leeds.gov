@@ -242,6 +242,7 @@ $footer-bg-color: #ABCE1E;
 
 // New components
 @import 'component_example';
+@import '../sass/decision-tree';
 
 .header-nav-container .logo {
     background:url(../images/logo.png) left center  no-repeat;
