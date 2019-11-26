@@ -1245,9 +1245,12 @@ footer{
 .footer-bottom {
     .footer-logos {
         max-width: 290px;
-        margin-left: auto;
         padding-right: 15px;
         padding-left: 15px;
+
+        @media screen and (min-width:600px) {
+            margin-left: auto;
+        }
 
         ul {
             padding: 0;
@@ -1257,6 +1260,10 @@ footer{
             li {
                 &:first-of-type {
                     margin-right: 20px;
+                }
+
+                a { display:block;
+                    &:hover {opacity: 0.7;}
                 }
             }
         }
