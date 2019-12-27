@@ -1,0 +1,50 @@
+// Accordion overrides
+.js {
+    .campaign {
+        .accordion {
+            border: 0;
+        }
+
+        .accordion__heading {
+            border: 0;
+        }
+
+        .accordion__trigger {
+            background: #F2F2F2;
+            border: 0;
+            margin-top: 15px;
+            padding-left: 66px;
+            @media (min-width: 768px) {
+                padding-left: 77px;
+            }
+            &:after {
+                background: $campaign-accordion-indicator-bg;
+                padding: 0 20px;
+                top: 0;
+                left: 0;
+                height: 100%;
+                line-height: 49px;
+                color: $campaign-accordion-indicator-text-colour;
+                @media (min-width: 768px) {
+                    line-height: 63px;
+                }
+            }
+            &:focus {
+                background: $yellow;
+                color: $black;
+                &:after {
+                    background: $yellow;
+                    color: $black;
+                }
+            }
+        }
+        .accordion__panel[aria-hidden=false] {
+            border-left: 52px solid $campaign-accordion-indicator-bg;
+            padding-left: 15px;
+            @media (min-width: 768px) {
+                border-left: 55px solid $campaign-accordion-indicator-bg;
+                padding-left: 25px;
+            }
+        }
+    }
+}

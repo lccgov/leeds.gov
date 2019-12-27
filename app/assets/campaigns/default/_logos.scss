@@ -1,0 +1,34 @@
+.campaign-logos-background {
+    background: $campaign-logos-bg;
+    padding: 30px 0 15px 0;
+    @media (min-width: 768px) {
+        padding: 60px 0 45px 0;
+    }
+}
+
+.campaign-logos {    
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+    }   
+    img {
+        margin-bottom: 15px;
+        display: block;
+        @media (min-width: 768px) {
+            margin: 0 6px 15px 6px;
+        }
+    }
+}
+
+// Small campaign logos
+.campaign-logos-small {
+    background: $campaign-logos-bg;
+    border-left: 4px solid $campaign-logos-sm-border;
+    padding: 30px;
+    margin-bottom: 30px;
+    @media (min-width: 768px) {
+        margin-bottom: 60px;
+    }
+}

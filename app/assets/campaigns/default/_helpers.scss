@@ -1,0 +1,12 @@
+.campaign {
+    .campaign-margin-bottom {
+        margin-bottom: 30px;
+        @media (min-width: 768px) {
+            margin-bottom: 60px;
+        }
+    }
+
+    .no-marg-top {
+        margin-top: 0 !important;
+    }
+}

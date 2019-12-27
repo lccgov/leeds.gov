@@ -1,0 +1,27 @@
+.campaign-header {
+    background: $hero-background;
+    padding: 30px;
+    margin-top: -60px;
+    margin-bottom: 30px;
+    @media (min-width: 768px) {
+        padding: 60px;
+        margin-bottom: 60px;
+    }
+    @media (min-width: 992px) {
+        margin-top: -120px;
+    }
+}
+
+.campaign-header-title {
+    margin: 0 0 5px 0;
+    color: $hero-title;
+}
+
+.campaign-header-text {
+    margin: 0 !important;
+    color: $hero-text;    
+    font-size: 19px;
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+}

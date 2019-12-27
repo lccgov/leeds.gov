@@ -1,0 +1,17 @@
+.campaign-highlight-text-container {
+    border-top: 4px solid $highlighted-text-border;
+    padding: 30px 0;
+    border-bottom: 4px solid $highlighted-text-border;
+    margin-bottom: 30px;
+    @media (min-width: 768px) {
+        padding: 60px 0;
+        margin-bottom: 60px;
+    }
+}
+
+.campaign-highlight-text {
+    font-family: $font-secondary, sans-serif;
+    font-weight: $header-font-weight;
+    @include heading-large();
+    margin: 0 !important;
+}
