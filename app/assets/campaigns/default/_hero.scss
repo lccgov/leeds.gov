@@ -1,5 +1,5 @@
 .campaign-header {
-    background: $hero-background;
+    background: $campaign-hero-background;
     padding: 30px;
     margin-top: -60px;
     margin-bottom: 30px;
@@ -14,14 +14,16 @@
 
 .campaign-header-title {
     margin: 0 0 5px 0;
-    color: $hero-title;
+    color: $campaign-hero-title;
 }
 
 .campaign-header-text {
-    margin: 0 !important;
-    color: $hero-text;    
-    font-size: 19px;
-    @media (min-width: 768px) {
-        font-size: 24px;
+    .ms-rtestate-field p, p {
+        margin: 0 !important;
+        color: $campaign-hero-text;    
+        font-size: 19px;
+        @media (min-width: 768px) {
+            font-size: 24px;
+        }
     }
 }

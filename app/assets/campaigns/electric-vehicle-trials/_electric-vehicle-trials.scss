@@ -1,0 +1,12 @@
+@import 'variables';
+
+.electric-vehicle-trials { 
+    @import '../default/components';
+}
+
+// Accordion overrides
+.js {
+    .electric-vehicle-trials {
+        @import '../default/accordion';
+    }
+}

@@ -266,7 +266,13 @@ $input-border-color:$grey;
 @import 'decision-tree';
 
 // Campaigns
-@import '../campaigns/default/campaigns';
+
+//EV trial campaign
+@import '../campaigns/default/default';
+@import '../campaigns/electric-vehicle-trials/electric-vehicle-trials';
+
+
+
 
 //site background
 html {

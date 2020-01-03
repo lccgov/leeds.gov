@@ -1,36 +1,37 @@
 // ------ Hero content
-$hero-background: #007299;
-$hero-title: #ffffff;
-$hero-text: #ffffff;
+$campaign-hero-background: #007299 !default;
+$campaign-hero-title: #ffffff !default;
+$campaign-hero-text: #ffffff !default;
 
 // ------ Highlighted text
-$highlighted-text-border: #007299;
+$campaign-highlighted-text-border: #007299 !default;
 
 // ------ Panel with images
-$panel-img-background-colour: #007299;
-$panel-img-heading-colour: #ffffff;
-$panel-img-text-colour: #ffffff;
+$campaign-panel-img-background-colour: #007299 !default;
+$campaign-panel-img-heading-colour: #ffffff !default;
+$campaign-panel-img-text-colour: #ffffff !default;
 
 // ------ Logos 
-$campaign-logos-bg: #F6F7F8;
-$campaign-logos-sm-border: #007299;
+$campaign-logos-bg: #F6F7F8 !default;
+$campaign-logos-sm-border: #007299 !default;
 
 // ------ Pods
 // background
-$campaign-pod-background: #007299;
-$campaign-pod-one-background: #007299;
-$campaign-pod-two-background: #007299;
-$campaign-pod-three-background: #007299;
+$campaign-pod-background: #007299 !default;
+$campaign-pod-one-background: #007299 !default;
+$campaign-pod-two-background: #007299 !default;
+$campaign-pod-three-background: #007299 !default;
 
 // text colour
-$campaign-pod-text-colour: #ffffff;
-$campaign-pod-one-text-colour: #ffffff;
-$campaign-pod-two-text-colour: #ffffff;
-$campaign-pod-three-text-colour: #ffffff;
+$campaign-pod-text-colour: #ffffff !default;
+$campaign-pod-one-text-colour: #ffffff !default;
+$campaign-pod-two-text-colour: #ffffff !default;
+$campaign-pod-three-text-colour: #ffffff !default;
 
 // ------ Accordion
-$campaign-accordion-indicator-bg: #007299;
-$campaign-accordion-indicator-text-colour: #ffffff;
+$campaign-accordion-header-text-colour: #007299 !default;
+$campaign-accordion-indicator-bg: #007299 !default;
+$campaign-accordion-indicator-text-colour: #ffffff !default;
 
 // ------ Blockquotes
-$campaign-blockquote-colour: #007299;
+$campaign-blockquote-colour: #007299 !default;

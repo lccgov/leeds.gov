@@ -1,0 +1,13 @@
+@import 'variables';
+
+.campaign {    
+    margin-bottom: -50px;
+    @import 'components';
+}
+
+// Accordion overrides
+.js {
+    .campaign {
+        @import 'accordion';
+    }
+}
