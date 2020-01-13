@@ -156,6 +156,23 @@ $panel-event-date-color:white;
 $hightlight-color:$base-link-color;
 $panel-alt-color:white;
 
+// Campaign pages
+$campaign-hero-background: $orange;
+$campaign-hero-title: #ffffff;
+$campaign-hero-text: #ffffff;
+
+// ------ Pods
+// background
+$campaign-pod-background: $orange;
+$campaign-pod-one-background: $orange;
+$campaign-pod-two-background: $orange;
+$campaign-pod-three-background: $orange;
+
+// ------ Panel with images
+$campaign-panel-img-background-colour: #2c3e50;
+$campaign-panel-img-heading-colour: #ffffff;
+$campaign-panel-img-text-colour: #ffffff;
+
 //- FRONT END TOOLKIT
 @import 'base_styles/variables';
 @import 'url-helper';
@@ -250,6 +267,9 @@ $panel-alt-color:white;
 // New components
 @import 'component_example';
 @import '../sass/decision-tree';
+
+// Campaign styling
+@import '../campaigns/default/default';
 
 @mixin btn-border($border-color,
 $border-width,
@@ -546,15 +566,20 @@ a.search span {
         margin-top: -70px;
     }
     @media (min-width: 767px) {
-        height: 90vh;
+        height: auto;
     }
     .hero-lcc {
         background: rgba(5, 38, 53, .7);
+        padding: 90px 0 50px 0;
+        @media (max-width: 767px) {
+            padding: 70px 0 25px 0;
+        }
         .hero-lcc__content {
             max-width: 850px;
-            margin-top: 55px;
+            margin-top: 0;
+            padding: 0 15px;
             @media (max-width: 990px) {
-                margin-top: 35px;
+                margin-top: 0px;
             }
             .hero-lcc__intro {
                 max-width: 35em;
@@ -565,7 +590,6 @@ a.search span {
                         margin-bottom: 15px;
                     }
                     .hero-lcc__intro-secondary {
-                        margin-bottom: 40px;
                         font-size: 30px;
                     }
                 }
@@ -573,6 +597,9 @@ a.search span {
                     .hero-lcc__intro-header {
                         margin: 0 0 10px;
                     }
+                }
+                .hero-lcc__intro-secondary {
+                    margin-bottom: 0;
                 }
             }
             .hero-lcc__actions {
@@ -1266,6 +1293,72 @@ footer{
                     &:hover {opacity: 0.7;}
                 }
             }
+        }
+    }
+}
+
+// Promo overrides
+.mega-promo .mega-promo__item a:after {
+    display: none;
+}
+
+.mega-promo {
+    .mega-promo__item {
+        &.quarter, &.third {
+            .details {
+                summary {
+                    &:focus {
+                        padding-bottom: 0 !important;
+                    }
+                }
+            }
+            a {
+                padding-bottom: 0 !important;
+            }
+        }
+        a {
+            background: $orange;
+            min-height: 150px;
+            .mega-promo__content {
+                padding: 15px 40px 15px 15px !important;
+                position: relative;
+                .mega-promo__header, .mega-promo__secondary {
+                    color: #ffffff;
+                }
+                &:after {
+                    font-family: FontAwesome;
+                    content: $promo-arrow;
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                    color: #ffffff;
+                    font-size: 16px;
+                }  
+            } 
+            &:hover, &:focus {
+                background: $dark-orange;
+            }
+        }
+        &.mega-promo__item-solid {
+            a {
+                display: flex;
+                width: 100%;    
+                align-items: flex-start;
+                padding-bottom: 0;
+                background: #2c3e50;
+                .mega-promo__content {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Campaign overrides
+.campaign {
+    .panel.img {
+        .img-container {
+            clip-path: none;
         }
     }
 }
