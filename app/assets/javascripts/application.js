@@ -104,6 +104,14 @@ $(document).ready(function () {
             $('.masterhead').after('<div class="backto"><div class="container-fluid"><a href="/museumsandgalleries/home" class="link-back">Back to Museums and Galleries</a></div></div>');
         }
     }
+
+    if( $('.main-nav').length ) {
+        $('li.selected').each(function () {
+            var current = $('.ms-hidden').html(),
+                spaced = '&nbsp;'+ current;
+            $('li.selected .ms-hidden').html(spaced);
+        });
+    }
 });
 
 //ARIA accordion
