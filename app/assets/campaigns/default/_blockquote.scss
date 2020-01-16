@@ -46,8 +46,8 @@
 
 .campaign-blockquote-version-two {
     border-left: 0;
-    border-top: 4px solid $black;
-    border-bottom: 4px solid $black;
+    border-top: 4px solid $campaign-block-quote-line-colour;
+    border-bottom: 4px solid $campaign-block-quote-line-colour;
     margin: 28px 0 59px;
     padding: 47px 0 52px 0;
     @media (min-width: 641px) {

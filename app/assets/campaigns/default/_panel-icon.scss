@@ -1,0 +1,32 @@
+.panel.panel-icon {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px 0;        
+    background: $campaign-panel-icon-bg-colour;
+    padding: 30px;    
+    align-items: flex-start;
+    @media (min-width: 768px) {
+        margin: 0 0 60px 0;
+        flex-direction: row;
+        min-width: 50%;
+    } 
+    img {
+        max-width: 100%;
+    }
+    .content { 
+        padding: 30px 0 0 0;
+        max-width: 650px;
+        @media (min-width: 768px) {
+            padding: 0 0 0 30px;
+        }
+        h2,h3,h4 {
+            color: $campaign-panel-icon-heading-colour;
+        }
+        p {
+            color: $campaign-panel-icon-text-colour;
+            a {
+                color: $campaign-panel-icon-text-colour;
+            }
+        }
+    }
+}
