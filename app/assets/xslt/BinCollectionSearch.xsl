@@ -29,6 +29,7 @@
         
         </div>
       </xsl:if>
+      <!--  We are removing the brown bin section until the business confirm the dates are correct
       <xsl:if test="count(/BinRoutes/Routes/BrownBin/Bin) > 0">
         <div class="selectedContainer">
           <h3>
@@ -38,7 +39,7 @@
           <xsl:for-each select="BinRoutes/Routes/BrownBin/Bin">
 
             <xsl:choose>
-              <xsl:when test="@IsHiddenFromPage"> <!-- then i test if the attr exists -->
+              <xsl:when test="@IsHiddenFromPage">
                   <li class="hideFromScreen">
                     <xsl:value-of select="@RouteDate"/>
                   </li>
@@ -55,6 +56,7 @@
             </div>
         </div>
       </xsl:if>
+      -->
       <xsl:if test="count(/BinRoutes/Routes/GreenBin/Bin) > 0">
         <div class="selectedContainer">
           <h3>
