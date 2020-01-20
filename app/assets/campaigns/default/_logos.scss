@@ -27,12 +27,14 @@
 .campaign-logos-small {
     background: $campaign-logos-bg;
     border-left: 4px solid $campaign-logos-sm-border;
-    padding: 30px;
+    padding: 30px 30px 10px 30px;
     margin-bottom: 30px;
     @media (min-width: 768px) {
         margin-bottom: 60px;
     }
     img {
         max-width: 100%;
+        margin-right: 20px;
+        margin-bottom: 20px;
     }
 }
