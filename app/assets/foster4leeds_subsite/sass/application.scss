@@ -1210,15 +1210,18 @@ footer{
     }
 }
 
+.panel-event {
+    @include flexbox();
+    @include flex-direction(column);
+    @media (min-width: 991px) {
+        @include flex-direction(row);
+        @include align-items(stretch);
+    }
+}
+
 .panel-event .panel-event-date {
-    @media (max-width: 767px) {
-        height: 200px;
-        width: 50%;
-    }
-    @media (max-width: 641px) {
-        height: 125px;
-        width: 50%;
-    }
+    position: relative;
+    height: auto;
 }
 
 // Custom panel styling
