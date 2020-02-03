@@ -1365,3 +1365,19 @@ footer{
         }
     }
 }
+
+// Pre-header (lcc logo)
+.pre-header {
+    padding: 10px 15px;
+    text-align: right;
+    @media screen and (min-width:991px) {
+        padding: 15px;
+    }
+    img {
+        display: inline-block;
+        height: 30px;
+        @media screen and (min-width:991px) {
+            height: 40px;
+        }
+    }
+}

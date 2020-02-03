@@ -51,6 +51,13 @@
                     </div>
             </div> 
 
+                <!-- Pre-header -->
+                <div class="pre-header">
+                    <a href="https://www.leeds.gov.uk">
+                        <img class="img-responsive lcc-logo" alt="Leeds city council logo" src="/_catalogs/masterpage/public/foster4leeds_subsite/images/lcc_logo.svg">
+                    </a>
+                </div>
+
                 <!-- Header -->
                 <header class="header-nav-container"> 
                     <div id="header" class="header-lcc">
