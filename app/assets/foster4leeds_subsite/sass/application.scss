@@ -267,6 +267,7 @@ $campaign-panel-img-text-colour: #ffffff;
 // New components
 @import 'component_example';
 @import '../sass/decision-tree';
+@import 'step-by-step';
 
 // Campaign styling
 @import '../campaigns/default/default';

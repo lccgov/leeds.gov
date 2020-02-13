@@ -232,6 +232,7 @@ $white:#fff;
 // New components
 @import 'component_example';
 @import '../sass/decision-tree';
+@import 'step-by-step';
 
 .sectionHeader{
     border-top:1px solid #ddd;
