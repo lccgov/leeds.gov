@@ -246,7 +246,8 @@ body{
     margin-left: 10px;
     margin-right: 0px;
     width: 200px;
-    margin-top: 10px;
+ /*   margin-top: 10px;    */
+    margin-top: 1px;    
     float:left;
 }
 
@@ -521,7 +522,8 @@ body{
     margin-left: 10px;
     margin-right: 0px;
     width: 200px;
-    margin-top: 10px;
+	/*   margin-top: 10px;    */
+    margin-top: 1px;    
     float:left;
 }
 
@@ -622,7 +624,7 @@ display:none;
 
         <div class="binHeader">
 
-            <img class="recycleLogo" src="../images/BinCalender/recycle-logo.jpg" alt="Recycle for leeds logo" />
+            <img class="recycleLogo" src="../images/BinCalender/recycle-logo1.jpg" alt="Recycle for leeds logo" />
 
             <h1>Bin Collection Dates</h1>
             <img class="lccLogo" src="../images/BinCalender/lccLogo.png" alt="Leeds City Council Logo" />
@@ -639,7 +641,7 @@ display:none;
                
 
                 <div class="selectedContainer green">
-                    <h3>Green bin collection days</h3>
+                    <h3>Green bin collection days.</h3>
                     _greenBinData
                   
                 </div>
@@ -648,56 +650,86 @@ display:none;
                     <img src="../images/BinCalender/triangle-green.png" class="triangle" />
                                       <h2>Yes Please!</h2>
                     <p>
-                        Aerosols •
-                        Food tins/drinks cans •
-                        Aluminium foil •
-                        Plastic bags •
-                        Plastic bottles •
-                        Other plastics (Types 1, 2 & 4) •
-                        Paper and card
+                        Paper and cardboard â€¢
+						Metal food tins and drinks cans â€¢
+						Aerosols â€¢
+						Foil â€¢
+						Plastic bottles â€¢
+						Plastic fruit, meat and vegetable trays â€¢
+						Plastic bags (stretchy) â€¢
+						Cartons (Tetra Paks) â€¢
+						Butter and margarine tubs â€¢
+						Yoghurt pots
                     </p>
                     <h2>No thanks!</h2>
-                      <p>Nappies •	
-                         Polystyrene • 
-                         Glass • 
-                         Yoghurt pots and butter tubs • 
-                         Clingfilm • 
-                         Shredded paper  </p>
+                      <p>
+						Food waste â€¢
+						Shredded paper â€¢
+						Polystyrene â€¢
+						Nappies â€¢
+						Batteries â€¢
+						Syringes/needles â€¢
+						Garden waste â€¢
+						Glass â€¢
+						Black, compostable and biodegradable plastic â€¢
+						Textiles 
+						</p>
                     <div class="clear"></div>
                 </div>
 
             </div>
 
-           
+    
+
+
+	
 
             <div id='divBrownBin'  class="binWrapper brownBin">
 
-             
-
                 <div class="selectedContainer brown">
-                    <h3>Brown bin collection days</h3>
+                    <h3>Brown bin collection days.</h3>
                     _brownBinData
-             
                 </div>
+				
+				<!-- remove the below when requested -->
+				<div class="whatGoesIn">
+					<br />
+					<P>We are currently updating the brown bin (garden waste) collection service. This means that your dates may change.</P>
+					<br />
+					<P>When the new brown bin collection dates are finalised, they will be available online and you will receive a letter with the new details. </P>
+				</div>
+				<!-- remove the above when requested -->
 
                 <div class="whatGoesIn">
                     <img src="../images/BinCalender/triangle-brown.png" class="triangle" />
                     <h2>Yes Please!</h2>
                     <p>
-                       Grass cuttings •
-                       Hedge clippings •
-                       Flowers and plants •
-                       Leaves •
-                       Twigs/Small branches •
-                       Weeds •
+                       Grass cuttings â€¢
+                       Hedge clippings â€¢
+                       Flowers and plants â€¢
+                       Leaves â€¢
+                       Twigs/Small branches â€¢
+                       Weeds â€¢
                        Windfall fruit 
                      </p>
                       <h2>No thanks!</h2>
-                      <p>Animal bedding and waste • Stones, soil and food waste • Plant pots and furniture  • Noxious weeds e.g. Japanese knotweed and ragwort  </p>
+                      <p>
+						Plastic of any kind, including compostable and biodegradable â€¢
+						Glass â€¢
+						Food waste â€¢ 
+						Pet bedding, pet waste or cat litter â€¢
+						Soil/compost â€¢
+						Stones/rubble â€¢
+						Noxious weeds
+					  </p>
                     <div class="clear"></div>
                 </div>
 
             </div>
+
+
+
+
 
        
             <div id='divBlueBin' class="binWrapper blueBin">
@@ -705,7 +737,7 @@ display:none;
              
 
                 <div class="selectedContainer blue">
-                    <h3>Food bin collection days</h3>
+                    <h3>Food bin collection days.</h3>
                     _blueBinData
                 </div>
 
@@ -713,12 +745,12 @@ display:none;
                     <img src="../images/BinCalender/triangle-blue.png" class="triangle" />
                     <h2>Yes Please!</h2>
                     
-                        <p>Cooked and uncooked food •
-                        Meat, fish and poultry •
-                        Dairy products •
-                        Bread, pastries and cakes •
-                        Pasta, rice and beans •
-                        Teabags and coffee grounds •
+                        <p>Cooked and uncooked food â€¢
+                        Meat, fish and poultry â€¢
+                        Dairy products â€¢
+                        Bread, pastries and cakes â€¢
+                        Pasta, rice and beans â€¢
+                        Teabags and coffee grounds â€¢
                         Vegetables and fruit (including peelings)</p>
                     <div class="clear"></div>
                 </div>
@@ -730,7 +762,7 @@ display:none;
              
 
                 <div class="selectedContainer">
-                    <h3>Black bin collection days</h3>
+                    <h3>Black bin collection days.</h3>
                     _blackBinData
                
                 </div>
@@ -739,11 +771,13 @@ display:none;
                     <img src="../images/BinCalender/triangle-black.png" class="triangle" />
                     <h2>No Thanks!</h2>
                     <p>
-                        Soil/rubble •
-                        Electrical items •
-                        Large or heavy items •
-                        Hazardous waste (batteries, paint, chemicals) •
-                        Needles/syringes 
+                        Gas bottles â€¢
+						Motor vehicle parts â€¢
+						Bricks/rubble â€¢
+						Soil â€¢ 
+						Commercial waste â€¢
+						Hazardous waste (needles, batteries, chemicals, paint) â€¢
+						Electrical items 
                     </p>
                     <div class="clear"></div>
                 </div>
@@ -788,8 +822,12 @@ display:none;
     <p>Please make sure all your waste is contained within your bin with the lid closed.  Please put your bin out by 7am on your collection day and return after emptying </p>
      <h2>Follow us on</h2>
      <div class="social">
+<!--
      <a href="https://www.facebook.com/people/Leeds-Waste-Docs/100006765738636"><i class="fa fa-facebook" aria-hidden="true"></i><span>FaceBook</span></a>
      <a href="https://twitter.com/LeedsWasteDocs?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+-->
+	 <a href="https://www.facebook.com/RecycleForLeeds"><i class="fa fa-facebook" aria-hidden="true"></i><span>FaceBook</span></a>
+     <a href="https://twitter.com/RecycleForLeeds"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a> 	 
      </div>
     </div>
 
