@@ -1,0 +1,111 @@
+@media print {
+    #containerSiteStatement {
+        display:none !important;
+    }
+    #alert {
+        display:none;
+    }
+    #ms-designer-ribbon {
+        display:none;
+    }
+    .sectionHeader .container-fluid .header-wrapper .header-content {
+        display:none !important;
+    }
+    .breadcrumb {
+        display:none;
+    }
+    .collapse {
+        display:block;
+    }
+    aside {
+        display:none;
+    }
+    #atozListResultsBottom {
+        display:none;
+    }
+    .survey {
+        display:none;
+    }
+    footer.main .col-lg-12 {
+        display: none;
+    }
+    footer.main .col-sm-6.text-right {
+        display: none;
+    }
+    .cd-top {
+        display:none;
+    }
+    .panel {
+        padding: 0;
+        background: none;
+        &.panel-border {
+            border:0;
+        }
+    }
+    .panel .text-block, .panel .text-highlight {
+        border:0;
+    }
+    .text-block {
+        padding:0;
+        border-left:0;
+    }
+    .text-highlight {
+        padding:0;
+        border-left:0;
+    }
+    .js .accordion__panel {
+        max-height: none;
+        visibility: visible;
+        padding: 0;
+        margin: 0 0 1em;
+        
+        &[aria-hidden=false] {
+            padding:0;
+            border:0;
+        }
+
+        ul {
+            padding:0;
+        }
+    }
+    .js .accordion__trigger {
+        padding-left:0;
+        border-left: 0;
+
+        &:after {
+            display:none;
+        }
+    }
+    .docList {
+        display:none;
+    }
+    #scopedByScopedPolyfill_1 {
+        display:none;
+    }
+    .btn-print {
+        display: none;
+    }
+    a[href]:after {
+        content: none !important;
+    }
+
+    //details stepped list
+    .details[open] .details__container {
+        animation:none;
+    }
+    .stepped-list__title-span:after {
+        display:none;
+    }
+    .stepped-list__list-item:before {
+        display:none;
+    }
+    .stepped-list:before {
+        display:none;
+    }
+    .stepped-list__details-summary {
+        padding:0;
+    }
+    .stepped-list__details-content {
+        margin:0 0 1em;
+    }
+}
