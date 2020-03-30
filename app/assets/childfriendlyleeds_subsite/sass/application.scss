@@ -210,6 +210,8 @@ $footer-bg-color: #F0EFEF;
 @import 'base_styles/jquery-ui-datepicker';
 @import 'base_styles/media-player';
 @import 'base_styles/lcc-search-box';
+@import 'base_styles/print';
+
 @import 'brand-colors';
 @import '2010-typography-overrides';
 @import 'accordion';
@@ -258,6 +260,8 @@ $footer-bg-color: #F0EFEF;
 @import 'component_example';
 @import '../sass/decision-tree';
 @import 'step-by-step';
+
+@import 'print';
 
 body{
     font-weight:200 !important;

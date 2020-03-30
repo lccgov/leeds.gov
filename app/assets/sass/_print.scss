@@ -82,11 +82,14 @@
     #scopedByScopedPolyfill_1 {
         display:none;
     }
-    .btn-print {
+    .btn--print {
         display: none;
     }
     a[href]:after {
         content: none !important;
+    }
+    .pagination-nav {
+        display:none;
     }
 
     //details stepped list

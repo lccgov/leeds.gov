@@ -144,14 +144,14 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-    $('#main').on('click', '.btn-print', function(){
+    $('#main').on('click', '.btn--print', function(){
         window.print();
     });
 
     //if( !$('div').hasClass('home-page') || !$('div').hasClass('groupPromo') ) {
     if( !$('div.home-page, div.groupPromo').length ) {
         console.log('promoboxes not present');
-        $( '<div class="container-fluid"><button class="btn btn-primary btn-print">Print page</button></div>' ).appendTo( '#main' );
+        $( '<div class="container-fluid"><button class="btn btn-primary btn--print">Print page</button></div>' ).appendTo( '#main' );
     }
 
 });

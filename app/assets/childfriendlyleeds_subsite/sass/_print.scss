@@ -1,0 +1,30 @@
+.btn--print {
+    display: inline-block;
+}
+
+@media print {
+    #main-menu, .sideNav, .header-left:after {
+        display:none !important;
+    }
+    .heroBanner {
+        padding:0 !important;
+        background: none !important;
+        color:black !important;
+        min-height:0 !important;
+    }
+    .secondaryFooter {
+        .iconLinks, nav {
+            display:none !important;
+        }
+    }
+    .ms-rteElement-spacer, hr.ms-rteElement-spacer, hr.spacerBottom, hr.spacerTop, .ms-PartSpacingVertical {
+        display:none !important;
+    }
+    .listWebpart ul {
+        display:none !important;
+    }
+    .sectionHeader, .masterhead {display:none !important;}
+    .ms-rtestate-field h2 {
+        margin-top:0 !important;
+    }
+}
