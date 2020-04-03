@@ -3,6 +3,11 @@
 }
 
 @media print {
+    * {
+        -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+        color-adjust: exact !important;                 /*Firefox*/
+    }
+
     #main-menu, .sideNav, .header-left:after {
         display:none !important;
     }
@@ -23,8 +28,21 @@
     .listWebpart ul {
         display:none !important;
     }
-    .sectionHeader, .masterhead {display:none !important;}
+    .masterhead {display:none !important;}
     .ms-rtestate-field h2 {
         margin-top:0 !important;
+    }
+    .sectionHeader {
+        background: none !important;
+        display: block !important;
+
+        .header-left .logo {
+            display: inline-block !important;
+            background-image:url(https://www-at.leeds.gov.uk/childfriendlyleeds/PublishingImages/cfl-thumb-logo-orange.jpg) !important;
+            margin: 0 0 30px !important;
+            width:120px !important;
+            height:140px !important;
+            -webkit-print-color-adjust: exact !important;
+        }
     }
 }
