@@ -3,6 +3,9 @@
 }
 
 @media print {
+    body {
+        margin: 10mm 0mm;
+    }
     * {
         -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
         color-adjust: exact !important;                 /*Firefox*/

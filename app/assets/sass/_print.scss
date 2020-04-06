@@ -1,4 +1,7 @@
 @media print {
+    body {
+        margin: 10mm 0mm;
+    }
     #containerSiteStatement {
         display:none !important;
     }
