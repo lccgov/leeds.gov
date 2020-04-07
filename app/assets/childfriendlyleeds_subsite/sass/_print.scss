@@ -10,6 +10,9 @@
         -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
         color-adjust: exact !important;                 /*Firefox*/
     }
+    img, div, ul, ol, table {
+        page-break-inside: avoid;
+    }
 
     #main-menu, .sideNav, .header-left:after {
         display:none !important;
@@ -36,16 +39,43 @@
         margin-top:0 !important;
     }
     .sectionHeader {
-        background: none !important;
-        display: block !important;
+        display:none !important;
+        // background: none !important;
+        // display: block !important;
 
-        .header-left .logo {
-            display: inline-block !important;
-            background-image:url(https://www-at.leeds.gov.uk/childfriendlyleeds/PublishingImages/cfl-thumb-logo-orange.jpg) !important;
-            margin: 0 0 30px !important;
-            width:120px !important;
-            height:140px !important;
-            -webkit-print-color-adjust: exact !important;
+        // .header-left .logo {
+        //     display: inline-block !important;
+        //     background-image:url(https://www-at.leeds.gov.uk/childfriendlyleeds/PublishingImages/cfl-thumb-logo-orange.jpg) !important;
+        //     margin: 0 0 30px !important;
+        //     width:120px !important;
+        //     height:140px !important;
+        //     -webkit-print-color-adjust: exact !important;
+        // }
+    }
+    .js .accordion__panel {
+        max-height: none;
+        visibility: visible;
+        padding: 0;
+        margin: 0 0 1em;
+        
+        &[aria-hidden=false] {
+            padding:0;
+            border:0;
         }
+
+        ul {
+            padding:0;
+        }
+    }
+    .js .accordion__trigger {
+        padding-left:0;
+        border-left: 0;
+
+        &:after {
+            display:none;
+        }
+    }
+    .docList {
+        display:none;
     }
 }
