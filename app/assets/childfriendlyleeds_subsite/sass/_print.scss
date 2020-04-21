@@ -1,5 +1,38 @@
-.btn--print {
-    display: inline-block;
+.container--print {
+    padding-top:1em;
+    padding-bottom:1em;
+
+    .btn--print {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        background: none !important;
+        border-radius: 0;
+        border: 0;
+        box-shadow: none;
+        color: $black !important;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        line-height: 1em;
+
+        &:hover {
+            text-decoration: underline !important;
+        }
+
+        &:focus {
+            background-color: #FFBF47!important;
+            color: #212224!important;
+            text-decoration: none;
+            outline: 0;
+        }
+
+        img {
+            width: 25px;
+            margin-right: 0.5em;
+        }
+
+    }
 }
 
 @media print {
