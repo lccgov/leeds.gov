@@ -299,3 +299,47 @@ html {
         margin: 50px 0 0 0 !important;
     }
 }
+
+
+//------------------------ Footer ------------------------//
+footer {
+    .lcc-footer {
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                a {
+                    display: block;
+                    .fa {
+                        padding-right: 10px;
+                        min-width: 27px;
+                    }
+                }
+            }
+        }
+        p, p a, p .font-xsmall, .font-xsmall, h2, h3, h3.heading-small, ul li, ul li a {
+            color: #ffffff;
+        }
+        p a:hover, ul li a:hover {
+            opacity: .7;
+        }
+        .footer-row-two {
+            border-top:1px solid #ffffff;
+            padding-top:30px;
+            margin-top:30px;
+            > div {
+                margin-bottom:30px;
+            }
+        }
+        .footer-lcc-logo {
+            height:52px;
+            margin-bottom:10px;
+        }
+    }
+    .footer-marg-bottom {
+        margin-bottom:30px;               
+        @media (min-width: 992px) {
+            margin-bottom:0px;
+        }
+    }
+}
