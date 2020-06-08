@@ -344,3 +344,19 @@ footer {
         }
     }
 }
+
+
+.panel.alt {
+//media play in panel
+    .media-container .media-player .control-bar .current-time,
+    .media-container .media-player .control-bar .volume-controls .mute,
+    .media-container .media-player .control-bar .volume-controls .vol-down, 
+    .media-container .media-player .control-bar .volume-controls .vol-up,
+    .media-container .media-player .control-bar .volume-controls .vol-display {
+        color:#ffffff;
+    }
+    .media-container .media-player .control-bar .volume-controls .vol-display {
+        background-image:url('/PublishingImages/player-icon-volume-white.png');
+    }
+    
+}

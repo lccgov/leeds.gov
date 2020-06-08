@@ -156,6 +156,24 @@ $(document).ready(function () {
 
 });
 
+//Twitter A11y stying
+$('.container-fluid').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function () {
+    customizeTweetMedia();
+});
+
+var customizeTweetMedia = function () {
+    // CSS Overrides
+    $('.container-fluid').find('.twitter-timeline').contents().find('.Identity-screenName').css('color', '#667580');
+    $('.container-fluid').find('.twitter-timeline').contents().find('.timeline-Tweet-retweetCredit').css('color', '#667580');
+    $('.container-fluid').find('.twitter-timeline').contents().find('.timeline-Tweet-timestamp').css('color', '#667580');
+    $('.container-fluid').find('.twitter-timeline').contents().find('.TwitterCard .SummaryCard-destination').css('color', '#667580');
+
+    
+    // Call the function on dynamic updates in addition to page load
+    $('.container-fluid').find('.twitter-timeline').contents().find('.timeline-TweetList').bind('DOMSubtreeModified propertychange', function () {
+        customizeTweetMedia(this);
+    });
+}
 
 
 //ARIA accordion
