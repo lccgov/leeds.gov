@@ -154,6 +154,15 @@ $(document).ready(function () {
         $( '<div class="container-fluid container--print"><button class="btn btn-primary btn--print"><img src="/PublishingImages/printer.svg" alt="" />Print page</button></div>' ).appendTo( '#main' );
     }
 
+    // Smooth anchor links
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+    
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+
 });
 
 //Twitter A11y stying
