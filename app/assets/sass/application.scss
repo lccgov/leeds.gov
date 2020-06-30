@@ -360,3 +360,15 @@ footer {
     }
     
 }
+
+//------------------------ Find a school - School details page ------------------------//
+#schoolTable {
+    table td, table th {
+        vertical-align: text-top
+    }
+    table td {
+        width: 60%;
+        word-break: break-word;
+    }
+}
+

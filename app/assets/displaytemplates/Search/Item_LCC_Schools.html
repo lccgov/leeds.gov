@@ -1,0 +1,61 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>LCC School Items</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">Displays the default result item template.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">&#39;Title&#39;:&#39;Title&#39;,&#39;Path&#39;:&#39;Path&#39;,&#39;Description&#39;:&#39;Description&#39;,&#39;SummaryOWSMTXT&#39;:&#39;SummaryOWSMTXT&#39;,&#39;EditorOWSUSER&#39;:&#39;EditorOWSUSER&#39;,&#39;SchoolNameOWSTEXT&#39;:&#39;SchoolNameOWSTEXT&#39;,&#39;LastModifiedTime&#39;:&#39;LastModifiedTime&#39;,&#39;CollapsingStatus&#39;:&#39;CollapsingStatus&#39;,&#39;DocId&#39;:&#39;DocId&#39;,&#39;HitHighlightedSummary&#39;:&#39;HitHighlightedSummary&#39;,&#39;HitHighlightedProperties&#39;:&#39;HitHighlightedProperties&#39;,&#39;FileExtension&#39;:&#39;FileExtension&#39;,&#39;ViewsLifeTime&#39;:&#39;ViewsLifeTime&#39;,&#39;ParentLink&#39;:&#39;ParentLink&#39;,&#39;FileType&#39;:&#39;FileType&#39;,&#39;IsContainer&#39;:&#39;IsContainer&#39;,&#39;SecondaryFileExtension&#39;:&#39;SecondaryFileExtension&#39;,&#39;DisplayAuthor&#39;:&#39;DisplayAuthor&#39;,‘PublishingRollupImage’:’PublishingRollupImage’</mso:ManagedPropertyMapping>
+
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://www-at.leeds.gov.uk/_catalogs/masterpage/Display%20Templates/Search/Item_Schools.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>z
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_School">
+<!--#_ 
+    var schoolName = $getItemValue(ctx, "SchoolNameOWSTEXT");
+
+        if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
+            var id = ctx.ClientControl.get_nextUniqueId();
+            var itemId = id + Srch.U.Ids.item;
+            var Path = ctx.CurrentItem.Path;
+            
+            var PathId = Path.substring(Path.indexOf("=") + 1);
+            
+			var hoverId = id + Srch.U.Ids.hover;
+			var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Default_HoverPanel.js";
+            $setResultItem(itemId, ctx.CurrentItem);
+			if(ctx.CurrentItem.IsContainer){
+				ctx.CurrentItem.csr_Icon = Srch.U.getFolderIconUrl();
+			}
+			ctx.currentItem_ShowHoverPanelCallback = Srch.U.getShowHoverPanelCallback(itemId, hoverId, hoverUrl);
+            ctx.currentItem_HideHoverPanelCallback = Srch.U.getHideHoverPanelCallback();
+            
+            
+            console.log(Path);
+            console.log(PathId);
+            
+            
+_#-->
+        
+            <li id="_#= $htmlEncode(itemId) =#_" name="Item" data-displaytemplate="DefaultItem" class="school-srch-items" onmouseover="_#= ctx.currentItem_ShowHoverPanelCallback =#_" onmouseout="_#= ctx.currentItem_HideHoverPanelCallback =#_">
+				
+					<a class="secondarySubmit" href="/schools-and-education/school-admissions/check-school-details/display-details?schoolid=_#=PathId=#_">_#= schoolName =#_</a>
+
+                <!--<div id="_#= $htmlEncode(hoverId) =#_" class="ms-srch-hover-outerContainer"></div>-->
+            </li>
+        
+<!--#_ 
+        } 
+_#-->
+    </div>
+</body>
+</html>
