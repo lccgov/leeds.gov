@@ -18,26 +18,13 @@
     function saPreRender(ctx){
         ctx.ListSchema.NoListItem = "";
     }
-
-    // function calculateAdmissionYear() {
-    //     var currentDate = new Date();
-    //     var currentYear = currentDate.getFullYear();
-    //     var changeDate = new Date(currentYear, 7, 1);  //1st August
-    //     var admissionYear = "";
-    //     if (currentDate < changeDate) {
-    //         admissionYear = "September " + (currentYear) + " to July " + (currentYear + 1)} 
-    //     else {
-    //         admissionYear = "September " + (currentYear + 1) + " to July " + (currentYear + 2)};
-    //     return admissionYear;
-    // }
  
     function saItem(ctx){
-        //Update years in this file 1st August each year
+        //Update years in this file March each year
         var yearOne = "2020-21";
         var yearTwo = "2019-20";
         var yearThree = "2018-19";
 
-        //var admissionYear = calculateAdmissionYear();
         var locationMapHtml = ctx.CurrentItem.LocationMap ? '<td><a href="' + ctx.CurrentItem.LocationMap + '" rel="external" target="_blank">Open in Google Maps</a></td>' : '<td></td>';
         var websiteHtml = ctx.CurrentItem.URL ? '<td><a href="' + ctx.CurrentItem.URL + '" rel="external" target="_blank">' + ctx.CurrentItem["URL.desc"] + '</a></td>' : '<td></td>';
 
@@ -162,7 +149,7 @@
         '<caption class="sr-only"></caption>' +
         '<tbody>' +
         '<tr>' +
-        '<th scope="row">Children who got a place last year by priority</th>' +
+        '<th scope="row">Number of children who got a place last year by priority</th>' +
         '<td>' + STSHtmlDecode(ctx.CurrentItem.OffersLastYear) + '</td>' +
         '</tr>' +
         '</tbody>' +
