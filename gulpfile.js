@@ -122,14 +122,27 @@ gulp.task('sync:lcc_sharepoint_toolkit_displaytemplates', ['sync:lcc_sharepoint_
         .pipe(gulp.dest('dist/_catalogs/masterpage/Display Templates/Content Web Parts'))
 });
 
+//Sync app/assets/displaytemplates to dist/_catalogs/masterpage/Display Templates
+gulp.task('sync:displaytemplates', ['sync:lcc_sharepoint_toolkit_displaytemplates'], (done) => {
+    return gulp.src('app/assets/displaytemplates/**/*.html', {
+        base: 'app/assets/displaytemplates'
+    }).pipe(gulp.dest('dist/_catalogs/masterpage/Display Templates'))
+});
+
 //Sync node_modules/lcc_sharepoint_toolkit/xslstylesheets to dist/Style Library/XSL Style Sheets
-gulp.task('sync:lcc_sharepoint_toolkit_xslstylesheets', ['sync:lcc_sharepoint_toolkit_displaytemplates'], (done) => {
+gulp.task('sync:lcc_sharepoint_toolkit_xslstylesheets', ['sync:displaytemplates'], (done) => {
     return gulp.src('node_modules/lcc_sharepoint_toolkit/xslstylesheets/*.xsl')
         .pipe(gulp.dest('dist/Style Library/XSL Style Sheets'))
 });
 
+//Sync app/assets/javascripts/jslink to dist/Style Library/js/jslink
+gulp.task('sync:jslink', ['sync:lcc_sharepoint_toolkit_xslstylesheets'], (done) => {
+    return gulp.src('app/assets/javascripts/jslink/**')
+        .pipe(gulp.dest('dist/Style Library/js/jslink'));
+});
+
 //Sync lcc_templates_sharepoint/assets excluding JS to dist/_catalogs/masterpages/public
-gulp.task('sync:lcc_templates_sharepoint_assets', ['sync:lcc_sharepoint_toolkit_xslstylesheets'], (done) => {
+gulp.task('sync:lcc_templates_sharepoint_assets', ['sync:jslink'], (done) => {
     syncy(['node_modules/lcc_templates_sharepoint/assets/**/*', '!node_modules/lcc_templates_sharepoint/assets/**/*.json', '!node_modules/lcc_templates_sharepoint/assets/javascripts/*', '!node_modules/lcc_templates_sharepoint/assets/stylesheets/*'], 'dist/_catalogs/masterpage/public', {
             base: 'node_modules/lcc_templates_sharepoint/assets',
             updateAndDelete: false
@@ -289,5 +302,5 @@ gulp.task('sp-upload', ['prompt'], (done) => {
     );
 });
 
-gulp.task('default',  ['clean:dist', 'sync:assets', 'sync:lcc_frontend_toolkit', 'compile:typescript', 'sync:javascripts', 'sync:lcc_sharepoint_toolkit_webparts', 'sync:lcc_sharepoint_toolkit_displaytemplates', 'sync:lcc_sharepoint_toolkit_xslstylesheets', 'sync:lcc_templates_sharepoint_assets', 'sync:lcc_templates_sharepoint_stylesheets', 'sync:lcc_templates_sharepoint_javascript', 'sync:lcc_templates_sharepoint_views', 'sync:lcc_templates_sharepoint_master', 'sass', 'sass:subsites']);
+gulp.task('default',  ['clean:dist', 'sync:assets', 'sync:lcc_frontend_toolkit', 'compile:typescript', 'sync:javascripts', 'sync:lcc_sharepoint_toolkit_webparts', 'sync:lcc_sharepoint_toolkit_displaytemplates', 'sync:displaytemplates', 'sync:lcc_sharepoint_toolkit_xslstylesheets', 'sync:jslink', 'sync:lcc_templates_sharepoint_assets', 'sync:lcc_templates_sharepoint_stylesheets', 'sync:lcc_templates_sharepoint_javascript', 'sync:lcc_templates_sharepoint_views', 'sync:lcc_templates_sharepoint_master', 'sass', 'sass:subsites']);
 gulp.task('upload',  ['default', 'sp-upload']);
