@@ -373,3 +373,23 @@ footer {
     }
 }
 
+
+//------------------------ Easy read font increase ------------------------//
+  
+@media (max-width: 640px){
+    .easy-read {
+        font-size: 19px;
+        .phase-banner p {
+            font-size: 19px;
+        }
+        h2 {
+            font-size: 27px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        h4 {
+            font-size: 19px;
+        }
+    }
+}
