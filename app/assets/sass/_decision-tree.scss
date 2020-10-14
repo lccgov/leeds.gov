@@ -24,6 +24,7 @@
 .lcc-tree-card-actions {
     display: flex;
     margin-bottom: -15px;
+    flex-wrap: wrap;
     .btn {
         margin: 0 15px 15px 0;
     }
