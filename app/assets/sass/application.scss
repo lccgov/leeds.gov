@@ -393,3 +393,36 @@ footer {
         }
     }
 }
+
+@media print {
+
+    .easy-read {
+        * {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .panel-border {
+            page-break-inside: avoid;
+            break-inside: avoid;
+            display:flex;
+            flex-direction:row-reverse;
+
+            p {
+                width:50%;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            img {
+                width:50%;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            table, img, svg {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+    }
+}
