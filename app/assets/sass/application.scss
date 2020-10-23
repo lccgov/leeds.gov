@@ -426,3 +426,19 @@ footer {
         }
     }
 }
+
+//------------------------ Domestic Violence pages ------------------------//
+.domestic-violence-container #hide {
+    position: sticky;
+    background: $dark-red;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 200;
+    margin-bottom: 24px;
+    a#hide-site {
+        color: #ffffff;
+        padding: 15px;
+        display: block;
+    }
+}
