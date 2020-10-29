@@ -428,17 +428,29 @@ footer {
 }
 
 //------------------------ Domestic Violence pages ------------------------//
-.domestic-violence-container #hide {
-    position: sticky;
-    background: #52246D;
-    bottom: 0;
-    width: 100%;
-    padding: 0;
-    z-index: 200;
-    margin-bottom: 24px;
-    a#hide-site {
-        color: #ffffff;
-        padding: 15px;
-        display: block;
+.domestic-violence-container {
+    #hide {
+        position: fixed; /*fallback*/
+        position: -webkit-sticky; /* still needed for ios */
+        position: sticky;
+        background: #52246D;
+        bottom: 0;
+        width: 100%;
+        padding: 0;
+        z-index: 200;
+        a#hide-site {
+            color: #ffffff;
+            padding: 15px 0;
+            display: block;
+        }
+    }
+    .container--print {
+        margin-top: 24px;
+    }
+    .ms-rtestate-field .pre-title {
+        margin-bottom: -30px !important; /* needed to overwrite sharepoint styling */
+        @media (min-width: 641px){
+            margin-bottom: -50px !important; /* needed to overwrite sharepoint styling */
+        }
     }
 }
