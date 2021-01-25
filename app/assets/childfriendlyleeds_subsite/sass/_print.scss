@@ -46,6 +46,8 @@
     img, div, ul, ol, table {
         page-break-inside: avoid;
     }
+    
+    thead {display: table-row-group;} //stops thead overlapping two pages
 
     #main-menu, .sideNav, .header-left:after {
         display:none !important;
