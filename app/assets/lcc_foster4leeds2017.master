@@ -67,14 +67,7 @@
                                     <div class="header-logo">
                                         <a href="/foster4leeds" title="Go to the homepage" class="logo"><span class="sr-only">Go to home page</span></a>
                                     </div>
-                                    <div class="header-content">
-                                        <div id="header-custom" class="header-custom">    
-                                            <div class="header-button">
-                                            <a title="Carer login" href="https://foster4leeds.leeds.gov.uk" class="btn btn-primary btn-account">
-                                                <span>Carer login</span>
-                                            </a>
-                                        </div>                                      
-                                        </div>                                  
+                                    <div class="header-content">                              
                                         <div class="header-nav">
                                             <a class="search" href="#">
                                                 <span class="sr-only">Toggle </span><span>Search</span>
