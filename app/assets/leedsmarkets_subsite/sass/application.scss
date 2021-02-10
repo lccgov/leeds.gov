@@ -598,10 +598,72 @@ footer.main{
 }
 
 // ---------------------------------- Search bar overrides
-.ms-srch-sb>.ms-srch-sb-searchLink {
-    border-left: 1px solid #414141;
+ul.menu li a.search:focus, ul.menu li a.main-menu:focus {
+    background: #FFBF47 !important;
+    color: #000000 !important;
 }
-.ms-srch-sb>input {
-    background: #F3F3F4 !important;
-    padding-left: 15px !important;
+
+#SearchBox {
+    .ms-srch-sb-border,.ms-srch-sb-borderFocused {
+        border: 1px solid #0b0c0c !important;
+    }
+    .ms-srch-sb>input {
+        background: #ffffff !important;
+        padding: 10px 15px !important;
+        color: #0b0c0c;
+    }
+    .ms-srch-sb>.ms-srch-sb-searchLink {
+        border-left: 0px;
+        color: #0b0c0c;
+        background: #ffffff;
+        margin: 0;
+        top: 1px;
+        right: 1px;
+        height: calc(100% - 2px);
+        min-height: calc(100% - 2px);
+        &:hover {
+            background: #ffffff !important;
+        }
+    }
+}
+
+// Hopepage promo slots
+
+.details .promoListWebpart ul li summary:focus .info, 
+.promoListWebpart ul li .details summary:focus .info, 
+.promoListWebpart ul li a .info {
+    opacity: 1;
+}
+
+// Homepage venue address
+.venueAddress p {
+    color: #0b0c0c;
+}
+
+// Search page
+.ms-srch-resultFooter, .ms-srch-resultFooter a, .ms-srch-result #PagingLink a {
+    color: #0b0c0c;
+}
+
+.col-md-8 #SearchBox {
+    padding: 0;
+    border: 0;
+}
+
+
+#PageLinkPrev.ms-promlink-button span:before {
+    content: "\f104";
+}
+
+#PagingImageLink {
+    #PageLinkNext,#PageLinkPrev {
+        float: none;
+        border: 0;
+        background: #ffffff;
+    }
+    a {
+        .ms-srch-pagingNext, .ms-srch-pagingPrev {
+            display: none;
+        }
+    }
 }
