@@ -16,10 +16,11 @@
 //$base-background-color:#fff;
 //$base-font-size:16px ;
 //$base-font-color:#333 ;
+$custom-core-color: #256EA2;
 $base-link-color:#484a07;
 $border-color:#484a07;
 //$base-container-width:1500px ;
-$btn-background-color:#3A7BBF ;
+$btn-background-color:#256EA2 ;
 $font-primary: 'Open Sans', Arial ; // main font
 $font-secondary:'Open Sans', Arial ; // secondary font
 
@@ -32,7 +33,7 @@ $font-secondary:'Open Sans', Arial ; // secondary font
 //$search-link:#333 ;
 
 // mainNav.scss
-$main-nav-background:#3A7BBF;
+$main-nav-background:#256EA2;
 //$main-nav-link:#fff ;
 
 //footer.scss
@@ -162,7 +163,7 @@ $secondary-button-color:$primary-button-background-color;
 //$responsiveMenuWidth:1200px ;
 
 // ---------------------------------- Footer varibles
-$footer-bg-color: #3A7BBF;
+$footer-bg-color: $main-nav-background;
 
 // ---------------------------------- Front end toolkit
 @import 'base_styles/variables';
@@ -314,13 +315,13 @@ $footer-bg-color: #3A7BBF;
 p.highlight {
     font-size: 1.4em;
     font-style: italic;
-    color: #3A7BBF;
+    color: $custom-core-color;
 }
 
 
 
 .sectionOne{
-    border-top:1px solid #3A7BBF;
+    border-top:1px solid $custom-core-color;
     img{
     max-width:100%;
 }
@@ -346,7 +347,7 @@ p.highlight {
 a.cta {
     padding: 15px 30px;
     display: inline-block;
-    background: #3A7BBF;
+    background: $custom-core-color;
     color: #fff !important;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -444,17 +445,11 @@ BLOCK CONTENT COLOURS
 *******/
 
 .listWebpart .red div {
-  background: #e74c3c;
-  a:hover {
-    background: #c0392b;
-  }
+  background: #c73728;
 }
 
 .listWebpart .orange div{
-  background: #e67e22;
-  a:hover {
-    background: #d35400;
-  }
+  background: #c34d00;
 }
 
  .listWebpart .purple div {
@@ -465,10 +460,7 @@ BLOCK CONTENT COLOURS
 }
 
 .listWebpart .teal div {
-  background: #1abc9c;
-  a:hover {
-    background: #16a085;
-  }
+  background: #07846b;
 }
 
  .listWebpart .green div {
@@ -514,17 +506,11 @@ BLOCK CONTENT COLOURS
 }
 
 .green .listWebpart {
-  background: #BFC24C;
-  a:hover {
-    background: #929432;
-  }
+  background: #6E7227;
 }
 
 .blue .listWebpart {
-  background: #377DC2;
-  a:hover {
-    background: #316FAC;
-  }
+  background: $custom-core-color;
 }
 
  .fullBlock .listWebpart {
@@ -709,7 +695,7 @@ PARTNER SITES
       padding: 0px 30px 0px 0px;
       border-bottom: none;
       text-transform: uppercase;
-      color: #BFC24C;
+      color: $main-nav-background;
       display: block;
       float: left;
       margin-top: 12px;
@@ -720,7 +706,7 @@ PARTNER SITES
       padding: 0;
     }
     a {
-      color: #3A7BBF;
+      color: $main-nav-background;
       list-style: none;
       width: auto;
       margin: 0px;
@@ -728,7 +714,7 @@ PARTNER SITES
       display: inline-block;
       text-decoration: none;
       &:hover {
-        color: #3A7BBF;
+        color: $main-nav-background;
         background: #fff;
         text-decoration: underline;
       }
@@ -817,7 +803,7 @@ BLOCK CONTENT SITES
       padding: 0px;
       color: #fff;
       text-decoration: none;
-      background: #3A7BBF;
+      background: $custom-core-color;
       padding: 12px;
       border-radius: 4px;
       -moz-border-radius: 4px;
@@ -908,9 +894,9 @@ h2.contactUs:after{
 
 
 .sectionSubsite.news{
-     background: #BFC24C;
-    border-radius: 8px;
-    -moz-border-radius: 8px;
+  background: #6E7227;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
 
     h3, label{
       color:#fff;
@@ -941,7 +927,7 @@ ul.accordion {
 }
 
 #paging .contentPod h3 {
- color:#3A7BBF;
+ color:$custom-core-color;
 }
 
 [rel=external].link:after,a[rel=external]:after {
@@ -970,10 +956,31 @@ footer.main{
 }
 
 // ---------------------------------- Search bar overrides
-.ms-srch-sb>.ms-srch-sb-searchLink {
-  border-left: 1px solid #414141;
+ul.menu li a.search:focus, ul.menu li a.main-menu:focus {
+  background: #FFBF47 !important;
+  color: #000000 !important;
 }
-.ms-srch-sb>input {
-  background: #F3F3F4 !important;
-  padding-left: 15px !important;
+
+#SearchBox {
+  .ms-srch-sb-border,.ms-srch-sb-borderFocused {
+      border: 1px solid #0b0c0c !important;
+  }
+  .ms-srch-sb>input {
+      background: #ffffff !important;
+      padding: 10px 15px !important;
+      color: #0b0c0c;
+  }
+  .ms-srch-sb>.ms-srch-sb-searchLink {
+      border-left: 0px;
+      color: #0b0c0c;
+      background: #ffffff;
+      margin: 0;
+      top: 1px;
+      right: 1px;
+      height: calc(100% - 2px);
+      min-height: calc(100% - 2px);
+      &:hover {
+          background: #ffffff !important;
+      }
+  }
 }
