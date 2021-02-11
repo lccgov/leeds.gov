@@ -274,7 +274,7 @@ $footer-bg-color: #3E3E40;
 }
 
 blockquote {
-   background: #8CC63F;
+   background: #014C26;
    color: #ffffff;
     padding: 6% 6% 6% 80px;
     margin: 0 0 20px 0;
@@ -285,14 +285,7 @@ blockquote {
         color:#ffffff;
     }
     &:after {
-        content: '';
-        background: url(../images/pointerGreenDown.png) top center no-repeat;
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        bottom: -50px;
-        left: 50%;
-        margin-left: -25px;
+        display: none;
     }
 }
 
@@ -327,10 +320,31 @@ footer.main {
 }
 
 // ---------------------------------- Search bar overrides
-.ms-srch-sb>.ms-srch-sb-searchLink {
-    border-left: 1px solid #414141;
+ul.menu li a.search:focus, ul.menu li a.main-menu:focus {
+    background: #FFBF47 !important;
+    color: #000000 !important;
 }
-.ms-srch-sb>input {
-    background: #F3F3F4 !important;
-    padding-left: 15px !important;
+
+#SearchBox {
+    .ms-srch-sb-border,.ms-srch-sb-borderFocused {
+        border: 1px solid #0b0c0c !important;
+    }
+    .ms-srch-sb>input {
+        background: #ffffff !important;
+        padding: 10px 15px !important;
+        color: #0b0c0c;
+    }
+    .ms-srch-sb>.ms-srch-sb-searchLink {
+        border-left: 0px;
+        color: #0b0c0c;
+        background: #ffffff;
+        margin: 0;
+        top: 1px;
+        right: 1px;
+        height: calc(100% - 2px);
+        min-height: calc(100% - 2px);
+        &:hover {
+            background: #ffffff !important;
+        }
+    }
 }
