@@ -360,11 +360,11 @@ var nnrepeatedcontentfour = '<p>We will give you updates when they are available
 var nnrepeatedcontentfive = '<p>Some people do not realise their everyday noises are a problem. They\'re probably not doing it on purpose.</p> \
 <p>If it feels safe, try speaking to the person responsible and see if you can come to an agreement.</p> \
 <p> If this does not work use our form to report the noise. We will aim to contact you within one week.</p> \
-<p><a href="#">Report antisocial behaviour</a></p>';  
+<p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>';  
 var nnrepeatedcontentsix = '<p>Contact the police on 101 to report the disturbance.</p>\
 <p>If you would like to report this as antisocial behaviour use our  form.</p>\
 <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-<p><a href="#">Report antisocial behaviour</a></p>'; 
+<p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>'; 
 var nnrepeatedcontentseven = '<p>If someone is in immediate danger call 999.</p>';
 var nnrepeatedcontenteight = '<p>The use of heavy machinery is permitted:</p>\
 <ul class="list list-bullet">\
@@ -464,6 +464,16 @@ var noisedecisiontree = {
                             message: nnrepeatedcontentthree,
                         }
                     ] 
+                },
+                {
+                    answer: 'Other',
+                    message: '<p>Let us know about the noise by contacting us:</p> \
+                    <p>8am to 6pm (Monday to Friday)</p> \
+                    <div class="text-block">\
+                        <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p> \
+                    </div> \
+                    <p>6pm to 3:30am (7 days a week)</p> \
+                    <div class="text-block"><p>0113 376 0337</p></div>',
                 }
             ]                                        
         },
@@ -496,7 +506,7 @@ var noisedecisiontree = {
                                         <p>0113 376 0337</p> \
                                     </div><p>Any other time</p> \
                                     <div class="text-block"> \
-                                        <p><a href="#">Complete our antisocial behaviour form</a></p> \
+                                        <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Complete our antisocial behaviour form</a></p> \
                                     </div>'
                                 }
                             ]
@@ -541,7 +551,7 @@ var noisedecisiontree = {
                                             <p>We will get in touch as quickly as we can depending on how serious the noise is. We aim to get back to everyone within one week.</p> \
                                             <p>If there is illegal activity then you can report this to the police on 101.</p> \
                                             <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                                            <p><a href="#">Report antisocial behaviour</a></p>',
+                                            <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                                         }
                                     ]
                                 }
@@ -554,7 +564,7 @@ var noisedecisiontree = {
                                 {
                                     answer: 'General road noise',
                                     message: '<p>Noise as a result of everyday living such as road traffic noise is not considered a nuisance.</p>\
-                                    <p>You can find out more by reading the governments advice for <a href = "https://www.gov.uk/noise-pollution-road-train-plane">traffic and road noise</a>.</p>',
+                                    <p>You can find out more by reading the government\'s advice for <a href = "https://www.gov.uk/noise-pollution-road-train-plane">traffic and road noise</a>.</p>',
                                 },
                                 {
                                     answer: 'Dangerous driving',
@@ -575,7 +585,7 @@ var noisedecisiontree = {
                                 {
                                     answer: 'General road noise',
                                     message: '<p>Noise as a result of everyday living such as road traffic noise is not considered a nuisance.</p>\
-                                    <p>You can find out more by reading the governments advice for <a href = "https://www.gov.uk/noise-pollution-road-train-plane">traffic and road noise</a>.</p>',
+                                    <p>You can find out more by reading the government\'s advice for <a href = "https://www.gov.uk/noise-pollution-road-train-plane">traffic and road noise</a>.</p>',
                                 },
                                 {
                                     answer: 'Dangerous driving',
@@ -598,7 +608,7 @@ var noisedecisiontree = {
                                         {
                                             answer: 'No',
                                             message: '<p>Contact the police on 101. Use our form to report the antisocial behaviour to us.</p>\
-                                            <p><a href="#">Report antisocial behaviour</a></p>',
+                                            <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                                         }
                                     ]
                                 },
@@ -617,7 +627,7 @@ var noisedecisiontree = {
                                                 {
                                                     answer: 'No',
                                                     message: '<p>Contact the police on 101. Use our form to report the antisocial behaviour to us.</p>\
-                                                    <p><a href="#">Report antisocial behaviour</a></p>',
+                                                    <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                                                 }
                                             ]
                                         },
@@ -635,7 +645,7 @@ var noisedecisiontree = {
                                                         },
                                                         {
                                                             answer: 'No',
-                                                            message: '<p>Contact the police on 101. Use our form to report the antisocial behaviour to us.</p><p><a href="#">Report antisocial behaviour</a></p>',
+                                                            message: '<p>Contact the police on 101. Use our form to report the antisocial behaviour to us.</p><p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                                                         }
                                                     ]
                                                 },
@@ -644,7 +654,8 @@ var noisedecisiontree = {
                                                     message: '<p>Noise as a result of everyday living such as children playing and household noise is not considered a nuisance.</p> \
                                                     <p>Some people do not realise their everyday noises are a problem. They\'re probably not doing it on purpose.</p> \
                                                     <p>If it feels safe, try speaking to the person responsible and see if you can come to an agreement.</p> \
-                                                    <p>If you think the children are vulnerable or at risk then you can <a href="https://www.leeds.gov.uk/residents/health-and-social-care/keeping-children-safe/report-a-child-protection-concern">report a child protection concern to us</a>.</p>',
+                                                    <p>If you think the children are vulnerable or at risk then you can <a href="https://www.leeds.gov.uk/residents/health-and-social-care/keeping-children-safe/report-a-child-protection-concern">report a child protection concern to us</a>.</p> \
+                                                    <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">If the noise is causing a lot of disturbance, you can report it on our antisocial behaviour form.</a></p>',
                                                 }
                                             ]
                                         }
@@ -656,7 +667,7 @@ var noisedecisiontree = {
                             answer: 'Buskers',
                             message: '<p>We welcome activity that improves the experience and atmosphere of the city such as buskers.</p>\
                             <p>If you think a busker in Leeds is being too loud, please speak to them.</p> \
-                            <p>If the problem continues, contact our <a href="https://www.leeds.gov.uk/business/commercial-opportunities/city-centre-advice-on-activities/cc">city centre management team <span class="sr-only">to report problem buskers</span></a>.</p>',
+                            <p>If the problem continues, contact our <a href="https://www.leeds.gov.uk/business/commercial-opportunities/city-centre-advice-on-activities/cc">city centre management team<span class="sr-only"> to report problem buskers</span></a>.</p>',
                         },
                         {
                             answer: 'Machinery',
@@ -664,7 +675,7 @@ var noisedecisiontree = {
                             <p>In some cases we may have given permission for work to be done outside of these hours.</p>\
                             <p>We may be able to help if you feel that the noise is happening at unreasonable times.</p>\
                             <p>Use our form to report the noise and we will aim to contact you within one week.</p>\
-                            <p><a href="#">Report antisocial behaviour</a></p>',
+                            <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                         },
                         {
                             answer: 'Bin collections',
@@ -777,7 +788,7 @@ var noisedecisiontree = {
                                             message: '<p>Contact the police on 101 to report the disturbance.</p>\
                                             <p>If you would like to report this as antisocial behaviour use our  form.</p>\
                                             <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                                            <p><a href="#">Report antisocial behaviour</a></p>',
+                                            <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                                         }             
                                     ]
                                 },
@@ -798,7 +809,7 @@ var noisedecisiontree = {
                                                     message: '<p>Contact the police on 101 to report the disturbance.</p>\
                                                     <p>If you would like to report this as antisocial behaviour use our  form.</p>\
                                                     <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                                                    <p><a href="#">Report antisocial behaviour</a></p>',
+                                                    <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                                                 }                                    
                                             ]
                                         },
@@ -819,7 +830,7 @@ var noisedecisiontree = {
                                                             message: '<p>Contact the police on 101 to report the disturbance.</p>\
                                                             <p>If you would like to report this as antisocial behaviour use our  form.</p>\
                                                             <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                                                            <p><a href="#">Report antisocial behaviour</a></p>',
+                                                            <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                                                         }   
                                                     ]
                                                 },
@@ -828,7 +839,7 @@ var noisedecisiontree = {
                                                     message: '<p>Use our form to report the noise. We\'ll get back to you to let you know what we are doing about your complaint.</p>\
                                                     <p>We will get in touch as quickly as we can depending on how serious the noise is. We aim to get back to everyone within one week. </p>\
                                                     <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                                                    <p><a href="#">Report antisocial behaviour</a></p>'
+                                                    <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>'
                                                 }                                     
                                             ]
                                         }                                        
@@ -848,7 +859,7 @@ var noisedecisiontree = {
                             <p>If it feels safe, try speaking to the person responsible and see if you can come to an agreement.</p> \
                             <p>If this does not work, use our form to report the noise. A case officer will contact you within one week.</p>\
                             <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                            <p><a href="#">Report antisocial behaviour</a></p>',
+                            <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                         },
                         {
                             answer: 'TV noise',
@@ -856,7 +867,7 @@ var noisedecisiontree = {
                             <p>If it feels safe, try speaking to the person responsible and see if you can come to an agreement.</p> \
                             <p>If this does not work, use our form to report the noise. A case officer will contact you within one week.</p>\
                             <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                            <p><a href="#">Report antisocial behaviour</a></p>',
+                            <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                         },
                         {
                             answer: 'Shouting or verbal abuse',
@@ -869,9 +880,9 @@ var noisedecisiontree = {
                                 {
                                     answer: 'No',
                                     message: '<p>If you are worried about someone because they are experiencing or witnessing domestic abuse, you can <a href="https://www.leeds.gov.uk/Pages/If-you\'re-worried-about-someone-else.aspx">get help to support someone you know</a>.</p>\
-                                    <p>Use our online form to report the noise and we\'ll contact you within in 2 days.</p>\
+                                    <p>Use our online form to report the noise and we\'ll contact you within 2 days.</p>\
                                     <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                                    <p><a href="#">Report antisocial behaviour</a></p>',
+                                    <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                                 }                            
                             ]
                         },
@@ -904,7 +915,7 @@ var noisedecisiontree = {
                             <p>The owner might not know that the animal is causing an issue. If it feels safe, try speaking to the owner of the animal and see if you can come to an agreement.</p>\
                             <p>If this does not work, use our form to report the noise. We will aim to contact you within one week.\
                             <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                            <p><a href="#">Report antisocial behaviour</a></p>',
+                            <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p>',
                         },
                     ]
                 },
@@ -1061,9 +1072,18 @@ var noisedecisiontree = {
                     <p>We will get in touch as quickly as we can depending on how serious the noise is. We aim to get back to everyone within one week.</p>\
                     <p>So we can take action and provide you with feedback regarding this noise issue we will need you to share your details with us when you complete the form.</p>\
                     <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                    <p><a href="https://my.leeds.gov.uk/Pages/Form%20Pages/ReportNoisePollution.asp">Report commercial noise</a></p>',
+                    <p><a href="https://my.leeds.gov.uk/Pages/Form%20Pages/ReportNoisePollution.aspx">Report commercial noise</a></p>',
                 },
-                
+                {
+                    answer: 'Other',
+                    message: '<p>Let us know about the noise by contacting us:</p> \
+                    <p>8am to 6pm (Monday to Friday)</p> \
+                    <div class="text-block">\
+                        <p><a href="https://my.leeds.gov.uk/Pages/Form Pages/AntisocialBehaviourOrHateCrime.aspx">Report antisocial behaviour</a></p> \
+                    </div> \
+                    <p>6pm to 3:30am (7 days a week)</p> \
+                    <div class="text-block"><p>0113 376 0337</p></div>',
+                }                
             ]
         }
     ]
