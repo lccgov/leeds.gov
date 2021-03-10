@@ -21,9 +21,9 @@
  
     function saItem(ctx){
         //Update years in this file March each year
-        var yearOne = "2020-21";
-        var yearTwo = "2019-20";
-        var yearThree = "2018-19";
+        var yearOne = "2021";
+        var yearTwo = "2020";
+        var yearThree = "2019";
 
         var locationMapHtml = ctx.CurrentItem.LocationMap ? '<td><a href="' + ctx.CurrentItem.LocationMap + '" rel="external" target="_blank">Open in Google Maps</a></td>' : '<td></td>';
         var websiteHtml = ctx.CurrentItem.URL ? '<td><a href="' + ctx.CurrentItem.URL + '" rel="external" target="_blank">' + ctx.CurrentItem["URL.desc"] + '</a></td>' : '<td></td>';
@@ -149,7 +149,7 @@
         '<caption class="sr-only"></caption>' +
         '<tbody>' +
         '<tr>' +
-        '<th scope="row">Number of children who got a place last year by priority</th>' +
+        '<th scope="row">How many children got a place by priority (offer day ' + yearTwo + ')</th>' +
         '<td>' + STSHtmlDecode(ctx.CurrentItem.OffersLastYear) + '</td>' +
         '</tr>' +
         '</tbody>' +
@@ -162,7 +162,7 @@
         '<caption class="sr-only">Last child offered a place at ' + ctx.CurrentItem.SchoolName + '</caption>' +
         '<tbody>' +
         '<tr>' +
-        '<th scope="row">' + yearOne + '</th>' +
+        '<th scope="row">Offer day ' + yearOne + '</th>' +
         '<td>' + 
         '<p><strong>Distance in miles: </strong>' + ctx.CurrentItem.FurthestDistance1 + '</p>' + 
         '<p><strong>Priority admitted: </strong>' + ctx.CurrentItem.CriteriaAdmittedUnder1 + '</p>' + 
@@ -170,7 +170,7 @@
         '</td>' +
         '</tr>' +
         '<tr>' +
-        '<th scope="row">' + yearTwo + '</th>' +
+        '<th scope="row">Offer day ' + yearTwo + '</th>' +
         '<td>' + 
         '<p><strong>Distance in miles: </strong>' + ctx.CurrentItem.FurthestDistance2 + '</p>' + 
         '<p><strong>Priority admitted: </strong>' + ctx.CurrentItem.CriteriaAdmittedUnder2 + '</p>' + 
@@ -178,7 +178,7 @@
         '</td>' +
         '</tr>' +
         '<tr>' +
-        '<th scope="row">' + yearThree + '</th>' +
+        '<th scope="row">Offer day ' + yearThree + '</th>' +
         '<td>' + 
         '<p><strong>Distance in miles: </strong>' + ctx.CurrentItem.FurthestDistance3 + '</p>' + 
         '<p><strong>Priority admitted: </strong>' + ctx.CurrentItem.CriteriaAdmittedUnder3 + '</p>' + 
@@ -188,7 +188,7 @@
         '</tbody>' +
         '</table>' +
         '</div>' +
-        '<h3>How many people applied last year</h3>' +
+        '<h3>How many people applied (offer day ' + yearOne + ')</h3>' +
         '<div class="table-responsive">' +
         '<table>' +
         '<caption class="sr-only">How many people applied last year at ' + ctx.CurrentItem.SchoolName + '</caption>' +
