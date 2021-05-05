@@ -1,0 +1,56 @@
+@import 'variables';
+
+.cfl { 
+    @import '../default/components';
+
+    .panel.panel-icon {
+        background:$base-background;
+
+        .content h2 {
+            color:$base-brand;
+        }
+    }
+    .campaign-pod {
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+
+        &:before {
+            content: '\f105';
+            font-family: FontAwesome;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            color: #F7941D;
+            line-height: 30px;
+            font-size: 40px;
+        }
+
+        p {
+            &:before {
+                display:none;
+            }
+            &.supporting {
+                color: $campaign-pod-text-colour;
+                text-decoration: none;
+                font-size: 19px;
+                font-family: "Open Sans",sans-serif,sans-serif;
+                font-weight: 400;
+            }
+            
+        }
+    }
+
+    .campaign-header {
+        -webkit-box-shadow: 10px -10px 30px -10px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px -10px 30px -10px rgba(0,0,0,0.75);
+        box-shadow: 10px -10px 30px -10px rgba(0,0,0,0.75);
+    }
+}
+
+// Accordion overrides
+.js {
+    .cfl {
+        @import '../default/accordion';
+    }
+}
