@@ -12,8 +12,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-8">
-						<h1><SharePointWebControls:TextField FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server" /></h1> 						
+					<div class="col-md-8">					
 						<div class="text">
 							<PublishingWebControls:RichHtmlField FieldName="86091a6f-b67f-4a54-9cac-29ad01dd127d" runat="server"></PublishingWebControls:RichHtmlField>
 						</div>
