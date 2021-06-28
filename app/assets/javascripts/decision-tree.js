@@ -375,12 +375,12 @@ var nnrepeatedcontenteight = '<p>The use of heavy machinery is permitted:</p>\
 <p>We may be able to help if you feel that the noise is happening at unreasonable times.</p>\
 <p>Use our form to report the noise and we will  aim to contact you within one week.</p>\
 <p>So we can take action and provide you with feedback regarding this noise issue we will need you to share your details with us when you complete the form.</p>\
-<p><a href="https://services.leeds.gov.uk/AntisocialBehaviourOrHateCrime">Report commercial noise</a></p>';
+<p><a href="https://services.leeds.gov.uk/CommercialNoisePollution/ServiceRequest/Information?utrn=W07232211792">Report commercial noise</a></p>';
 var nnrepeatedcontentnine = '<p>Noise from the day to day running of a business is not legally considered a noise nuisance.</p>\
 <p>We may be able to help if you feel that the noise is happening at unreasonable times or is not related to the running of the business.</p>\
 <p>Use our form to report the noise  and we will contact you within one week.</p>\
 <p>So we can take action and provide you with feedback regarding this noise issue we will need you to share your details with us when you complete the form.</p>\
-<p><a href="https://services.leeds.gov.uk/AntisocialBehaviourOrHateCrime">Report commercial noise</a></p>';
+<p><a href="https://services.leeds.gov.uk/CommercialNoisePollution/ServiceRequest/Information?utrn=W07232211792">Report commercial noise</a></p>';
 var nnrepeatedcontentten = '<p>Try speaking to the business owner to see if they can stop the alarm.</p>\
 <p>If there is no answer or they\'re unable to to stop the alarm, call us to report the noise.</p>\
 <div class="text-block"><p>0113 222 4402</p></div>\
@@ -516,7 +516,7 @@ var noisedecisiontree = {
                             message: '<p>Ice cream vans are allowed to play chimes between 12pm and 7pm. We may be able to help if the ice cream van is breaking the <a href="https://www.gov.uk/government/publications/code-of-practice-on-noise-from-ice-cream-van-chimes"><span class="sr-only">Ice cream van</span> code of practice</a>.</p> \
                             <p>If the noise is happening outside of these hours you can use our form to report it and we will contact you within one week.</p> \
                             <p>So we can take action and provide you with feedback regarding this noise issue we will need you to share your details with us when you complete the form.</p> \
-                            <p><a href="https://services.leeds.gov.uk/AntisocialBehaviourOrHateCrime">Report commercial noise</a></p>'
+                            <p><a href="https://services.leeds.gov.uk/CommercialNoisePollution/ServiceRequest/Information?utrn=W07232211792">Report commercial noise</a></p>'
                         },
                         {
                             answer: 'Repair work',
@@ -543,7 +543,7 @@ var noisedecisiontree = {
                                             message: '<p>Noise from the day to day running of a business is not legally considered a noise nuisance.</p>\
                                             <p>We may be able to help if you feel that the noise is happening at unreasonable times or is not related to the running of the business.</p>\                                  <p>Use our form to report the noise and we will contact you within one week.</p>\
                                             <p>So we can take action and provide you with feedback regarding this noise issue we will need you to share your details with us when you complete the form.</p>\
-                                            <p><a href="https://services.leeds.gov.uk/AntisocialBehaviourOrHateCrime">Report commercial noise</a></p>',
+                                            <p><a href="https://services.leeds.gov.uk/CommercialNoisePollution/ServiceRequest/Information?utrn=W07232211792">Report commercial noise</a></p>',
                                         },
                                         {
                                             answer: 'Illegal site',
@@ -691,7 +691,7 @@ var noisedecisiontree = {
                                     answer: 'Business',
                                     message: '<p>Bin collections for business are carried out by private companies. Please contact the company who are responsible for the noise.</p>\
                                     <p>You can also use our form to report the noise. We will aim to  contact you within one week.</p>\
-                                    <p><a href="https://services.leeds.gov.uk/AntisocialBehaviourOrHateCrime">Report commercial noise</a></p>',
+                                    <p><a href="https://services.leeds.gov.uk/CommercialNoisePollution/ServiceRequest/Information?utrn=W07232211792">Report commercial noise</a></p>',
                                 }
                             ]
                         },
@@ -1072,7 +1072,7 @@ var noisedecisiontree = {
                     <p>We will get in touch as quickly as we can depending on how serious the noise is. We aim to get back to everyone within one week.</p>\
                     <p>So we can take action and provide you with feedback regarding this noise issue we will need you to share your details with us when you complete the form.</p>\
                     <p>If you need urgent help between 6pm and 3:30am call 0113 376 0337.</p>\
-                    <p><a href="https://services.leeds.gov.uk/AntisocialBehaviourOrHateCrime">Report commercial noise</a></p>',
+                    <p><a href="https://services.leeds.gov.uk/CommercialNoisePollution/ServiceRequest/Information?utrn=W07232211792">Report commercial noise</a></p>',
                 },
                 {
                     answer: 'Other',
