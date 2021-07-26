@@ -125,7 +125,7 @@
         '<tr>' +
         '<th scope="row">Summary of admissions policy</th>' +
         '<td><p>' + STSHtmlDecode(ctx.CurrentItem.AdmissionCriteriaSummary) + '</p>' +
-        '<p>You should read the full admissions policy before applying. For some criteria, you may need to send extra information in a supplementary information form (SIF).</p>' +
+        '<p>You should read the full admissions policy before applying. For some criteria, you may need to send extra information.</p>' +
         '</td>' +
         '</tr>' +
         '<tr>' +
@@ -149,7 +149,7 @@
         '<caption class="sr-only"></caption>' +
         '<tbody>' +
         '<tr>' +
-        '<th scope="row">How many children got a place by priority (offer day ' + yearTwo + ')</th>' +
+        '<th scope="row">How many children got a place by priority</th>' +
         '<td>' + STSHtmlDecode(ctx.CurrentItem.OffersLastYear) + '</td>' +
         '</tr>' +
         '</tbody>' +
