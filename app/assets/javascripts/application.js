@@ -144,6 +144,12 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
+    //Skip link
+    $('.skip').on('click', function(e) {
+        e.preventDefault();
+        $('#main').attr('tabindex', '-1').focus();
+    });
+
     $('#main').on('click', '.btn--print', function(){
         window.print();
     });

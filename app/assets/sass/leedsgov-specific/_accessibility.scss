@@ -1,0 +1,20 @@
+.ms-srch-item-summary {
+    a {
+        word-break: break-all;
+    }
+}
+
+.hero-lcc__search-input {
+    &::-webkit-input-placeholder {
+        color: #263238 !important;
+    }
+    &::-moz-placeholder { 
+        color: #263238 !important;
+    }
+    &:-ms-input-placeholder { 
+        color: #263238 !important;
+    }
+    &:-moz-placeholder { 
+        color: #263238 !important;
+    }
+}
