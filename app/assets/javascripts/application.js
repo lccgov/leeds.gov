@@ -151,6 +151,7 @@ $(document).ready(function () {
     });
 
     $('#main').on('click', '.btn--print', function(){
+        $('details').attr('open', '');
         window.print();
     });
 
