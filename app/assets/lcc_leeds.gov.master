@@ -27,7 +27,7 @@
         <meta name="theme-color" content="#ffffff">
         
         <!-- Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         
         <!-- Custom font using Typekit -->
@@ -275,9 +275,9 @@
         
         <script type="text/javascript">if (typeof browseris !== "undefined") {browseris.ie = false;}</script>
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript">//<![CDATA[//]]></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript">//<![CDATA[//]]></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js" type="text/javascript">//<![CDATA[//]]></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript">//<![CDATA[//]]></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" type="text/javascript">//<![CDATA[//]]></script>
         <script src="https://static.atgsvcs.com/js/atgsvcs.js" type="text/javascript">//<![CDATA[//]]></script>  
         <script src="/_catalogs/masterpage/public/javascripts/lcc-template.js?1.1.66" type="text/javascript"></script>
         <script src="/_catalogs/masterpage/public/javascripts/application.js?1.1.66" type="text/javascript"></script> 
