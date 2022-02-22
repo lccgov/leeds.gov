@@ -21,9 +21,9 @@
  
     function saItem(ctx){
         //Update years in this file March each year
-        var yearOne = "2021";
-        var yearTwo = "2020";
-        var yearThree = "2019";
+        var yearOne = "2022";
+        var yearTwo = "2021";
+        var yearThree = "2020";
 
         var locationMapHtml = ctx.CurrentItem.LocationMap ? '<td><a href="' + ctx.CurrentItem.LocationMap + '" rel="external" target="_blank">Open in Google Maps</a></td>' : '<td></td>';
         var websiteHtml = ctx.CurrentItem.URL ? '<td><a href="' + ctx.CurrentItem.URL + '" rel="external" target="_blank">' + ctx.CurrentItem["URL.desc"] + '</a></td>' : '<td></td>';
