@@ -142,8 +142,8 @@
                                         <div class="header-content">
                                             <div id="header-custom" class="header-custom"> 
                                                 <div class="header-button">
-                                                <a title="My Account" class="btn-account" href="/my-account"> 
-                                                    <span class="sr-only">My Account link</span><span>My Account</span>
+                                                <a title="Apply, report or pay" class="btn-account" href="/apply-report-or-pay"> 
+                                                    <span>Apply, report or pay</span>
                                                 </a>
                                             </div>                                
                                             </div>                                  
@@ -203,8 +203,6 @@
                         </div>
                     </div>
                     
-                    <!-- A to Z Top -->
-                    <div id="atozListResultsTop"></div>
 
                     <!-- MAIN CONTENT -->
                     <div data-name="bodycontent">
@@ -212,9 +210,6 @@
                             <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server"></asp:ContentPlaceHolder>
                         </SharePoint:AjaxDelta>
                     </div>
-                    
-                    <!-- A to Z Bottom -->
-                    <div id="atozListResultsBottom"></div>
                     
                     <!-- footer -->
                     <footer class="main" role="contentinfo">

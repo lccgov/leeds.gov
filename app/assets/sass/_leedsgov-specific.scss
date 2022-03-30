@@ -6,6 +6,7 @@
 @import 'leedsgov-specific/survey-webpart';
 @import 'leedsgov-specific/print';
 @import 'leedsgov-specific/accessibility';
+@import 'leedsgov-specific/homepage-rework';
 
 //self service custom buttons
 .header-actions {
@@ -143,7 +144,7 @@
                 font-weight: bold;
                 &.active, &:hover {
                     background: #e5f1f5;
-                    color: #007299;
+                    color: #003f55;
                 }
             }
             // &:first-of-type {
