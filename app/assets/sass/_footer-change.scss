@@ -7,7 +7,7 @@ $footer-bg-color: #003f55 !default;
 // footer.scss
 @import 'url-helper';
 footer.main {
-    margin: 0;
+    margin: 30px 0 0;
     background: $footer-bg-color;
     padding: 0;
     .list-atoz {

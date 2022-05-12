@@ -4,14 +4,14 @@
     width:100%;
     margin:auto;
     max-width: 1280px;
-    padding:0 8px;
+    padding:0 15px;
 
-    @media only screen and (min-width: 730px) {
-        padding:0 24px;
-    }
-    @media only screen and (min-width: 1328px) {
-        padding:0;
-    }
+    // @media only screen and (min-width: 730px) {
+    //     padding:0 24px;
+    // }
+    // @media only screen and (min-width: 1328px) {
+    //     padding:0;
+    // }
 }
 
 .hero {
@@ -142,7 +142,7 @@
             input {
                 font-family: $font-secondary !important;
                 font-size: 22px;
-                border:0 !important;
+                border:1px solid #b7b7b7 !important;
                 background:#ECEFF1;
                 padding:16px 24px !important;
                 width:100% !important;
@@ -165,7 +165,7 @@
                 background:#F6A127;
                 color:$black;
                 font-weight: 600;
-                border:0;
+                border:1px solid #F6A127;
                 padding:16px 24px;
                 margin:16px 0 0 !important;
 
