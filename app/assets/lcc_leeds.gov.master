@@ -16,6 +16,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="GENERATOR" content="Microsoft SharePoint">
         <meta http-equiv="Expires" content="0">
+
+	<!-- OneTrust Cookies Consent Notice start for www.leeds.gov.uk -->
+	<script src="https://cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="0790ac78-2e50-45e4-87fc-c0d468823872" ></script>
+	<script type="text/javascript">
+		function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end for www.leeds.gov.uk -->
         
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="/_catalogs/masterpage/public/images/apple-touch-icon.png?1.1.66">
@@ -120,7 +127,9 @@
             <div id="s4-workspace-disabled" class="mainWorkspace">
                 <div id="s4-bodyContainer">
 
+
                     <!-- COOKIES -->
+<!--
                     <div id="containerSiteStatement">
                         <div id="siteStatement">
                             <div id="global-cookie-message" class="pageControl container-fluid noindex" style="display:none">
@@ -129,6 +138,7 @@
                             </div>
                         </div>
                     </div>             
+-->
 
                     <!-- Header -->
                     <header class="header-nav-container" role="banner"> 
