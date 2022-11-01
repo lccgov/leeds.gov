@@ -23,7 +23,7 @@
     "@types/sharepoint": "^2016.1.0",
     "file-exists": "^2.0.0",
     "file-system": "^2.2.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^2.0.13",
     "gulp-foreach": "^0.1.0",
     "gulp-html-replace": "^1.6.1",
