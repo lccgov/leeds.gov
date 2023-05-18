@@ -8,6 +8,13 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <SharePoint:SPHtmlTag lang="en" runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;"><!--<![endif]-->
     <head runat="server">
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NKPC5H');</script>
+        <!-- End Google Tag Manager -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,6 +40,10 @@
         <link rel="stylesheet" href="/_catalogs/masterpage/public/foster4leeds_subsite/stylesheets/application.css">
         </head>
     <body onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-NKPC5H
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
     <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" /><SharePoint:ImageLink runat="server" />                             <SharePoint:SharePointForm onsubmit="if (typeof (_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server"><asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false"  EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />                             <SharePoint:SPSecurityTrimmedControl runat="server" HideFromSearchCrawler="true" EmitDiv="true">                                 <div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">                                     <a id="linkTurnOnAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">                                         <SharePoint:EncodedLiteral runat="server" text="&lt;%$Resources:wss,master_turnonaccessibility%&gt;" EncodeMethod="HtmlEncode">                                         </SharePoint:EncodedLiteral>                                     </a>                                 </div>                         <div id="TurnOffAccessibility" style="display:none" class="s4-notdlg noindex">                             <a id="linkTurnOffAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">                                 <SharePoint:EncodedLiteral runat="server" text="&lt;%$Resources:wss,master_turnoffaccessibility%&gt;" EncodeMethod="HtmlEncode">                                 </SharePoint:EncodedLiteral>                             </a>                         </div>                         </SharePoint:SPSecurityTrimmedControl>                         <div id="ms-designer-ribbon">                             <PublishingRibbon:PublishingRibbon runat="server" />                          </div>
         <div id="skiplink-container">
             <div>
